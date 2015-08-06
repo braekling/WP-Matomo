@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+
+[wp-piwik.wp-piwik]
+file_filter = wp-piwik-<lang>.po
+source_file = wp-piwik.pot
+source_lang = en
+type = PO
+
