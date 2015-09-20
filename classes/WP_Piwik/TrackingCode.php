@@ -58,6 +58,8 @@ class TrackingCode {
 
 		if ($settings->getGlobalOption ( 'track_datacfasync' ))
 			$code = str_replace ( '<script type', '<script data-cfasync="false" type', $code );
+		if ($settings->getGlobalOption ( 'set_download_extensions' ))
+			$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['setDownloadExtensions', '" . ($settings->getGlobalOption ( 'set_download_extensions' )) . "']);\n_paq.push(['trackPageView']);", $code );
 		if ($settings->getGlobalOption ( 'add_download_extensions' ))
 			$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['addDownloadExtensions', '" . ($settings->getGlobalOption ( 'add_download_extensions' )) . "']);\n_paq.push(['trackPageView']);", $code );
 		if ($settings->getGlobalOption ( 'limit_cookies' ))

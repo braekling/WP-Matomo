@@ -311,6 +311,8 @@ class Settings extends \WP_Piwik\Admin {
 				'disabled' => __ ( 'Disabled', 'wp-piwik' )
 		), __ ( 'Choose if you want to get an update notice if WP-Piwik is updated.', 'wp-piwik' ) );
 
+		$this->showInput ( 'set_download_extensions', __ ( 'Define all file types for download tracking', 'wp-piwik' ), __ ( 'Replace Piwik\'s default file extensions for download tracking, divided by a vertical bar (&#124;). Leave blank to keep Piwik\'s default settings.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik documentation%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/guides/tracking-javascript-guide#file-extensions-for-tracking-downloads">', '</a>' ) );
+		
 		echo $submitButton;
 		?>
 			</tbody>
