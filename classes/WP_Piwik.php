@@ -106,11 +106,6 @@ class WP_Piwik {
 						$this,
 						'extendWordPressDashboard'
 				) );
-			if (self::$settings->getGlobalOption ( 'add_post_annotations' ))
-				add_action ( 'transition_post_status', array (
-						$this,
-						'onPostStatusTransition'
-				), 10, 3 );
 		}
 		if ($this->isToolbarActive ()) {
 			add_action ( is_admin () ? 'admin_head' : 'wp_head', array (
@@ -138,7 +133,13 @@ class WP_Piwik {
 						$this,
 						'addJavascriptCode'
 				) );
+			if (self::$settings->getGlobalOption ( 'add_post_annotations' ))
+				add_action ( 'transition_post_status', array (
+						$this,
+						'addPiwikAnnotation'
+				), 10, 3 );
 		}
+		
 	}
 
 	/**
@@ -557,23 +558,6 @@ class WP_Piwik {
 	}
 
 	/**
-	 * Add a new post annotation in Piwik
-	 *
-	 * @param int $postID
-	 *        	The new post's ID
-	 */
-	public function addPiwikAnnotation($postID) {
-		$note = 'Published: ' . get_post ( $postID )->post_title . ' - URL: ' . get_permalink ( $postID );
-		$id = WP_Piwik\Request::register ( 'Annotations.add', array (
-				'idSite' => $this->getPiwikSiteId (),
-				'date' => date ( 'Y-m-d' ),
-				'note' => $note
-		) );
-		$result = $this->request ( $id );
-		self::$logger->log ( 'Add post annotation. ' . $note . ' - ' . serialize ( $result ) );
-	}
-
-	/**
 	 * Apply settings update
 	 *
 	 * @return boolean settings update applied
@@ -834,6 +818,7 @@ class WP_Piwik {
 
 	/**
 	 * Identify new posts if an annotation is required
+	 * and create Piwik annotation
 	 *
 	 * @param string $newStatus
 	 *        	new post status
@@ -842,12 +827,16 @@ class WP_Piwik {
 	 * @param object $post
 	 *        	current post object
 	 */
-	public function onPostStatusTransition($newStatus, $oldStatus, $post) {
+	public function addPiwikAnnotation($newStatus, $oldStatus, $post) {
 		if ($newStatus == 'publish' && $oldStatus != 'publish') {
-			add_action ( 'publish_post', array (
-					$this,
-					'addPiwikAnnotation'
+			$note = 'Published: ' . $post->post_title . ' - URL: ' . get_permalink ( $post->ID );
+			$id = WP_Piwik\Request::register ( 'Annotations.add', array (
+				'idSite' => $this->getPiwikSiteId (),
+				'date' => date ( 'Y-m-d' ),
+				'note' => $note
 			) );
+			$result = $this->request ( $id );
+			self::$logger->log ( 'Add post annotation. ' . $note . ' - ' . serialize ( $result ) );
 		}
 	}
 
