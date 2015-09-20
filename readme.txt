@@ -120,6 +120,14 @@ After several changes related to Piwik 2.14.1 and to prepare Piwik 3, I recommen
 
 == Changelog ==
 
+= 1.0.4 =
+* Several language updates.
+* Feature: Offer setDownloadExtensions option (see expert settings).
+* Feature: Consider configured HHTP connection method in proxy script.
+* Widget: Visitor country added.
+* Bugfix: Annotations on scheduled posts will work.
+* Bugfix: Donation button will work again.
+
 = 1.0.3 =
 * Several language updates.
 * Switch to JSON renderer (Piwik 3 compatibility preparation)
