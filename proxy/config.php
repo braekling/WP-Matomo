@@ -26,5 +26,10 @@ if (substr ( $PIWIK_URL, 0, 2 ) == '//')
 
 $TOKEN_AUTH = $settings->getGlobalOption ( 'piwik_token' );
 $timeout = $settings->getGlobalOption ( 'connection_timeout' );
+$useCurl = (
+	(function_exists('curl_init') && ini_get('allow_url_fopen') && $settings->getGlobalOption('http_connection') == 'curl') || (function_exists('curl_init') && !ini_get('allow_url_fopen'))
+);
+
+$settings->getGlobalOption ( 'http_connection' );
 
 ini_set ( 'display_errors', 0 );

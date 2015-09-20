@@ -41,10 +41,10 @@ function arrayValue($array, $key, $value = null)
 }
 function getContents($url, $options = false)
 {
-	if (ini_get('allow_url_fopen')) {
+	if (!$useCurl && ini_get('allow_url_fopen')) {
 		$ctx = ($options?stream_context_create($options):NULL);
 		return file_get_contents($url, 0, $ctx);
-	} elseif (function_exists('curl_version'))
+	} elseif ($useCurl && function_exists('curl_version'))
 		return piwikFileGetContentsCurl($url, $options);
 	else return 'Neither url_fopen nor cURL is available. Please enable at least one of them.';
 }
