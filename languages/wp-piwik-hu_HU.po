@@ -1,8 +1,7 @@
 # Copyright (C) 2015 WP-Piwik
 # This file is distributed under the same license as the WP-Piwik package.
 # Translators:
-# Andre Braekling <webmaster@braekling.de>, 2009
-# FatCow http://www.fatcow.com, 2009
+# Mark Kokeny <oregapamgroup@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
@@ -10,78 +9,78 @@ msgstr ""
 "POT-Creation-Date: 2015-07-22 10:25:29+00:00\n"
 "PO-Revision-Date: 2015-09-21 08:29+0000\n"
 "Last-Translator: Stefan Giehl <stefan@piwik.org>\n"
-"Language-Team: Ukrainian (Ukraine) (http://www.transifex.com/piwik/wp-piwik/language/uk_UA/)\n"
+"Language-Team: Hungarian (Hungary) (http://www.transifex.com/piwik/wp-piwik/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: uk_UA\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: hu_HU\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: classes/WP_Piwik/Admin/Settings.php:24
 msgid "Reload"
-msgstr ""
+msgstr "Újratöltés"
 
 #: classes/WP_Piwik/Admin/Settings.php:27
 msgid "Changes saved."
-msgstr ""
+msgstr "Módosítások elmentve."
 
 #: classes/WP_Piwik/Admin/Settings.php:45
 msgid "Save Changes"
-msgstr ""
+msgstr "Módosítások mentése"
 
 #: classes/WP_Piwik/Admin/Settings.php:46
 msgid "Thanks for using WP-Piwik!"
-msgstr ""
+msgstr "Köszönjük, hogy a WP-Piwik-et használod!"
 
 #: classes/WP_Piwik/Admin/Settings.php:50
 msgid "WP-Piwik %s is successfully connected to Piwik %s."
-msgstr ""
+msgstr "WP-Piwik %s sikeresen kapcsolódott a Piwik %s-hez."
 
 #: classes/WP_Piwik/Admin/Settings.php:50
 msgid "You are running WordPress %s."
-msgstr ""
+msgstr "WordPress %s verzióját használod."
 
 #: classes/WP_Piwik/Admin/Settings.php:50
 msgid ""
 "You are running a WordPress %s blog network (WPMU). WP-Piwik will handle "
 "your sites as different websites."
-msgstr ""
+msgstr "WordPress %s bloghálózatot (WPMU) használsz. WP-Piwik külön oldalként kezeli minden oldalad."
 
 #: classes/WP_Piwik/Admin/Settings.php:53
 msgid ""
 "WP-Piwik %s was not able to connect to Piwik using your configuration. Check"
 " the &raquo;Connect to Piwik&laquo; section below."
-msgstr ""
+msgstr "WP-Piwik %s nem tud kapcsolatot létesíteni a Piwik-el a megadott kapcsolati adatok alapján. Ellenőrizd a &raquo;Kapcsolódás Piwikhez&laquo; szekciót lentebb."
 
 #: classes/WP_Piwik/Admin/Settings.php:56
 msgid ""
 "WP-Piwik %s has to be connected to Piwik first. Check the &raquo;Connect to "
 "Piwik&laquo; section below."
-msgstr ""
+msgstr "WP-Piwik-nek mindenekelőtt kapcsolatban kell lennie a Piwik-el. Ellenőrizd a &raquo;Kapcsolódás Piwikhez&laquo; szekciót lentebb."
 
 #: classes/WP_Piwik/Admin/Settings.php:60
 msgid "Connect to Piwik"
-msgstr ""
+msgstr "Kapcsolódás Piwik-hez"
 
 #: classes/WP_Piwik/Admin/Settings.php:65
 msgid "Show Statistics"
-msgstr ""
+msgstr "Statisztikák megjelenítése"
 
 #: classes/WP_Piwik/Admin/Settings.php:69
 msgid "Enable Tracking"
-msgstr ""
+msgstr "Követés engedélyezése"
 
 #: classes/WP_Piwik/Admin/Settings.php:74
 msgid "Expert Settings"
-msgstr ""
+msgstr "Haladó beállítások"
 
 #: classes/WP_Piwik/Admin/Settings.php:78 classes/WP_Piwik.php:923
 msgid "Support"
-msgstr ""
+msgstr "Támogatás"
 
 #: classes/WP_Piwik/Admin/Settings.php:82
 msgid "Credits"
-msgstr ""
+msgstr "Stáblista"
 
 #: classes/WP_Piwik/Admin/Settings.php:95
 msgid ""
@@ -89,75 +88,75 @@ msgid ""
 "WordPress admin dashboard and to add and configure your Piwik tracking code."
 " To use this you will need your own Piwik instance. If you do not already "
 "have a Piwik setup, you have two simple options: use either"
-msgstr ""
+msgstr "A WP-Piwik egy WordPress kiegészítő, amely a Piwik statisztikáit megjeleníti a te WordPress admin vezérlőpultodon, illetve Piwik követőkódot helyezhetsz el vele a blogodon. Használatához szükséged lesz egy saját működőképes Piwik rendszerre. Amennyiben nincs Piwik-ed, két egyszerű lehetőség közül választhatsz: választhatod bármelyiket"
 
 #: classes/WP_Piwik/Admin/Settings.php:95
 msgid "Self-hosted"
-msgstr ""
+msgstr "Általad-üzemeltetett"
 
 #: classes/WP_Piwik/Admin/Settings.php:95
 msgid "or"
-msgstr ""
+msgstr "vagy"
 
 #: classes/WP_Piwik/Admin/Settings.php:95
 msgid "Cloud-hosted"
-msgstr ""
+msgstr "Felhő-üzemeltetett"
 
 #: classes/WP_Piwik/Admin/Settings.php:98
 msgid ""
 "Neither cURL nor fopen are available. So WP-Piwik can not use the HTTP API "
 "and not connect to Piwik Pro."
-msgstr ""
+msgstr "Sem a cURL, sem pedig az fopen nem elérhető, tehát a WP-Piwik nem tudja használni a HTTP API-t és nem tud kapcsolódni a Piwik Pro-hoz."
 
 #: classes/WP_Piwik/Admin/Settings.php:98
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:30
 msgid "More information"
-msgstr ""
+msgstr "További információk"
 
 #: classes/WP_Piwik/Admin/Settings.php:100
 msgid "You can choose between three connection methods:"
-msgstr ""
+msgstr "Válassz a három kapcsolódási metódus közül:"
 
 #: classes/WP_Piwik/Admin/Settings.php:100
 #: classes/WP_Piwik/Admin/Settings.php:103
 msgid "Self-hosted (HTTP API, default)"
-msgstr ""
+msgstr "Általad-üzemeltetettt (HTTP API, alapértelmezett)"
 
 #: classes/WP_Piwik/Admin/Settings.php:100
 msgid ""
 "This is the default option for a self-hosted Piwik and should work for most "
 "configurations. WP-Piwik will connect to Piwik using http(s)."
-msgstr ""
+msgstr "Ez az alapértelmezett beállítás az általad-üzemeltetett Piwik-hez, ennek a legtöbb esetben működnie kell. WP-Piwik http(s)-en keresztül fog csatlakozni Piwik-edhez."
 
 #: classes/WP_Piwik/Admin/Settings.php:100
 #: classes/WP_Piwik/Admin/Settings.php:104
 msgid "Self-hosted (PHP API)"
-msgstr ""
+msgstr "Általad-üzemeltetett (PHP API)"
 
 #: classes/WP_Piwik/Admin/Settings.php:100
 msgid ""
 "Choose this, if your self-hosted Piwik and WordPress are running on the same"
 " machine and you know the full server path to your Piwik instance."
-msgstr ""
+msgstr "Válaszd ezt, ha az általad-üzemeltetett Piwik és a WordPress ugyanazon a szervergépen fut és tudod a teljes elérési útvonalat Piwik rendszeredhez."
 
 #: classes/WP_Piwik/Admin/Settings.php:100
 #: classes/WP_Piwik/Admin/Settings.php:105
 msgid "Cloud-hosted (Piwik Pro)"
-msgstr ""
+msgstr "Felhő-üzemeltetett (Piwik Pro)"
 
 #: classes/WP_Piwik/Admin/Settings.php:100
 msgid ""
 "If you are using a cloud-hosted Piwik by Piwik Pro, you can simply use this "
 "option."
-msgstr ""
+msgstr "Ha felhő-üzemeltetett Piwik-et használsz a Piwik Pro-n keresztül, csak egyszerűen válaszd ezt az opciót."
 
 #: classes/WP_Piwik/Admin/Settings.php:101
 msgid "Piwik Mode"
-msgstr ""
+msgstr "Piwik üzemmód"
 
 #: classes/WP_Piwik/Admin/Settings.php:102
 msgid "Disabled (WP-Piwik will not connect to Piwik)"
-msgstr ""
+msgstr "Letiltva (WP-Piwik nem csatlakozik a Piwikhez)"
 
 #: classes/WP_Piwik/Admin/Settings.php:108
 msgid "Piwik URL"
@@ -167,108 +166,108 @@ msgstr "Piwik URL"
 msgid ""
 "Enter your Piwik URL. This is the same URL you use to access your Piwik "
 "instance, e.g. http://www.example.com/piwik/."
-msgstr ""
+msgstr "Add meg Piwik-ed URL címét. Ugyan az a cím, amelyen te is eléred Piwik-ed webböngészőn keresztül. Pl.: http://www.example.com/piwik/."
 
 #: classes/WP_Piwik/Admin/Settings.php:109
 msgid "Piwik path"
-msgstr ""
+msgstr "Piwik útvonal"
 
 #: classes/WP_Piwik/Admin/Settings.php:109
 msgid "Enter the file path to your Piwik instance, e.g. /var/www/piwik/."
-msgstr ""
+msgstr "Add meg az elérési útvonalat a Piwik telepítésedhez, pl.: /var/www/piwik/."
 
 #: classes/WP_Piwik/Admin/Settings.php:110
 msgid "Piwik user"
-msgstr ""
+msgstr "Piwik felhasználó"
 
 #: classes/WP_Piwik/Admin/Settings.php:110
 msgid ""
 "Enter your Piwik Pro username. It is also part of your URL: "
 "http://USERNAME.piwik.pro."
-msgstr ""
+msgstr "Add meg Piwik Pro felhasználóneved. Ez része az URL címednek: http://USERNAME.piwik.pro."
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid "Auth token"
-msgstr "Авто token"
+msgstr "Authorizációs token"
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid ""
 "Enter your Piwik auth token here. It is an alphanumerical code like "
 "0a1b2c34d56e78901fa2bc3d45678efa."
-msgstr ""
+msgstr "Írd be Piwik authorizációs tokened ide. Ez egy alfanumerikus karaktersor, pl.: 0a1b2c34d56e78901fa2bc3d45678efa."
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid "See %sWP-Piwik FAQ%s."
-msgstr ""
+msgstr "Bővebb infó %sWP-Piwik GYIK%s"
 
 #: classes/WP_Piwik/Admin/Settings.php:116
 msgid "Auto config"
-msgstr ""
+msgstr "Automata konfiguráció"
 
 #: classes/WP_Piwik/Admin/Settings.php:116
 msgid ""
 "Check this to automatically choose your blog from your Piwik sites by URL. "
 "If your blog is not added to Piwik yet, WP-Piwik will add a new site."
-msgstr ""
+msgstr "Pipáld be ezt, hogy automatikusan kiválasszam a blogod a Piwik oldalaid közül URL alapján. Amennyiben még nem adtad hozzá az oldalad Piwik-hez, a WP-Piwik megteszi ezt helyetted."
 
 #: classes/WP_Piwik/Admin/Settings.php:127
 msgid "Determined site"
-msgstr ""
+msgstr "Meghatározott oldal"
 
 #: classes/WP_Piwik/Admin/Settings.php:132
 msgid "Select site"
-msgstr ""
+msgstr "Válassz oldalt"
 
 #: classes/WP_Piwik/Admin/Settings.php:140
 msgid "Piwik default date"
-msgstr ""
+msgstr "Piwik alapértelmezett dátum"
 
 #: classes/WP_Piwik/Admin/Settings.php:141
 #: classes/WP_Piwik/Admin/Settings.php:154
 msgid "Today"
-msgstr ""
+msgstr "Ma"
 
 #: classes/WP_Piwik/Admin/Settings.php:142
 #: classes/WP_Piwik/Admin/Settings.php:153
 msgid "Yesterday"
-msgstr ""
+msgstr "Tegnap"
 
 #: classes/WP_Piwik/Admin/Settings.php:143
 msgid "Current month"
-msgstr ""
+msgstr "Jelen hónap"
 
 #: classes/WP_Piwik/Admin/Settings.php:144
 msgid "Last month"
-msgstr ""
+msgstr "Előző hónap"
 
 #: classes/WP_Piwik/Admin/Settings.php:145
 msgid "Current week"
-msgstr ""
+msgstr "Jelen hét"
 
 #: classes/WP_Piwik/Admin/Settings.php:146
 msgid "Last week"
-msgstr ""
+msgstr "Múlthét"
 
 #: classes/WP_Piwik/Admin/Settings.php:147
 msgid "Default date shown on statistics page."
-msgstr ""
+msgstr "Alapértelmezett dátum látható a statisztikák oldalon."
 
 #: classes/WP_Piwik/Admin/Settings.php:149
 msgid "Show SEO data"
-msgstr ""
+msgstr "SEO adat mejelenítése"
 
 #: classes/WP_Piwik/Admin/Settings.php:149
 msgid "Display SEO ranking data on statistics page."
-msgstr ""
+msgstr "SEO rangsor adat megjelenítése a statisztikák oldalon."
 
 #: classes/WP_Piwik/Admin/Settings.php:149
 #: classes/WP_Piwik/Admin/Settings.php:160
 msgid "Slow!"
-msgstr ""
+msgstr "Lassú!"
 
 #: classes/WP_Piwik/Admin/Settings.php:151
 msgid "Dashboard overview"
-msgstr ""
+msgstr "Vezérlőpult összesítés"
 
 #: classes/WP_Piwik/Admin/Settings.php:152
 #: classes/WP_Piwik/Admin/Settings.php:190
@@ -276,213 +275,213 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:213
 #: classes/WP_Piwik/Admin/Settings.php:304
 msgid "Disabled"
-msgstr ""
+msgstr "Letiltva"
 
 #: classes/WP_Piwik/Admin/Settings.php:155
 msgid "Last 30 days"
-msgstr ""
+msgstr "Utolsó 30 nap"
 
 #: classes/WP_Piwik/Admin/Settings.php:156
 msgid "Enable WP-Piwik dashboard widget &quot;Overview&quot;."
-msgstr ""
+msgstr "WP-Piwik vezérlőpulti widget &quot;Összegzés&quot; engedélyezése."
 
 #: classes/WP_Piwik/Admin/Settings.php:158
 msgid "Dashboard graph"
-msgstr ""
+msgstr "Vezélőpult grafikon"
 
 #: classes/WP_Piwik/Admin/Settings.php:158
 msgid "Enable WP-Piwik dashboard widget &quot;Graph&quot;."
-msgstr ""
+msgstr "WP-Piwik vezérlőpulti widget &quot;Grafikon&quot; engedélyezése."
 
 #: classes/WP_Piwik/Admin/Settings.php:160
 msgid "Dashboard SEO"
-msgstr ""
+msgstr "Vezélőpult grafikon"
 
 #: classes/WP_Piwik/Admin/Settings.php:160
 msgid "Enable WP-Piwik dashboard widget &quot;SEO&quot;."
-msgstr ""
+msgstr "WP-Piwik vezérlőpulti widget &quot;SEO&quot; engedélyezése."
 
 #: classes/WP_Piwik/Admin/Settings.php:162
 msgid "Show graph on WordPress Toolbar"
-msgstr ""
+msgstr "Grafikon megjelenítése a WordPress eszköztáron"
 
 #: classes/WP_Piwik/Admin/Settings.php:162
 msgid "Display a last 30 days visitor graph on WordPress' toolbar."
-msgstr ""
+msgstr "Utolsó 30 nap látogatói adatainak megjelenítése a WordPress eszköztáron."
 
 #: classes/WP_Piwik/Admin/Settings.php:164
 msgid "Display stats to"
-msgstr ""
+msgstr "Statisztikák megjelenítése ehhez:"
 
 #: classes/WP_Piwik/Admin/Settings.php:171
 msgid "Choose user roles allowed to see the statistics page."
-msgstr ""
+msgstr "Válaszd ki, melyik felhasználói csoport tagjai láthatják a statisztikák oldalt."
 
 #: classes/WP_Piwik/Admin/Settings.php:173
 msgid "Show per post stats"
-msgstr ""
+msgstr "Megjelenítendő bejegyzés statisztikák száma"
 
 #: classes/WP_Piwik/Admin/Settings.php:173
 msgid "Show stats about single posts at the post edit admin page."
-msgstr ""
+msgstr "Az egyszeri bejegyzések statisztikáit jeleníti meg az admin oldalon."
 
 #: classes/WP_Piwik/Admin/Settings.php:175
 msgid "Piwik shortcut"
-msgstr ""
+msgstr "Piwik parancsikon"
 
 #: classes/WP_Piwik/Admin/Settings.php:175
 msgid "Display a shortcut to Piwik itself."
-msgstr ""
+msgstr "Piwik prancsikon megejlenítése."
 
 #: classes/WP_Piwik/Admin/Settings.php:177
 msgid "WP-Piwik display name"
-msgstr ""
+msgstr "WP-Piwik megjelenítendő neve"
 
 #: classes/WP_Piwik/Admin/Settings.php:177
 msgid "Plugin name shown in WordPress."
-msgstr ""
+msgstr "Ez a név fog megjelenni a WordPressben."
 
 #: classes/WP_Piwik/Admin/Settings.php:179
 msgid "Enable shortcodes"
-msgstr ""
+msgstr "Shortcode engedélyezése"
 
 #: classes/WP_Piwik/Admin/Settings.php:179
 msgid "Enable shortcodes in post or page content."
-msgstr ""
+msgstr "Shortkódok engedélyezése a bejegyzésben, vagy az oldal tartalmában"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid "You can choose between four tracking code modes:"
-msgstr ""
+msgstr "Négy követési módszer közül választhatsz:"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid ""
 "WP-Piwik will not add the tracking code. Use this, if you want to add the "
 "tracking code to your template files or you use another plugin to add the "
 "tracking code."
-msgstr ""
+msgstr "WP-Piwik nem állít be követőkódot. Használd ezt, ha manuálisan akarod beágyazni a követőkódod a sablonfájlokba, vagy másik kiegészítőt használsz erre a célra."
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 #: classes/WP_Piwik/Admin/Settings.php:193
 msgid "Default tracking"
-msgstr ""
+msgstr "Alapértelmezett követés"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid "WP-Piwik will use Piwik's standard tracking code."
-msgstr ""
+msgstr "WP-Piwik a Piwik sztenderd követőkódját alkalmazza."
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 #: classes/WP_Piwik/Admin/Settings.php:194
 msgid "Use js/index.php"
-msgstr ""
+msgstr "Használja a js/index.php-t"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid ""
 "You can choose this tracking code, to deliver a minified proxy code and to "
 "avoid using the files called piwik.js or piwik.php."
-msgstr ""
+msgstr "Választhatod ezt a követőkódot, amely kicsinyített proxy kódot tartalmaz, ezzel elkerülve a piwik.js illetve piwik.php fájlok használatát."
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid "See %sreadme file%s."
-msgstr ""
+msgstr "Továbbiak az %solvass el fájlban%s."
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 #: classes/WP_Piwik/Admin/Settings.php:195
 msgid "Use proxy script"
-msgstr ""
+msgstr "Használjon proxy szkriptet"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid "Use this tracking code to not reveal the Piwik server URL."
-msgstr ""
+msgstr "Használd ezt a követőkódot, és nem feded fel a Piwik szerver URL címét."
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 #: classes/WP_Piwik/Admin/Settings.php:210
 #: classes/WP_Piwik/Admin/Settings.php:220
 msgid "See %sPiwik FAQ%s."
-msgstr ""
+msgstr "Bővebb infó %sWP-Piwik GYIK%s"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 #: classes/WP_Piwik/Admin/Settings.php:196
 msgid "Enter manually"
-msgstr ""
+msgstr "Megadás manuálisan"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid ""
 "Enter your own tracking code manually. You can choose one of the prior "
 "options, pre-configure your tracking code and switch to manually editing at "
 "last."
-msgstr ""
+msgstr "Írd be saját követőkódod manuálisan. Választhatsz egyet az előbbi opciók közül, elő-konfigurálod a követőkódot, majd a végén váltasz manuális szerkesztésre."
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid "Use the placeholder {ID} to add the Piwik site ID."
-msgstr ""
+msgstr "Használj placeholder-t {ID} hogy hozzáadd a Piwik oldal ID-t."
 
 #: classes/WP_Piwik/Admin/Settings.php:191
 msgid "Add tracking code"
-msgstr ""
+msgstr "Követőkód hozzáadása"
 
 #: classes/WP_Piwik/Admin/Settings.php:199
 msgid "Tracking code"
-msgstr ""
+msgstr "Követőkód"
 
 #: classes/WP_Piwik/Admin/Settings.php:201
 msgid "JavaScript code position"
-msgstr ""
+msgstr "JavaScript kód pozíció"
 
 #: classes/WP_Piwik/Admin/Settings.php:202
 msgid "Footer"
-msgstr ""
+msgstr "Lábléc"
 
 #: classes/WP_Piwik/Admin/Settings.php:203
 msgid "Header"
-msgstr ""
+msgstr "Fejléc"
 
 #: classes/WP_Piwik/Admin/Settings.php:204
 msgid ""
 "Choose whether the JavaScript code is added to the footer or the header."
-msgstr ""
+msgstr "Válaszd ki, hogy a fejlécbe vagy a láblécbe kerüljön a JavaScript kód."
 
 #: classes/WP_Piwik/Admin/Settings.php:206
 msgid "Noscript code"
-msgstr ""
+msgstr "Noscript kód"
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 msgid "Add &lt;noscript&gt;"
-msgstr ""
+msgstr "&lt;noscript&gt; Hozzáadása"
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 msgid "Adds the &lt;noscript&gt; code to your footer."
-msgstr ""
+msgstr "&lt;noscript&gt; kódot helyez a láblécbe."
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 #: classes/WP_Piwik/Admin/Settings.php:210
 msgid "Disabled in proxy mode."
-msgstr ""
+msgstr "Proxy mód letiltva."
 
 #: classes/WP_Piwik/Admin/Settings.php:210
 msgid "Add rec parameter to noscript code"
-msgstr ""
+msgstr "Rec paraméter hozzárendelése a noscript kódhoz"
 
 #: classes/WP_Piwik/Admin/Settings.php:210
 msgid "Enable tracking for visitors without JavaScript (not recommended)."
-msgstr ""
+msgstr "JavaScript mentes látogatókövetés engedélyezése (nem ajánlott)."
 
 #: classes/WP_Piwik/Admin/Settings.php:212
 msgid "Enable content tracking"
-msgstr ""
+msgstr "Tartalom követés engedélyezése"
 
 #: classes/WP_Piwik/Admin/Settings.php:214
 msgid "Track all content blocks"
-msgstr ""
+msgstr "Minden tartalmi blokk követése"
 
 #: classes/WP_Piwik/Admin/Settings.php:215
 msgid "Track only visible content blocks"
-msgstr ""
+msgstr "Csak a látható tartalmi blokk követése"
 
 #: classes/WP_Piwik/Admin/Settings.php:216
 msgid ""
 "Content tracking allows you to track interaction with the content of a web "
 "page or application."
-msgstr ""
+msgstr "A tartalom követés engedélyezi számodra, hogy interakciókat kövess az oldal tartalmán belül, vagy egy applikációban."
 
 #: classes/WP_Piwik/Admin/Settings.php:216
 #: classes/WP_Piwik/Admin/Settings.php:218
@@ -492,138 +491,138 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:247
 #: classes/WP_Piwik/Admin/Settings.php:249
 msgid "See %sPiwik documentation%s."
-msgstr ""
+msgstr "Bővebb infó a %sPiwik dokumentációban%s."
 
 #: classes/WP_Piwik/Admin/Settings.php:218
 msgid "Track search"
-msgstr ""
+msgstr "Keresés követése"
 
 #: classes/WP_Piwik/Admin/Settings.php:218
 msgid "Use Piwik's advanced Site Search Analytics feature."
-msgstr ""
+msgstr "Piwik haladó oldal keresési analitika funkció használata."
 
 #: classes/WP_Piwik/Admin/Settings.php:220
 msgid "Track 404"
-msgstr ""
+msgstr "404 követése"
 
 #: classes/WP_Piwik/Admin/Settings.php:220
 msgid ""
 "WP-Piwik can automatically add a 404-category to track 404-page-visits."
-msgstr ""
+msgstr "WP-Piwik képes automatikusan 404-kategóriát létrehozni, hogy nyomonkövesse a 404-oldal-látogatásokat."
 
 #: classes/WP_Piwik/Admin/Settings.php:222
 msgid "Add annotation on new post"
-msgstr ""
+msgstr "Annotáció hozzáadása új bejegyzéseknél"
 
 #: classes/WP_Piwik/Admin/Settings.php:222
 msgid "Add a Piwik annotation on each new post."
-msgstr ""
+msgstr "Minden új bejegyzés kapni fog egy Piwik annotációt."
 
 #: classes/WP_Piwik/Admin/Settings.php:224
 msgid "Show custom variables box"
-msgstr ""
+msgstr "Egyedi változók doboz megjelenítése"
 
 #: classes/WP_Piwik/Admin/Settings.php:224
 msgid " Show a &quot;custom variables&quot; edit box on post edit page."
-msgstr ""
+msgstr "Megjeleníti az &quot;egyedi változók&quot; szerkesztése dobozt a bejegyzés szerkesztés oldalon."
 
 #: classes/WP_Piwik/Admin/Settings.php:226
 msgid "Add new file types for download tracking"
-msgstr ""
+msgstr "Új fájltípusok hozzáadása a letöltés követéshez"
 
 #: classes/WP_Piwik/Admin/Settings.php:226
 msgid ""
 "Add file extensions for download tracking, divided by a vertical bar "
 "(&#124;)."
-msgstr ""
+msgstr "Új fájltípusok hozzáadása a letöltés követéshez, függőleges vonallal elválasztva (&#124;)."
 
 #: classes/WP_Piwik/Admin/Settings.php:228
 msgid "Disable cookies"
-msgstr ""
+msgstr "Sütik letiltása"
 
 #: classes/WP_Piwik/Admin/Settings.php:228
 msgid "Disable all tracking cookies for a visitor."
-msgstr ""
+msgstr "Minden követési süti letiltása egy látogatónak."
 
 #: classes/WP_Piwik/Admin/Settings.php:230
 msgid "Limit cookie lifetime"
-msgstr ""
+msgstr "Süti élettartamának limitálása"
 
 #: classes/WP_Piwik/Admin/Settings.php:230
 msgid ""
 "You can limit the cookie lifetime to avoid tracking your users over a longer"
 " period as necessary."
-msgstr ""
+msgstr "Limitálhatod a sütik élettartamát, hogy elkerülhesd a felhasználók a szükségesnél hosszabb benntartását."
 
 #: classes/WP_Piwik/Admin/Settings.php:232
 msgid "Visitor timeout (seconds)"
-msgstr ""
+msgstr "Látogatói időkorlát (másodpercben)"
 
 #: classes/WP_Piwik/Admin/Settings.php:234
 msgid "Session timeout (seconds)"
-msgstr ""
+msgstr "Munkamenet időkorlát (másodpercben)"
 
 #: classes/WP_Piwik/Admin/Settings.php:236
 msgid "Referral timeout (seconds)"
-msgstr ""
+msgstr "Hivatkozás időkorlát (másodpercben)"
 
 #: classes/WP_Piwik/Admin/Settings.php:238
 msgid "Track admin pages"
-msgstr ""
+msgstr "Admin oldalak követése"
 
 #: classes/WP_Piwik/Admin/Settings.php:238
 msgid ""
 "Enable to track users on admin pages (remember to configure the tracking "
 "filter appropriately)."
-msgstr ""
+msgstr "Felhasználók követésének engedélyezése az admin oldalakon (ne felejts el megfelelő követési szűrőt alkalmazni)."
 
 #: classes/WP_Piwik/Admin/Settings.php:241
 msgid "Tracking filter"
-msgstr "Слідкуючий фільтр"
+msgstr "Követési szűrő"
 
 #: classes/WP_Piwik/Admin/Settings.php:245
 msgid "Choose users by user role you do <strong>not</strong> want to track."
-msgstr ""
+msgstr "Válaszd ki azokat a felhasználói szinteket amelyeket <strong>nem</strong> akarsz követni."
 
 #: classes/WP_Piwik/Admin/Settings.php:247
 msgid "Track subdomains in the same website"
-msgstr ""
+msgstr "Aldomainek követése ugyanazon weboldalon"
 
 #: classes/WP_Piwik/Admin/Settings.php:247
 msgid "Adds *.-prefix to cookie domain."
-msgstr ""
+msgstr "Hozzáad egy *.-prefixumot a domain sütiébe."
 
 #: classes/WP_Piwik/Admin/Settings.php:249
 msgid "Do not count subdomains as outlink"
-msgstr ""
+msgstr "Ne számolja az aldomaineket a kilépési linkeknél"
 
 #: classes/WP_Piwik/Admin/Settings.php:249
 msgid "Adds *.-prefix to tracked domain."
-msgstr ""
+msgstr "Hozzáad egy *.-prefixumot a követett domainhez."
 
 #: classes/WP_Piwik/Admin/Settings.php:251
 msgid "Track RSS feeds"
-msgstr ""
+msgstr "RSS csatornák követése"
 
 #: classes/WP_Piwik/Admin/Settings.php:251
 msgid "Enable to track posts in feeds via tracking pixel."
-msgstr ""
+msgstr "Bejegyzések követése a csatornában követő pixel segítségével."
 
 #: classes/WP_Piwik/Admin/Settings.php:253
 msgid "Track RSS feed links as campaign"
-msgstr ""
+msgstr "RSS csatorna linkek kampánykénti követése"
 
 #: classes/WP_Piwik/Admin/Settings.php:255
 msgid "RSS feed campaign"
-msgstr ""
+msgstr "RSS csatorna kampány"
 
 #: classes/WP_Piwik/Admin/Settings.php:255
 msgid "Keyword: post name."
-msgstr ""
+msgstr "Kulcsszó: hivatkozás neve."
 
 #: classes/WP_Piwik/Admin/Settings.php:257
 msgid "Enable heartbeat timer"
-msgstr ""
+msgstr "Heartbeat időzítő engedélyezése"
 
 #: classes/WP_Piwik/Admin/Settings.php:257
 msgid ""
@@ -632,178 +631,178 @@ msgid ""
 "between the pings in seconds (Piwik default: 15) to enable or 0 to disable "
 "this feature. <strong>Note:</strong> This will cause a lot of additional "
 "HTTP requests on your site."
-msgstr ""
+msgstr "A heartbeat időzítő engedélyezésével pontosabb látogatási hosszakat kaphatsz, periodikusan kiküldött HTTP ping kérések kiküldésének segítségével, rögtön miután az oldalt megnyitották. Add meg az időt a pingek között másodpercben(Piwik alapértelmezett: 15), hogy engedélyezd, vagy 0-t hogy letiltsd ezt a funkciót. <strong>Megjegyzés:</strong> Ez a funkció sok HTTP kérést okozhat az oldaladon."
 
 #: classes/WP_Piwik/Admin/Settings.php:262
 msgid ""
 "Usually, you do not need to change these settings. If you want to do so, you"
 " should know what you do or you got an expert's advice."
-msgstr ""
+msgstr "Általában nincs szükség ezen beállítások módosítására. Azonban ha akarod akkor megteheted, feltéve ha tudod, hogy mit csinálsz, vagy kaptál tanácsot hozzáértő személytől."
 
 #: classes/WP_Piwik/Admin/Settings.php:264
 msgid "Enable cache"
-msgstr ""
+msgstr "Gyorsítótár engedélyezése"
 
 #: classes/WP_Piwik/Admin/Settings.php:264
 msgid "Cache API calls, which not contain today's values, for a week."
-msgstr ""
+msgstr "API hívások gyorsítótárazása egy hétig, amelyek nem tartalmazzák a mai napi értékeket."
 
 #: classes/WP_Piwik/Admin/Settings.php:267
 msgid "HTTP connection via"
-msgstr ""
+msgstr "HTTP kapcsolódás ezzel"
 
 #: classes/WP_Piwik/Admin/Settings.php:268
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "cURL"
-msgstr ""
+msgstr "cURL"
 
 #: classes/WP_Piwik/Admin/Settings.php:269
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "fopen"
-msgstr ""
+msgstr "fopen"
 
 #: classes/WP_Piwik/Admin/Settings.php:270
 msgid ""
 "Choose whether WP-Piwik should use cURL or fopen to connect to Piwik in HTTP"
 " or Pro mode."
-msgstr ""
+msgstr "Válaszd ki, hogy a WP-Piwik a cURL-t vagy az fopen-t használja, a HTTP-n kereszüli Piwik, illetve Piwik Pro-hoz történő kapcsolódáskor."
 
 #: classes/WP_Piwik/Admin/Settings.php:272
 msgid "HTTP method"
-msgstr ""
+msgstr "HTTP metódus"
 
 #: classes/WP_Piwik/Admin/Settings.php:273
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "POST"
-msgstr ""
+msgstr "POST"
 
 #: classes/WP_Piwik/Admin/Settings.php:274
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "GET"
-msgstr ""
+msgstr "GET"
 
 #: classes/WP_Piwik/Admin/Settings.php:275
 msgid "Choose whether WP-Piwik should use POST or GET in HTTP or Pro mode."
-msgstr ""
+msgstr "Válaszd ki, hogy a WP-Piwik a POST-ot vagy a GET-et használja HTTP vagy Pro módban."
 
 #: classes/WP_Piwik/Admin/Settings.php:277
 msgid "Disable time limit"
-msgstr ""
+msgstr "Időlimit letiltása"
 
 #: classes/WP_Piwik/Admin/Settings.php:277
 msgid "Use set_time_limit(0) if stats page causes a time out."
-msgstr ""
+msgstr "set_time_limit(0) használata, ha a statisztikák oldal betöltésekor időtúllépés lép fel."
 
 #: classes/WP_Piwik/Admin/Settings.php:279
 msgid "Connection timeout"
-msgstr ""
+msgstr "Kapcsolódási időkorlát"
 
 #: classes/WP_Piwik/Admin/Settings.php:281
 msgid "Disable SSL peer verification"
-msgstr ""
+msgstr "SSL peer ellenőrzés letiltása"
 
 #: classes/WP_Piwik/Admin/Settings.php:281
 msgid "not recommended"
-msgstr ""
+msgstr "nem ajánlott"
 
 #: classes/WP_Piwik/Admin/Settings.php:283
 msgid "User agent"
-msgstr ""
+msgstr "User agent"
 
 #: classes/WP_Piwik/Admin/Settings.php:284
 msgid "Use the PHP default user agent"
-msgstr ""
+msgstr "Használja a PHP alapértlmezett user agent-jét"
 
 #: classes/WP_Piwik/Admin/Settings.php:284
 msgid "empty"
-msgstr ""
+msgstr "üres"
 
 #: classes/WP_Piwik/Admin/Settings.php:285
 msgid "Define a specific user agent"
-msgstr ""
+msgstr "Specifikus user agent meghatározása"
 
 #: classes/WP_Piwik/Admin/Settings.php:287
 msgid "Specific user agent"
-msgstr ""
+msgstr "Specifikus user agent"
 
 #: classes/WP_Piwik/Admin/Settings.php:289
 msgid "Add data-cfasync=false"
-msgstr ""
+msgstr "data-cfasync=false hozzáadása"
 
 #: classes/WP_Piwik/Admin/Settings.php:291
 msgid "CDN URL"
-msgstr ""
+msgstr "CDN URL"
 
 #: classes/WP_Piwik/Admin/Settings.php:293
 msgid "CDN URL (SSL)"
-msgstr ""
+msgstr "CDN URL (SSL)"
 
 #: classes/WP_Piwik/Admin/Settings.php:295
 msgid "Force Piwik to use a specific protocol"
-msgstr ""
+msgstr "Erőltesse a Piwik-et, hogy használja a specifikus protokollt"
 
 #: classes/WP_Piwik/Admin/Settings.php:296
 msgid "Disabled (default)"
-msgstr ""
+msgstr "Letiltva (alapértelmezett)"
 
 #: classes/WP_Piwik/Admin/Settings.php:297
 msgid "http"
-msgstr ""
+msgstr "http"
 
 #: classes/WP_Piwik/Admin/Settings.php:298
 msgid "https (SSL)"
-msgstr ""
+msgstr "https (SSL)"
 
 #: classes/WP_Piwik/Admin/Settings.php:299
 msgid ""
 "Choose if you want to explicitly force Piwik to use HTTP or HTTPS. Does not "
 "work with a CDN URL."
-msgstr ""
+msgstr "Válaszd ezt, ha explicit módon akarod rábírni a Piwik-et, hogy használjon HTTP-t vagy HTTPS-t. Nem fog működni CDN URL-el."
 
 #: classes/WP_Piwik/Admin/Settings.php:301
 msgid "Update notice"
-msgstr ""
+msgstr "Frissítési értesítés"
 
 #: classes/WP_Piwik/Admin/Settings.php:302
 msgid "Show always if WP-Piwik is updated"
-msgstr ""
+msgstr "Mutassa mindíg, ha a WP-Piwik frissítve van"
 
 #: classes/WP_Piwik/Admin/Settings.php:303
 msgid "Show only if WP-Piwik is updated and settings were changed"
-msgstr ""
+msgstr "Mutassa csak akkor, ha a WP-Piwik frissítésre került és beállításai módosultak"
 
 #: classes/WP_Piwik/Admin/Settings.php:305
 msgid "Choose if you want to get an update notice if WP-Piwik is updated."
-msgstr ""
+msgstr "Válaszd ezt, ha értesítést kívánsz kapni a WP-Piwik frissítéséről."
 
 #: classes/WP_Piwik/Admin/Settings.php:466
 msgid "Donate"
-msgstr ""
+msgstr "Támogatás"
 
 #: classes/WP_Piwik/Admin/Settings.php:468
 msgid "If you like WP-Piwik, you can support its development by a donation:"
-msgstr ""
+msgstr "Ha tetszik a WP-Piwik, támogasd fejlesztésünket egy kis adománnyal:"
 
 #: classes/WP_Piwik/Admin/Settings.php:506
 msgid "My Amazon.de wishlist"
-msgstr ""
+msgstr "Amazon.de kívánságlistám"
 
 #: classes/WP_Piwik/Admin/Settings.php:509
 #: classes/WP_Piwik/Admin/Settings.php:556
 msgid "Please don't forget to vote the compatibility at the"
-msgstr ""
+msgstr "Kérlek ne felejts el szavazni a kompatibilitásról a"
 
 #: classes/WP_Piwik/Admin/Settings.php:540
 msgid "Thank you very much for your donation"
-msgstr ""
+msgstr "Köszönjük, hogy támogattad munkánkat"
 
 #: classes/WP_Piwik/Admin/Settings.php:540
 msgid "the Piwik team itself"
-msgstr ""
+msgstr "a Piwik csapat maga"
 
 #: classes/WP_Piwik/Admin/Settings.php:540
 msgid ", and all people flattering this"
-msgstr ""
+msgstr "és minden személy aki megtisztelte ezt"
 
 #: classes/WP_Piwik/Admin/Settings.php:541
 msgid ""
@@ -811,195 +810,195 @@ msgid ""
 "GPL 2.0 and MIT) and <a "
 "href=\"http://omnipotent.net/jquery.sparkline/\">jQuery Sparklines</a> "
 "(License: New BSD License)."
-msgstr ""
+msgstr "A grafikonok köszönhetők a <a href=\"http://www.jqplot.com/\">jqPlot-nak</a> (Licenc: GPL 2.0 és MIT), illetve a <a href=\"http://omnipotent.net/jquery.sparkline/\">jQuery Sparklines-nek</a> (Licenc: New BSD License)."
 
 #: classes/WP_Piwik/Admin/Settings.php:542
 msgid "Metabox support inspired by"
-msgstr ""
+msgstr "Metabox támogatást inspirálta:"
 
 #: classes/WP_Piwik/Admin/Settings.php:543
 msgid "Tabbed settings page suggested by the"
-msgstr ""
+msgstr "Lapfüles beállítási oldalt ajánlotta:"
 
 #: classes/WP_Piwik/Admin/Settings.php:544
 msgid "Thank you very much"
-msgstr ""
+msgstr "Köszönettel tartozunk"
 
 #: classes/WP_Piwik/Admin/Settings.php:544
 msgid "for your translation work"
-msgstr ""
+msgstr "a fordítási munkádért"
 
 #: classes/WP_Piwik/Admin/Settings.php:545
 msgid ""
 "Thank you very much, all users who send me mails containing criticism, "
 "commendation, feature requests and bug reports! You help me to make WP-Piwik"
 " much better."
-msgstr ""
+msgstr "Köszönettel tartozunk minden felhasználónak, aki kritikájával, dícséretével, új funkciók ajánlásával és hibabejelentésekkel segítette munkánkat! Általatok lesz a WP-Piwik kiegészítő jobb és jobb."
 
 #: classes/WP_Piwik/Admin/Settings.php:546
 msgid ""
 "Thank <strong>you</strong> for using my plugin. It is the best commendation "
 "if my piece of code is really used!"
-msgstr ""
+msgstr "Köszönjük <strong>neked</strong>, hogy használod ezt a kiegészítőt. A legnagyobb dícséret az, hogy hasznos számotokra az amit csinálunk."
 
 #: classes/WP_Piwik/Admin/Settings.php:555
 msgid "The best place to get help:"
-msgstr ""
+msgstr "Legjobb hely, ahol segítséget kaphatsz:"
 
 #: classes/WP_Piwik/Admin/Settings.php:555
 msgid "WP-Piwik support forum"
-msgstr ""
+msgstr "WP-Piwik támogatási fórum"
 
 #: classes/WP_Piwik/Admin/Settings.php:558
 msgid "Debugging"
-msgstr ""
+msgstr "Hibakeresés"
 
 #: classes/WP_Piwik/Admin/Settings.php:559
 msgid ""
 "Either allow_url_fopen has to be enabled <em>or</em> cURL has to be "
 "available:"
-msgstr ""
+msgstr "Az allow_url_fopen-nek kell engedélyezve vagy a cURL-nek elérhetőnek kell lennie:"
 
 #: classes/WP_Piwik/Admin/Settings.php:562
 msgid "cURL is"
-msgstr ""
+msgstr "cURL"
 
 #: classes/WP_Piwik/Admin/Settings.php:563
 #: classes/WP_Piwik/Admin/Settings.php:568
 msgid "not"
-msgstr ""
+msgstr "nem"
 
 #: classes/WP_Piwik/Admin/Settings.php:564
 msgid "available"
-msgstr ""
+msgstr "elérhető"
 
 #: classes/WP_Piwik/Admin/Settings.php:567
 msgid "allow_url_fopen is"
-msgstr ""
+msgstr "allow_url_fopen"
 
 #: classes/WP_Piwik/Admin/Settings.php:569
 msgid "enabled"
-msgstr ""
+msgstr "engedélyezve"
 
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "is used."
-msgstr ""
+msgstr "használatban."
 
 #: classes/WP_Piwik/Admin/Settings.php:573
 msgid "Determined Piwik base URL is"
-msgstr ""
+msgstr "A meghatározott Piwik gyökér URL:"
 
 #: classes/WP_Piwik/Admin/Settings.php:577
 msgid "Tools"
-msgstr ""
+msgstr "Eszközök"
 
 #: classes/WP_Piwik/Admin/Settings.php:579
 msgid "Run testscript"
-msgstr ""
+msgstr "Tesztszktipt futtatása"
 
 #: classes/WP_Piwik/Admin/Settings.php:580
 msgid "Sitebrowser"
-msgstr ""
+msgstr "Oldalböngésző"
 
 #: classes/WP_Piwik/Admin/Settings.php:581
 msgid "Clear cache"
-msgstr ""
+msgstr "Gyorsítótár ürítése"
 
 #: classes/WP_Piwik/Admin/Settings.php:582
 msgid "Are you sure you want to clear all settings?"
-msgstr ""
+msgstr "Biztos, hogy törölnél minden beállítást?"
 
 #: classes/WP_Piwik/Admin/Settings.php:582
 msgid "Reset WP-Piwik"
-msgstr ""
+msgstr "WP-Piwik visszaállítása"
 
 #: classes/WP_Piwik/Admin/Settings.php:584
 msgid "Latest support threads on WordPress.org"
-msgstr ""
+msgstr "Legfrissebb támogatási fórumok a WordPress.org-on"
 
 #: classes/WP_Piwik/Admin/Settings.php:635
 msgid "Settings cleared (except connection settings)."
-msgstr ""
+msgstr "Beállítások törölve (kivéve a csatlakozási beállításokat)"
 
 #: classes/WP_Piwik/Admin/Settings.php:651
 msgid "Cache cleared."
-msgstr ""
+msgstr "Gyorsítótár kiürítve"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:17
 msgid "site"
-msgstr ""
+msgstr "oldal"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:18
 msgid "sites"
-msgstr ""
+msgstr "oldalak"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:24
 msgid "No site configured yet."
-msgstr ""
+msgstr "Nincs konfigurált oldal."
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:29
 msgid "Blog ID"
-msgstr ""
+msgstr "Blog ID"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:30
 msgid "Title"
-msgstr ""
+msgstr "Cím"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:31
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:32
 msgid "Site ID (Piwik)"
-msgstr ""
+msgstr "Oldal ID (Piwik)"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:79
 msgid "Site not created yet."
-msgstr ""
+msgstr "Oldal még nem készült el."
 
 #: classes/WP_Piwik/Admin/Statistics.php:12
 msgid "Statistics"
-msgstr ""
+msgstr "Statisztikák"
 
 #: classes/WP_Piwik/Admin/Statistics.php:20
 msgid "Currently shown stats:"
-msgstr ""
+msgstr "Jelenleg mutatott statok:"
 
 #: classes/WP_Piwik/Request/Php.php:27
 msgid "Could not resolve"
-msgstr ""
+msgstr "Nem sikerül feloldani"
 
 #: classes/WP_Piwik/Request/Php.php:27
 msgid "realpath() returns false"
-msgstr ""
+msgstr "realpath() false értékkel tér vissza"
 
 #: classes/WP_Piwik/Request/Php.php:39
 msgid "Class Piwik\\FrontController does not exists."
-msgstr ""
+msgstr "Piwik\\FrontController osztály nem létezik."
 
 #: classes/WP_Piwik/Request/Php.php:42
 msgid "Class Piwik\\API\\Request does not exists."
-msgstr ""
+msgstr "Piwik\\API\\Request osztály nem létezk."
 
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:10
 msgid "Piwik Custom Variables"
-msgstr ""
+msgstr "Piwik egyedi változók"
 
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:21
 msgid "Name"
-msgstr ""
+msgstr "Név"
 
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:21
 msgid "Value"
-msgstr ""
+msgstr "Érték"
 
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:30
 msgid "Set custom variables for a page view"
-msgstr ""
+msgstr "Egyedi változók beállítása az oldalnézethez"
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:18
 msgid "Browser Details"
-msgstr ""
+msgstr "Böngésző adatai"
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:37
 #: classes/WP_Piwik/Widget/Browsers.php:37
@@ -1013,12 +1012,12 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Systems.php:33
 #: classes/WP_Piwik/Widget/Visitors.php:35 classes/WP_Piwik/Widget.php:91
 msgid "Piwik error"
-msgstr ""
+msgstr "Piwik hiba"
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:39
 #: classes/WP_Piwik/Widget/Browsers.php:39
 msgid "Browser"
-msgstr "Браузер"
+msgstr "Böngésző"
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:39
 #: classes/WP_Piwik/Widget/Browsers.php:39
@@ -1027,7 +1026,7 @@ msgstr "Браузер"
 #: classes/WP_Piwik/Widget/Systems.php:35
 #: classes/WP_Piwik/Widget/Visitors.php:57 classes/WP_Piwik/Widget.php:100
 msgid "Unique"
-msgstr "Унікальність"
+msgstr "Egyedi"
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:39
 #: classes/WP_Piwik/Widget/Browsers.php:39
@@ -1036,7 +1035,7 @@ msgstr "Унікальність"
 #: classes/WP_Piwik/Widget/SystemDetails.php:35
 #: classes/WP_Piwik/Widget/Systems.php:35
 msgid "Percent"
-msgstr "Відсотків"
+msgstr "Százalék"
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:66
 #: classes/WP_Piwik/Widget/Browsers.php:66
@@ -1044,204 +1043,204 @@ msgstr "Відсотків"
 #: classes/WP_Piwik/Widget/SystemDetails.php:62
 #: classes/WP_Piwik/Widget/Systems.php:62
 msgid "Others"
-msgstr ""
+msgstr "Egyebek"
 
 #: classes/WP_Piwik/Widget/Browsers.php:18
 msgid "Browsers"
-msgstr ""
+msgstr "Böngészők"
 
 #: classes/WP_Piwik/Widget/Chart.php:19
 #: classes/WP_Piwik/Widget/Overview.php:41 classes/WP_Piwik/Widget/Post.php:37
 #: classes/WP_Piwik/Widget/Visitors.php:17
 msgid "Visitors"
-msgstr "Відвідувачів"
+msgstr "Látogatók"
 
 #: classes/WP_Piwik/Widget/Chart.php:71
 msgid ""
 "The graph contains the values shown in the table below (visitors / unique / "
 "bounces). The red line show a linear trendline (unique)."
-msgstr ""
+msgstr "A grafikon tartalmazza az értékeket, melyek láthatóak a lentebbi táblázatban (látogatók / egyedi / visszapattanások). A vörös vonal mutatja a lineáris trendvonalat (egyedi)."
 
 #: classes/WP_Piwik/Widget/Keywords.php:16
 msgid "Keywords"
-msgstr "Ключові слова"
+msgstr "Kulcsszavak"
 
 #: classes/WP_Piwik/Widget/Noresult.php:16
 #: classes/WP_Piwik/Widget/Search.php:16
 msgid "Site Search"
-msgstr ""
+msgstr "Oldal keresés"
 
 #: classes/WP_Piwik/Widget/Noresult.php:25
 #: classes/WP_Piwik/Widget/Search.php:25
 msgid "Keyword"
-msgstr "Ключове слово"
+msgstr "Kulcsszó"
 
 #: classes/WP_Piwik/Widget/Noresult.php:25
 #: classes/WP_Piwik/Widget/Search.php:25
 msgid "Requests"
-msgstr ""
+msgstr "Kérések"
 
 #: classes/WP_Piwik/Widget/Noresult.php:25
 #: classes/WP_Piwik/Widget/Search.php:25
 #: classes/WP_Piwik/Widget/Visitors.php:57
 msgid "Bounced"
-msgstr "Відмов"
+msgstr "Visszapattant"
 
 #: classes/WP_Piwik/Widget/Overview.php:17 classes/WP_Piwik/Widget/Post.php:18
 msgid "Overview"
-msgstr "Опис"
+msgstr "Áttekintés"
 
 #: classes/WP_Piwik/Widget/Overview.php:42 classes/WP_Piwik/Widget/Post.php:38
 msgid "Unique visitors"
-msgstr "Унікальних відвідувачів"
+msgstr "Egyedi látogatók"
 
 #: classes/WP_Piwik/Widget/Overview.php:43 classes/WP_Piwik/Widget/Post.php:39
 msgid "Page views"
-msgstr "Переглядів сторінки"
+msgstr "Oldal megtekintések"
 
 #: classes/WP_Piwik/Widget/Overview.php:44 classes/WP_Piwik/Widget/Post.php:40
 msgid "Total time spent"
-msgstr ""
+msgstr "Eltöltött idő"
 
 #: classes/WP_Piwik/Widget/Overview.php:45 classes/WP_Piwik/Widget/Post.php:42
 msgid "Bounce count"
-msgstr "Кількість відмов"
+msgstr "Visszapattanások száma"
 
 #: classes/WP_Piwik/Widget/Overview.php:48 classes/WP_Piwik/Widget/Post.php:41
 msgid "Time/visit"
-msgstr ""
+msgstr "Idő/látogatás"
 
 #: classes/WP_Piwik/Widget/Overview.php:48
 msgid "Max. page views in one visit"
-msgstr "Макс. Сторінок переглянуто за один візит"
+msgstr "Max. oldal megtekintések egy látogatás alatt"
 
 #: classes/WP_Piwik/Widget/Overview.php:49 classes/WP_Piwik/Widget/Post.php:46
 msgid "Shortcut"
-msgstr ""
+msgstr "Parancsikon"
 
 #: classes/WP_Piwik/Widget/Pages.php:16
 msgid "Pages"
-msgstr ""
+msgstr "Oldalak"
 
 #: classes/WP_Piwik/Widget/Plugins.php:16
 msgid "Plugins"
-msgstr ""
+msgstr "Kiegészítők"
 
 #: classes/WP_Piwik/Widget/Plugins.php:25
 msgid "Plugin"
-msgstr ""
+msgstr "Kiegészítő"
 
 #: classes/WP_Piwik/Widget/Plugins.php:25
 #: classes/WP_Piwik/Widget/Visitors.php:57 classes/WP_Piwik/Widget.php:102
 msgid "Visits"
-msgstr "Візитів"
+msgstr "Látogatások"
 
 #: classes/WP_Piwik/Widget/Post.php:43
 msgid "Min. generation time"
-msgstr ""
+msgstr "Min. oldalgenerációs idő"
 
 #: classes/WP_Piwik/Widget/Post.php:44
 msgid "Max. generation time"
-msgstr ""
+msgstr "Max. oldalgenerációs idő"
 
 #: classes/WP_Piwik/Widget/Referrers.php:16
 msgid "Referrers"
-msgstr ""
+msgstr "Hivatkozások"
 
 #: classes/WP_Piwik/Widget/Screens.php:16
 msgid "Resolutions"
-msgstr ""
+msgstr "Felbontások"
 
 #: classes/WP_Piwik/Widget/Screens.php:37
 msgid "Resolution"
-msgstr "Розширення"
+msgstr "Felbontás"
 
 #: classes/WP_Piwik/Widget/Seo.php:13
 msgid "SEO"
-msgstr ""
+msgstr "SEO"
 
 #: classes/WP_Piwik/Widget/SystemDetails.php:14
 msgid "Operation System Details"
-msgstr ""
+msgstr "Operációs rendszer adatok"
 
 #: classes/WP_Piwik/Widget/SystemDetails.php:35
 #: classes/WP_Piwik/Widget/Systems.php:35
 msgid "Operation System"
-msgstr ""
+msgstr "Operációs rendszer"
 
 #: classes/WP_Piwik/Widget/Systems.php:14
 msgid "Operation Systems"
-msgstr ""
+msgstr "Operációs rendszerek"
 
 #: classes/WP_Piwik/Widget/Visitors.php:57
 msgid "Date"
-msgstr "Дата"
+msgstr "Dátum"
 
 #: classes/WP_Piwik/Widget/Visitors.php:57
 msgid "Page Views"
-msgstr ""
+msgstr "Oldal megtekintések"
 
 #: classes/WP_Piwik/Widget.php:104
 msgid "Hits"
-msgstr ""
+msgstr "Kattintások"
 
 #: classes/WP_Piwik/Widget.php:106
 msgid "Actions"
-msgstr ""
+msgstr "Akciók"
 
 #: classes/WP_Piwik/Widget.php:162
 msgid "No data available."
-msgstr ""
+msgstr "Nincs elérhető adat."
 
 #: classes/WP_Piwik/Widget.php:293
 msgid "week"
-msgstr ""
+msgstr "hét"
 
 #: classes/WP_Piwik.php:193
 msgid "%s %s installed."
-msgstr ""
+msgstr "%s %s telepítve."
 
 #: classes/WP_Piwik.php:193
 msgid "Next you should connect to Piwik"
-msgstr ""
+msgstr "Most kapcsolódnod kell a Piwik-hez"
 
 #: classes/WP_Piwik.php:227
 msgid "%s updated to %s."
-msgstr ""
+msgstr "%s frissítve erre: %s."
 
 #: classes/WP_Piwik.php:227
 msgid "Please validate your configuration"
-msgstr ""
+msgstr "Kérlek ellenőrizd a konfigurációd"
 
 #: classes/WP_Piwik.php:259 classes/WP_Piwik.php:481
 msgid "Settings"
-msgstr "Настройки"
+msgstr "Beállítások"
 
 #: classes/WP_Piwik.php:262
 msgid "Important"
-msgstr ""
+msgstr "Fontos"
 
 #: classes/WP_Piwik.php:343 classes/WP_Piwik.php:365
 msgid "Piwik Statistics"
-msgstr "Piwik статистика"
+msgstr "Piwik statisztikák"
 
 #: classes/WP_Piwik.php:453
 msgid "Configure WP-Piwik"
-msgstr ""
+msgstr "WP-Piwik beállításai"
 
 #: classes/WP_Piwik.php:923
 msgid "An error occured"
-msgstr "Сталася помилка"
+msgstr "Egy hiba adódott"
 
 #: classes/WP_Piwik.php:1191
 msgid "Cheatin&#8217; uh?"
-msgstr ""
+msgstr "Csalsz &#8217;e, mi?"
 
 #: wp-piwik.php:60
 msgid ""
 "WP-Piwik requires at least PHP 5.3. You are using the deprecated version %s."
 " Please update PHP to use WP-Piwik."
-msgstr ""
+msgstr "A WP-Piwik megkívánja legalább a PHP 5.3-at. Te egy korábbi %s verziót használsz. Kérlek frissítsd a PHP-t, hogy használni tudd a WP-Piwik-et."
 
 #. Plugin Name of the plugin/theme
 msgid "WP-Piwik"
@@ -1249,13 +1248,13 @@ msgstr "WP-Piwik"
 
 #. Plugin URI of the plugin/theme
 msgid "http://wordpress.org/extend/plugins/wp-piwik/"
-msgstr ""
+msgstr "http://wordpress.org/extend/plugins/wp-piwik/"
 
 #. Description of the plugin/theme
 msgid ""
 "Adds Piwik stats to your dashboard menu and Piwik code to your wordpress "
 "header."
-msgstr ""
+msgstr "Hozzáadja a Piwik statisztikákat a vezérlőpult menüjébe és a Piwik kódot a WordPress fejlécébe."
 
 #. Author of the plugin/theme
 msgid "Andr&eacute; Br&auml;kling"

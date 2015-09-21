@@ -1,8 +1,7 @@
 # Copyright (C) 2015 WP-Piwik
 # This file is distributed under the same license as the WP-Piwik package.
 # Translators:
-# Andre Braekling <webmaster@braekling.de>, 2009
-# FatCow http://www.fatcow.com, 2009
+# michel.weimerskirch <michel@weimerskirch.net>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
@@ -10,36 +9,36 @@ msgstr ""
 "POT-Creation-Date: 2015-07-22 10:25:29+00:00\n"
 "PO-Revision-Date: 2015-09-21 08:29+0000\n"
 "Last-Translator: Stefan Giehl <stefan@piwik.org>\n"
-"Language-Team: Ukrainian (Ukraine) (http://www.transifex.com/piwik/wp-piwik/language/uk_UA/)\n"
+"Language-Team: Luxembourgish (http://www.transifex.com/piwik/wp-piwik/language/lb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: uk_UA\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: lb\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: classes/WP_Piwik/Admin/Settings.php:24
 msgid "Reload"
-msgstr ""
+msgstr "Nei lueden"
 
 #: classes/WP_Piwik/Admin/Settings.php:27
 msgid "Changes saved."
-msgstr ""
+msgstr "Ännerunge gespäichert."
 
 #: classes/WP_Piwik/Admin/Settings.php:45
 msgid "Save Changes"
-msgstr ""
+msgstr "Ännerunge späicheren"
 
 #: classes/WP_Piwik/Admin/Settings.php:46
 msgid "Thanks for using WP-Piwik!"
-msgstr ""
+msgstr "Merci dass du WP-Piwik benotz!"
 
 #: classes/WP_Piwik/Admin/Settings.php:50
 msgid "WP-Piwik %s is successfully connected to Piwik %s."
-msgstr ""
+msgstr "WP-Piwik %s ass erfollegräich mat Piwik %s verbonnen."
 
 #: classes/WP_Piwik/Admin/Settings.php:50
 msgid "You are running WordPress %s."
-msgstr ""
+msgstr "Du benotz WordPress %s."
 
 #: classes/WP_Piwik/Admin/Settings.php:50
 msgid ""
@@ -61,11 +60,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:60
 msgid "Connect to Piwik"
-msgstr ""
+msgstr "Mat Piwik verbannen"
 
 #: classes/WP_Piwik/Admin/Settings.php:65
 msgid "Show Statistics"
-msgstr ""
+msgstr "Statistiken uweisen"
 
 #: classes/WP_Piwik/Admin/Settings.php:69
 msgid "Enable Tracking"
@@ -77,7 +76,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:78 classes/WP_Piwik.php:923
 msgid "Support"
-msgstr ""
+msgstr "Ënnerstëtzung"
 
 #: classes/WP_Piwik/Admin/Settings.php:82
 msgid "Credits"
@@ -93,15 +92,15 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:95
 msgid "Self-hosted"
-msgstr ""
+msgstr "Selwer gehost"
 
 #: classes/WP_Piwik/Admin/Settings.php:95
 msgid "or"
-msgstr ""
+msgstr "oder"
 
 #: classes/WP_Piwik/Admin/Settings.php:95
 msgid "Cloud-hosted"
-msgstr ""
+msgstr "An der Cloud gehost"
 
 #: classes/WP_Piwik/Admin/Settings.php:98
 msgid ""
@@ -112,7 +111,7 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:98
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:30
 msgid "More information"
-msgstr ""
+msgstr "Méi Informatiounen"
 
 #: classes/WP_Piwik/Admin/Settings.php:100
 msgid "You can choose between three connection methods:"
@@ -153,7 +152,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:101
 msgid "Piwik Mode"
-msgstr ""
+msgstr "Piwik-Modus"
 
 #: classes/WP_Piwik/Admin/Settings.php:102
 msgid "Disabled (WP-Piwik will not connect to Piwik)"
@@ -161,7 +160,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:108
 msgid "Piwik URL"
-msgstr "Piwik URL"
+msgstr "Piwik-Adress"
 
 #: classes/WP_Piwik/Admin/Settings.php:108
 msgid ""
@@ -189,7 +188,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid "Auth token"
-msgstr "Авто token"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid ""
@@ -203,7 +202,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:116
 msgid "Auto config"
-msgstr ""
+msgstr "Automatesch konfiguréieren"
 
 #: classes/WP_Piwik/Admin/Settings.php:116
 msgid ""
@@ -226,28 +225,28 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:141
 #: classes/WP_Piwik/Admin/Settings.php:154
 msgid "Today"
-msgstr ""
+msgstr "Haut"
 
 #: classes/WP_Piwik/Admin/Settings.php:142
 #: classes/WP_Piwik/Admin/Settings.php:153
 msgid "Yesterday"
-msgstr ""
+msgstr "Gëschter"
 
 #: classes/WP_Piwik/Admin/Settings.php:143
 msgid "Current month"
-msgstr ""
+msgstr "Aktuelle Mount"
 
 #: classes/WP_Piwik/Admin/Settings.php:144
 msgid "Last month"
-msgstr ""
+msgstr "Leschte Mount"
 
 #: classes/WP_Piwik/Admin/Settings.php:145
 msgid "Current week"
-msgstr ""
+msgstr "Aktuell Woch"
 
 #: classes/WP_Piwik/Admin/Settings.php:146
 msgid "Last week"
-msgstr ""
+msgstr "Lescht Woch"
 
 #: classes/WP_Piwik/Admin/Settings.php:147
 msgid "Default date shown on statistics page."
@@ -264,11 +263,11 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:149
 #: classes/WP_Piwik/Admin/Settings.php:160
 msgid "Slow!"
-msgstr ""
+msgstr "Lues!"
 
 #: classes/WP_Piwik/Admin/Settings.php:151
 msgid "Dashboard overview"
-msgstr ""
+msgstr "Iwwersiicht um Tableau de Bord"
 
 #: classes/WP_Piwik/Admin/Settings.php:152
 #: classes/WP_Piwik/Admin/Settings.php:190
@@ -276,11 +275,11 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:213
 #: classes/WP_Piwik/Admin/Settings.php:304
 msgid "Disabled"
-msgstr ""
+msgstr "DeaktivéIert"
 
 #: classes/WP_Piwik/Admin/Settings.php:155
 msgid "Last 30 days"
-msgstr ""
+msgstr "Lescht 30 Deeg"
 
 #: classes/WP_Piwik/Admin/Settings.php:156
 msgid "Enable WP-Piwik dashboard widget &quot;Overview&quot;."
@@ -388,7 +387,7 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:190
 #: classes/WP_Piwik/Admin/Settings.php:195
 msgid "Use proxy script"
-msgstr ""
+msgstr "Proxy-Skript benotzen"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid "Use this tracking code to not reveal the Piwik server URL."
@@ -403,7 +402,7 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:190
 #: classes/WP_Piwik/Admin/Settings.php:196
 msgid "Enter manually"
-msgstr ""
+msgstr "Manuell aginn"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid ""
@@ -430,11 +429,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:202
 msgid "Footer"
-msgstr ""
+msgstr "Säitefouss"
 
 #: classes/WP_Piwik/Admin/Settings.php:203
 msgid "Header"
-msgstr ""
+msgstr "Säitekapp"
 
 #: classes/WP_Piwik/Admin/Settings.php:204
 msgid ""
@@ -443,7 +442,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:206
 msgid "Noscript code"
-msgstr ""
+msgstr "\"<noscript>\"-Code"
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 msgid "Add &lt;noscript&gt;"
@@ -496,7 +495,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:218
 msgid "Track search"
-msgstr ""
+msgstr "Sichufroen tracken"
 
 #: classes/WP_Piwik/Admin/Settings.php:218
 msgid "Use Piwik's advanced Site Search Analytics feature."
@@ -504,7 +503,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:220
 msgid "Track 404"
-msgstr ""
+msgstr "404 tracken"
 
 #: classes/WP_Piwik/Admin/Settings.php:220
 msgid ""
@@ -539,15 +538,15 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:228
 msgid "Disable cookies"
-msgstr ""
+msgstr "Cookien deaktivéieren"
 
 #: classes/WP_Piwik/Admin/Settings.php:228
 msgid "Disable all tracking cookies for a visitor."
-msgstr ""
+msgstr "All d'Cookien fir e Benotzer deaktivéieren."
 
 #: classes/WP_Piwik/Admin/Settings.php:230
 msgid "Limit cookie lifetime"
-msgstr ""
+msgstr "Cookie-Liewenszäit limitéieren"
 
 #: classes/WP_Piwik/Admin/Settings.php:230
 msgid ""
@@ -579,7 +578,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:241
 msgid "Tracking filter"
-msgstr "Слідкуючий фільтр"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:245
 msgid "Choose users by user role you do <strong>not</strong> want to track."
@@ -642,25 +641,25 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:264
 msgid "Enable cache"
-msgstr ""
+msgstr "Tëschespäicher aktivéieren"
 
 #: classes/WP_Piwik/Admin/Settings.php:264
 msgid "Cache API calls, which not contain today's values, for a week."
-msgstr ""
+msgstr "API-Opriff, déi keng Wäerter vun haut enthalen, fir eng Woch tëschespäicheren."
 
 #: classes/WP_Piwik/Admin/Settings.php:267
 msgid "HTTP connection via"
-msgstr ""
+msgstr "HTTP-Connectioun iwwer"
 
 #: classes/WP_Piwik/Admin/Settings.php:268
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "cURL"
-msgstr ""
+msgstr "cURL"
 
 #: classes/WP_Piwik/Admin/Settings.php:269
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "fopen"
-msgstr ""
+msgstr "fopen"
 
 #: classes/WP_Piwik/Admin/Settings.php:270
 msgid ""
@@ -670,17 +669,17 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:272
 msgid "HTTP method"
-msgstr ""
+msgstr "HTTP-Method"
 
 #: classes/WP_Piwik/Admin/Settings.php:273
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "POST"
-msgstr ""
+msgstr "POST"
 
 #: classes/WP_Piwik/Admin/Settings.php:274
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "GET"
-msgstr ""
+msgstr "GET"
 
 #: classes/WP_Piwik/Admin/Settings.php:275
 msgid "Choose whether WP-Piwik should use POST or GET in HTTP or Pro mode."
@@ -688,15 +687,15 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:277
 msgid "Disable time limit"
-msgstr ""
+msgstr "Zäitlimit deaktivéieren"
 
 #: classes/WP_Piwik/Admin/Settings.php:277
 msgid "Use set_time_limit(0) if stats page causes a time out."
-msgstr ""
+msgstr "D'Funktioun \"set_time_limit(0)\" benotze, wann d'Statistik-Säit d'Zäit iwwerschreit."
 
 #: classes/WP_Piwik/Admin/Settings.php:279
 msgid "Connection timeout"
-msgstr ""
+msgstr "Zäitiwwerschreidung bei der Connectioun"
 
 #: classes/WP_Piwik/Admin/Settings.php:281
 msgid "Disable SSL peer verification"
@@ -704,7 +703,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:281
 msgid "not recommended"
-msgstr ""
+msgstr "net recommendéiert"
 
 #: classes/WP_Piwik/Admin/Settings.php:283
 msgid "User agent"
@@ -732,11 +731,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:291
 msgid "CDN URL"
-msgstr ""
+msgstr "CDN-URL"
 
 #: classes/WP_Piwik/Admin/Settings.php:293
 msgid "CDN URL (SSL)"
-msgstr ""
+msgstr "CDN-URL (SSL)"
 
 #: classes/WP_Piwik/Admin/Settings.php:295
 msgid "Force Piwik to use a specific protocol"
@@ -744,15 +743,15 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:296
 msgid "Disabled (default)"
-msgstr ""
+msgstr "Deaktivéiert (standard)"
 
 #: classes/WP_Piwik/Admin/Settings.php:297
 msgid "http"
-msgstr ""
+msgstr "http"
 
 #: classes/WP_Piwik/Admin/Settings.php:298
 msgid "https (SSL)"
-msgstr ""
+msgstr "https (SSL)"
 
 #: classes/WP_Piwik/Admin/Settings.php:299
 msgid ""
@@ -778,7 +777,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:466
 msgid "Donate"
-msgstr ""
+msgstr "En Don maachen"
 
 #: classes/WP_Piwik/Admin/Settings.php:468
 msgid "If you like WP-Piwik, you can support its development by a donation:"
@@ -786,7 +785,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:506
 msgid "My Amazon.de wishlist"
-msgstr ""
+msgstr "Meng Amazon.de-Wonschlëscht"
 
 #: classes/WP_Piwik/Admin/Settings.php:509
 #: classes/WP_Piwik/Admin/Settings.php:556
@@ -823,11 +822,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:544
 msgid "Thank you very much"
-msgstr ""
+msgstr "E grousse Merci"
 
 #: classes/WP_Piwik/Admin/Settings.php:544
 msgid "for your translation work"
-msgstr ""
+msgstr "fir deng Iwwersetzungsaarbecht"
 
 #: classes/WP_Piwik/Admin/Settings.php:545
 msgid ""
@@ -862,28 +861,28 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:562
 msgid "cURL is"
-msgstr ""
+msgstr "cURL ass"
 
 #: classes/WP_Piwik/Admin/Settings.php:563
 #: classes/WP_Piwik/Admin/Settings.php:568
 msgid "not"
-msgstr ""
+msgstr "net"
 
 #: classes/WP_Piwik/Admin/Settings.php:564
 msgid "available"
-msgstr ""
+msgstr "disponibel"
 
 #: classes/WP_Piwik/Admin/Settings.php:567
 msgid "allow_url_fopen is"
-msgstr ""
+msgstr "allow_url_fopen ass"
 
 #: classes/WP_Piwik/Admin/Settings.php:569
 msgid "enabled"
-msgstr ""
+msgstr "aktivéiert"
 
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "is used."
-msgstr ""
+msgstr "gëtt benotzt."
 
 #: classes/WP_Piwik/Admin/Settings.php:573
 msgid "Determined Piwik base URL is"
@@ -891,7 +890,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:577
 msgid "Tools"
-msgstr ""
+msgstr "Geschir"
 
 #: classes/WP_Piwik/Admin/Settings.php:579
 msgid "Run testscript"
@@ -903,7 +902,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:581
 msgid "Clear cache"
-msgstr ""
+msgstr "Tëschespäicher eidel maachen"
 
 #: classes/WP_Piwik/Admin/Settings.php:582
 msgid "Are you sure you want to clear all settings?"
@@ -923,7 +922,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:651
 msgid "Cache cleared."
-msgstr ""
+msgstr "Tëschespäicher eidelgemaach."
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:17
 msgid "site"
@@ -939,27 +938,27 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:29
 msgid "Blog ID"
-msgstr ""
+msgstr "Blog-ID"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:30
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:31
 msgid "URL"
-msgstr ""
+msgstr "Adress"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:32
 msgid "Site ID (Piwik)"
-msgstr ""
+msgstr "ID vum Site (Piwik)"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:79
 msgid "Site not created yet."
-msgstr ""
+msgstr "Site nach net ugeluecht."
 
 #: classes/WP_Piwik/Admin/Statistics.php:12
 msgid "Statistics"
-msgstr ""
+msgstr "Statistiken"
 
 #: classes/WP_Piwik/Admin/Statistics.php:20
 msgid "Currently shown stats:"
@@ -987,11 +986,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:21
 msgid "Name"
-msgstr ""
+msgstr "Numm"
 
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:21
 msgid "Value"
-msgstr ""
+msgstr "Wäert"
 
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:30
 msgid "Set custom variables for a page view"
@@ -1013,12 +1012,12 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Systems.php:33
 #: classes/WP_Piwik/Widget/Visitors.php:35 classes/WP_Piwik/Widget.php:91
 msgid "Piwik error"
-msgstr ""
+msgstr "Piwik-Feeler"
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:39
 #: classes/WP_Piwik/Widget/Browsers.php:39
 msgid "Browser"
-msgstr "Браузер"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:39
 #: classes/WP_Piwik/Widget/Browsers.php:39
@@ -1027,7 +1026,7 @@ msgstr "Браузер"
 #: classes/WP_Piwik/Widget/Systems.php:35
 #: classes/WP_Piwik/Widget/Visitors.php:57 classes/WP_Piwik/Widget.php:100
 msgid "Unique"
-msgstr "Унікальність"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:39
 #: classes/WP_Piwik/Widget/Browsers.php:39
@@ -1036,7 +1035,7 @@ msgstr "Унікальність"
 #: classes/WP_Piwik/Widget/SystemDetails.php:35
 #: classes/WP_Piwik/Widget/Systems.php:35
 msgid "Percent"
-msgstr "Відсотків"
+msgstr "Prozent"
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:66
 #: classes/WP_Piwik/Widget/Browsers.php:66
@@ -1044,17 +1043,17 @@ msgstr "Відсотків"
 #: classes/WP_Piwik/Widget/SystemDetails.php:62
 #: classes/WP_Piwik/Widget/Systems.php:62
 msgid "Others"
-msgstr ""
+msgstr "Aner"
 
 #: classes/WP_Piwik/Widget/Browsers.php:18
 msgid "Browsers"
-msgstr ""
+msgstr "Browseren"
 
 #: classes/WP_Piwik/Widget/Chart.php:19
 #: classes/WP_Piwik/Widget/Overview.php:41 classes/WP_Piwik/Widget/Post.php:37
 #: classes/WP_Piwik/Widget/Visitors.php:17
 msgid "Visitors"
-msgstr "Відвідувачів"
+msgstr "Visiteuren"
 
 #: classes/WP_Piwik/Widget/Chart.php:71
 msgid ""
@@ -1064,7 +1063,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget/Keywords.php:16
 msgid "Keywords"
-msgstr "Ключові слова"
+msgstr "Schlësselwierder"
 
 #: classes/WP_Piwik/Widget/Noresult.php:16
 #: classes/WP_Piwik/Widget/Search.php:16
@@ -1074,7 +1073,7 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Noresult.php:25
 #: classes/WP_Piwik/Widget/Search.php:25
 msgid "Keyword"
-msgstr "Ключове слово"
+msgstr "Schlësselwuert"
 
 #: classes/WP_Piwik/Widget/Noresult.php:25
 #: classes/WP_Piwik/Widget/Search.php:25
@@ -1085,19 +1084,19 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Search.php:25
 #: classes/WP_Piwik/Widget/Visitors.php:57
 msgid "Bounced"
-msgstr "Відмов"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:17 classes/WP_Piwik/Widget/Post.php:18
 msgid "Overview"
-msgstr "Опис"
+msgstr "Iwwersiicht"
 
 #: classes/WP_Piwik/Widget/Overview.php:42 classes/WP_Piwik/Widget/Post.php:38
 msgid "Unique visitors"
-msgstr "Унікальних відвідувачів"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:43 classes/WP_Piwik/Widget/Post.php:39
 msgid "Page views"
-msgstr "Переглядів сторінки"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:44 classes/WP_Piwik/Widget/Post.php:40
 msgid "Total time spent"
@@ -1105,7 +1104,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:45 classes/WP_Piwik/Widget/Post.php:42
 msgid "Bounce count"
-msgstr "Кількість відмов"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:48 classes/WP_Piwik/Widget/Post.php:41
 msgid "Time/visit"
@@ -1113,11 +1112,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:48
 msgid "Max. page views in one visit"
-msgstr "Макс. Сторінок переглянуто за один візит"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:49 classes/WP_Piwik/Widget/Post.php:46
 msgid "Shortcut"
-msgstr ""
+msgstr "Ofkierzung"
 
 #: classes/WP_Piwik/Widget/Pages.php:16
 msgid "Pages"
@@ -1134,7 +1133,7 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Plugins.php:25
 #: classes/WP_Piwik/Widget/Visitors.php:57 classes/WP_Piwik/Widget.php:102
 msgid "Visits"
-msgstr "Візитів"
+msgstr "Visitten"
 
 #: classes/WP_Piwik/Widget/Post.php:43
 msgid "Min. generation time"
@@ -1150,56 +1149,56 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget/Screens.php:16
 msgid "Resolutions"
-msgstr ""
+msgstr "Opléisungen"
 
 #: classes/WP_Piwik/Widget/Screens.php:37
 msgid "Resolution"
-msgstr "Розширення"
+msgstr "Opléisung"
 
 #: classes/WP_Piwik/Widget/Seo.php:13
 msgid "SEO"
-msgstr ""
+msgstr "Sichmaschinnenoptiméierung"
 
 #: classes/WP_Piwik/Widget/SystemDetails.php:14
 msgid "Operation System Details"
-msgstr ""
+msgstr "Betribssystem-Detailer"
 
 #: classes/WP_Piwik/Widget/SystemDetails.php:35
 #: classes/WP_Piwik/Widget/Systems.php:35
 msgid "Operation System"
-msgstr ""
+msgstr "Betribssystem"
 
 #: classes/WP_Piwik/Widget/Systems.php:14
 msgid "Operation Systems"
-msgstr ""
+msgstr "Betribssystemer"
 
 #: classes/WP_Piwik/Widget/Visitors.php:57
 msgid "Date"
-msgstr "Дата"
+msgstr "Datum"
 
 #: classes/WP_Piwik/Widget/Visitors.php:57
 msgid "Page Views"
-msgstr ""
+msgstr "Gekuckte Säiten"
 
 #: classes/WP_Piwik/Widget.php:104
 msgid "Hits"
-msgstr ""
+msgstr "Opriff"
 
 #: classes/WP_Piwik/Widget.php:106
 msgid "Actions"
-msgstr ""
+msgstr "Aktiounen"
 
 #: classes/WP_Piwik/Widget.php:162
 msgid "No data available."
-msgstr ""
+msgstr "Keng Daten disponibel."
 
 #: classes/WP_Piwik/Widget.php:293
 msgid "week"
-msgstr ""
+msgstr "Woch"
 
 #: classes/WP_Piwik.php:193
 msgid "%s %s installed."
-msgstr ""
+msgstr "%s %s installéiert."
 
 #: classes/WP_Piwik.php:193
 msgid "Next you should connect to Piwik"
@@ -1215,27 +1214,27 @@ msgstr ""
 
 #: classes/WP_Piwik.php:259 classes/WP_Piwik.php:481
 msgid "Settings"
-msgstr "Настройки"
+msgstr "Astellungen"
 
 #: classes/WP_Piwik.php:262
 msgid "Important"
-msgstr ""
+msgstr "Wichteg"
 
 #: classes/WP_Piwik.php:343 classes/WP_Piwik.php:365
 msgid "Piwik Statistics"
-msgstr "Piwik статистика"
+msgstr "Piwik-Statistiken"
 
 #: classes/WP_Piwik.php:453
 msgid "Configure WP-Piwik"
-msgstr ""
+msgstr "WP-Piwik konfiguréieren"
 
 #: classes/WP_Piwik.php:923
 msgid "An error occured"
-msgstr "Сталася помилка"
+msgstr "E Feeler ass opgetrueden"
 
 #: classes/WP_Piwik.php:1191
 msgid "Cheatin&#8217; uh?"
-msgstr ""
+msgstr "Du fuddels, hë?"
 
 #: wp-piwik.php:60
 msgid ""
@@ -1249,7 +1248,7 @@ msgstr "WP-Piwik"
 
 #. Plugin URI of the plugin/theme
 msgid "http://wordpress.org/extend/plugins/wp-piwik/"
-msgstr ""
+msgstr "http://wordpress.org/extend/plugins/wp-piwik/"
 
 #. Description of the plugin/theme
 msgid ""

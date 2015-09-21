@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2015-07-22 10:25:29+00:00\n"
-"PO-Revision-Date: 2015-07-22 10:33+0000\n"
-"Last-Translator: André Bräkling\n"
-"Language-Team: Dutch (Netherlands) (http://www.transifex.com/projects/p/wp-piwik/language/nl_NL/)\n"
+"PO-Revision-Date: 2015-09-21 08:29+0000\n"
+"Last-Translator: Stefan Giehl <stefan@piwik.org>\n"
+"Language-Team: Dutch (Netherlands) (http://www.transifex.com/piwik/wp-piwik/language/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -624,7 +624,7 @@ msgstr "Sleutelwoord: post naam."
 
 #: classes/WP_Piwik/Admin/Settings.php:257
 msgid "Enable heartbeat timer"
-msgstr ""
+msgstr "Schakel heartbeat timer in"
 
 #: classes/WP_Piwik/Admin/Settings.php:257
 msgid ""
@@ -859,7 +859,7 @@ msgstr "Debugging"
 msgid ""
 "Either allow_url_fopen has to be enabled <em>or</em> cURL has to be "
 "available:"
-msgstr ""
+msgstr "Ofwel moet allow_url_open ingeschakeld zijn <em>of</em> cURL moet beschikbaar zijn:"
 
 #: classes/WP_Piwik/Admin/Settings.php:562
 msgid "cURL is"
@@ -888,7 +888,7 @@ msgstr "is gebruikt"
 
 #: classes/WP_Piwik/Admin/Settings.php:573
 msgid "Determined Piwik base URL is"
-msgstr ""
+msgstr "De vastgestelde Piwik root URL is"
 
 #: classes/WP_Piwik/Admin/Settings.php:577
 msgid "Tools"

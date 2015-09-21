@@ -1,8 +1,7 @@
 # Copyright (C) 2015 WP-Piwik
 # This file is distributed under the same license as the WP-Piwik package.
 # Translators:
-# Andre Braekling <webmaster@braekling.de>, 2009
-# FatCow http://www.fatcow.com, 2009
+# AnandVivek, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
@@ -10,42 +9,42 @@ msgstr ""
 "POT-Creation-Date: 2015-07-22 10:25:29+00:00\n"
 "PO-Revision-Date: 2015-09-21 08:29+0000\n"
 "Last-Translator: Stefan Giehl <stefan@piwik.org>\n"
-"Language-Team: Ukrainian (Ukraine) (http://www.transifex.com/piwik/wp-piwik/language/uk_UA/)\n"
+"Language-Team: Hindi (http://www.transifex.com/piwik/wp-piwik/language/hi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: uk_UA\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: hi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: classes/WP_Piwik/Admin/Settings.php:24
 msgid "Reload"
-msgstr ""
+msgstr "पुन: लोड"
 
 #: classes/WP_Piwik/Admin/Settings.php:27
 msgid "Changes saved."
-msgstr ""
+msgstr "बदलाव सहेजा गया।"
 
 #: classes/WP_Piwik/Admin/Settings.php:45
 msgid "Save Changes"
-msgstr ""
+msgstr "बदलाव सहेजें"
 
 #: classes/WP_Piwik/Admin/Settings.php:46
 msgid "Thanks for using WP-Piwik!"
-msgstr ""
+msgstr "WP-Piwik का उपयोग करने हेतु धन्यवाद!"
 
 #: classes/WP_Piwik/Admin/Settings.php:50
 msgid "WP-Piwik %s is successfully connected to Piwik %s."
-msgstr ""
+msgstr "WP-Piwik %s सफलतापूर्वक Piwik %s से जुड़ गया है।"
 
 #: classes/WP_Piwik/Admin/Settings.php:50
 msgid "You are running WordPress %s."
-msgstr ""
+msgstr "आप वर्डप्रैस %s चला रहे हैं।"
 
 #: classes/WP_Piwik/Admin/Settings.php:50
 msgid ""
 "You are running a WordPress %s blog network (WPMU). WP-Piwik will handle "
 "your sites as different websites."
-msgstr ""
+msgstr "आप अभी वर्डप्रैस %s ब्लॉग (डबल्यूपीएमयू) चला रहे हैं। WP-Piwik आपके साइट को एक अलग वैबसाइट की तरह चलाएगा।"
 
 #: classes/WP_Piwik/Admin/Settings.php:53
 msgid ""
@@ -61,27 +60,27 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:60
 msgid "Connect to Piwik"
-msgstr ""
+msgstr "Piwik से जोड़ें"
 
 #: classes/WP_Piwik/Admin/Settings.php:65
 msgid "Show Statistics"
-msgstr ""
+msgstr "आँकड़ा दिखाएँ"
 
 #: classes/WP_Piwik/Admin/Settings.php:69
 msgid "Enable Tracking"
-msgstr ""
+msgstr "ट्रैकिंग सक्षम"
 
 #: classes/WP_Piwik/Admin/Settings.php:74
 msgid "Expert Settings"
-msgstr ""
+msgstr "विशेषज्ञ सेटिंग्स"
 
 #: classes/WP_Piwik/Admin/Settings.php:78 classes/WP_Piwik.php:923
 msgid "Support"
-msgstr ""
+msgstr "सहयोग"
 
 #: classes/WP_Piwik/Admin/Settings.php:82
 msgid "Credits"
-msgstr ""
+msgstr "श्रेय"
 
 #: classes/WP_Piwik/Admin/Settings.php:95
 msgid ""
@@ -89,7 +88,7 @@ msgid ""
 "WordPress admin dashboard and to add and configure your Piwik tracking code."
 " To use this you will need your own Piwik instance. If you do not already "
 "have a Piwik setup, you have two simple options: use either"
-msgstr ""
+msgstr "WP-Piwik वर्डप्रैस का एक प्लगइन है जो Piwik के आँकड़ों को वर्डप्रैस के प्रबंधक डैशबोर्ड में दिखाता है। इसके उपयोग के लिए आपको अपना Piwik की आवश्यकता होगी। यदि आपके पास Piwik का सेटअप नहीं है तो आप इसे दो साधारण तरीके से प्राप्त कर सकते हैं।"
 
 #: classes/WP_Piwik/Admin/Settings.php:95
 msgid "Self-hosted"
@@ -97,7 +96,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:95
 msgid "or"
-msgstr ""
+msgstr "या"
 
 #: classes/WP_Piwik/Admin/Settings.php:95
 msgid "Cloud-hosted"
@@ -112,11 +111,11 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:98
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:30
 msgid "More information"
-msgstr ""
+msgstr "और जानकारी"
 
 #: classes/WP_Piwik/Admin/Settings.php:100
 msgid "You can choose between three connection methods:"
-msgstr ""
+msgstr "आप इनमें से तीन जोड़ने की विधि चुन सकते हैं:"
 
 #: classes/WP_Piwik/Admin/Settings.php:100
 #: classes/WP_Piwik/Admin/Settings.php:103
@@ -153,7 +152,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:101
 msgid "Piwik Mode"
-msgstr ""
+msgstr "Piwik मोड"
 
 #: classes/WP_Piwik/Admin/Settings.php:102
 msgid "Disabled (WP-Piwik will not connect to Piwik)"
@@ -161,7 +160,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:108
 msgid "Piwik URL"
-msgstr "Piwik URL"
+msgstr "Piwik यूआरएल"
 
 #: classes/WP_Piwik/Admin/Settings.php:108
 msgid ""
@@ -179,7 +178,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:110
 msgid "Piwik user"
-msgstr ""
+msgstr "Piwik प्रयोक्ता"
 
 #: classes/WP_Piwik/Admin/Settings.php:110
 msgid ""
@@ -189,7 +188,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid "Auth token"
-msgstr "Авто token"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid ""
@@ -217,37 +216,37 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:132
 msgid "Select site"
-msgstr ""
+msgstr "साइट चुनें"
 
 #: classes/WP_Piwik/Admin/Settings.php:140
 msgid "Piwik default date"
-msgstr ""
+msgstr "Piwik मूल दिनांक"
 
 #: classes/WP_Piwik/Admin/Settings.php:141
 #: classes/WP_Piwik/Admin/Settings.php:154
 msgid "Today"
-msgstr ""
+msgstr "आज"
 
 #: classes/WP_Piwik/Admin/Settings.php:142
 #: classes/WP_Piwik/Admin/Settings.php:153
 msgid "Yesterday"
-msgstr ""
+msgstr "कल"
 
 #: classes/WP_Piwik/Admin/Settings.php:143
 msgid "Current month"
-msgstr ""
+msgstr "इस माह"
 
 #: classes/WP_Piwik/Admin/Settings.php:144
 msgid "Last month"
-msgstr ""
+msgstr "पिछले माह"
 
 #: classes/WP_Piwik/Admin/Settings.php:145
 msgid "Current week"
-msgstr ""
+msgstr "इस सप्ताह"
 
 #: classes/WP_Piwik/Admin/Settings.php:146
 msgid "Last week"
-msgstr ""
+msgstr "पिछले सप्ताह"
 
 #: classes/WP_Piwik/Admin/Settings.php:147
 msgid "Default date shown on statistics page."
@@ -255,20 +254,20 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:149
 msgid "Show SEO data"
-msgstr ""
+msgstr "SEO आँकड़ा दिखाएँ"
 
 #: classes/WP_Piwik/Admin/Settings.php:149
 msgid "Display SEO ranking data on statistics page."
-msgstr ""
+msgstr "SEO पायदान डाटा को आँकड़ा पृष्ठ पर दिखाएँ।"
 
 #: classes/WP_Piwik/Admin/Settings.php:149
 #: classes/WP_Piwik/Admin/Settings.php:160
 msgid "Slow!"
-msgstr ""
+msgstr "धीमा!"
 
 #: classes/WP_Piwik/Admin/Settings.php:151
 msgid "Dashboard overview"
-msgstr ""
+msgstr "डैशबोर्ड अवलोकन"
 
 #: classes/WP_Piwik/Admin/Settings.php:152
 #: classes/WP_Piwik/Admin/Settings.php:190
@@ -276,11 +275,11 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:213
 #: classes/WP_Piwik/Admin/Settings.php:304
 msgid "Disabled"
-msgstr ""
+msgstr "अक्षम"
 
 #: classes/WP_Piwik/Admin/Settings.php:155
 msgid "Last 30 days"
-msgstr ""
+msgstr "अंतिम 30 दिवस"
 
 #: classes/WP_Piwik/Admin/Settings.php:156
 msgid "Enable WP-Piwik dashboard widget &quot;Overview&quot;."
@@ -296,7 +295,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:160
 msgid "Dashboard SEO"
-msgstr ""
+msgstr "डैशबोर्ड SEO"
 
 #: classes/WP_Piwik/Admin/Settings.php:160
 msgid "Enable WP-Piwik dashboard widget &quot;SEO&quot;."
@@ -336,11 +335,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:177
 msgid "WP-Piwik display name"
-msgstr ""
+msgstr "WP-Piwik दृश्य नाम"
 
 #: classes/WP_Piwik/Admin/Settings.php:177
 msgid "Plugin name shown in WordPress."
-msgstr ""
+msgstr "प्लगइन नाम जो वर्डप्रैस में दिखता है।"
 
 #: classes/WP_Piwik/Admin/Settings.php:179
 msgid "Enable shortcodes"
@@ -373,7 +372,7 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:190
 #: classes/WP_Piwik/Admin/Settings.php:194
 msgid "Use js/index.php"
-msgstr ""
+msgstr "js/index.php का उपयोग"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid ""
@@ -388,7 +387,7 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:190
 #: classes/WP_Piwik/Admin/Settings.php:195
 msgid "Use proxy script"
-msgstr ""
+msgstr "प्रॉक्सि स्क्रिप्ट का उपयोग"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid "Use this tracking code to not reveal the Piwik server URL."
@@ -403,7 +402,7 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:190
 #: classes/WP_Piwik/Admin/Settings.php:196
 msgid "Enter manually"
-msgstr ""
+msgstr "अपने से डालें"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid ""
@@ -504,7 +503,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:220
 msgid "Track 404"
-msgstr ""
+msgstr "ट्रैक 404"
 
 #: classes/WP_Piwik/Admin/Settings.php:220
 msgid ""
@@ -539,7 +538,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:228
 msgid "Disable cookies"
-msgstr ""
+msgstr "कुकी अक्षम करें"
 
 #: classes/WP_Piwik/Admin/Settings.php:228
 msgid "Disable all tracking cookies for a visitor."
@@ -579,7 +578,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:241
 msgid "Tracking filter"
-msgstr "Слідкуючий фільтр"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:245
 msgid "Choose users by user role you do <strong>not</strong> want to track."
@@ -655,12 +654,12 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:268
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "cURL"
-msgstr ""
+msgstr "cURL"
 
 #: classes/WP_Piwik/Admin/Settings.php:269
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "fopen"
-msgstr ""
+msgstr "fopen"
 
 #: classes/WP_Piwik/Admin/Settings.php:270
 msgid ""
@@ -675,12 +674,12 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:273
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "POST"
-msgstr ""
+msgstr "POST"
 
 #: classes/WP_Piwik/Admin/Settings.php:274
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "GET"
-msgstr ""
+msgstr "GET"
 
 #: classes/WP_Piwik/Admin/Settings.php:275
 msgid "Choose whether WP-Piwik should use POST or GET in HTTP or Pro mode."
@@ -716,7 +715,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:284
 msgid "empty"
-msgstr ""
+msgstr "रिक्त"
 
 #: classes/WP_Piwik/Admin/Settings.php:285
 msgid "Define a specific user agent"
@@ -732,11 +731,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:291
 msgid "CDN URL"
-msgstr ""
+msgstr "CDN URL"
 
 #: classes/WP_Piwik/Admin/Settings.php:293
 msgid "CDN URL (SSL)"
-msgstr ""
+msgstr "CDN URL (SSL)"
 
 #: classes/WP_Piwik/Admin/Settings.php:295
 msgid "Force Piwik to use a specific protocol"
@@ -748,11 +747,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:297
 msgid "http"
-msgstr ""
+msgstr "http"
 
 #: classes/WP_Piwik/Admin/Settings.php:298
 msgid "https (SSL)"
-msgstr ""
+msgstr "https (SSL)"
 
 #: classes/WP_Piwik/Admin/Settings.php:299
 msgid ""
@@ -762,7 +761,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:301
 msgid "Update notice"
-msgstr ""
+msgstr "सूचना अद्यतन"
 
 #: classes/WP_Piwik/Admin/Settings.php:302
 msgid "Show always if WP-Piwik is updated"
@@ -778,7 +777,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:466
 msgid "Donate"
-msgstr ""
+msgstr "दान"
 
 #: classes/WP_Piwik/Admin/Settings.php:468
 msgid "If you like WP-Piwik, you can support its development by a donation:"
@@ -795,7 +794,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:540
 msgid "Thank you very much for your donation"
-msgstr ""
+msgstr "आपके दान के लिए धन्यवाद"
 
 #: classes/WP_Piwik/Admin/Settings.php:540
 msgid "the Piwik team itself"
@@ -823,11 +822,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:544
 msgid "Thank you very much"
-msgstr ""
+msgstr "बहुत बहुत धन्यवाद"
 
 #: classes/WP_Piwik/Admin/Settings.php:544
 msgid "for your translation work"
-msgstr ""
+msgstr "आपके अनुवाद कार्य हेतु"
 
 #: classes/WP_Piwik/Admin/Settings.php:545
 msgid ""
@@ -844,11 +843,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:555
 msgid "The best place to get help:"
-msgstr ""
+msgstr "सबसे अच्छा जगह सहायता के लिए:"
 
 #: classes/WP_Piwik/Admin/Settings.php:555
 msgid "WP-Piwik support forum"
-msgstr ""
+msgstr "WP-Piwik सहायता मंच"
 
 #: classes/WP_Piwik/Admin/Settings.php:558
 msgid "Debugging"
@@ -875,7 +874,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:567
 msgid "allow_url_fopen is"
-msgstr ""
+msgstr "allow_url_fopen है"
 
 #: classes/WP_Piwik/Admin/Settings.php:569
 msgid "enabled"
@@ -891,7 +890,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:577
 msgid "Tools"
-msgstr ""
+msgstr "औज़ार"
 
 #: classes/WP_Piwik/Admin/Settings.php:579
 msgid "Run testscript"
@@ -947,11 +946,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:31
 msgid "URL"
-msgstr ""
+msgstr "यूआरएल"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:32
 msgid "Site ID (Piwik)"
-msgstr ""
+msgstr "साइट आईडी (Piwik)"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:79
 msgid "Site not created yet."
@@ -959,7 +958,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Statistics.php:12
 msgid "Statistics"
-msgstr ""
+msgstr "आँकड़ा"
 
 #: classes/WP_Piwik/Admin/Statistics.php:20
 msgid "Currently shown stats:"
@@ -987,11 +986,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:21
 msgid "Name"
-msgstr ""
+msgstr "नाम"
 
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:21
 msgid "Value"
-msgstr ""
+msgstr "मूल्य"
 
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:30
 msgid "Set custom variables for a page view"
@@ -999,7 +998,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:18
 msgid "Browser Details"
-msgstr ""
+msgstr "ब्राउज़र जानकारी"
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:37
 #: classes/WP_Piwik/Widget/Browsers.php:37
@@ -1013,12 +1012,12 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Systems.php:33
 #: classes/WP_Piwik/Widget/Visitors.php:35 classes/WP_Piwik/Widget.php:91
 msgid "Piwik error"
-msgstr ""
+msgstr "Piwik त्रुटि"
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:39
 #: classes/WP_Piwik/Widget/Browsers.php:39
 msgid "Browser"
-msgstr "Браузер"
+msgstr "ब्राउज़र"
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:39
 #: classes/WP_Piwik/Widget/Browsers.php:39
@@ -1027,7 +1026,7 @@ msgstr "Браузер"
 #: classes/WP_Piwik/Widget/Systems.php:35
 #: classes/WP_Piwik/Widget/Visitors.php:57 classes/WP_Piwik/Widget.php:100
 msgid "Unique"
-msgstr "Унікальність"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:39
 #: classes/WP_Piwik/Widget/Browsers.php:39
@@ -1036,7 +1035,7 @@ msgstr "Унікальність"
 #: classes/WP_Piwik/Widget/SystemDetails.php:35
 #: classes/WP_Piwik/Widget/Systems.php:35
 msgid "Percent"
-msgstr "Відсотків"
+msgstr "प्रतिशत"
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:66
 #: classes/WP_Piwik/Widget/Browsers.php:66
@@ -1044,7 +1043,7 @@ msgstr "Відсотків"
 #: classes/WP_Piwik/Widget/SystemDetails.php:62
 #: classes/WP_Piwik/Widget/Systems.php:62
 msgid "Others"
-msgstr ""
+msgstr "अन्य"
 
 #: classes/WP_Piwik/Widget/Browsers.php:18
 msgid "Browsers"
@@ -1054,7 +1053,7 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Overview.php:41 classes/WP_Piwik/Widget/Post.php:37
 #: classes/WP_Piwik/Widget/Visitors.php:17
 msgid "Visitors"
-msgstr "Відвідувачів"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Chart.php:71
 msgid ""
@@ -1064,7 +1063,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget/Keywords.php:16
 msgid "Keywords"
-msgstr "Ключові слова"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Noresult.php:16
 #: classes/WP_Piwik/Widget/Search.php:16
@@ -1074,7 +1073,7 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Noresult.php:25
 #: classes/WP_Piwik/Widget/Search.php:25
 msgid "Keyword"
-msgstr "Ключове слово"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Noresult.php:25
 #: classes/WP_Piwik/Widget/Search.php:25
@@ -1085,19 +1084,19 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Search.php:25
 #: classes/WP_Piwik/Widget/Visitors.php:57
 msgid "Bounced"
-msgstr "Відмов"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:17 classes/WP_Piwik/Widget/Post.php:18
 msgid "Overview"
-msgstr "Опис"
+msgstr "अवलोकन"
 
 #: classes/WP_Piwik/Widget/Overview.php:42 classes/WP_Piwik/Widget/Post.php:38
 msgid "Unique visitors"
-msgstr "Унікальних відвідувачів"
+msgstr "नए दृश्यक"
 
 #: classes/WP_Piwik/Widget/Overview.php:43 classes/WP_Piwik/Widget/Post.php:39
 msgid "Page views"
-msgstr "Переглядів сторінки"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:44 classes/WP_Piwik/Widget/Post.php:40
 msgid "Total time spent"
@@ -1105,7 +1104,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:45 classes/WP_Piwik/Widget/Post.php:42
 msgid "Bounce count"
-msgstr "Кількість відмов"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:48 classes/WP_Piwik/Widget/Post.php:41
 msgid "Time/visit"
@@ -1113,7 +1112,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:48
 msgid "Max. page views in one visit"
-msgstr "Макс. Сторінок переглянуто за один візит"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:49 classes/WP_Piwik/Widget/Post.php:46
 msgid "Shortcut"
@@ -1134,7 +1133,7 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Plugins.php:25
 #: classes/WP_Piwik/Widget/Visitors.php:57 classes/WP_Piwik/Widget.php:102
 msgid "Visits"
-msgstr "Візитів"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Post.php:43
 msgid "Min. generation time"
@@ -1154,28 +1153,28 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget/Screens.php:37
 msgid "Resolution"
-msgstr "Розширення"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Seo.php:13
 msgid "SEO"
-msgstr ""
+msgstr "SEO"
 
 #: classes/WP_Piwik/Widget/SystemDetails.php:14
 msgid "Operation System Details"
-msgstr ""
+msgstr "संचालन प्रणाली की जानकारी"
 
 #: classes/WP_Piwik/Widget/SystemDetails.php:35
 #: classes/WP_Piwik/Widget/Systems.php:35
 msgid "Operation System"
-msgstr ""
+msgstr "संचालन प्रणाली"
 
 #: classes/WP_Piwik/Widget/Systems.php:14
 msgid "Operation Systems"
-msgstr ""
+msgstr "संचालन प्रणालियाँ"
 
 #: classes/WP_Piwik/Widget/Visitors.php:57
 msgid "Date"
-msgstr "Дата"
+msgstr "दिनांक"
 
 #: classes/WP_Piwik/Widget/Visitors.php:57
 msgid "Page Views"
@@ -1191,15 +1190,15 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget.php:162
 msgid "No data available."
-msgstr ""
+msgstr "डाटा अनुपलब्ध"
 
 #: classes/WP_Piwik/Widget.php:293
 msgid "week"
-msgstr ""
+msgstr "सप्ताह"
 
 #: classes/WP_Piwik.php:193
 msgid "%s %s installed."
-msgstr ""
+msgstr "%s %s स्थापित।"
 
 #: classes/WP_Piwik.php:193
 msgid "Next you should connect to Piwik"
@@ -1215,15 +1214,15 @@ msgstr ""
 
 #: classes/WP_Piwik.php:259 classes/WP_Piwik.php:481
 msgid "Settings"
-msgstr "Настройки"
+msgstr ""
 
 #: classes/WP_Piwik.php:262
 msgid "Important"
-msgstr ""
+msgstr "महत्वपूर्ण"
 
 #: classes/WP_Piwik.php:343 classes/WP_Piwik.php:365
 msgid "Piwik Statistics"
-msgstr "Piwik статистика"
+msgstr "Piwik आँकड़ा"
 
 #: classes/WP_Piwik.php:453
 msgid "Configure WP-Piwik"
@@ -1231,11 +1230,11 @@ msgstr ""
 
 #: classes/WP_Piwik.php:923
 msgid "An error occured"
-msgstr "Сталася помилка"
+msgstr ""
 
 #: classes/WP_Piwik.php:1191
 msgid "Cheatin&#8217; uh?"
-msgstr ""
+msgstr "धोका&#8217; उह?"
 
 #: wp-piwik.php:60
 msgid ""
@@ -1249,7 +1248,7 @@ msgstr "WP-Piwik"
 
 #. Plugin URI of the plugin/theme
 msgid "http://wordpress.org/extend/plugins/wp-piwik/"
-msgstr ""
+msgstr "http://wordpress.org/extend/plugins/wp-piwik/"
 
 #. Description of the plugin/theme
 msgid ""
@@ -1259,7 +1258,7 @@ msgstr ""
 
 #. Author of the plugin/theme
 msgid "Andr&eacute; Br&auml;kling"
-msgstr "Andr&eacute; Br&auml;kling"
+msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "http://www.braekling.de"

@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2015-07-22 10:25:29+00:00\n"
-"PO-Revision-Date: 2015-07-22 10:38+0000\n"
-"Last-Translator: André Bräkling\n"
-"Language-Team: German (Germany) (http://www.transifex.com/projects/p/wp-piwik/language/de_DE/)\n"
+"PO-Revision-Date: 2015-09-21 08:29+0000\n"
+"Last-Translator: Stefan Giehl <stefan@piwik.org>\n"
+"Language-Team: German (Germany) (http://www.transifex.com/piwik/wp-piwik/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -529,13 +529,13 @@ msgstr "Zeige eine Eingabebox für &quot;custom variables&quot; auf der Seite zu
 
 #: classes/WP_Piwik/Admin/Settings.php:226
 msgid "Add new file types for download tracking"
-msgstr "F&uuml;ge weitere Dateitypen f&uuml;r das Download-Tracking hinzu."
+msgstr "F&uuml;ge weitere Dateiendungen f&uuml;r das Download-Tracking hinzu"
 
 #: classes/WP_Piwik/Admin/Settings.php:226
 msgid ""
 "Add file extensions for download tracking, divided by a vertical bar "
 "(&#124;)."
-msgstr "F&uuml;ge Dateierweiterung zum Download-Tracking hinzu. Trenne mehrere Erweiterung durch einen senkrechten Strich (&#124;)."
+msgstr "F&uuml;ge Dateiendungen zum Download-Tracking hinzu. Trenne mehrere Erweiterung durch einen senkrechten Strich (&#124;)."
 
 #: classes/WP_Piwik/Admin/Settings.php:228
 msgid "Disable cookies"
