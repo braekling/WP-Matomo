@@ -27,7 +27,7 @@
 				$count = 0;
 				foreach ($response as $row) {
 					$count++;
-					$tableBody[] = array($row['label'], $row['nb_visits'], $row['bounce_rate']);
+					$tableBody[] = array(htmlentities($row['label']), $row['nb_visits'], $row['bounce_rate']);
 					if ($count == 10) break;
 				}
 				$this->table($tableHead, $tableBody, null);
