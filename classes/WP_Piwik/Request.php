@@ -4,7 +4,7 @@
 
 	abstract class Request {
 		
-		protected static $wpPiwik, $settings, $debug, $requests = array(), $results = array(), $isCacheable = array(), $piwikVersion;
+		protected static $wpPiwik, $settings, $debug, $lastError = '', $requests = array(), $results = array(), $isCacheable = array(), $piwikVersion;
 		
 		public function __construct($wpPiwik, $settings) {
 			self::$wpPiwik = $wpPiwik;
@@ -85,6 +85,10 @@
 			self::$wpPiwik->log("Result string: ".$str);
 		    return ($str == json_decode(false, true) || @json_decode($str, true) !== false)?json_decode($str, true):array();
 		}
+
+		public static function getLastError() {
+			return self::$lastError;
+		}			
 		
 		abstract protected function request($id);
 			

@@ -42,6 +42,7 @@
 					curl_setopt($c, CURLOPT_PROXYUSERPWD, $httpProxyClass->username().':'.$httpProxyClass->password());
 			}
 			$result = curl_exec($c);
+			self::$lastError = curl_error($c);
 			if ($GLOBALS ['wp-piwik_debug']) {
 				$header_size = curl_getinfo($c, CURLINFO_HEADER_SIZE);
 				$header = substr($result, 0, $header_size);
