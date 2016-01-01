@@ -57,7 +57,11 @@ class Settings extends \WP_Piwik\Admin {
 			if (! empty ( $piwikVersion ) && !is_array( $piwikVersion )) {
 				$this->showText ( sprintf ( __ ( 'WP-Piwik %s is successfully connected to Piwik %s.', 'wp-piwik' ), self::$wpPiwik->getPluginVersion (), $piwikVersion ) . ' ' . (! self::$wpPiwik->isNetworkMode () ? sprintf ( __ ( 'You are running WordPress %s.', 'wp-piwik' ), get_bloginfo ( 'version' ) ) : sprintf ( __ ( 'You are running a WordPress %s blog network (WPMU). WP-Piwik will handle your sites as different websites.', 'wp-piwik' ), get_bloginfo ( 'version' ) )) );
 			} else {
-				$this->showBox ( 'error', 'no', sprintf ( __ ( 'WP-Piwik %s was not able to connect to Piwik using your configuration. Check the &raquo;Connect to Piwik&laquo; section below.', 'wp-piwik' ), self::$wpPiwik->getPluginVersion () ) );
+				$errorMessage = \WP_Piwik\Request::getLastError();
+				if ( empty( $errorMessage ) )
+					$this->showBox ( 'error', 'no', sprintf ( __ ( 'WP-Piwik %s was not able to connect to Piwik using your configuration. Check the &raquo;Connect to Piwik&laquo; section below.', 'wp-piwik' ), self::$wpPiwik->getPluginVersion () ) );
+				else 
+					$this->showBox ( 'error', 'no', sprintf ( __ ( 'WP-Piwik %s was not able to connect to Piwik using your configuration. During connection the following error occured: <br /><code>%s</code>', 'wp-piwik' ), self::$wpPiwik->getPluginVersion (), $errorMessage ) );
 			}
 		} else
 			$this->showBox ( 'error', 'no', sprintf ( __ ( 'WP-Piwik %s has to be connected to Piwik first. Check the &raquo;Connect to Piwik&laquo; section below.', 'wp-piwik' ), self::$wpPiwik->getPluginVersion () ) );

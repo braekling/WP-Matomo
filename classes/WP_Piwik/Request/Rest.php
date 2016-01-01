@@ -42,6 +42,7 @@
 					curl_setopt($c, CURLOPT_PROXYUSERPWD, $httpProxyClass->username().':'.$httpProxyClass->password());
 			}
 			$result = curl_exec($c);
+			self::$lastError = curl_error($c);
 			if ($GLOBALS ['wp-piwik_debug']) {
 				$header_size = curl_getinfo($c, CURLINFO_HEADER_SIZE);
 				$header = substr($result, 0, $header_size);
@@ -54,7 +55,9 @@
 		}
 
 		private function fopen($id, $url, $params) {
-			$contextDefinition = array('http'=>array('timeout' => self::$settings->getGlobalOption('connection_timeout')));
+			$contextDefinition = array('http'=>array('timeout' => self::$settings->getGlobalOption('connection_timeout')) );
+			if (self::$settings->getGlobalOption('disable_ssl_verify'))
+				$contextDefinition['ssl'] = array('allow_self_signed' => true);
 			if (self::$settings->getGlobalOption('http_method')=='post') {
 				$fullUrl = $url;
 				$contextDefinition['http']['method'] = 'POST';
