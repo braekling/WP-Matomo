@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2015-07-22 10:25:29+00:00\n"
-"PO-Revision-Date: 2015-10-12 21:07+0000\n"
+"PO-Revision-Date: 2016-01-09 19:35+0000\n"
 "Last-Translator: André Bräkling\n"
 "Language-Team: Italian (Italy) (http://www.transifex.com/piwik/wp-piwik/language/it_IT/)\n"
 "MIME-Version: 1.0\n"
@@ -338,7 +338,7 @@ msgstr "Visualizzare una scorciatoia per il Piwik principale."
 
 #: classes/WP_Piwik/Admin/Settings.php:177
 msgid "WP-Piwik display name"
-msgstr ""
+msgstr "Nome visualizzato in WP-Piwik"
 
 #: classes/WP_Piwik/Admin/Settings.php:177
 msgid "Plugin name shown in WordPress."
@@ -609,7 +609,7 @@ msgstr "Traccia i feed RSS"
 
 #: classes/WP_Piwik/Admin/Settings.php:251
 msgid "Enable to track posts in feeds via tracking pixel."
-msgstr ""
+msgstr "Abilita la possibilità di tracciare i post nei feed tramite un tracking pixel."
 
 #: classes/WP_Piwik/Admin/Settings.php:253
 msgid "Track RSS feed links as campaign"
@@ -625,7 +625,7 @@ msgstr "Keyword: nome post."
 
 #: classes/WP_Piwik/Admin/Settings.php:257
 msgid "Enable heartbeat timer"
-msgstr ""
+msgstr "Abilita un timer heartbeat"
 
 #: classes/WP_Piwik/Admin/Settings.php:257
 msgid ""
@@ -634,7 +634,7 @@ msgid ""
 "between the pings in seconds (Piwik default: 15) to enable or 0 to disable "
 "this feature. <strong>Note:</strong> This will cause a lot of additional "
 "HTTP requests on your site."
-msgstr ""
+msgstr "Abilita un timer heartbeat per ottenere durate delle visite più precise inviando un ping HTTP periodico per tutto il tempo in cui il sito resta aperto. Inserisci il tempo, in secondi, tra i ping (predefinito: 15) per abilitare, oppure 0 per disabilitare questa funzione. <strong>Nota:</strong> Questo provocherà molte richieste HTTP supplementari al tuo sito."
 
 #: classes/WP_Piwik/Admin/Settings.php:262
 msgid ""
@@ -901,7 +901,7 @@ msgstr "Esegui script di prova"
 
 #: classes/WP_Piwik/Admin/Settings.php:580
 msgid "Sitebrowser"
-msgstr ""
+msgstr "Sitebrowser"
 
 #: classes/WP_Piwik/Admin/Settings.php:581
 msgid "Clear cache"
@@ -1237,7 +1237,7 @@ msgstr "E' successo un errore"
 
 #: classes/WP_Piwik.php:1191
 msgid "Cheatin&#8217; uh?"
-msgstr ""
+msgstr "Stai &#8217;barando&#8217, vero?"
 
 #: wp-piwik.php:60
 msgid ""

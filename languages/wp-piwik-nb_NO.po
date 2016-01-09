@@ -1,14 +1,14 @@
 # Copyright (C) 2015 WP-Piwik
 # This file is distributed under the same license as the WP-Piwik package.
 # Translators:
-# Espen Bye, 2015
+# Espen Bye, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2015-07-22 10:25:29+00:00\n"
-"PO-Revision-Date: 2015-09-22 08:58+0000\n"
-"Last-Translator: Stefan Giehl <stefan@piwik.org>\n"
+"PO-Revision-Date: 2016-01-09 19:35+0000\n"
+"Last-Translator: André Bräkling\n"
 "Language-Team: Norwegian Bokmål (Norway) (http://www.transifex.com/piwik/wp-piwik/language/nb_NO/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,15 +22,15 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:27
 msgid "Changes saved."
-msgstr ""
+msgstr "Endringer lagret."
 
 #: classes/WP_Piwik/Admin/Settings.php:45
 msgid "Save Changes"
-msgstr ""
+msgstr "Lagre endringer"
 
 #: classes/WP_Piwik/Admin/Settings.php:46
 msgid "Thanks for using WP-Piwik!"
-msgstr ""
+msgstr "Takk for at du bruker WP-Piwik!"
 
 #: classes/WP_Piwik/Admin/Settings.php:50
 msgid "WP-Piwik %s is successfully connected to Piwik %s."
@@ -64,11 +64,11 @@ msgstr "Koble til Piwik"
 
 #: classes/WP_Piwik/Admin/Settings.php:65
 msgid "Show Statistics"
-msgstr ""
+msgstr "Vis statistikk"
 
 #: classes/WP_Piwik/Admin/Settings.php:69
 msgid "Enable Tracking"
-msgstr ""
+msgstr "Aktiver sporing"
 
 #: classes/WP_Piwik/Admin/Settings.php:74
 msgid "Expert Settings"
@@ -178,7 +178,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:110
 msgid "Piwik user"
-msgstr ""
+msgstr "Piwik-bruker"
 
 #: classes/WP_Piwik/Admin/Settings.php:110
 msgid ""
@@ -216,7 +216,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:132
 msgid "Select site"
-msgstr ""
+msgstr "Velg nettside"
 
 #: classes/WP_Piwik/Admin/Settings.php:140
 msgid "Piwik default date"
@@ -234,7 +234,7 @@ msgstr "I går"
 
 #: classes/WP_Piwik/Admin/Settings.php:143
 msgid "Current month"
-msgstr ""
+msgstr "Nåværende måned"
 
 #: classes/WP_Piwik/Admin/Settings.php:144
 msgid "Last month"
@@ -242,7 +242,7 @@ msgstr "Forrige måned"
 
 #: classes/WP_Piwik/Admin/Settings.php:145
 msgid "Current week"
-msgstr ""
+msgstr "Nåværende uke"
 
 #: classes/WP_Piwik/Admin/Settings.php:146
 msgid "Last week"
@@ -254,7 +254,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:149
 msgid "Show SEO data"
-msgstr ""
+msgstr "Vis SEO-data"
 
 #: classes/WP_Piwik/Admin/Settings.php:149
 msgid "Display SEO ranking data on statistics page."
@@ -263,7 +263,7 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:149
 #: classes/WP_Piwik/Admin/Settings.php:160
 msgid "Slow!"
-msgstr ""
+msgstr "Sakte!"
 
 #: classes/WP_Piwik/Admin/Settings.php:151
 msgid "Dashboard overview"
@@ -417,7 +417,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:191
 msgid "Add tracking code"
-msgstr ""
+msgstr "Legg til sporingskode"
 
 #: classes/WP_Piwik/Admin/Settings.php:199
 msgid "Tracking code"
@@ -467,7 +467,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:212
 msgid "Enable content tracking"
-msgstr ""
+msgstr "Aktiver innholdssporing"
 
 #: classes/WP_Piwik/Admin/Settings.php:214
 msgid "Track all content blocks"
@@ -578,7 +578,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:241
 msgid "Tracking filter"
-msgstr "Sporings filter"
+msgstr "Sporingsfilter"
 
 #: classes/WP_Piwik/Admin/Settings.php:245
 msgid "Choose users by user role you do <strong>not</strong> want to track."
@@ -602,7 +602,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:251
 msgid "Track RSS feeds"
-msgstr ""
+msgstr "Spor RSS-strømmer"
 
 #: classes/WP_Piwik/Admin/Settings.php:251
 msgid "Enable to track posts in feeds via tracking pixel."
@@ -669,7 +669,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:272
 msgid "HTTP method"
-msgstr ""
+msgstr "HTTP-metode"
 
 #: classes/WP_Piwik/Admin/Settings.php:273
 #: classes/WP_Piwik/Admin/Settings.php:571
@@ -731,11 +731,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:291
 msgid "CDN URL"
-msgstr ""
+msgstr "CDN URL"
 
 #: classes/WP_Piwik/Admin/Settings.php:293
 msgid "CDN URL (SSL)"
-msgstr ""
+msgstr "CDN URL (SSL)"
 
 #: classes/WP_Piwik/Admin/Settings.php:295
 msgid "Force Piwik to use a specific protocol"
@@ -1012,7 +1012,7 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Systems.php:33
 #: classes/WP_Piwik/Widget/Visitors.php:35 classes/WP_Piwik/Widget.php:91
 msgid "Piwik error"
-msgstr ""
+msgstr "Piwik-feil"
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:39
 #: classes/WP_Piwik/Widget/Browsers.php:39
