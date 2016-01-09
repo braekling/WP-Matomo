@@ -2,8 +2,8 @@
 
 Contributors: Braekling
 Requires at least: 4.0
-Tested up to: 4.3.1
-Stable tag: 1.0.5
+Tested up to: 4.4.1
+Stable tag: 1.0.6
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
 Tags: statistics, stats, analytics, piwik, wpmu
 
@@ -40,7 +40,7 @@ is equal to *[wp-piwik module="overview" title="" period="day" date="yesterday"]
 
 * Graphs powered by [jqPlot](http://www.jqplot.com/) (GPL 2.0 and MIT) and  and [jQuery Sparklines](http://omnipotent.net/jquery.sparkline/) (New BSD License).
 * All translators at the [Transifex translation community](https://www.transifex.com/projects/p/wp-piwik/).
-* Donations: Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., the Piwik team itself, and all people flattering this.
+* Donations: Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., the Piwik team itself, and all people flattering this.
 * All users who send me mails containing criticism, commendation, feature requests and bug reports - you help me to make WP-Piwik much better!
 
 Thank you all!
@@ -115,11 +115,12 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 4. WordPress toolbar graph.
 5. Piwik: Here you'll find your auth token.
 
-== Upgrade Notice ==
-
-Version 1.0.5 contains an important security fix. Please update as soon as possible.
-
 == Changelog ==
+
+= 1.0.6=
+* Language updates
+* Encoding & gettext fixes
+* Better error messages. Thx, to mcguffin, see https://github.com/braekling/WP-Piwik/pull/14
 
 = 1.0.5=
 * Several language updates.
