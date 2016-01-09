@@ -240,32 +240,32 @@ abstract class Widget {
 			case 'today' :
 				$period = 'day';
 				$date = 'today';
-				$description = 'today';
+				$description = __('today', 'wp-piwik' );
 				break;
 			case 'current_month' :
 				$period = 'month';
 				$date = 'today';
-				$description = 'current month';
+				$description = __('current month', 'wp-piwik' );
 				break;
 			case 'last_month' :
 				$period = 'month';
 				$date = date ( "Y-m-d", strtotime ( "last day of previous month" ) );
-				$description = 'last month';
+				$description = __('last month', 'wp-piwik' );
 				break;
 			case 'current_week' :
 				$period = 'week';
 				$date = 'today';
-				$description = 'current week';
+				$description = __('current week', 'wp-piwik' );
 				break;
 			case 'last_week' :
 				$period = 'week';
 				$date = date ( "Y-m-d", strtotime ( "-1 week" ) );
-				$description = 'last week';
+				$description = __('last week', 'wp-piwik' );
 				break;
 			case 'yesterday' :
 				$period = 'day';
 				$date = 'yesterday';
-				$description = 'yesterday';
+				$description = __('yesterday', 'wp-piwik' );
 				break;
 			default :
 				break;
@@ -325,9 +325,9 @@ abstract class Widget {
 	public function rangeName() {
 		switch ($this->parameter ['date']) {
 			case 'last30' :
-				return 'last 30 days';
+				return __('last 30 days', 'wp-piwik' );
 			case 'last12' :
-				return 'last 12 ' . $this->parameter ['period'] . 's';
+				return __('last 12 ' . $this->parameter ['period'] . 's', 'wp-piwik' );
 			default :
 				return $this->parameter ['date'];
 		}

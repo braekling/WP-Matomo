@@ -15,7 +15,7 @@
 			);
 			$this->title = $prefix.__('Pages', 'wp-piwik').' ('.__($timeSettings['description'],'wp-piwik').')';
 			$this->method = 'Actions.getPageTitles';
-			$this->name = 'Page';
+			$this->name = __('Page', 'wp-piwik' );
 		}
 		
 	}
