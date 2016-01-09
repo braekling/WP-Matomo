@@ -21,7 +21,7 @@ class Settings extends \WP_Piwik\Admin {
 		if (isset($_GET['clear']) && $_GET['clear']) {
 			$this->clear($_GET['clear'] == 2);
 			self::$wpPiwik->resetRequest();
-			echo '<form method="post" action="?page='.$_GET['page'].'"><input type="submit" value="'.__('Reload', 'wp-piwik').'" /></form>';
+			echo '<form method="post" action="?page='.htmlentities($_GET['page']).'"><input type="submit" value="'.__('Reload', 'wp-piwik').'" /></form>';
 			return;
 		} elseif (isset ( $_POST ) && isset ( $_POST ['wp-piwik'] )) {
 			$this->showBox ( 'updated', 'yes', __ ( 'Changes saved.' ) );
@@ -45,7 +45,7 @@ class Settings extends \WP_Piwik\Admin {
 				$this->showDonation();
 		}
 	?>
-	<form method="post" action="?page=<?php echo $_GET['page']; ?>">
+	<form method="post" action="?page=<?php echo htmlentities($_GET['page']); ?>">
 		<input type="hidden" name="wp-piwik[revision]" value="<?php echo self::$settings->getGlobalOption('revision'); ?>" />
 		<?php wp_nonce_field('wp-piwik_settings'); ?>
 		<table class="wp-piwik-form">
@@ -410,7 +410,7 @@ class Settings extends \WP_Piwik\Admin {
 	 * @param boolean $wide Create a wide box (default: false)
 	 */
 	private function showInput($id, $name, $description, $isHidden = false, $groupName = '', $rowName = false, $hideDescription = true, $wide = false) {
-		printf ( '<tr class="%s%s"%s><th scope="row"><label for="%5$s">%s:</label></th><td><input '.($wide?'class="wp-piwik-wide" ':'').'name="wp-piwik[%s]" id="%5$s" value="%s" /> %s</td></tr>', $isHidden ? 'hidden ' : '', $groupName ? $groupName : '', $rowName ? ' id="' . $groupName . '-' . $rowName . '"' : '', $name, $id, self::$settings->getGlobalOption ( $id ), !empty($description) ? $this->getDescription ( $id, $description, $hideDescription ) : '' );
+		printf ( '<tr class="%s%s"%s><th scope="row"><label for="%5$s">%s:</label></th><td><input '.($wide?'class="wp-piwik-wide" ':'').'name="wp-piwik[%s]" id="%5$s" value="%s" /> %s</td></tr>', $isHidden ? 'hidden ' : '', $groupName ? $groupName : '', $rowName ? ' id="' . $groupName . '-' . $rowName . '"' : '', $name, $id, htmlentities(self::$settings->getGlobalOption( $id ), ENT_NOQUOTES, 'UTF-8', false), !empty($description) ? $this->getDescription ( $id, $description, $hideDescription ) : '' );
 	}
 
 	/**
