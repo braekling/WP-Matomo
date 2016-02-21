@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2015-07-22 10:25:29+00:00\n"
-"PO-Revision-Date: 2016-01-09 19:35+0000\n"
+"PO-Revision-Date: 2016-02-21 13:19+0000\n"
 "Last-Translator: André Bräkling\n"
 "Language-Team: Norwegian Bokmål (Norway) (http://www.transifex.com/piwik/wp-piwik/language/nb_NO/)\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:24
 msgid "Reload"
-msgstr ""
+msgstr "Last inn på ny"
 
 #: classes/WP_Piwik/Admin/Settings.php:27
 msgid "Changes saved."
@@ -38,7 +38,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:50
 msgid "You are running WordPress %s."
-msgstr ""
+msgstr "Du bruker WordPress %s."
 
 #: classes/WP_Piwik/Admin/Settings.php:50
 msgid ""
@@ -202,7 +202,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:116
 msgid "Auto config"
-msgstr ""
+msgstr "Automatisk konfigurasjon"
 
 #: classes/WP_Piwik/Admin/Settings.php:116
 msgid ""
@@ -311,7 +311,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:164
 msgid "Display stats to"
-msgstr ""
+msgstr "Vis statistikk til"
 
 #: classes/WP_Piwik/Admin/Settings.php:171
 msgid "Choose user roles allowed to see the statistics page."
@@ -363,7 +363,7 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:190
 #: classes/WP_Piwik/Admin/Settings.php:193
 msgid "Default tracking"
-msgstr ""
+msgstr "Standard sporing"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid "WP-Piwik will use Piwik's standard tracking code."
@@ -442,7 +442,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:206
 msgid "Noscript code"
-msgstr ""
+msgstr "Noscript-kode"
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 msgid "Add &lt;noscript&gt;"
@@ -491,7 +491,7 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:247
 #: classes/WP_Piwik/Admin/Settings.php:249
 msgid "See %sPiwik documentation%s."
-msgstr ""
+msgstr "Se %sPiwik-dokumentasjon%s."
 
 #: classes/WP_Piwik/Admin/Settings.php:218
 msgid "Track search"
