@@ -9,13 +9,13 @@ namespace WP_Piwik;
  * @package WP_Piwik
  */
 class Settings {
-	
+
 	/**
 	 *
 	 * @var Environment variables and default settings container
 	 */
 	private static $wpPiwik, $defaultSettings;
-	
+
 	/**
 	 *
 	 * @var Define callback functions for changed settings
@@ -25,9 +25,9 @@ class Settings {
 			'piwik_token' => 'checkPiwikToken',
 			'site_id' => 'requestPiwikSiteID',
 			'tracking_code' => 'prepareTrackingCode',
-			'noscript_code' => 'prepareNocscriptCode' 
+			'noscript_code' => 'prepareNocscriptCode'
 	);
-	
+
 	/**
 	 *
 	 * @var Register default configuration set
@@ -51,7 +51,7 @@ class Settings {
 			'dashboard_seo' => false,
 			'toolbar' => false,
 			'capability_read_stats' => array (
-					'administrator' => true 
+					'administrator' => true
 			),
 			'perpost_stats' => false,
 			'plugin_display_name' => 'WP-Piwik',
@@ -83,6 +83,7 @@ class Settings {
 			'track_feed_addcampaign' => false,
 			'track_feed_campaign' => 'feed',
 			'track_heartbeat' => 0,
+			'track_user_id' => 'disabled',
 			// User settings: Expert configuration
 			'cache' => true,
 			'http_connection' => 'curl',
@@ -103,9 +104,9 @@ class Settings {
 			'noscript_code' => '',
 			'tracking_code' => '',
 			'last_tracking_code_update' => 0,
-			'dashboard_revision' => 0 
+			'dashboard_revision' => 0
 	), $settingsChanged = false;
-	
+
 	/**
 	 * Constructor class to prepare settings manager
 	 *
@@ -117,7 +118,7 @@ class Settings {
 		self::$wpPiwik->log ( 'Store default settings' );
 		self::$defaultSettings = array (
 				'globalSettings' => $this->globalSettings,
-				'settings' => $this->settings 
+				'settings' => $this->settings
 		);
 		self::$wpPiwik->log ( 'Load settings' );
 		foreach ( $this->globalSettings as $key => $default ) {
@@ -126,7 +127,7 @@ class Settings {
 		foreach ( $this->settings as $key => $default )
 			$this->settings [$key] = get_option ( 'wp-piwik-' . $key, $default );
 	}
-	
+
 	/**
 	 * Save all settings as WordPress options
 	 */
@@ -154,7 +155,7 @@ class Settings {
 			$objRole = get_role ( $strKey );
 			foreach ( array (
 					'stealth',
-					'read_stats' 
+					'read_stats'
 			) as $strCap ) {
 				$aryCaps = $this->getGlobalOption ( 'capability_' . $strCap );
 				if (isset ( $aryCaps [$strKey] ) && $aryCaps [$strKey])
@@ -164,7 +165,7 @@ class Settings {
 		}
 		$this->settingsChanged = false;
 	}
-	
+
 	/**
 	 * Get a global option's value
 	 *
@@ -175,7 +176,7 @@ class Settings {
 	public function getGlobalOption($key) {
 		return isset ( $this->globalSettings [$key] ) ? $this->globalSettings [$key] : self::$defaultSettings ['globalSettings'] [$key];
 	}
-	
+
 	/**
 	 * Get an option's value related to a specific blog
 	 *
@@ -191,7 +192,7 @@ class Settings {
 		}
 		return isset ( $this->settings [$key] ) ? $this->settings [$key] : self::$defaultSettings ['settings'] [$key];
 	}
-	
+
 	/**
 	 * Set a global option's value
 	 *
@@ -205,7 +206,7 @@ class Settings {
 		self::$wpPiwik->log ( 'Changed global option ' . $key . ': ' . (is_array ( $value ) ? serialize ( $value ) : $value) );
 		$this->globalSettings [$key] = $value;
 	}
-	
+
 	/**
 	 * Set an option's value related to a specific blog
 	 *
@@ -224,7 +225,7 @@ class Settings {
 		} else
 			$this->settings [$key] = $value;
 	}
-	
+
 	/**
 	 * Reset settings to default
 	 */
@@ -243,19 +244,19 @@ class Settings {
 		}
 		else $wpdb->query("DELETE FROM $wpdb->options WHERE option_name LIKE 'wp-piwik_global-%'");
 	}
-	
+
 	/**
 	 * Get blog list
 	 */
 	public static function getBlogList($limit = null, $page = null) {
 		if ( !\wp_is_large_network() )
 			return \wp_get_sites ( array('limit' => $limit, 'offset' => $page?($page - 1) * $limit:null));
-		if ($limit && $page) 
+		if ($limit && $page)
 			$queryLimit = ' LIMIT '.(int) (($page - 1) * $limit).','.(int) $limit;
 		global $wpdb;
 		return $wpdb->get_results('SELECT blog_id FROM '.$wpdb->blogs.' ORDER BY blog_id'.$queryLimit, ARRAY_A);
 	}
-	
+
 	/**
 	 * Check if plugin is network activated
 	 *
@@ -266,7 +267,7 @@ class Settings {
 			require_once (ABSPATH . 'wp-admin/includes/plugin.php');
 		return is_plugin_active_for_network ( 'wp-piwik/wp-piwik.php' );
 	}
-	
+
 	/**
 	 * Apply new configuration
 	 *
@@ -283,7 +284,7 @@ class Settings {
 		$this->setGlobalOption ( 'last_settings_update', time () );
 		$this->save ();
 	}
-	
+
 	/**
 	 * Apply callback function on new settings
 	 *
@@ -296,14 +297,14 @@ class Settings {
 			if (isset ( $in [$key] ))
 				$in [$key] = call_user_func_array ( array (
 						$this,
-						$value 
+						$value
 				), array (
 						$in [$key],
-						$in 
+						$in
 				) );
 		return $in;
 	}
-	
+
 	/**
 	 * Add slash to Piwik URL if necessary
 	 *
@@ -316,7 +317,7 @@ class Settings {
 	private function checkPiwikUrl($value, $in) {
 		return substr ( $value, - 1, 1 ) != '/' ? $value . '/' : $value;
 	}
-	
+
 	/**
 	 * Remove &amp;token_auth= from auth token
 	 *
@@ -329,7 +330,7 @@ class Settings {
 	private function checkPiwikToken($value, $in) {
 		return str_replace ( '&token_auth=', '', $value );
 	}
-	
+
 	/**
 	 * Request the site ID (if not set before)
 	 *
@@ -344,7 +345,7 @@ class Settings {
 			return self::$wpPiwik->getPiwikSiteId();
 		return $value;
 	}
-	
+
 	/**
 	 * Prepare the tracking code
 	 *
@@ -366,7 +367,7 @@ class Settings {
 		$this->setOption ( 'noscript_code', $result ['noscript'] );*/
 		return; // $result ['script'];
 	}
-	
+
 	/**
 	 * Prepare the nocscript code
 	 *
@@ -381,7 +382,7 @@ class Settings {
 			return stripslashes ( $value );
 		return $this->getOption ( 'noscript_code' );
 	}
-	
+
 	/**
 	 * Get debug data
 	 *
