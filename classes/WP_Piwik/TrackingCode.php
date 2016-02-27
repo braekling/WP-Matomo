@@ -70,17 +70,17 @@ class TrackingCode {
 		if (($settings->getGlobalOption ( 'track_user_id' ) != 'disabled') && is_user_logged_in()) {
 			// Get the User ID Admin option, and the current user's data
 			$uidFrom = $settings->getGlobalOption ( 'track_user_id' );
-			$user = get_currentuserinfo();
+			get_currentuserinfo(); // $current_user
 
 			// Get the "Piwik" User ID based on the Admin Setting
 			if ( $uidFrom == 'uid' ) {
-				$pkUserId = $user->ID;
+				$pkUserId = $current_user->ID;
 			} elseif ( $uidFrom == 'email' ) {
-				$pkUserId = $user->user_email;
+				$pkUserId = $current_user->user_email;
 			} elseif ( $uidFrom == 'username' ) {
 				$pkUserId = $user->user_login;
-			} elseif ( $uidFrom == 'displayname' ) {
-				$pkUserId = $user->display_name;
+			} elseif ( $current_user == 'displayname' ) {
+				$pkUserId = $current_user->display_name;
 			}
 
 			// Check we got a User ID to track, and track it
