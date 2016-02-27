@@ -78,8 +78,8 @@ class TrackingCode {
 			} elseif ( $uidFrom == 'email' ) {
 				$pkUserId = $current_user->user_email;
 			} elseif ( $uidFrom == 'username' ) {
-				$pkUserId = $user->user_login;
-			} elseif ( $current_user == 'displayname' ) {
+				$pkUserId = $current_user->user_login;
+			} elseif ( $uidFrom == 'displayname' ) {
 				$pkUserId = $current_user->display_name;
 			}
 
