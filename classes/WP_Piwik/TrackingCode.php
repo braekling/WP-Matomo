@@ -85,7 +85,7 @@ class TrackingCode {
 
 			// Check we got a User ID to track, and track it
 			if ( isset( $pkUserId ) && ! empty( $pkUserId ))
-				$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['setUserId', " . esc_js( $pkUserId ) . "]);\n_paq.push(['trackPageView']);", $code );
+				$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['setUserId', '" . esc_js( $pkUserId ) . "']);\n_paq.push(['trackPageView']);", $code );
 		}
 
 		if ($settings->getGlobalOption ( 'force_protocol' ) != 'disabled')
