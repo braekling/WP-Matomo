@@ -1,13 +1,14 @@
 # Copyright (C) 2015 WP-Piwik
 # This file is distributed under the same license as the WP-Piwik package.
 # Translators:
+# wenkuan shi <cklx@mail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2015-07-22 10:25:29+00:00\n"
-"PO-Revision-Date: 2016-02-21 13:19+0000\n"
-"Last-Translator: André Bräkling\n"
+"PO-Revision-Date: 2016-02-24 12:41+0000\n"
+"Last-Translator: wenkuan shi <cklx@mail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/piwik/wp-piwik/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,15 +18,15 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:24
 msgid "Reload"
-msgstr ""
+msgstr "刷新"
 
 #: classes/WP_Piwik/Admin/Settings.php:27
 msgid "Changes saved."
-msgstr ""
+msgstr "更改已保存。"
 
 #: classes/WP_Piwik/Admin/Settings.php:45
 msgid "Save Changes"
-msgstr ""
+msgstr "保存更改"
 
 #: classes/WP_Piwik/Admin/Settings.php:46
 msgid "Thanks for using WP-Piwik!"
@@ -33,41 +34,41 @@ msgstr "感谢使用 WP-Piwik！"
 
 #: classes/WP_Piwik/Admin/Settings.php:50
 msgid "WP-Piwik %s is successfully connected to Piwik %s."
-msgstr ""
+msgstr "WP-Piwik %s成功连接到了Piwik %s。"
 
 #: classes/WP_Piwik/Admin/Settings.php:50
 msgid "You are running WordPress %s."
-msgstr ""
+msgstr "你正在使用WordPress %s。"
 
 #: classes/WP_Piwik/Admin/Settings.php:50
 msgid ""
 "You are running a WordPress %s blog network (WPMU). WP-Piwik will handle "
 "your sites as different websites."
-msgstr ""
+msgstr "您正在运行一个WordPress %s 博客网（WPMU）。 WP-Piwik将处理您的网站为不同的网站。"
 
 #: classes/WP_Piwik/Admin/Settings.php:53
 msgid ""
 "WP-Piwik %s was not able to connect to Piwik using your configuration. Check"
 " the &raquo;Connect to Piwik&laquo; section below."
-msgstr ""
+msgstr "使用您的配置WP-Piwik %s无法连接到Piwik。请检查&raquo;连接 Piwik&laquo; 底部设置。"
 
 #: classes/WP_Piwik/Admin/Settings.php:56
 msgid ""
 "WP-Piwik %s has to be connected to Piwik first. Check the &raquo;Connect to "
 "Piwik&laquo; section below."
-msgstr ""
+msgstr "WP-Piwik %s 必须先连接到Piwik，请检查 &raquo;连接 Piwik&laquo; 底部设置。"
 
 #: classes/WP_Piwik/Admin/Settings.php:60
 msgid "Connect to Piwik"
-msgstr ""
+msgstr "连接Piwik"
 
 #: classes/WP_Piwik/Admin/Settings.php:65
 msgid "Show Statistics"
-msgstr ""
+msgstr "显示统计"
 
 #: classes/WP_Piwik/Admin/Settings.php:69
 msgid "Enable Tracking"
-msgstr ""
+msgstr "启用跟踪"
 
 #: classes/WP_Piwik/Admin/Settings.php:74
 msgid "Expert Settings"
@@ -87,11 +88,11 @@ msgid ""
 "WordPress admin dashboard and to add and configure your Piwik tracking code."
 " To use this you will need your own Piwik instance. If you do not already "
 "have a Piwik setup, you have two simple options: use either"
-msgstr ""
+msgstr "WP-Piwik是一个WordPress插件，主要功能为显示选择Piwik统计在你的WordPress的管理仪表板和添加和配置您的Piwik跟踪代码。要使用插件，你需要有自己Piwik实例。如果您还没有安装Piwik，你有两个简单的选择：要么安装Piwik，要么卸载此插件。"
 
 #: classes/WP_Piwik/Admin/Settings.php:95
 msgid "Self-hosted"
-msgstr ""
+msgstr "自有主机"
 
 #: classes/WP_Piwik/Admin/Settings.php:95
 msgid "or"
@@ -99,13 +100,13 @@ msgstr "或者"
 
 #: classes/WP_Piwik/Admin/Settings.php:95
 msgid "Cloud-hosted"
-msgstr ""
+msgstr "云主机"
 
 #: classes/WP_Piwik/Admin/Settings.php:98
 msgid ""
 "Neither cURL nor fopen are available. So WP-Piwik can not use the HTTP API "
 "and not connect to Piwik Pro."
-msgstr ""
+msgstr "由于cURL和fopen都没有开启，所以WP-Piwik不能使用HTTP API，无法连接到Piwik pro。"
 
 #: classes/WP_Piwik/Admin/Settings.php:98
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:30
@@ -114,48 +115,48 @@ msgstr "更多信息"
 
 #: classes/WP_Piwik/Admin/Settings.php:100
 msgid "You can choose between three connection methods:"
-msgstr ""
+msgstr "您可以三种连接方式之间进行选择："
 
 #: classes/WP_Piwik/Admin/Settings.php:100
 #: classes/WP_Piwik/Admin/Settings.php:103
 msgid "Self-hosted (HTTP API, default)"
-msgstr ""
+msgstr "自有主机(HTTP API, 默认)"
 
 #: classes/WP_Piwik/Admin/Settings.php:100
 msgid ""
 "This is the default option for a self-hosted Piwik and should work for most "
 "configurations. WP-Piwik will connect to Piwik using http(s)."
-msgstr ""
+msgstr "这是一个自托管Piwik的默认选项，应该为大多数配置工作。 WP-Piwik将使用HTTP（S）连接到Piwik。"
 
 #: classes/WP_Piwik/Admin/Settings.php:100
 #: classes/WP_Piwik/Admin/Settings.php:104
 msgid "Self-hosted (PHP API)"
-msgstr ""
+msgstr "自有主机  (PHP API)"
 
 #: classes/WP_Piwik/Admin/Settings.php:100
 msgid ""
 "Choose this, if your self-hosted Piwik and WordPress are running on the same"
 " machine and you know the full server path to your Piwik instance."
-msgstr ""
+msgstr "选择这个，如果你的自托管Piwik和WordPress在同一台机器上运行，你知道完整的服务器路径，您的Piwik实例。"
 
 #: classes/WP_Piwik/Admin/Settings.php:100
 #: classes/WP_Piwik/Admin/Settings.php:105
 msgid "Cloud-hosted (Piwik Pro)"
-msgstr ""
+msgstr "云主机(Piwik Pro)"
 
 #: classes/WP_Piwik/Admin/Settings.php:100
 msgid ""
 "If you are using a cloud-hosted Piwik by Piwik Pro, you can simply use this "
 "option."
-msgstr ""
+msgstr "如果您使用的是Piwik云主机 的Piwik Pro，你可以简单地使用此选项。"
 
 #: classes/WP_Piwik/Admin/Settings.php:101
 msgid "Piwik Mode"
-msgstr ""
+msgstr "Piwik模式"
 
 #: classes/WP_Piwik/Admin/Settings.php:102
 msgid "Disabled (WP-Piwik will not connect to Piwik)"
-msgstr ""
+msgstr "关闭  (WP-Piwik 将不会连接到 Piwik)"
 
 #: classes/WP_Piwik/Admin/Settings.php:108
 msgid "Piwik URL"
@@ -165,7 +166,7 @@ msgstr "Piwik URL"
 msgid ""
 "Enter your Piwik URL. This is the same URL you use to access your Piwik "
 "instance, e.g. http://www.example.com/piwik/."
-msgstr ""
+msgstr "输入你的Piwik URL，这个链接地址与你访问你的Piwik实例是一样的，例如：http://www.example.com/piwik/  。"
 
 #: classes/WP_Piwik/Admin/Settings.php:109
 msgid "Piwik path"
@@ -173,17 +174,17 @@ msgstr "Piwik 路径"
 
 #: classes/WP_Piwik/Admin/Settings.php:109
 msgid "Enter the file path to your Piwik instance, e.g. /var/www/piwik/."
-msgstr ""
+msgstr "输入你的Piwik实例的文件路径，例如： /var/www/piwik/"
 
 #: classes/WP_Piwik/Admin/Settings.php:110
 msgid "Piwik user"
-msgstr ""
+msgstr "Piwik用户"
 
 #: classes/WP_Piwik/Admin/Settings.php:110
 msgid ""
 "Enter your Piwik Pro username. It is also part of your URL: "
 "http://USERNAME.piwik.pro."
-msgstr ""
+msgstr "输入您的Piwik Pro用户名，它也是你的链接地址的一个部分：http://用户名.piwik.pro"
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid "Auth token"
@@ -193,11 +194,11 @@ msgstr "认证令牌（Auth Token）"
 msgid ""
 "Enter your Piwik auth token here. It is an alphanumerical code like "
 "0a1b2c34d56e78901fa2bc3d45678efa."
-msgstr ""
+msgstr "在此输入您Piwik身份验证令牌。这是一串字母数字代码类似0a1b2c34d56e78901fa2bc3d45678efa。"
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid "See %sWP-Piwik FAQ%s."
-msgstr ""
+msgstr "查看%sWP-Piwik FAQ%s。"
 
 #: classes/WP_Piwik/Admin/Settings.php:116
 msgid "Auto config"
@@ -215,37 +216,37 @@ msgstr "判断站点"
 
 #: classes/WP_Piwik/Admin/Settings.php:132
 msgid "Select site"
-msgstr ""
+msgstr "选择网站"
 
 #: classes/WP_Piwik/Admin/Settings.php:140
 msgid "Piwik default date"
-msgstr ""
+msgstr "Piwik默认日期"
 
 #: classes/WP_Piwik/Admin/Settings.php:141
 #: classes/WP_Piwik/Admin/Settings.php:154
 msgid "Today"
-msgstr ""
+msgstr "今天"
 
 #: classes/WP_Piwik/Admin/Settings.php:142
 #: classes/WP_Piwik/Admin/Settings.php:153
 msgid "Yesterday"
-msgstr ""
+msgstr "昨天"
 
 #: classes/WP_Piwik/Admin/Settings.php:143
 msgid "Current month"
-msgstr ""
+msgstr "本月"
 
 #: classes/WP_Piwik/Admin/Settings.php:144
 msgid "Last month"
-msgstr ""
+msgstr "上月"
 
 #: classes/WP_Piwik/Admin/Settings.php:145
 msgid "Current week"
-msgstr ""
+msgstr "本周"
 
 #: classes/WP_Piwik/Admin/Settings.php:146
 msgid "Last week"
-msgstr ""
+msgstr "上周"
 
 #: classes/WP_Piwik/Admin/Settings.php:147
 msgid "Default date shown on statistics page."
@@ -253,20 +254,20 @@ msgstr "在统计数据页面显示的默认日期。"
 
 #: classes/WP_Piwik/Admin/Settings.php:149
 msgid "Show SEO data"
-msgstr ""
+msgstr "显示SEO数据"
 
 #: classes/WP_Piwik/Admin/Settings.php:149
 msgid "Display SEO ranking data on statistics page."
-msgstr ""
+msgstr "显示SEO统计页面上的排名数据。"
 
 #: classes/WP_Piwik/Admin/Settings.php:149
 #: classes/WP_Piwik/Admin/Settings.php:160
 msgid "Slow!"
-msgstr ""
+msgstr "慢！"
 
 #: classes/WP_Piwik/Admin/Settings.php:151
 msgid "Dashboard overview"
-msgstr ""
+msgstr "仪表盘概述"
 
 #: classes/WP_Piwik/Admin/Settings.php:152
 #: classes/WP_Piwik/Admin/Settings.php:190
@@ -274,31 +275,31 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:213
 #: classes/WP_Piwik/Admin/Settings.php:304
 msgid "Disabled"
-msgstr ""
+msgstr "禁用"
 
 #: classes/WP_Piwik/Admin/Settings.php:155
 msgid "Last 30 days"
-msgstr ""
+msgstr "最近30天"
 
 #: classes/WP_Piwik/Admin/Settings.php:156
 msgid "Enable WP-Piwik dashboard widget &quot;Overview&quot;."
-msgstr ""
+msgstr "开启WP-Piwik仪表盘小部件 &quot;概述&quot；"
 
 #: classes/WP_Piwik/Admin/Settings.php:158
 msgid "Dashboard graph"
-msgstr ""
+msgstr "仪表盘图表"
 
 #: classes/WP_Piwik/Admin/Settings.php:158
 msgid "Enable WP-Piwik dashboard widget &quot;Graph&quot;."
-msgstr ""
+msgstr "开启WP-Piwik仪表盘小部件 &quot;图表&quot；"
 
 #: classes/WP_Piwik/Admin/Settings.php:160
 msgid "Dashboard SEO"
-msgstr ""
+msgstr "仪表盘SEO"
 
 #: classes/WP_Piwik/Admin/Settings.php:160
 msgid "Enable WP-Piwik dashboard widget &quot;SEO&quot;."
-msgstr ""
+msgstr "开启WP-Piwik仪表盘小部件 &quot;SEO&quot；"
 
 #: classes/WP_Piwik/Admin/Settings.php:162
 msgid "Show graph on WordPress Toolbar"
@@ -306,11 +307,11 @@ msgstr "在 WordPress 工具条上显示图表"
 
 #: classes/WP_Piwik/Admin/Settings.php:162
 msgid "Display a last 30 days visitor graph on WordPress' toolbar."
-msgstr ""
+msgstr "在WordPress的工具栏上显示最近30天的访客图。"
 
 #: classes/WP_Piwik/Admin/Settings.php:164
 msgid "Display stats to"
-msgstr ""
+msgstr "显示统计信息"
 
 #: classes/WP_Piwik/Admin/Settings.php:171
 msgid "Choose user roles allowed to see the statistics page."
@@ -318,15 +319,15 @@ msgstr "选择能够查看统计页面的用户组"
 
 #: classes/WP_Piwik/Admin/Settings.php:173
 msgid "Show per post stats"
-msgstr ""
+msgstr "显示每篇文章的统计"
 
 #: classes/WP_Piwik/Admin/Settings.php:173
 msgid "Show stats about single posts at the post edit admin page."
-msgstr ""
+msgstr "在每篇文章的编辑管理页面显示这篇文章的统计数据。"
 
 #: classes/WP_Piwik/Admin/Settings.php:175
 msgid "Piwik shortcut"
-msgstr ""
+msgstr "Piwik快捷方式"
 
 #: classes/WP_Piwik/Admin/Settings.php:175
 msgid "Display a shortcut to Piwik itself."
@@ -350,14 +351,14 @@ msgstr "启用短代码，可以插入到文章或页面内容中。"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid "You can choose between four tracking code modes:"
-msgstr ""
+msgstr "您有四种跟踪代码模式之间进行选择："
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid ""
 "WP-Piwik will not add the tracking code. Use this, if you want to add the "
 "tracking code to your template files or you use another plugin to add the "
 "tracking code."
-msgstr ""
+msgstr "WP-Piwik将不添加跟踪代码。如果你想跟踪代码添加到您的模板文件，或使用其他插件添加跟踪代码，请使用此方法。"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 #: classes/WP_Piwik/Admin/Settings.php:193
@@ -366,7 +367,7 @@ msgstr "默认跟踪"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid "WP-Piwik will use Piwik's standard tracking code."
-msgstr ""
+msgstr "WP-Piwik将使用Piwik的标准跟踪代码。"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 #: classes/WP_Piwik/Admin/Settings.php:194
@@ -377,11 +378,11 @@ msgstr "使用 js/index.php"
 msgid ""
 "You can choose this tracking code, to deliver a minified proxy code and to "
 "avoid using the files called piwik.js or piwik.php."
-msgstr ""
+msgstr "您可以选择此跟踪代码，提供一个缩小的代理代码，并避免使用被称为piwik.js或piwik.php的文件。"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid "See %sreadme file%s."
-msgstr ""
+msgstr "参阅%sreadme file%s。"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 #: classes/WP_Piwik/Admin/Settings.php:195
@@ -390,29 +391,29 @@ msgstr "使用代理脚本"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid "Use this tracking code to not reveal the Piwik server URL."
-msgstr ""
+msgstr "使用此跟踪代码没有透露Piwik服务器URL。"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 #: classes/WP_Piwik/Admin/Settings.php:210
 #: classes/WP_Piwik/Admin/Settings.php:220
 msgid "See %sPiwik FAQ%s."
-msgstr ""
+msgstr "参阅 %sPiwik FAQ%s。"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 #: classes/WP_Piwik/Admin/Settings.php:196
 msgid "Enter manually"
-msgstr ""
+msgstr "手动输入"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid ""
 "Enter your own tracking code manually. You can choose one of the prior "
 "options, pre-configure your tracking code and switch to manually editing at "
 "last."
-msgstr ""
+msgstr "手动输入你自己的跟踪代码。您可以选择的前一个选项，预配置的跟踪代码和切换在最后手动编辑。"
 
 #: classes/WP_Piwik/Admin/Settings.php:190
 msgid "Use the placeholder {ID} to add the Piwik site ID."
-msgstr ""
+msgstr "使用占位符{ID}来添加Piwik网站ID。"
 
 #: classes/WP_Piwik/Admin/Settings.php:191
 msgid "Add tracking code"
@@ -420,28 +421,28 @@ msgstr "添加跟踪代码"
 
 #: classes/WP_Piwik/Admin/Settings.php:199
 msgid "Tracking code"
-msgstr ""
+msgstr "跟踪代码"
 
 #: classes/WP_Piwik/Admin/Settings.php:201
 msgid "JavaScript code position"
-msgstr ""
+msgstr "JavaScript代码位置"
 
 #: classes/WP_Piwik/Admin/Settings.php:202
 msgid "Footer"
-msgstr ""
+msgstr "页尾"
 
 #: classes/WP_Piwik/Admin/Settings.php:203
 msgid "Header"
-msgstr ""
+msgstr "头部"
 
 #: classes/WP_Piwik/Admin/Settings.php:204
 msgid ""
 "Choose whether the JavaScript code is added to the footer or the header."
-msgstr ""
+msgstr "选择的JavaScript代码是否被添加到页脚或首标。"
 
 #: classes/WP_Piwik/Admin/Settings.php:206
 msgid "Noscript code"
-msgstr ""
+msgstr "NOSCRIPT代码"
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 msgid "Add &lt;noscript&gt;"
@@ -462,25 +463,25 @@ msgstr "在 noscript 代码中添加 rec 参数"
 
 #: classes/WP_Piwik/Admin/Settings.php:210
 msgid "Enable tracking for visitors without JavaScript (not recommended)."
-msgstr ""
+msgstr "启用没有JavaScript的访问者跟踪（不推荐）。"
 
 #: classes/WP_Piwik/Admin/Settings.php:212
 msgid "Enable content tracking"
-msgstr ""
+msgstr "启用内容跟踪"
 
 #: classes/WP_Piwik/Admin/Settings.php:214
 msgid "Track all content blocks"
-msgstr ""
+msgstr "跟踪所有内容模块"
 
 #: classes/WP_Piwik/Admin/Settings.php:215
 msgid "Track only visible content blocks"
-msgstr ""
+msgstr "只跟踪可见的内容模块"
 
 #: classes/WP_Piwik/Admin/Settings.php:216
 msgid ""
 "Content tracking allows you to track interaction with the content of a web "
 "page or application."
-msgstr ""
+msgstr "内容跟踪允许您灵活地跟踪网页或应用程序的内容。"
 
 #: classes/WP_Piwik/Admin/Settings.php:216
 #: classes/WP_Piwik/Admin/Settings.php:218
@@ -490,7 +491,7 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:247
 #: classes/WP_Piwik/Admin/Settings.php:249
 msgid "See %sPiwik documentation%s."
-msgstr ""
+msgstr "参阅%sPiwik 文档%s。"
 
 #: classes/WP_Piwik/Admin/Settings.php:218
 msgid "Track search"
@@ -498,7 +499,7 @@ msgstr "跟踪搜索"
 
 #: classes/WP_Piwik/Admin/Settings.php:218
 msgid "Use Piwik's advanced Site Search Analytics feature."
-msgstr ""
+msgstr "使用Piwik的高级网站搜索分析功能。"
 
 #: classes/WP_Piwik/Admin/Settings.php:220
 msgid "Track 404"
@@ -511,29 +512,29 @@ msgstr "WP-Piwik 会自动添加一个 404 目录来跟踪 404 页面的访问"
 
 #: classes/WP_Piwik/Admin/Settings.php:222
 msgid "Add annotation on new post"
-msgstr ""
+msgstr "在新文章添加备注"
 
 #: classes/WP_Piwik/Admin/Settings.php:222
 msgid "Add a Piwik annotation on each new post."
-msgstr ""
+msgstr "在每一篇新文章里添加一个Piwik备注。"
 
 #: classes/WP_Piwik/Admin/Settings.php:224
 msgid "Show custom variables box"
-msgstr ""
+msgstr "显示自定义变量箱"
 
 #: classes/WP_Piwik/Admin/Settings.php:224
 msgid " Show a &quot;custom variables&quot; edit box on post edit page."
-msgstr ""
+msgstr "在文章编辑页面显示 &quot;自定义变量编辑箱&quot; 。"
 
 #: classes/WP_Piwik/Admin/Settings.php:226
 msgid "Add new file types for download tracking"
-msgstr ""
+msgstr "为下载跟踪·添加新的文件类型"
 
 #: classes/WP_Piwik/Admin/Settings.php:226
 msgid ""
 "Add file extensions for download tracking, divided by a vertical bar "
 "(&#124;)."
-msgstr ""
+msgstr "为下载跟踪添加文件扩展名，由一个垂直的栏分隔(&#124;) 。"
 
 #: classes/WP_Piwik/Admin/Settings.php:228
 msgid "Disable cookies"
@@ -545,35 +546,35 @@ msgstr "对某访问者禁用所有跟踪 Cookie"
 
 #: classes/WP_Piwik/Admin/Settings.php:230
 msgid "Limit cookie lifetime"
-msgstr ""
+msgstr "限制cookie生存"
 
 #: classes/WP_Piwik/Admin/Settings.php:230
 msgid ""
 "You can limit the cookie lifetime to avoid tracking your users over a longer"
 " period as necessary."
-msgstr ""
+msgstr "你可以限制cookie的生命周期，以避免长时间强制跟踪你的用户。"
 
 #: classes/WP_Piwik/Admin/Settings.php:232
 msgid "Visitor timeout (seconds)"
-msgstr ""
+msgstr "游客超时（秒）"
 
 #: classes/WP_Piwik/Admin/Settings.php:234
 msgid "Session timeout (seconds)"
-msgstr ""
+msgstr "会话超时（秒）"
 
 #: classes/WP_Piwik/Admin/Settings.php:236
 msgid "Referral timeout (seconds)"
-msgstr ""
+msgstr "转向超时（秒）"
 
 #: classes/WP_Piwik/Admin/Settings.php:238
 msgid "Track admin pages"
-msgstr ""
+msgstr "跟踪管理页面"
 
 #: classes/WP_Piwik/Admin/Settings.php:238
 msgid ""
 "Enable to track users on admin pages (remember to configure the tracking "
 "filter appropriately)."
-msgstr ""
+msgstr "启用追踪管理页面的用户（记得要适当地配置跟踪过滤器）。"
 
 #: classes/WP_Piwik/Admin/Settings.php:241
 msgid "Tracking filter"
@@ -585,43 +586,43 @@ msgstr "选择你<strong>不</strong>需要跟踪的用户组"
 
 #: classes/WP_Piwik/Admin/Settings.php:247
 msgid "Track subdomains in the same website"
-msgstr ""
+msgstr "在同一个网站跟踪各个子域"
 
 #: classes/WP_Piwik/Admin/Settings.php:247
 msgid "Adds *.-prefix to cookie domain."
-msgstr ""
+msgstr "为cookie域名增加 *.-前缀。"
 
 #: classes/WP_Piwik/Admin/Settings.php:249
 msgid "Do not count subdomains as outlink"
-msgstr ""
+msgstr "子域名不计为外链"
 
 #: classes/WP_Piwik/Admin/Settings.php:249
 msgid "Adds *.-prefix to tracked domain."
-msgstr ""
+msgstr "为跟踪域名增加 *.-前缀。"
 
 #: classes/WP_Piwik/Admin/Settings.php:251
 msgid "Track RSS feeds"
-msgstr ""
+msgstr "跟踪RSS摘要"
 
 #: classes/WP_Piwik/Admin/Settings.php:251
 msgid "Enable to track posts in feeds via tracking pixel."
-msgstr ""
+msgstr "通过跟踪像素来跟踪feeds里的文章。"
 
 #: classes/WP_Piwik/Admin/Settings.php:253
 msgid "Track RSS feed links as campaign"
-msgstr ""
+msgstr "动态跟踪RSS源链接"
 
 #: classes/WP_Piwik/Admin/Settings.php:255
 msgid "RSS feed campaign"
-msgstr ""
+msgstr "RSS馈送活动"
 
 #: classes/WP_Piwik/Admin/Settings.php:255
 msgid "Keyword: post name."
-msgstr ""
+msgstr "关键字：文章名称。"
 
 #: classes/WP_Piwik/Admin/Settings.php:257
 msgid "Enable heartbeat timer"
-msgstr ""
+msgstr "启用心跳计时器"
 
 #: classes/WP_Piwik/Admin/Settings.php:257
 msgid ""
@@ -630,13 +631,13 @@ msgid ""
 "between the pings in seconds (Piwik default: 15) to enable or 0 to disable "
 "this feature. <strong>Note:</strong> This will cause a lot of additional "
 "HTTP requests on your site."
-msgstr ""
+msgstr "启用心跳由定时器只要该网站开通定期发送HTTP ping请求，以获得更准确的访问长度。输入ping之间的秒（Piwik默认：15）时间来启用该功能，0来禁用该功能。 <strong>注意：</strong>这将导致很多网站上的其他HTTP请求。"
 
 #: classes/WP_Piwik/Admin/Settings.php:262
 msgid ""
 "Usually, you do not need to change these settings. If you want to do so, you"
 " should know what you do or you got an expert's advice."
-msgstr ""
+msgstr "通常情况下，你并不需要更改这些设置。如果你想这样做，你应该知道你做了什么，或者你有一个专家的意见。"
 
 #: classes/WP_Piwik/Admin/Settings.php:264
 msgid "Enable cache"
@@ -644,45 +645,45 @@ msgstr "启用缓存"
 
 #: classes/WP_Piwik/Admin/Settings.php:264
 msgid "Cache API calls, which not contain today's values, for a week."
-msgstr ""
+msgstr "缓存一个星期API调用，这不包含今天的值。"
 
 #: classes/WP_Piwik/Admin/Settings.php:267
 msgid "HTTP connection via"
-msgstr ""
+msgstr "通过HTTP连接"
 
 #: classes/WP_Piwik/Admin/Settings.php:268
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "cURL"
-msgstr ""
+msgstr "cURL"
 
 #: classes/WP_Piwik/Admin/Settings.php:269
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "fopen"
-msgstr ""
+msgstr "fopen"
 
 #: classes/WP_Piwik/Admin/Settings.php:270
 msgid ""
 "Choose whether WP-Piwik should use cURL or fopen to connect to Piwik in HTTP"
 " or Pro mode."
-msgstr ""
+msgstr "选择WP-Piwik是否应该使用cURL或FOPEN连接到Piwik使用HTTP或专业模式。"
 
 #: classes/WP_Piwik/Admin/Settings.php:272
 msgid "HTTP method"
-msgstr ""
+msgstr "HTTP方法"
 
 #: classes/WP_Piwik/Admin/Settings.php:273
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "POST"
-msgstr ""
+msgstr "POST"
 
 #: classes/WP_Piwik/Admin/Settings.php:274
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "GET"
-msgstr ""
+msgstr "GET"
 
 #: classes/WP_Piwik/Admin/Settings.php:275
 msgid "Choose whether WP-Piwik should use POST or GET in HTTP or Pro mode."
-msgstr ""
+msgstr "选择WP-Piwi在HTTP或PRO模式下使用POST或GET。"
 
 #: classes/WP_Piwik/Admin/Settings.php:277
 msgid "Disable time limit"
@@ -710,23 +711,23 @@ msgstr "用户代理（UA）"
 
 #: classes/WP_Piwik/Admin/Settings.php:284
 msgid "Use the PHP default user agent"
-msgstr ""
+msgstr "使用PHP的默认用户代理"
 
 #: classes/WP_Piwik/Admin/Settings.php:284
 msgid "empty"
-msgstr ""
+msgstr "空的"
 
 #: classes/WP_Piwik/Admin/Settings.php:285
 msgid "Define a specific user agent"
-msgstr ""
+msgstr "定义一个特定的用户代理"
 
 #: classes/WP_Piwik/Admin/Settings.php:287
 msgid "Specific user agent"
-msgstr ""
+msgstr "具体的用户代理"
 
 #: classes/WP_Piwik/Admin/Settings.php:289
 msgid "Add data-cfasync=false"
-msgstr ""
+msgstr "添加data-cfasync=false"
 
 #: classes/WP_Piwik/Admin/Settings.php:291
 msgid "CDN URL"
@@ -734,45 +735,45 @@ msgstr "CDN URL"
 
 #: classes/WP_Piwik/Admin/Settings.php:293
 msgid "CDN URL (SSL)"
-msgstr ""
+msgstr "CDN URL (SSL)"
 
 #: classes/WP_Piwik/Admin/Settings.php:295
 msgid "Force Piwik to use a specific protocol"
-msgstr ""
+msgstr "强制Piwik使用特定协议"
 
 #: classes/WP_Piwik/Admin/Settings.php:296
 msgid "Disabled (default)"
-msgstr ""
+msgstr "关闭（默认）"
 
 #: classes/WP_Piwik/Admin/Settings.php:297
 msgid "http"
-msgstr ""
+msgstr "http"
 
 #: classes/WP_Piwik/Admin/Settings.php:298
 msgid "https (SSL)"
-msgstr ""
+msgstr "https (SSL)"
 
 #: classes/WP_Piwik/Admin/Settings.php:299
 msgid ""
 "Choose if you want to explicitly force Piwik to use HTTP or HTTPS. Does not "
 "work with a CDN URL."
-msgstr ""
+msgstr "如果你想强制Piwik使用HTTP或HTTPS，CDN URL将不会工作。"
 
 #: classes/WP_Piwik/Admin/Settings.php:301
 msgid "Update notice"
-msgstr ""
+msgstr "更新通知"
 
 #: classes/WP_Piwik/Admin/Settings.php:302
 msgid "Show always if WP-Piwik is updated"
-msgstr ""
+msgstr "在WP-Piwik更新时一直显示"
 
 #: classes/WP_Piwik/Admin/Settings.php:303
 msgid "Show only if WP-Piwik is updated and settings were changed"
-msgstr ""
+msgstr "只有WP-Piwik更新和设置被改变时显示"
 
 #: classes/WP_Piwik/Admin/Settings.php:305
 msgid "Choose if you want to get an update notice if WP-Piwik is updated."
-msgstr ""
+msgstr "选择如果WP-Piwik有更新时收到更新通知。"
 
 #: classes/WP_Piwik/Admin/Settings.php:466
 msgid "Donate"
@@ -842,11 +843,11 @@ msgstr "感谢<strong>你</strong>使用我的插件。我的代码能帮到你�
 
 #: classes/WP_Piwik/Admin/Settings.php:555
 msgid "The best place to get help:"
-msgstr ""
+msgstr "最好获取帮助的地方："
 
 #: classes/WP_Piwik/Admin/Settings.php:555
 msgid "WP-Piwik support forum"
-msgstr ""
+msgstr "WP-Piwik支持论坛"
 
 #: classes/WP_Piwik/Admin/Settings.php:558
 msgid "Debugging"
@@ -881,35 +882,35 @@ msgstr "启用"
 
 #: classes/WP_Piwik/Admin/Settings.php:571
 msgid "is used."
-msgstr ""
+msgstr "被使用"
 
 #: classes/WP_Piwik/Admin/Settings.php:573
 msgid "Determined Piwik base URL is"
-msgstr ""
+msgstr "确定Piwik基本网址"
 
 #: classes/WP_Piwik/Admin/Settings.php:577
 msgid "Tools"
-msgstr ""
+msgstr "工具"
 
 #: classes/WP_Piwik/Admin/Settings.php:579
 msgid "Run testscript"
-msgstr ""
+msgstr "运行testscript"
 
 #: classes/WP_Piwik/Admin/Settings.php:580
 msgid "Sitebrowser"
-msgstr ""
+msgstr "网站浏览器"
 
 #: classes/WP_Piwik/Admin/Settings.php:581
 msgid "Clear cache"
-msgstr ""
+msgstr "清除缓存"
 
 #: classes/WP_Piwik/Admin/Settings.php:582
 msgid "Are you sure you want to clear all settings?"
-msgstr ""
+msgstr "你确定要清除所有设置？"
 
 #: classes/WP_Piwik/Admin/Settings.php:582
 msgid "Reset WP-Piwik"
-msgstr ""
+msgstr "复位WP-Piwik"
 
 #: classes/WP_Piwik/Admin/Settings.php:584
 msgid "Latest support threads on WordPress.org"
@@ -917,27 +918,27 @@ msgstr "WordPress.org 上的最新支持讨论"
 
 #: classes/WP_Piwik/Admin/Settings.php:635
 msgid "Settings cleared (except connection settings)."
-msgstr ""
+msgstr "设置清除（除连接设置）。"
 
 #: classes/WP_Piwik/Admin/Settings.php:651
 msgid "Cache cleared."
-msgstr ""
+msgstr "缓存已被清除。"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:17
 msgid "site"
-msgstr ""
+msgstr "网站"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:18
 msgid "sites"
-msgstr ""
+msgstr "网站"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:24
 msgid "No site configured yet."
-msgstr ""
+msgstr "还没有配置网站。"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:29
 msgid "Blog ID"
-msgstr ""
+msgstr "博客ID"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:30
 msgid "Title"
@@ -953,7 +954,7 @@ msgstr "站点 ID（Piwik）"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:79
 msgid "Site not created yet."
-msgstr ""
+msgstr "网站还没有建立。"
 
 #: classes/WP_Piwik/Admin/Statistics.php:12
 msgid "Statistics"
@@ -973,11 +974,11 @@ msgstr "realpath() 返回 false"
 
 #: classes/WP_Piwik/Request/Php.php:39
 msgid "Class Piwik\\FrontController does not exists."
-msgstr ""
+msgstr "Class Piwik \\ FrontController不存在。"
 
 #: classes/WP_Piwik/Request/Php.php:42
 msgid "Class Piwik\\API\\Request does not exists."
-msgstr ""
+msgstr "Class Piwik\\API\\Request 不存在。"
 
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:10
 msgid "Piwik Custom Variables"
@@ -1046,7 +1047,7 @@ msgstr "其他"
 
 #: classes/WP_Piwik/Widget/Browsers.php:18
 msgid "Browsers"
-msgstr ""
+msgstr "浏览器"
 
 #: classes/WP_Piwik/Widget/Chart.php:19
 #: classes/WP_Piwik/Widget/Overview.php:41 classes/WP_Piwik/Widget/Post.php:37
@@ -1067,7 +1068,7 @@ msgstr "关键词"
 #: classes/WP_Piwik/Widget/Noresult.php:16
 #: classes/WP_Piwik/Widget/Search.php:16
 msgid "Site Search"
-msgstr ""
+msgstr "站内搜索"
 
 #: classes/WP_Piwik/Widget/Noresult.php:25
 #: classes/WP_Piwik/Widget/Search.php:25
@@ -1127,7 +1128,7 @@ msgstr "插件"
 
 #: classes/WP_Piwik/Widget/Plugins.php:25
 msgid "Plugin"
-msgstr ""
+msgstr "插件"
 
 #: classes/WP_Piwik/Widget/Plugins.php:25
 #: classes/WP_Piwik/Widget/Visitors.php:57 classes/WP_Piwik/Widget.php:102
@@ -1136,19 +1137,19 @@ msgstr "访问"
 
 #: classes/WP_Piwik/Widget/Post.php:43
 msgid "Min. generation time"
-msgstr ""
+msgstr "最小生成时间"
 
 #: classes/WP_Piwik/Widget/Post.php:44
 msgid "Max. generation time"
-msgstr ""
+msgstr "最大生成时间"
 
 #: classes/WP_Piwik/Widget/Referrers.php:16
 msgid "Referrers"
-msgstr ""
+msgstr "来源"
 
 #: classes/WP_Piwik/Widget/Screens.php:16
 msgid "Resolutions"
-msgstr ""
+msgstr "分辨率"
 
 #: classes/WP_Piwik/Widget/Screens.php:37
 msgid "Resolution"
@@ -1160,16 +1161,16 @@ msgstr "SEO"
 
 #: classes/WP_Piwik/Widget/SystemDetails.php:14
 msgid "Operation System Details"
-msgstr ""
+msgstr "操作系统详细信息"
 
 #: classes/WP_Piwik/Widget/SystemDetails.php:35
 #: classes/WP_Piwik/Widget/Systems.php:35
 msgid "Operation System"
-msgstr ""
+msgstr "操作系统"
 
 #: classes/WP_Piwik/Widget/Systems.php:14
 msgid "Operation Systems"
-msgstr ""
+msgstr "操作系统"
 
 #: classes/WP_Piwik/Widget/Visitors.php:57
 msgid "Date"
@@ -1177,15 +1178,15 @@ msgstr "日期"
 
 #: classes/WP_Piwik/Widget/Visitors.php:57
 msgid "Page Views"
-msgstr ""
+msgstr "页面浏览量（PV）"
 
 #: classes/WP_Piwik/Widget.php:104
 msgid "Hits"
-msgstr ""
+msgstr "点击事件"
 
 #: classes/WP_Piwik/Widget.php:106
 msgid "Actions"
-msgstr ""
+msgstr "活动次数"
 
 #: classes/WP_Piwik/Widget.php:162
 msgid "No data available."
@@ -1193,11 +1194,11 @@ msgstr "目前无数据"
 
 #: classes/WP_Piwik/Widget.php:293
 msgid "week"
-msgstr ""
+msgstr "周"
 
 #: classes/WP_Piwik.php:193
 msgid "%s %s installed."
-msgstr ""
+msgstr "%s %s安装。"
 
 #: classes/WP_Piwik.php:193
 msgid "Next you should connect to Piwik"
@@ -1205,7 +1206,7 @@ msgstr "接下来，请连接到 Piwik"
 
 #: classes/WP_Piwik.php:227
 msgid "%s updated to %s."
-msgstr ""
+msgstr "%s升级到%s。"
 
 #: classes/WP_Piwik.php:227
 msgid "Please validate your configuration"
@@ -1225,7 +1226,7 @@ msgstr "Piwik 统计"
 
 #: classes/WP_Piwik.php:453
 msgid "Configure WP-Piwik"
-msgstr ""
+msgstr "配置WP-Piwik"
 
 #: classes/WP_Piwik.php:923
 msgid "An error occured"
@@ -1239,26 +1240,26 @@ msgstr "呃，打开的方式不对吧？"
 msgid ""
 "WP-Piwik requires at least PHP 5.3. You are using the deprecated version %s."
 " Please update PHP to use WP-Piwik."
-msgstr ""
+msgstr "WP-Piwik至少需要PHP 5.3。您正在使用过时的版本 %s。请更新PHP后再使用WP-Piwik。"
 
 #. Plugin Name of the plugin/theme
 msgid "WP-Piwik"
-msgstr ""
+msgstr "WP-Piwik"
 
 #. Plugin URI of the plugin/theme
 msgid "http://wordpress.org/extend/plugins/wp-piwik/"
-msgstr ""
+msgstr "http://wordpress.org/extend/plugins/wp-piwik/"
 
 #. Description of the plugin/theme
 msgid ""
 "Adds Piwik stats to your dashboard menu and Piwik code to your wordpress "
 "header."
-msgstr ""
+msgstr "添加Piwik统计到仪表板菜单，Piwik代码到你的WordPress的header。"
 
 #. Author of the plugin/theme
 msgid "Andr&eacute; Br&auml;kling"
-msgstr ""
+msgstr "Andr&eacute; Br&auml;kling"
 
 #. Author URI of the plugin/theme
 msgid "http://www.braekling.de"
-msgstr ""
+msgstr "http://www.braekling.de"
