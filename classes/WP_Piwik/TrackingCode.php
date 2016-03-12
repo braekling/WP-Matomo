@@ -28,6 +28,7 @@ class TrackingCode {
 	}
 
 	public static function prepareTrackingCode($code, $settings, $logger) {
+		global $current_user;
 		$logger->log ( 'Apply tracking code changes:' );
 		$settings->setOption ( 'last_tracking_code_update', time () );
 		if ($settings->getGlobalOption ( 'track_mode' ) == 'js')
@@ -64,6 +65,29 @@ class TrackingCode {
 			$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['addDownloadExtensions', '" . ($settings->getGlobalOption ( 'add_download_extensions' )) . "']);\n_paq.push(['trackPageView']);", $code );
 		if ($settings->getGlobalOption ( 'limit_cookies' ))
 			$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['setVisitorCookieTimeout', '" . $settings->getGlobalOption ( 'limit_cookies_visitor' ) . "']);\n_paq.push(['setSessionCookieTimeout', '" . $settings->getGlobalOption ( 'limit_cookies_session' ) . "']);\n_paq.push(['setReferralCookieTimeout', '" . $settings->getGlobalOption ( 'limit_cookies_referral' ) . "']);\n_paq.push(['trackPageView']);", $code );
+
+		// User ID Tracking (only when enabled, and the visitor is logged in)
+		if (($settings->getGlobalOption ( 'track_user_id' ) != 'disabled') && is_user_logged_in()) {
+			// Get the User ID Admin option, and the current user's data
+			$uidFrom = $settings->getGlobalOption ( 'track_user_id' );
+			get_currentuserinfo(); // $current_user
+
+			// Get the "Piwik" User ID based on the Admin Setting
+			if ( $uidFrom == 'uid' ) {
+				$pkUserId = $current_user->ID;
+			} elseif ( $uidFrom == 'email' ) {
+				$pkUserId = $current_user->user_email;
+			} elseif ( $uidFrom == 'username' ) {
+				$pkUserId = $current_user->user_login;
+			} elseif ( $uidFrom == 'displayname' ) {
+				$pkUserId = $current_user->display_name;
+			}
+
+			// Check we got a User ID to track, and track it
+			if ( isset( $pkUserId ) && ! empty( $pkUserId ))
+				$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['setUserId', '" . esc_js( $pkUserId ) . "']);\n_paq.push(['trackPageView']);", $code );
+		}
+
 		if ($settings->getGlobalOption ( 'force_protocol' ) != 'disabled')
 			$code = str_replace ( '"//', '"' . $settings->getGlobalOption ( 'force_protocol' ) . '://', $code );
 		if ($settings->getGlobalOption ( 'track_content' ) == 'all')
