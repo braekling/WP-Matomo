@@ -216,7 +216,7 @@ class Settings extends \WP_Piwik\Admin {
 
 		$this->showTextarea ( 'noscript_code', __ ( 'Noscript code', 'wp-piwik' ), 2, 'This is a preview of your &lt;noscript&gt; code which is part of your tracking code.', $isNotGeneratedTracking || self::$settings->getGlobalOption ( 'track_mode' ) == 'proxy', 'wp-piwik-track-option wp-piwik-track-option-default wp-piwik-track-option-js', true, '', true, false );
 
-		$this->showCheckbox ( 'track_noscript', __ ( 'Add &lt;noscript&gt;', 'wp-piwik' ), __ ( 'Adds the &lt;noscript&gt; code to your footer.', 'wp-piwik' ) . ' ' . __ ( 'Disabled in proxy mode.', 'wp-piwik' ), $isNotGeneratedTracking || self::$settings->getGlobalOption ( 'track_mode' ) == 'proxy', 'wp-piwik-track-option wp-piwik-track-option-default wp-piwik-track-option-js' );
+		$this->showCheckbox ( 'track_noscript', __ ( 'Add &lt;noscript&gt;', 'wp-piwik' ), __ ( 'Adds the &lt;noscript&gt; code to your footer.', 'wp-piwik' ) . ' ' . __ ( 'Disabled in proxy mode.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'track_mode' ) == 'proxy', 'wp-piwik-track-option wp-piwik-track-option-default wp-piwik-track-option-js' );
 
 		$this->showCheckbox ( 'track_nojavascript', __ ( 'Add rec parameter to noscript code', 'wp-piwik' ), __ ( 'Enable tracking for visitors without JavaScript (not recommended).', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik FAQ%s.', 'wp-piwik' ), '<a href="http://piwik.org/faq/how-to/#faq_176">', '</a>' ) . ' ' . __ ( 'Disabled in proxy mode.', 'wp-piwik' ), $isNotGeneratedTracking || self::$settings->getGlobalOption ( 'track_mode' ) == 'proxy', 'wp-piwik-track-option wp-piwik-track-option-default wp-piwik-track-option-js' );
 

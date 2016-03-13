@@ -120,6 +120,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 = 1.0.7 =
 * Feature: User ID Tracking. Thx to Danw33, see https://github.com/braekling/WP-Piwik/pull/16
 * Feature: Site ID parameter added to opt-out shortcode. Thx to christianhennen, see https://github.com/braekling/WP-Piwik/pull/17
+* Bugfix: No script tag is not auto-inserted if the tracking code is manually defined.
 
 = 1.0.6 =
 * Language updates
