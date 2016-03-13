@@ -214,7 +214,7 @@ class Settings extends \WP_Piwik\Admin {
 				'header' => __ ( 'Header', 'wp-piwik' )
 		), __ ( 'Choose whether the JavaScript code is added to the footer or the header.', 'wp-piwik' ), '', $isNotTracking, 'wp-piwik-track-option wp-piwik-track-option-default wp-piwik-track-option-js wp-piwik-track-option-proxy wp-piwik-track-option-manually' );
 
-		$this->showTextarea ( 'noscript_code', __ ( 'Noscript code', 'wp-piwik' ), 2, 'This is a preview of your &lt;noscript&gt; code which is part of your tracking code.', self::$settings->getGlobalOption ( 'track_mode' ) == 'proxy', 'wp-piwik-track-option wp-piwik-track-option-default wp-piwik-track-option-js wp-piwik-track-option-manually', true, '', true, false );
+		$this->showTextarea ( 'noscript_code', __ ( 'Noscript code', 'wp-piwik' ), 2, 'This is a preview of your &lt;noscript&gt; code which is part of your tracking code.', self::$settings->getGlobalOption ( 'track_mode' ) == 'proxy', 'wp-piwik-track-option wp-piwik-track-option-default wp-piwik-track-option-js wp-piwik-track-option-manually', true, '', (self::$settings->getGlobalOption ( 'track_mode' ) != 'manually'), false );
 
 		$this->showCheckbox ( 'track_noscript', __ ( 'Add &lt;noscript&gt;', 'wp-piwik' ), __ ( 'Adds the &lt;noscript&gt; code to your footer.', 'wp-piwik' ) . ' ' . __ ( 'Disabled in proxy mode.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'track_mode' ) == 'proxy', 'wp-piwik-track-option wp-piwik-track-option-default wp-piwik-track-option-js wp-piwik-track-option-manually' );
 
