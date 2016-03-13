@@ -117,12 +117,16 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 
 == Changelog ==
 
-= 1.0.6=
+= 1.0.7 =
+* Feature: User ID Tracking. Thx to Danw33, see https://github.com/braekling/WP-Piwik/pull/16
+* Feature: Site ID parameter added to opt-out shortcode. Thx to christianhennen, see https://github.com/braekling/WP-Piwik/pull/17
+
+= 1.0.6 =
 * Language updates
 * Encoding & gettext fixes
-* Better error messages. Thx, to mcguffin, see https://github.com/braekling/WP-Piwik/pull/14
+* Better error messages. Thx to mcguffin, see https://github.com/braekling/WP-Piwik/pull/14
 
-= 1.0.5=
+= 1.0.5 =
 * Several language updates.
 * Important security fix: XSS vulnerability
 
