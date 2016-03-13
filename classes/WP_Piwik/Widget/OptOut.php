@@ -22,7 +22,7 @@
 				default :
 					$PIWIK_URL = self::$settings->getGlobalOption ( 'piwik_url' );
 			}
-			$this->out ( '<iframe frameborder="no" width="'.(isset($this->parameter['width'])?$this->parameter['width']:'').'" height="'.(isset($this->parameter['height'])?$this->parameter['height']:'').'" src="'.$PIWIK_URL.'index.php?module=CoreAdminHome&action=optOut&language='.(isset($this->parameter['language'])?$this->parameter['language']:'en').'"></iframe>' );
+			$this->out ( '<iframe frameborder="no" width="'.(isset($this->parameter['width'])?$this->parameter['width']:'').'" height="'.(isset($this->parameter['height'])?$this->parameter['height']:'').'" src="'.$PIWIK_URL.'index.php?module=CoreAdminHome&action=optOut&'.(isset($this->parameter['idsite'])?'idsite='.$this->parameter['idsite'].'&':'').'language='.(isset($this->parameter['language'])?$this->parameter['language']:'en').'"></iframe>' );
 		}
 		
 	}

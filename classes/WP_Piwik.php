@@ -966,6 +966,7 @@ class WP_Piwik {
 				'limit' => 10,
 				'width' => '100%',
 				'height' => '200px',
+				'idsite' => '',
 				'language' => 'en',
 				'range' => false,
 				'key' => 'sum_daily_nb_uniq_visitors'
