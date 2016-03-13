@@ -1,5 +1,6 @@
 <?php
-require ('../../../../wp-load.php');
+$wpRootDir = isset($wpRootDir)?$wpRootDir:'../../../../';
+require ($wpRootDir.'wp-load.php');
 
 require_once ('../classes/WP_Piwik/Settings.php');
 require_once ('../classes/WP_Piwik/Logger.php');

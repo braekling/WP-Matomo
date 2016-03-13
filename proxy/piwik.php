@@ -7,6 +7,9 @@
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 if (file_exists('config.php')) {
+    if (file_exists('config.local.php')) {
+        include 'config.local.php';
+    }
     include 'config.php';
 }
 // -----
