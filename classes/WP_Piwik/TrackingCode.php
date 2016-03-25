@@ -67,7 +67,7 @@ class TrackingCode {
 			$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['setVisitorCookieTimeout', '" . $settings->getGlobalOption ( 'limit_cookies_visitor' ) . "']);\n_paq.push(['setSessionCookieTimeout', '" . $settings->getGlobalOption ( 'limit_cookies_session' ) . "']);\n_paq.push(['setReferralCookieTimeout', '" . $settings->getGlobalOption ( 'limit_cookies_referral' ) . "']);\n_paq.push(['trackPageView']);", $code );
 
 		// User ID Tracking (only when enabled, and the visitor is logged in)
-		if (($settings->getGlobalOption ( 'track_user_id' ) != 'disabled') && is_user_logged_in()) {
+		if (($settings->getGlobalOption ( 'track_user_id' ) != 'disabled') && \is_user_logged_in()) {
 			// Get the User ID Admin option, and the current user's data
 			$uidFrom = $settings->getGlobalOption ( 'track_user_id' );
 			get_currentuserinfo(); // $current_user
