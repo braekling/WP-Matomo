@@ -8,7 +8,7 @@ class TrackingCode {
 
 	private $trackingCode;
 
-	public $is404 = false, $isSearch = false;
+	public $is404 = false, $isSearch = false, $isUsertracking = false;
 
 	public function __construct($wpPiwik) {
 		self::$wpPiwik = $wpPiwik;
@@ -18,6 +18,8 @@ class TrackingCode {
 	}
 
 	public function getTrackingCode() {
+		if ($this->isUsertracking)
+			$this->isUsertracking ();
 		if ($this->is404)
 			$this->apply404Changes ();
 		if ($this->isSearch)
@@ -66,28 +68,6 @@ class TrackingCode {
 		if ($settings->getGlobalOption ( 'limit_cookies' ))
 			$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['setVisitorCookieTimeout', '" . $settings->getGlobalOption ( 'limit_cookies_visitor' ) . "']);\n_paq.push(['setSessionCookieTimeout', '" . $settings->getGlobalOption ( 'limit_cookies_session' ) . "']);\n_paq.push(['setReferralCookieTimeout', '" . $settings->getGlobalOption ( 'limit_cookies_referral' ) . "']);\n_paq.push(['trackPageView']);", $code );
 
-		// User ID Tracking (only when enabled, and the visitor is logged in)
-		if (($settings->getGlobalOption ( 'track_user_id' ) != 'disabled') && \is_user_logged_in()) {
-			// Get the User ID Admin option, and the current user's data
-			$uidFrom = $settings->getGlobalOption ( 'track_user_id' );
-			get_currentuserinfo(); // $current_user
-
-			// Get the "Piwik" User ID based on the Admin Setting
-			if ( $uidFrom == 'uid' ) {
-				$pkUserId = $current_user->ID;
-			} elseif ( $uidFrom == 'email' ) {
-				$pkUserId = $current_user->user_email;
-			} elseif ( $uidFrom == 'username' ) {
-				$pkUserId = $current_user->user_login;
-			} elseif ( $uidFrom == 'displayname' ) {
-				$pkUserId = $current_user->display_name;
-			}
-
-			// Check we got a User ID to track, and track it
-			if ( isset( $pkUserId ) && ! empty( $pkUserId ))
-				$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['setUserId', '" . esc_js( $pkUserId ) . "']);\n_paq.push(['trackPageView']);", $code );
-		}
-
 		if ($settings->getGlobalOption ( 'force_protocol' ) != 'disabled')
 			$code = str_replace ( '"//', '"' . $settings->getGlobalOption ( 'force_protocol' ) . '://', $code );
 		if ($settings->getGlobalOption ( 'track_content' ) == 'all')
@@ -131,6 +111,27 @@ class TrackingCode {
 		$this->trackingCode = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['trackSiteSearch','" . get_search_query () . "', false, " . $intResultCount . "]);\n_paq.push(['trackPageView']);", $this->trackingCode );
 	}
 
+	private function applyUserTracking() {
+		if (\is_user_logged_in()) {
+			// Get the User ID Admin option, and the current user's data
+			$uidFrom = $settings->getGlobalOption ( 'track_user_id' );
+			get_currentuserinfo(); // $current_user
+			// Get the user ID based on the admin setting
+			if ( $uidFrom == 'uid' ) {
+				$pkUserId = $current_user->ID;
+			} elseif ( $uidFrom == 'email' ) {
+				$pkUserId = $current_user->user_email;
+			} elseif ( $uidFrom == 'username' ) {
+				$pkUserId = $current_user->user_login;
+			} elseif ( $uidFrom == 'displayname' ) {
+				$pkUserId = $current_user->display_name;
+			}
+			// Check we got a User ID to track, and track it
+			if ( isset( $pkUserId ) && ! empty( $pkUserId ))
+				$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['setUserId', '" . esc_js( $pkUserId ) . "']);\n_paq.push(['trackPageView']);", $code );
+		}		
+	}
+	
 	private function addCustomValues() {
 		$customVars = '';
 		for($i = 1; $i <= 5; $i ++) {
