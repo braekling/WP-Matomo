@@ -19,7 +19,7 @@ class TrackingCode {
 
 	public function getTrackingCode() {
 		if ($this->isUsertracking)
-			$this->isUsertracking ();
+			$this->applyUserTracking ();
 		if ($this->is404)
 			$this->apply404Changes ();
 		if ($this->isSearch)
