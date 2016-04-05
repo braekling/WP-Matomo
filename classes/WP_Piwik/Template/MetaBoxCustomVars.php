@@ -9,7 +9,7 @@
 				'wp-piwik_post_customvars',
 				__('Piwik Custom Variables', 'wp-piwik'),
 				array(&$this, 'showCustomvars'),
-				'post',
+				array('post', 'page', 'custom_post_type'),
 				'side',
 				'default'
 			);
