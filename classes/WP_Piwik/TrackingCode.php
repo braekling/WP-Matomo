@@ -24,7 +24,7 @@ class TrackingCode {
 			$this->apply404Changes ();
 		if ($this->isSearch)
 			$this->applySearchChanges ();
-		if (is_single ())
+		if (is_single () || is_page())
 			$this->addCustomValues ();
 		return $this->trackingCode;
 	}
@@ -114,8 +114,9 @@ class TrackingCode {
 	private function applyUserTracking() {
 		if (\is_user_logged_in()) {
 			// Get the User ID Admin option, and the current user's data
-			$uidFrom = $settings->getGlobalOption ( 'track_user_id' );
-			get_currentuserinfo(); // $current_user
+			$uidFrom = self::$wpPiwik->getGlobalOption ( 'track_user_id' );
+			global $current_user;
+			\get_currentuserinfo(); // $current_user
 			// Get the user ID based on the admin setting
 			if ( $uidFrom == 'uid' ) {
 				$pkUserId = $current_user->ID;
