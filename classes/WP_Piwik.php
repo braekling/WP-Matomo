@@ -287,6 +287,7 @@ class WP_Piwik {
 		}
 		$trackingCode = new WP_Piwik\TrackingCode ( $this );
 		$trackingCode->is404 = (is_404 () && self::$settings->getGlobalOption ( 'track_404' ));
+		$trackingCode->isUsertracking = self::$settings->getGlobalOption ( 'track_user_id' ) != 'disabled'
 		$trackingCode->isSearch = (is_search () && self::$settings->getGlobalOption ( 'track_search' ));
 		self::$logger->log ( 'Add tracking code. Blog ID: ' . self::$blog_id . ' Site ID: ' . self::$settings->getOption ( 'site_id' ) );
 		if ($this->isNetworkMode () && self::$settings->getGlobalOption ( 'track_mode' ) == 'manually') {

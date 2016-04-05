@@ -119,6 +119,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 
 = 1.0.8 =
 * Feature: Show "per post stats" and the "custom variable meta box" also on page and custom post edit
+* Bugfix: Fixed user tracking (moved the user tracking changes from general modifications to runtime modifications)
 * Bugfix: Fixed namespace error. Thx to thelfensdrfer, see https://github.com/braekling/WP-Piwik/pull/18
 * Bugfix: Warning on blog name change, see https://wordpress.org/support/topic/wp-piwik-triggers-warning-when-changing-blog-name
 
