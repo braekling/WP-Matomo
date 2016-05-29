@@ -25,13 +25,17 @@
 			else {
 				if ($this->parameter['date'] == 'last30') {
 					$result = array();
-					if (is_array($response))
+					if (is_array($response)) {
 						foreach ($response as $data)
 							foreach ($data as $key => $value)
 								if (isset($result[$key]))
 									$result[$key] += $value;
 								else
 									$result[$key] = $value;
+						$result['nb_actions_per_visit'] = round($result['nb_actions'] / $result['nb_visits'], 1);
+						$result['bounce_rate'] = round($result['bounce_count'] / $result['nb_visits'] * 100, 1) . '%';
+						$result['avg_time_on_site'] = round($result['sum_visit_length'] / $result['nb_visits'], 0);
+					}
 					$response = $result;	
 				}
 				$time = isset($response['sum_visit_length'])?$this->timeFormat($response['sum_visit_length']):'-';
@@ -41,7 +45,7 @@
 					array(__('Visitors', 'wp-piwik').':', $this->value($response, 'nb_visits')),
 					array(__('Unique visitors', 'wp-piwik').':', $this->value($response, 'nb_uniq_visitors')),
 					array(__('Page views', 'wp-piwik').':', $this->value($response, 'nb_actions').' (&#216; '.$this->value($response, 'nb_actions_per_visit').')'),
-					array(__('Total time spent', 'wp-piwik').':', $time),
+					array(__('Total time spent', 'wp-piwik').':', $time.' (&#216; '.$avgTime.')'),
 					array(__('Bounce count', 'wp-piwik').':', $this->value($response, 'bounce_count').' ('.$this->value($response, 'bounce_rate').')')
 				);
 				if ($this->parameter['date'] != 'last30')

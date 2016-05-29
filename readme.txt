@@ -2,7 +2,7 @@
 
 Contributors: Braekling
 Requires at least: 4.0
-Tested up to: 4.4.2
+Tested up to: 4.5.2
 Stable tag: 1.0.8
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
 Tags: statistics, stats, analytics, piwik, wpmu
@@ -116,6 +116,11 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 5. Piwik: Here you'll find your auth token.
 
 == Changelog ==
+
+= 1.0.9 =
+* Language updates
+* Bugfix: Deprecated get_currentuserinfo() replace. Thx to the infinity, see https://github.com/braekling/WP-Piwik/pull/21
+* Bugfix: Overview widget will show proper values even if a period > 1 day is selected, see https://wordpress.org/support/topic/weird-numbers-im-wp-piwik
 
 = 1.0.8 =
 * Feature: Show "per post stats" and the "custom variable meta box" also on page and custom post edit
