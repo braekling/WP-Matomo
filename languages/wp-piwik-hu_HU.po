@@ -1,14 +1,14 @@
 # Copyright (C) 2016 WP-Piwik
 # This file is distributed under the same license as the WP-Piwik package.
 # Translators:
-# Mark Kokeny <oregapamgroup@gmail.com>, 2015
+# Márk Kökény <oregapamgroup@gmail.com>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2016-03-13 21:32:45+00:00\n"
-"PO-Revision-Date: 2016-03-13 21:33+0000\n"
-"Last-Translator: André Bräkling\n"
+"PO-Revision-Date: 2016-03-15 10:53+0000\n"
+"Last-Translator: Márk Kökény <oregapamgroup@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/piwik/wp-piwik/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -56,7 +56,7 @@ msgstr "WP-Piwik %s nem tud kapcsolatot létesíteni a Piwik-el a megadott kapcs
 msgid ""
 "WP-Piwik %s was not able to connect to Piwik using your configuration. "
 "During connection the following error occured: <br /><code>%s</code>"
-msgstr ""
+msgstr "WP-Piwik %s nem tud kapcsolatot létesíteni a Piwik-el a megadott kapcsolati adatok alapján. Kapcsolódás közben az alábbi hiba lépett fel: <br /><code>%s</code>"
 
 #: classes/WP_Piwik/Admin/Settings.php:67
 msgid ""
@@ -643,30 +643,30 @@ msgstr "A heartbeat időzítő engedélyezésével pontosabb látogatási hossza
 
 #: classes/WP_Piwik/Admin/Settings.php:270
 msgid "User ID Tracking"
-msgstr ""
+msgstr "Felhasználó ID követés"
 
 #: classes/WP_Piwik/Admin/Settings.php:272
 msgid "WP User ID"
-msgstr ""
+msgstr "WP felhasználó ID"
 
 #: classes/WP_Piwik/Admin/Settings.php:273
 msgid "Email Address"
-msgstr ""
+msgstr "E-mailcím"
 
 #: classes/WP_Piwik/Admin/Settings.php:274
 msgid "Username"
-msgstr ""
+msgstr "Felhasználóinév"
 
 #: classes/WP_Piwik/Admin/Settings.php:275
 msgid "Display Name (Not Recommended!)"
-msgstr ""
+msgstr "Megjelenítési név (Nem ajánlott!)"
 
 #: classes/WP_Piwik/Admin/Settings.php:276
 msgid ""
 "When a user is logged in to WordPress, track their &quot;User ID&quot;. You "
 "can select which field from the User's profile is tracked as the &quot;User "
 "ID&quot;. When enabled, Tracking based on Email Address is recommended."
-msgstr ""
+msgstr "Mikor egy felhasználó bejelentkezik a WordPress-be, követi az ő &quot;User ID-át&quot;. Ki tudod választani, melyik mezőt tekintse a rendszer &quot;User ID-nak&quot;. Mikor engedélyezve van, ajánlott az email címet kiválasztani."
 
 #: classes/WP_Piwik/Admin/Settings.php:281
 msgid ""
@@ -812,13 +812,13 @@ msgstr "Válaszd ezt, ha értesítést kívánsz kapni a WP-Piwik frissítésér
 
 #: classes/WP_Piwik/Admin/Settings.php:326
 msgid "Define all file types for download tracking"
-msgstr ""
+msgstr "Add meg a követni kívánt fájltípusokat"
 
 #: classes/WP_Piwik/Admin/Settings.php:326
 msgid ""
 "Replace Piwik's default file extensions for download tracking, divided by a "
 "vertical bar (&#124;). Leave blank to keep Piwik's default settings."
-msgstr ""
+msgstr "Piwik alapértelmezett fájlkiterjesztések lecserélése letöltés követéskor, függőleges vonallal elválasztva (&#124;). Hagyd üresen, hogy megtartsd a Piwik alapértelmezett beállításait."
 
 #: classes/WP_Piwik/Admin/Settings.php:487
 msgid "Donate"
@@ -1103,11 +1103,11 @@ msgstr "A grafikon tartalmazza az értékeket, melyek láthatóak a lentebbi tá
 
 #: classes/WP_Piwik/Widget/Country.php:18
 msgid "Countries"
-msgstr ""
+msgstr "Országok"
 
 #: classes/WP_Piwik/Widget/Country.php:39
 msgid "Country"
-msgstr ""
+msgstr "Ország"
 
 #: classes/WP_Piwik/Widget/Keywords.php:16
 msgid "Keywords"
@@ -1172,7 +1172,7 @@ msgstr "Oldalak"
 
 #: classes/WP_Piwik/Widget/Pages.php:18
 msgid "Page"
-msgstr ""
+msgstr "Oldal"
 
 #: classes/WP_Piwik/Widget/Plugins.php:16
 msgid "Plugins"
@@ -1246,27 +1246,27 @@ msgstr "Nincs elérhető adat."
 
 #: classes/WP_Piwik/Widget.php:243
 msgid "today"
-msgstr ""
+msgstr "ma"
 
 #: classes/WP_Piwik/Widget.php:248
 msgid "current month"
-msgstr ""
+msgstr "jelen hónap"
 
 #: classes/WP_Piwik/Widget.php:253
 msgid "last month"
-msgstr ""
+msgstr "előző hónap"
 
 #: classes/WP_Piwik/Widget.php:258
 msgid "current week"
-msgstr ""
+msgstr "jelen hét"
 
 #: classes/WP_Piwik/Widget.php:263
 msgid "last week"
-msgstr ""
+msgstr "előző hét"
 
 #: classes/WP_Piwik/Widget.php:268
 msgid "yesterday"
-msgstr ""
+msgstr "tegnap"
 
 #: classes/WP_Piwik/Widget.php:293
 msgid "week"
@@ -1274,7 +1274,7 @@ msgstr "hét"
 
 #: classes/WP_Piwik/Widget.php:328
 msgid "last 30 days"
-msgstr ""
+msgstr "utolsó 30 nap"
 
 #: classes/WP_Piwik.php:194
 msgid "%s %s installed."

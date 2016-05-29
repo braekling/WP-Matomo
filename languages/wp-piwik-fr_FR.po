@@ -3,14 +3,14 @@
 # Translators:
 # Andre Braekling <webmaster@braekling.de>, 2009
 # André Bräkling, 2015
-# Franck, 2015
+# Franck, 2015-2016
 # Vincent BIRET <vincentbiret@hotmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2016-03-13 21:32:45+00:00\n"
-"PO-Revision-Date: 2016-03-13 21:33+0000\n"
+"PO-Revision-Date: 2016-05-29 11:38+0000\n"
 "Last-Translator: André Bräkling\n"
 "Language-Team: French (France) (http://www.transifex.com/piwik/wp-piwik/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
@@ -59,7 +59,7 @@ msgstr "WP-Piwik %s n'a pas pu se connecter à Piwik à partir de votre configur
 msgid ""
 "WP-Piwik %s was not able to connect to Piwik using your configuration. "
 "During connection the following error occured: <br /><code>%s</code>"
-msgstr ""
+msgstr "WP-Piwik %s n'a pas pu se connecter à Piwik à partir de votre configuration.  L'erreur suivante est apparue au cours de la connexion&nbsp;: <br /><code>%s</code>"
 
 #: classes/WP_Piwik/Admin/Settings.php:67
 msgid ""
@@ -646,30 +646,30 @@ msgstr "Activer une minuterie par pulsation pour obtenir des durées de visite p
 
 #: classes/WP_Piwik/Admin/Settings.php:270
 msgid "User ID Tracking"
-msgstr ""
+msgstr "Identifiant de suivi utilisateur"
 
 #: classes/WP_Piwik/Admin/Settings.php:272
 msgid "WP User ID"
-msgstr ""
+msgstr "Identifiant d'utilisateur WP"
 
 #: classes/WP_Piwik/Admin/Settings.php:273
 msgid "Email Address"
-msgstr ""
+msgstr "Courriel"
 
 #: classes/WP_Piwik/Admin/Settings.php:274
 msgid "Username"
-msgstr ""
+msgstr "Nom d'utilisateur"
 
 #: classes/WP_Piwik/Admin/Settings.php:275
 msgid "Display Name (Not Recommended!)"
-msgstr ""
+msgstr "Nom à afficher publiquement (Non Recommendé&nbsp;!)"
 
 #: classes/WP_Piwik/Admin/Settings.php:276
 msgid ""
 "When a user is logged in to WordPress, track their &quot;User ID&quot;. You "
 "can select which field from the User's profile is tracked as the &quot;User "
 "ID&quot;. When enabled, Tracking based on Email Address is recommended."
-msgstr ""
+msgstr "Lorsqu'un utilisateur est connecté à WordPress, suivre son &quot;Identifiant&quot;. Vous pouvez sélectionner quel champ du profil utilisateur à suivre comme &quot;Identifiant&quot;. Lorsque c'est activé, le suivi est basé sur le courriel est recommandé."
 
 #: classes/WP_Piwik/Admin/Settings.php:281
 msgid ""
@@ -815,13 +815,13 @@ msgstr "Choisissez si vous souhaitez obtenir un avis de mise à jour si WP-Piwik
 
 #: classes/WP_Piwik/Admin/Settings.php:326
 msgid "Define all file types for download tracking"
-msgstr ""
+msgstr "Définir tous les types de fichier pour le suivi de téléchargement"
 
 #: classes/WP_Piwik/Admin/Settings.php:326
 msgid ""
 "Replace Piwik's default file extensions for download tracking, divided by a "
 "vertical bar (&#124;). Leave blank to keep Piwik's default settings."
-msgstr ""
+msgstr "Remplacer les extensions de fichier par défaut de Piwik pour le suivi de téléchargement, séparées par une barre verticale (&#124;). Laisser vide pour conserver les réglages par défaut de Piwik."
 
 #: classes/WP_Piwik/Admin/Settings.php:487
 msgid "Donate"
@@ -1106,11 +1106,11 @@ msgstr "Le graphique contient les valeurs indiquées dans le tableau ci-dessous 
 
 #: classes/WP_Piwik/Widget/Country.php:18
 msgid "Countries"
-msgstr ""
+msgstr "Pays"
 
 #: classes/WP_Piwik/Widget/Country.php:39
 msgid "Country"
-msgstr ""
+msgstr "Pays"
 
 #: classes/WP_Piwik/Widget/Keywords.php:16
 msgid "Keywords"
@@ -1175,7 +1175,7 @@ msgstr "Pages"
 
 #: classes/WP_Piwik/Widget/Pages.php:18
 msgid "Page"
-msgstr ""
+msgstr "Page"
 
 #: classes/WP_Piwik/Widget/Plugins.php:16
 msgid "Plugins"
@@ -1249,27 +1249,27 @@ msgstr "Pas de données disponibles"
 
 #: classes/WP_Piwik/Widget.php:243
 msgid "today"
-msgstr ""
+msgstr "aujourd'hui"
 
 #: classes/WP_Piwik/Widget.php:248
 msgid "current month"
-msgstr ""
+msgstr "mois en cours"
 
 #: classes/WP_Piwik/Widget.php:253
 msgid "last month"
-msgstr ""
+msgstr "mois précédent"
 
 #: classes/WP_Piwik/Widget.php:258
 msgid "current week"
-msgstr ""
+msgstr "semaine en cours"
 
 #: classes/WP_Piwik/Widget.php:263
 msgid "last week"
-msgstr ""
+msgstr "semaine précédente"
 
 #: classes/WP_Piwik/Widget.php:268
 msgid "yesterday"
-msgstr ""
+msgstr "hier"
 
 #: classes/WP_Piwik/Widget.php:293
 msgid "week"
@@ -1277,7 +1277,7 @@ msgstr "semaine"
 
 #: classes/WP_Piwik/Widget.php:328
 msgid "last 30 days"
-msgstr ""
+msgstr "30 derniers jours"
 
 #: classes/WP_Piwik.php:194
 msgid "%s %s installed."

@@ -4,12 +4,13 @@
 # Andre Braekling <webmaster@braekling.de>, 2009
 # André Bräkling, 2015
 # Hannes Bossuyt <hannesbossuyt@gmail.com>, 2015
+# Sharon Vos, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2016-03-13 21:32:45+00:00\n"
-"PO-Revision-Date: 2016-03-13 21:33+0000\n"
+"PO-Revision-Date: 2016-05-29 11:38+0000\n"
 "Last-Translator: André Bräkling\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/piwik/wp-piwik/language/nl_NL/)\n"
 "MIME-Version: 1.0\n"
@@ -649,15 +650,15 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:272
 msgid "WP User ID"
-msgstr ""
+msgstr "WP gebruiker ID"
 
 #: classes/WP_Piwik/Admin/Settings.php:273
 msgid "Email Address"
-msgstr ""
+msgstr "E-mailadres"
 
 #: classes/WP_Piwik/Admin/Settings.php:274
 msgid "Username"
-msgstr ""
+msgstr "Gebruikersnaam"
 
 #: classes/WP_Piwik/Admin/Settings.php:275
 msgid "Display Name (Not Recommended!)"
@@ -1105,11 +1106,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget/Country.php:18
 msgid "Countries"
-msgstr ""
+msgstr "Landen"
 
 #: classes/WP_Piwik/Widget/Country.php:39
 msgid "Country"
-msgstr ""
+msgstr "Land"
 
 #: classes/WP_Piwik/Widget/Keywords.php:16
 msgid "Keywords"
@@ -1174,7 +1175,7 @@ msgstr "Pagina's"
 
 #: classes/WP_Piwik/Widget/Pages.php:18
 msgid "Page"
-msgstr ""
+msgstr "Pagina"
 
 #: classes/WP_Piwik/Widget/Plugins.php:16
 msgid "Plugins"
@@ -1248,27 +1249,27 @@ msgstr "Geen data beschikbaar"
 
 #: classes/WP_Piwik/Widget.php:243
 msgid "today"
-msgstr ""
+msgstr "Vandaag"
 
 #: classes/WP_Piwik/Widget.php:248
 msgid "current month"
-msgstr ""
+msgstr "Deze maand"
 
 #: classes/WP_Piwik/Widget.php:253
 msgid "last month"
-msgstr ""
+msgstr "Afgelopen maand"
 
 #: classes/WP_Piwik/Widget.php:258
 msgid "current week"
-msgstr ""
+msgstr "Deze week"
 
 #: classes/WP_Piwik/Widget.php:263
 msgid "last week"
-msgstr ""
+msgstr "Afgelopen week"
 
 #: classes/WP_Piwik/Widget.php:268
 msgid "yesterday"
-msgstr ""
+msgstr "Gisteren"
 
 #: classes/WP_Piwik/Widget.php:293
 msgid "week"
@@ -1276,7 +1277,7 @@ msgstr "week"
 
 #: classes/WP_Piwik/Widget.php:328
 msgid "last 30 days"
-msgstr ""
+msgstr "Laatste 30 dagen"
 
 #: classes/WP_Piwik.php:194
 msgid "%s %s installed."

@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the WP-Piwik package.
 # Translators:
 # Flávio Veras <flaviove@gmail.com>, 2015
-# @Renato <arsv60@gmail.com>, 2015
+# @Renato <arsv60@gmail.com>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2016-03-13 21:32:45+00:00\n"
-"PO-Revision-Date: 2016-03-13 21:34+0000\n"
+"PO-Revision-Date: 2016-05-29 11:40+0000\n"
 "Last-Translator: André Bräkling\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/piwik/wp-piwik/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -57,7 +57,7 @@ msgstr "WP-Piwik %s não foi capaz de se conectar ao Piwik usando sua configura�
 msgid ""
 "WP-Piwik %s was not able to connect to Piwik using your configuration. "
 "During connection the following error occured: <br /><code>%s</code>"
-msgstr ""
+msgstr "WP-Piwik %s não foi capaz de se conectar ao Piwik usando sua configuração. Durante a conexão ocorreu o seguinte erro: <br /><code>%s</code>"
 
 #: classes/WP_Piwik/Admin/Settings.php:67
 msgid ""
@@ -644,15 +644,15 @@ msgstr "Ativar um temporizador de batimento cardíaco para obter comprimentos ma
 
 #: classes/WP_Piwik/Admin/Settings.php:270
 msgid "User ID Tracking"
-msgstr ""
+msgstr "Rastreador de ID do usuário"
 
 #: classes/WP_Piwik/Admin/Settings.php:272
 msgid "WP User ID"
-msgstr ""
+msgstr "ID do usuário WP"
 
 #: classes/WP_Piwik/Admin/Settings.php:273
 msgid "Email Address"
-msgstr ""
+msgstr "Endereço de e-mail"
 
 #: classes/WP_Piwik/Admin/Settings.php:274
 msgid "Username"
@@ -660,14 +660,14 @@ msgstr "Nome de Usuário"
 
 #: classes/WP_Piwik/Admin/Settings.php:275
 msgid "Display Name (Not Recommended!)"
-msgstr ""
+msgstr "Exibir Nome (não recomendado!)"
 
 #: classes/WP_Piwik/Admin/Settings.php:276
 msgid ""
 "When a user is logged in to WordPress, track their &quot;User ID&quot;. You "
 "can select which field from the User's profile is tracked as the &quot;User "
 "ID&quot;. When enabled, Tracking based on Email Address is recommended."
-msgstr ""
+msgstr "Quando um usuário estiver conectado no WordPress, rastrear seu &quot;User ID&quot;. Você pode selecionar qual campo de perfil de Usuário rastrear à medida que o &quot;User ID&quot;. Quando ativado, o Rastreamento baseado no Endereço de E-mail é recomendado."
 
 #: classes/WP_Piwik/Admin/Settings.php:281
 msgid ""
@@ -813,13 +813,13 @@ msgstr "Escolha se você quer receber um aviso de atualização se o WP-Piwik fo
 
 #: classes/WP_Piwik/Admin/Settings.php:326
 msgid "Define all file types for download tracking"
-msgstr ""
+msgstr "Definir todos os tipos de arquivo para o acompanhamento de downloads"
 
 #: classes/WP_Piwik/Admin/Settings.php:326
 msgid ""
 "Replace Piwik's default file extensions for download tracking, divided by a "
 "vertical bar (&#124;). Leave blank to keep Piwik's default settings."
-msgstr ""
+msgstr "Substituir as extensões de arquivo padrão do Piwik para rastreamento de download, divididas por uma barra vertical (&#124;). Deixe em branco para manter as configurações padrão do Piwik."
 
 #: classes/WP_Piwik/Admin/Settings.php:487
 msgid "Donate"
@@ -1247,27 +1247,27 @@ msgstr "Nenhum dado disponível."
 
 #: classes/WP_Piwik/Widget.php:243
 msgid "today"
-msgstr ""
+msgstr "hoje"
 
 #: classes/WP_Piwik/Widget.php:248
 msgid "current month"
-msgstr ""
+msgstr "mês atual"
 
 #: classes/WP_Piwik/Widget.php:253
 msgid "last month"
-msgstr ""
+msgstr "último mês"
 
 #: classes/WP_Piwik/Widget.php:258
 msgid "current week"
-msgstr ""
+msgstr "semana atual"
 
 #: classes/WP_Piwik/Widget.php:263
 msgid "last week"
-msgstr ""
+msgstr "última semana"
 
 #: classes/WP_Piwik/Widget.php:268
 msgid "yesterday"
-msgstr ""
+msgstr "ontem"
 
 #: classes/WP_Piwik/Widget.php:293
 msgid "week"
@@ -1275,7 +1275,7 @@ msgstr "semana"
 
 #: classes/WP_Piwik/Widget.php:328
 msgid "last 30 days"
-msgstr ""
+msgstr "últimos 30 dias"
 
 #: classes/WP_Piwik.php:194
 msgid "%s %s installed."

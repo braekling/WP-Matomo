@@ -3,12 +3,13 @@
 # Translators:
 # Andre Braekling <webmaster@braekling.de>, 2009
 # FatCow http://www.fatcow.com, 2009
+# Moo, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2016-03-13 21:32:45+00:00\n"
-"PO-Revision-Date: 2016-03-13 21:33+0000\n"
+"PO-Revision-Date: 2016-05-29 11:39+0000\n"
 "Last-Translator: André Bräkling\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/piwik/wp-piwik/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
@@ -19,19 +20,19 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:24
 msgid "Reload"
-msgstr ""
+msgstr "Įkelti iš naujo"
 
 #: classes/WP_Piwik/Admin/Settings.php:27
 msgid "Changes saved."
-msgstr ""
+msgstr "Pakeitimai įrašyti."
 
 #: classes/WP_Piwik/Admin/Settings.php:54
 msgid "Save Changes"
-msgstr ""
+msgstr "Įrašyti pakeitimus"
 
 #: classes/WP_Piwik/Admin/Settings.php:55
 msgid "Thanks for using WP-Piwik!"
-msgstr ""
+msgstr "Dėkojame, kad naudojatės WP-Piwik!"
 
 #: classes/WP_Piwik/Admin/Settings.php:58
 msgid "WP-Piwik %s is successfully connected to Piwik %s."
@@ -71,7 +72,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:76
 msgid "Show Statistics"
-msgstr ""
+msgstr "Rodyti statistiką"
 
 #: classes/WP_Piwik/Admin/Settings.php:80
 msgid "Enable Tracking"
@@ -283,7 +284,7 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:271
 #: classes/WP_Piwik/Admin/Settings.php:323
 msgid "Disabled"
-msgstr ""
+msgstr "Išjungta"
 
 #: classes/WP_Piwik/Admin/Settings.php:166
 msgid "Last 30 days"
@@ -652,11 +653,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:273
 msgid "Email Address"
-msgstr ""
+msgstr "El. pašto adresas"
 
 #: classes/WP_Piwik/Admin/Settings.php:274
 msgid "Username"
-msgstr ""
+msgstr "Naudotojo vardas"
 
 #: classes/WP_Piwik/Admin/Settings.php:275
 msgid "Display Name (Not Recommended!)"

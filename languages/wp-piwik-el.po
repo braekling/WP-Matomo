@@ -2,14 +2,15 @@
 # This file is distributed under the same license as the WP-Piwik package.
 # Translators:
 # Andr&eacute; Br&auml;kling <webmaster@braekling.de>, 2011
+# Vasilis Lourdas, 2016
 # Vasilis Lourdas, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2016-03-13 21:32:45+00:00\n"
-"PO-Revision-Date: 2016-03-13 21:34+0000\n"
-"Last-Translator: André Bräkling\n"
+"PO-Revision-Date: 2016-03-14 20:59+0000\n"
+"Last-Translator: Vasilis Lourdas\n"
 "Language-Team: Greek (http://www.transifex.com/piwik/wp-piwik/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,7 +58,7 @@ msgstr "Το WP-Piwik %s δεν μπόρεσε να συνδεθεί με το P
 msgid ""
 "WP-Piwik %s was not able to connect to Piwik using your configuration. "
 "During connection the following error occured: <br /><code>%s</code>"
-msgstr ""
+msgstr "Το WP-Piwik δεν ήταν δυνατό να συνδεθεί με το Piwik χρησιμοποιώντας την παραμετροποίησή σας. Κατά την σύνδεση, συνέβη το εξής σφάλμα: <br /><code>%s</code>"
 
 #: classes/WP_Piwik/Admin/Settings.php:67
 msgid ""
@@ -644,15 +645,15 @@ msgstr "Ενεργοποίηση ενός μετρητή παλμού για τ�
 
 #: classes/WP_Piwik/Admin/Settings.php:270
 msgid "User ID Tracking"
-msgstr ""
+msgstr "Αναγνωριστικό ανίχνευσης χρήστη"
 
 #: classes/WP_Piwik/Admin/Settings.php:272
 msgid "WP User ID"
-msgstr ""
+msgstr "Αναγνωριστικό χρήστη WP"
 
 #: classes/WP_Piwik/Admin/Settings.php:273
 msgid "Email Address"
-msgstr ""
+msgstr "Διεύθυνση ηλ. ταχυδρομείου"
 
 #: classes/WP_Piwik/Admin/Settings.php:274
 msgid "Username"
@@ -660,14 +661,14 @@ msgstr "Όνομα χρήστη"
 
 #: classes/WP_Piwik/Admin/Settings.php:275
 msgid "Display Name (Not Recommended!)"
-msgstr ""
+msgstr "Εμφανιζόμενο όνομα (δεν προτείνεται!)"
 
 #: classes/WP_Piwik/Admin/Settings.php:276
 msgid ""
 "When a user is logged in to WordPress, track their &quot;User ID&quot;. You "
 "can select which field from the User's profile is tracked as the &quot;User "
 "ID&quot;. When enabled, Tracking based on Email Address is recommended."
-msgstr ""
+msgstr "Όταν ένας χρήστης κάνει είσοδο στο WordPress, παρακολουθήστε το &quot;Αναγνωριστικό Χρήστη&quot; του. Μπορείτε να επιλέξετε ποιο πεδίο από το προφίλ χρήστη θα χρησιμοποιείται ως το &quot;Αναγνωριστικό χρήστη&quot;. Όταν είναι ενεργό, προτείνεται η παρακολούθηση βάσει της διεύθυνσης ηλ. ταχυδρομείου."
 
 #: classes/WP_Piwik/Admin/Settings.php:281
 msgid ""
@@ -813,13 +814,13 @@ msgstr "Επιλέξτε αν επιθυμείτε να λαμβάνετε εν�
 
 #: classes/WP_Piwik/Admin/Settings.php:326
 msgid "Define all file types for download tracking"
-msgstr ""
+msgstr "Ορίστε όλους τους τύπους αρχείων για την παρακολούθηση των μεταφορτώσεων"
 
 #: classes/WP_Piwik/Admin/Settings.php:326
 msgid ""
 "Replace Piwik's default file extensions for download tracking, divided by a "
 "vertical bar (&#124;). Leave blank to keep Piwik's default settings."
-msgstr ""
+msgstr "Αντικαταστήστε τους προκαθορισμένους τύπους αρχείων για την παρακολούθηση μεταφορτώσεων, χωρισμένους με μια κάθετη μπάρα (&#124;). Αφήστε το κενό για να κρατηθούν οι προκαθορισμένες ρυθμίσεις του Piwik."
 
 #: classes/WP_Piwik/Admin/Settings.php:487
 msgid "Donate"
@@ -1247,27 +1248,27 @@ msgstr "Δεν υπάρχουν διαθέσιμα στοιχεία."
 
 #: classes/WP_Piwik/Widget.php:243
 msgid "today"
-msgstr ""
+msgstr "σήμερα"
 
 #: classes/WP_Piwik/Widget.php:248
 msgid "current month"
-msgstr ""
+msgstr "τρέχων μήνας"
 
 #: classes/WP_Piwik/Widget.php:253
 msgid "last month"
-msgstr ""
+msgstr "προηγούμενος μήνας"
 
 #: classes/WP_Piwik/Widget.php:258
 msgid "current week"
-msgstr ""
+msgstr "τρέχουσα εβδομάδα"
 
 #: classes/WP_Piwik/Widget.php:263
 msgid "last week"
-msgstr ""
+msgstr "προηγούμενη εβδομάδα"
 
 #: classes/WP_Piwik/Widget.php:268
 msgid "yesterday"
-msgstr ""
+msgstr "χθες"
 
 #: classes/WP_Piwik/Widget.php:293
 msgid "week"
@@ -1275,7 +1276,7 @@ msgstr "εβδομάδα"
 
 #: classes/WP_Piwik/Widget.php:328
 msgid "last 30 days"
-msgstr ""
+msgstr "τελευταίες 30 ημέρες"
 
 #: classes/WP_Piwik.php:194
 msgid "%s %s installed."
