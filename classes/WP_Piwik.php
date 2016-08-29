@@ -1241,6 +1241,7 @@ class WP_Piwik {
 	 * @return boolean True if current page is WP-Piwik's option page
 	 */
 	public static function isOptionsPage() {
+		require_once(ABSPATH . 'wp-admin/includes/screen.php');
 		$screen = get_current_screen();
 		return $screen == self::$optionsPageId;
 	}
