@@ -12,7 +12,7 @@ class WP_Piwik {
 	 *
 	 * @var Runtime environment variables
 	 */
-	private static $revisionId = 2016052901, $version = '1.0.9', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
+	private static $revisionId = 2016082901, $version = '1.0.10', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
 
 	/**
 	 * Constructor class to configure and register all WP-Piwik components
