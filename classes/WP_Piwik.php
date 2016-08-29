@@ -12,7 +12,7 @@ class WP_Piwik {
 	 *
 	 * @var Runtime environment variables
 	 */
-	private static $revisionId = 2016052901, $version = '1.0.9', $blog_id, $pluginBasename = NULL, $logger, $settings, $request;
+	private static $revisionId = 2016052901, $version = '1.0.9', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
 
 	/**
 	 * Constructor class to configure and register all WP-Piwik components
@@ -362,11 +362,11 @@ class WP_Piwik {
 		}
 		if (! self::$settings->checkNetworkActivation ()) {
 			$optionsPage = new WP_Piwik\Admin\Settings ( $this, self::$settings );
-			$optionsPageId = add_options_page ( self::$settings->getGlobalOption ( 'plugin_display_name' ), self::$settings->getGlobalOption ( 'plugin_display_name' ), 'activate_plugins', __FILE__, array (
+			self::$optionsPageId = add_options_page ( self::$settings->getGlobalOption ( 'plugin_display_name' ), self::$settings->getGlobalOption ( 'plugin_display_name' ), 'activate_plugins', __FILE__, array (
 					$optionsPage,
 					'show'
 			) );
-			$this->loadAdminSettingsHeader ( $optionsPageId, $optionsPage );
+			$this->loadAdminSettingsHeader ( self::$optionsPageId, $optionsPage );
 		}
 	}
 
@@ -383,11 +383,11 @@ class WP_Piwik {
 			$this->loadAdminStatsHeader ( $this->statsPageId, $statsPage );
 		}
 		$optionsPage = new WP_Piwik\Admin\Settings ( $this, self::$settings );
-		$optionsPageId = add_submenu_page ( 'settings.php', self::$settings->getGlobalOption ( 'plugin_display_name' ), self::$settings->getGlobalOption ( 'plugin_display_name' ), 'manage_sites', __FILE__, array (
+		self::$optionsPageId = add_submenu_page ( 'settings.php', self::$settings->getGlobalOption ( 'plugin_display_name' ), self::$settings->getGlobalOption ( 'plugin_display_name' ), 'manage_sites', __FILE__, array (
 				$optionsPage,
 				'show'
 		) );
-		$this->loadAdminSettingsHeader ( $optionsPageId, $optionsPage );
+		$this->loadAdminSettingsHeader ( self::$optionsPageId, $optionsPage );
 	}
 
 	/**
@@ -615,7 +615,7 @@ class WP_Piwik {
 	 * @return boolean Are new settings submitted?
 	 */
 	private function isConfigSubmitted() {
-		return isset ( $_POST ) && isset ( $_POST ['wp-piwik'] );
+		return self::isOptionsPage() && isset ( $_POST ) && isset ( $_POST ['wp-piwik'] );
 	}
 
 	/**
@@ -1233,5 +1233,15 @@ class WP_Piwik {
 			update_site_option ( $option, $value );
 		else
 			update_option ( $option, $value );
+	}
+
+	/**
+	 * Check if WP-Piwik options page
+	 * 
+	 * @return boolean True if current page is WP-Piwik's option page
+	 */
+	public static function isOptionsPage() {
+		$screen = get_current_screen();
+		return $screen == self::$optionsPageId;
 	}
 }
