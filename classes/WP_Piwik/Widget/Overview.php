@@ -32,9 +32,9 @@
 									$result[$key] += $value;
 								else
 									$result[$key] = $value;
-						$result['nb_actions_per_visit'] = round($result['nb_actions'] / $result['nb_visits'], 1);
-						$result['bounce_rate'] = round($result['bounce_count'] / $result['nb_visits'] * 100, 1) . '%';
-						$result['avg_time_on_site'] = round($result['sum_visit_length'] / $result['nb_visits'], 0);
+						$result['nb_actions_per_visit'] = $result['nb_visits'] > 0 ? round($result['nb_actions'] / $result['nb_visits'], 1) : 0;
+						$result['bounce_rate'] = $result['nb_visits'] > 0 ? round($result['bounce_count'] / $result['nb_visits'] * 100, 1) . '%' : 0;
+						$result['avg_time_on_site'] = $result['nb_visits'] > 0 ? round($result['sum_visit_length'] / $result['nb_visits'], 0) : 0;
 					}
 					$response = $result;	
 				}

@@ -117,6 +117,10 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 
 == Changelog ==
 
+= 1.0.11 =
+* Security improvements
+*
+
 = 1.0.10 =
 * Security fix
 
