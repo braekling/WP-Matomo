@@ -614,8 +614,8 @@ class WP_Piwik {
 	 *
 	 * @return boolean Are new settings submitted?
 	 */
-	private function isConfigSubmitted() {
-		return self::isOptionsPage() && isset ( $_POST ) && isset ( $_POST ['wp-piwik'] );
+	public static function isConfigSubmitted() {
+		return self::isValidOptionsPost() && isset ( $_POST ) && isset ( $_POST ['wp-piwik'] );
 	}
 
 	/**
@@ -1240,9 +1240,7 @@ class WP_Piwik {
 	 * 
 	 * @return boolean True if current page is WP-Piwik's option page
 	 */
-	public static function isOptionsPage() {
-		require_once(ABSPATH . 'wp-admin/includes/screen.php');
-		$screen = get_current_screen();
-		return $screen == self::$optionsPageId;
+	public static function isValidOptionsPost() {
+		return check_admin_referer( 'wp-piwik_settings' ) && current_user_can( 'manage_options' ) ;
 	}
 }

@@ -23,7 +23,7 @@ class Settings extends \WP_Piwik\Admin {
 			self::$wpPiwik->resetRequest();
 			echo '<form method="post" action="?page='.htmlentities($_GET['page']).'"><input type="submit" value="'.__('Reload', 'wp-piwik').'" /></form>';
 			return;
-		} elseif (isset ( $_POST ) && isset ( $_POST ['wp-piwik'] )) {
+		} elseif (self::$wpPiwik->isConfigSubmitted()) {
 			$this->showBox ( 'updated', 'yes', __ ( 'Changes saved.' ) );
 			self::$wpPiwik->resetRequest();
 			self::$wpPiwik->updateTrackingCode();
