@@ -298,6 +298,7 @@ class Settings extends \WP_Piwik\Admin {
 		$this->showInput ( 'connection_timeout', __ ( 'Connection timeout', 'wp-piwik' ), 'Define a connection timeout for all HTTP requests done by WP-Piwik in seconds.' );
 
 		$this->showCheckbox ( 'disable_ssl_verify', __ ( 'Disable SSL peer verification', 'wp-piwik' ), '(' . __ ( 'not recommended', 'wp-piwik' ) . ')' );
+		$this->showCheckbox ( 'disable_ssl_verify_host', __ ( 'Disable SSL host verification', 'wp-piwik' ), '(' . __ ( 'not recommended', 'wp-piwik' ) . ')' );
 
 		$this->showSelect ( 'piwik_useragent', __ ( 'User agent', 'wp-piwik' ), array (
 				'php' => __ ( 'Use the PHP default user agent', 'wp-piwik' ) . (ini_get ( 'user_agent' ) ? '(' . ini_get ( 'user_agent' ) . ')' : ' (' . __ ( 'empty', 'wp-piwik' ) . ')'),

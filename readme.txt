@@ -119,7 +119,8 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 
 = 1.0.11 =
 * Security improvements
-*
+* Removed some division by zero warnings
+* Option to disable SSL host verification (additional to peer verification)
 
 = 1.0.10 =
 * Security fix

@@ -91,6 +91,7 @@ class Settings {
 			'disable_timelimit' => false,
 			'connection_timeout' => 5,
 			'disable_ssl_verify' => false,
+			'disable_ssl_verify_host' => false,
 			'piwik_useragent' => 'php',
 			'piwik_useragent_string' => 'WP-Piwik',
 			'track_datacfasync' => false,
