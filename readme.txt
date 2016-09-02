@@ -122,6 +122,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Removed some division by zero warnings
 * Option to disable SSL host verification (additional to peer verification)
 * Overview widget: Do not show unique visitors row if value is not available
+* Bugfix: Post shortcode is fixed and will work again
 
 = 1.0.10 =
 * Security fix
