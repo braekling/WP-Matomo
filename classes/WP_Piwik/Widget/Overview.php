@@ -41,9 +41,10 @@
 				$time = isset($response['sum_visit_length'])?$this->timeFormat($response['sum_visit_length']):'-';
 				$avgTime = isset($response['avg_time_on_site'])?$this->timeFormat($response['avg_time_on_site']):'-';
 				$tableHead = null;
-				$tableBody = array(
-					array(__('Visitors', 'wp-piwik').':', $this->value($response, 'nb_visits')),
-					array(__('Unique visitors', 'wp-piwik').':', $this->value($response, 'nb_uniq_visitors')),
+				$tableBody = array(array(__('Visitors', 'wp-piwik').':', $this->value($response, 'nb_visits')));
+				if ($this->value($response, 'nb_uniq_visitors') != '-')
+					array_push($tableBody, array(__('Unique visitors', 'wp-piwik').':', $this->value($response, 'nb_uniq_visitors')));
+				array_push($tableBody,
 					array(__('Page views', 'wp-piwik').':', $this->value($response, 'nb_actions').' (&#216; '.$this->value($response, 'nb_actions_per_visit').')'),
 					array(__('Total time spent', 'wp-piwik').':', $time.' (&#216; '.$avgTime.')'),
 					array(__('Bounce count', 'wp-piwik').':', $this->value($response, 'bounce_count').' ('.$this->value($response, 'bounce_rate').')')
