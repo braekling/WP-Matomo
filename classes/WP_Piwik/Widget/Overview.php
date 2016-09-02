@@ -32,18 +32,19 @@
 									$result[$key] += $value;
 								else
 									$result[$key] = $value;
-						$result['nb_actions_per_visit'] = round($result['nb_actions'] / $result['nb_visits'], 1);
-						$result['bounce_rate'] = round($result['bounce_count'] / $result['nb_visits'] * 100, 1) . '%';
-						$result['avg_time_on_site'] = round($result['sum_visit_length'] / $result['nb_visits'], 0);
+						$result['nb_actions_per_visit'] = $result['nb_visits'] > 0 ? round($result['nb_actions'] / $result['nb_visits'], 1) : 0;
+						$result['bounce_rate'] = $result['nb_visits'] > 0 ? round($result['bounce_count'] / $result['nb_visits'] * 100, 1) . '%' : 0;
+						$result['avg_time_on_site'] = $result['nb_visits'] > 0 ? round($result['sum_visit_length'] / $result['nb_visits'], 0) : 0;
 					}
 					$response = $result;	
 				}
 				$time = isset($response['sum_visit_length'])?$this->timeFormat($response['sum_visit_length']):'-';
 				$avgTime = isset($response['avg_time_on_site'])?$this->timeFormat($response['avg_time_on_site']):'-';
 				$tableHead = null;
-				$tableBody = array(
-					array(__('Visitors', 'wp-piwik').':', $this->value($response, 'nb_visits')),
-					array(__('Unique visitors', 'wp-piwik').':', $this->value($response, 'nb_uniq_visitors')),
+				$tableBody = array(array(__('Visitors', 'wp-piwik').':', $this->value($response, 'nb_visits')));
+				if ($this->value($response, 'nb_uniq_visitors') != '-')
+					array_push($tableBody, array(__('Unique visitors', 'wp-piwik').':', $this->value($response, 'nb_uniq_visitors')));
+				array_push($tableBody,
 					array(__('Page views', 'wp-piwik').':', $this->value($response, 'nb_actions').' (&#216; '.$this->value($response, 'nb_actions_per_visit').')'),
 					array(__('Total time spent', 'wp-piwik').':', $time.' (&#216; '.$avgTime.')'),
 					array(__('Bounce count', 'wp-piwik').':', $this->value($response, 'bounce_count').' ('.$this->value($response, 'bounce_rate').')')

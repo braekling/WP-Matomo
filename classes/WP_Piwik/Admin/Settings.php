@@ -23,7 +23,7 @@ class Settings extends \WP_Piwik\Admin {
 			self::$wpPiwik->resetRequest();
 			echo '<form method="post" action="?page='.htmlentities($_GET['page']).'"><input type="submit" value="'.__('Reload', 'wp-piwik').'" /></form>';
 			return;
-		} elseif (isset ( $_POST ) && isset ( $_POST ['wp-piwik'] )) {
+		} elseif (self::$wpPiwik->isConfigSubmitted()) {
 			$this->showBox ( 'updated', 'yes', __ ( 'Changes saved.' ) );
 			self::$wpPiwik->resetRequest();
 			self::$wpPiwik->updateTrackingCode();
@@ -298,6 +298,7 @@ class Settings extends \WP_Piwik\Admin {
 		$this->showInput ( 'connection_timeout', __ ( 'Connection timeout', 'wp-piwik' ), 'Define a connection timeout for all HTTP requests done by WP-Piwik in seconds.' );
 
 		$this->showCheckbox ( 'disable_ssl_verify', __ ( 'Disable SSL peer verification', 'wp-piwik' ), '(' . __ ( 'not recommended', 'wp-piwik' ) . ')' );
+		$this->showCheckbox ( 'disable_ssl_verify_host', __ ( 'Disable SSL host verification', 'wp-piwik' ), '(' . __ ( 'not recommended', 'wp-piwik' ) . ')' );
 
 		$this->showSelect ( 'piwik_useragent', __ ( 'User agent', 'wp-piwik' ), array (
 				'php' => __ ( 'Use the PHP default user agent', 'wp-piwik' ) . (ini_get ( 'user_agent' ) ? '(' . ini_get ( 'user_agent' ) . ')' : ' (' . __ ( 'empty', 'wp-piwik' ) . ')'),
@@ -550,7 +551,7 @@ class Settings extends \WP_Piwik\Admin {
 	 */
 	public function showCredits() {
 		?>
-		<p><strong><?php _e('Thank you very much for your donation', 'wp-piwik'); ?>:</strong> Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., <?php _e('the Piwik team itself','wp-piwik');?><?php _e(', and all people flattering this','wp-piwik'); ?>!</p>
+		<p><strong><?php _e('Thank you very much for your donation', 'wp-piwik'); ?>:</strong> Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., Helmut O., <?php _e('the Piwik team itself','wp-piwik');?><?php _e(', and all people flattering this','wp-piwik'); ?>!</p>
 		<p><?php _e('Graphs powered by <a href="http://www.jqplot.com/">jqPlot</a> (License: GPL 2.0 and MIT) and <a href="http://omnipotent.net/jquery.sparkline/">jQuery Sparklines</a> (License: New BSD License).','wp-piwik'); ?></p>
 		<p><?php _e('Thank you very much','wp-piwik'); ?> <a href="https://www.transifex.com/projects/p/wp-piwik/">Transifex Translation Community</a> <?php _e('for your translation work','wp-piwik'); ?>!</p>
 		<p><?php _e('Thank you very much, all users who send me mails containing criticism, commendation, feature requests and bug reports! You help me to make WP-Piwik much better.','wp-piwik'); ?></p>

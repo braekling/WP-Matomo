@@ -91,6 +91,7 @@ class Settings {
 			'disable_timelimit' => false,
 			'connection_timeout' => 5,
 			'disable_ssl_verify' => false,
+			'disable_ssl_verify_host' => false,
 			'piwik_useragent' => 'php',
 			'piwik_useragent_string' => 'WP-Piwik',
 			'track_datacfasync' => false,
@@ -275,7 +276,7 @@ class Settings {
 	 *        	new configuration set
 	 */
 	public function applyChanges($in) {
-		if (!self::$wpPiwik->isOptionsPage())
+		if (!self::$wpPiwik->isValidOptionsPost())
 			die("Invalid config changes.");
 		$in = $this->checkSettings ( $in );
 		self::$wpPiwik->log ( 'Apply changed settings:' );

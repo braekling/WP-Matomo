@@ -6,7 +6,7 @@ Plugin URI: http://wordpress.org/extend/plugins/wp-piwik/
 
 Description: Adds Piwik stats to your dashboard menu and Piwik code to your wordpress header.
 
-Version: 1.0.10
+Version: 1.0.11
 Author: Andr&eacute; Br&auml;kling
 Author URI: http://www.braekling.de
 Text Domain: wp-piwik
@@ -73,5 +73,9 @@ else {
 	spl_autoload_register ( 'wp_piwik_autoloader' );
 	$GLOBALS ['wp-piwik_debug'] = false;
 	if (class_exists ( 'WP_Piwik' ))
-		$GLOBALS ['wp-piwik'] = new WP_Piwik ();
+		add_action( 'init', 'wp_piwik_loader' );
+}
+
+function wp_piwik_loader() {
+	$GLOBALS ['wp-piwik'] = new WP_Piwik ();
 }

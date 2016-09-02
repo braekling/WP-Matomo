@@ -30,6 +30,7 @@
 				curl_setopt($c, CURLOPT_POSTFIELDS, $params.'&token_auth='.self::$settings->getGlobalOption('piwik_token'));
 			} else $c = curl_init($url.'?'.$params.'&token_auth='.self::$settings->getGlobalOption('piwik_token'));
 			curl_setopt($c, CURLOPT_SSL_VERIFYPEER, !self::$settings->getGlobalOption('disable_ssl_verify'));
+			curl_setopt($c, CURLOPT_SSL_VERIFYHOST, !self::$settings->getGlobalOption('disable_ssl_verify_host')?2:0);
 			curl_setopt($c, CURLOPT_USERAGENT, self::$settings->getGlobalOption('piwik_useragent')=='php'?ini_get('user_agent'):self::$settings->getGlobalOption('piwik_useragent_string'));
 			curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
 			curl_setopt($c, CURLOPT_HEADER, $GLOBALS ['wp-piwik_debug'] );
@@ -56,8 +57,11 @@
 
 		private function fopen($id, $url, $params) {
 			$contextDefinition = array('http'=>array('timeout' => self::$settings->getGlobalOption('connection_timeout')) );
+			$contextDefinition['ssl'] = array();
 			if (self::$settings->getGlobalOption('disable_ssl_verify'))
-				$contextDefinition['ssl'] = array('allow_self_signed' => true);
+				$contextDefinition['ssl'] = array('allow_self_signed' => true, 'verify_peer' => false );
+			if (self::$settings->getGlobalOption('disable_ssl_verify_host'))
+				$contextDefinition['ssl']['verify_peer_name'] = false;
 			if (self::$settings->getGlobalOption('http_method')=='post') {
 				$fullUrl = $url;
 				$contextDefinition['http']['method'] = 'POST';

@@ -51,6 +51,7 @@ $globalSettings = array(
 	'disable_timelimit',
 	'connection_timeout',
 	'disable_ssl_verify',
+	'disable_ssl_verify_host',
 	'piwik_useragent',
 	'piwik_useragent_string',
 	'track_datacfasync',
