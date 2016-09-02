@@ -11,7 +11,7 @@
 			$url = self::$settings->getGlobalOption('piwik_url');
 			foreach (self::$requests as $requestID => $config) {
 				if (!isset(self::$results[$requestID])) {
-					$params = 'module=API&format=json&'.$this->buildURL($config);
+					$params = 'module=API&format=json&'.$this->buildURL($config, true);
 					$map[$count] = $requestID;
 					$result = $this->call($id, $url, $params);
 					self::$results[$map[$count]] = $result;
