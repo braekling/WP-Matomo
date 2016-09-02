@@ -276,7 +276,7 @@ class Settings {
 	 *        	new configuration set
 	 */
 	public function applyChanges($in) {
-		if (!self::$wpPiwik->isOptionsPage())
+		if (!self::$wpPiwik->isValidOptionsPost())
 			die("Invalid config changes.");
 		$in = $this->checkSettings ( $in );
 		self::$wpPiwik->log ( 'Apply changed settings:' );

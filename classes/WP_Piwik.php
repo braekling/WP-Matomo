@@ -615,7 +615,7 @@ class WP_Piwik {
 	 * @return boolean Are new settings submitted?
 	 */
 	public static function isConfigSubmitted() {
-		return self::isValidOptionsPost() && isset ( $_POST ) && isset ( $_POST ['wp-piwik'] );
+		return isset ( $_POST ) && isset ( $_POST ['wp-piwik'] ) && self::isValidOptionsPost();
 	}
 
 	/**
@@ -1241,6 +1241,6 @@ class WP_Piwik {
 	 * @return boolean True if current page is WP-Piwik's option page
 	 */
 	public static function isValidOptionsPost() {
-		return check_admin_referer( 'wp-piwik_settings' ) && current_user_can( 'manage_options' ) ;
+		return is_admin() && check_admin_referer( 'wp-piwik_settings' ) && current_user_can( 'manage_options' ) ;
 	}
 }

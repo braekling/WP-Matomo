@@ -30,7 +30,7 @@
 				curl_setopt($c, CURLOPT_POSTFIELDS, $params.'&token_auth='.self::$settings->getGlobalOption('piwik_token'));
 			} else $c = curl_init($url.'?'.$params.'&token_auth='.self::$settings->getGlobalOption('piwik_token'));
 			curl_setopt($c, CURLOPT_SSL_VERIFYPEER, !self::$settings->getGlobalOption('disable_ssl_verify'));
-			curl_setopt($c, CURLOPT_SSL_VERIFYHOST, !self::$settings->getGlobalOption('disable_ssl_verify_host'));
+			curl_setopt($c, CURLOPT_SSL_VERIFYHOST, !self::$settings->getGlobalOption('disable_ssl_verify_host')?2:0);
 			curl_setopt($c, CURLOPT_USERAGENT, self::$settings->getGlobalOption('piwik_useragent')=='php'?ini_get('user_agent'):self::$settings->getGlobalOption('piwik_useragent_string'));
 			curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
 			curl_setopt($c, CURLOPT_HEADER, $GLOBALS ['wp-piwik_debug'] );

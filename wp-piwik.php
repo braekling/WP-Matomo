@@ -73,5 +73,9 @@ else {
 	spl_autoload_register ( 'wp_piwik_autoloader' );
 	$GLOBALS ['wp-piwik_debug'] = false;
 	if (class_exists ( 'WP_Piwik' ))
-		$GLOBALS ['wp-piwik'] = new WP_Piwik ();
+		add_action( 'init', 'wp_piwik_loader' );
+}
+
+function wp_piwik_loader() {
+	$GLOBALS ['wp-piwik'] = new WP_Piwik ();
 }
