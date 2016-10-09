@@ -68,7 +68,7 @@
 				$unique = substr($unique, 0, -1);
 				$labels = substr($labels, 0, -1);
 				$bounced = substr($bounced, 0, -1);
-				echo '<div id="wp-piwik_stats_vistors_graph" style="height:220px;" title="'.__('The graph contains the values shown in the table below (visitors / unique / bounces). The red line show a linear trendline (unique).', 'wp-piwik').'"></div>';
+				echo '<div id="wp-piwik_stats_vistors_graph" style="height:220px;" title="'.__('The graph contains the values shown in the table below (visitors / unique / bounces). The red line shows a linear trendline (unique).', 'wp-piwik').'"></div>';
 				echo '<script type="text/javascript">';
 				echo '$j.jqplot("wp-piwik_stats_vistors_graph", [['.$values.'],['.$unique.'],['.$bounced.']],{axes:{yaxis:{min:0, tickOptions:{formatString:"%.0f"}},xaxis:{min:1,max:30,ticks:['.$labels.']}},seriesDefaults:{showMarker:false,lineWidth:1,fill:true,fillAndStroke:true,fillAlpha:0.9,trendline:{show:false,color:"#C00",lineWidth:1.5,type:"exp"}},series:[{color:"#90AAD9",fillColor:"#D4E2ED"},{color:"#A3BCEA",fillColor:"#E4F2FD",trendline:{show:true,label:"Unique visitor trend"}},{color:"#E9A0BA",fillColor:"#FDE4F2"}],});';
 				echo '</script>';
