@@ -1092,7 +1092,7 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Chart.php:71
 msgid ""
 "The graph contains the values shown in the table below (visitors / unique / "
-"bounces). The red line show a linear trendline (unique)."
+"bounces). The red line shows a linear trendline (unique)."
 msgstr ""
 
 #: classes/WP_Piwik/Widget/Country.php:18
