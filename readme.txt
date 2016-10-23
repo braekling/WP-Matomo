@@ -2,7 +2,7 @@
 
 Contributors: Braekling
 Requires at least: 4.0
-Tested up to: 4.6.0
+Tested up to: 4.6.1
 Stable tag: 1.0.11
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
 Tags: piwik, tracking, statistics, stats, analytics
@@ -15,7 +15,7 @@ This plugin adds a Piwik stats site to your WordPress dashboard. It's also able 
 
 To use this plugin you will need your own Piwik instance. If you do not already have a Piwik setup, you have two simple options: use either [Self-hosted](http://piwik.org/) or [Cloud-hosted](http://piwik.org/hosting/). 
 
-**Requirements:** PHP 5.4 (or higher), WordPress 4.0 (or higher), Piwik 2.9 (or higher; 2.16 or higher recommended)
+**Requirements:** PHP 5.4 (or higher)/PHP 7.0 (or higher), WordPress 4.0 (or higher), Piwik 2.16 (or higher)
  
 **Languages:** English, Albania, Dutch, French, German, Greek, Hungarian, Italian, Portuguese (Brazil). Partially supported: Azerbaijani, Belarusian, Chinese (simplified),  Hindi, Lithuanian, Luxembourgish, Norwegian, Persian, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian
 
