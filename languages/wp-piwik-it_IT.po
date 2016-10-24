@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
-"POT-Creation-Date: 2016-03-13 21:32:45+00:00\n"
-"PO-Revision-Date: 2016-09-02 20:56+0000\n"
-"Last-Translator: André Bräkling\n"
+"POT-Creation-Date: 2016-10-09 20:03:09+00:00\n"
+"PO-Revision-Date: 2016-10-15 08:01+0000\n"
+"Last-Translator: Enzo Ferrara\n"
 "Language-Team: Italian (Italy) (http://www.transifex.com/piwik/wp-piwik/language/it_IT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -83,7 +83,7 @@ msgstr "Abilita il Tracking"
 msgid "Expert Settings"
 msgstr "Impostazioni per esperti"
 
-#: classes/WP_Piwik/Admin/Settings.php:89 classes/WP_Piwik.php:924
+#: classes/WP_Piwik/Admin/Settings.php:89 classes/WP_Piwik.php:925
 msgid "Support"
 msgstr "Assistenza"
 
@@ -283,7 +283,7 @@ msgstr "Panoramica Dashboard"
 #: classes/WP_Piwik/Admin/Settings.php:203
 #: classes/WP_Piwik/Admin/Settings.php:224
 #: classes/WP_Piwik/Admin/Settings.php:271
-#: classes/WP_Piwik/Admin/Settings.php:323
+#: classes/WP_Piwik/Admin/Settings.php:324
 msgid "Disabled"
 msgstr "Disabilitato"
 
@@ -500,7 +500,7 @@ msgstr "Il content tracking ti permette di tracciare le interazioni con il conte
 #: classes/WP_Piwik/Admin/Settings.php:237
 #: classes/WP_Piwik/Admin/Settings.php:258
 #: classes/WP_Piwik/Admin/Settings.php:260
-#: classes/WP_Piwik/Admin/Settings.php:326
+#: classes/WP_Piwik/Admin/Settings.php:327
 msgid "See %sPiwik documentation%s."
 msgstr "Leggi la %sDocumentazione di Piwik%s."
 
@@ -690,12 +690,12 @@ msgid "HTTP connection via"
 msgstr "Connessione HTTP tramite"
 
 #: classes/WP_Piwik/Admin/Settings.php:287
-#: classes/WP_Piwik/Admin/Settings.php:582
+#: classes/WP_Piwik/Admin/Settings.php:583
 msgid "cURL"
 msgstr "cURL"
 
 #: classes/WP_Piwik/Admin/Settings.php:288
-#: classes/WP_Piwik/Admin/Settings.php:582
+#: classes/WP_Piwik/Admin/Settings.php:583
 msgid "fopen"
 msgstr "fopen"
 
@@ -710,12 +710,12 @@ msgid "HTTP method"
 msgstr "Metodo HTTP"
 
 #: classes/WP_Piwik/Admin/Settings.php:292
-#: classes/WP_Piwik/Admin/Settings.php:582
+#: classes/WP_Piwik/Admin/Settings.php:583
 msgid "POST"
 msgstr "POST"
 
 #: classes/WP_Piwik/Admin/Settings.php:293
-#: classes/WP_Piwik/Admin/Settings.php:582
+#: classes/WP_Piwik/Admin/Settings.php:583
 msgid "GET"
 msgstr "GET"
 
@@ -740,119 +740,124 @@ msgid "Disable SSL peer verification"
 msgstr "Disattivare verificazione Peer SSL"
 
 #: classes/WP_Piwik/Admin/Settings.php:300
+#: classes/WP_Piwik/Admin/Settings.php:301
 msgid "not recommended"
 msgstr "sconsigliato"
 
-#: classes/WP_Piwik/Admin/Settings.php:302
+#: classes/WP_Piwik/Admin/Settings.php:301
+msgid "Disable SSL host verification"
+msgstr "Disabilita la verifica host SSl"
+
+#: classes/WP_Piwik/Admin/Settings.php:303
 msgid "User agent"
 msgstr "User agent"
 
-#: classes/WP_Piwik/Admin/Settings.php:303
+#: classes/WP_Piwik/Admin/Settings.php:304
 msgid "Use the PHP default user agent"
 msgstr "Utilizza user agent PHP predefinito"
 
-#: classes/WP_Piwik/Admin/Settings.php:303
+#: classes/WP_Piwik/Admin/Settings.php:304
 msgid "empty"
 msgstr "vuoto"
 
-#: classes/WP_Piwik/Admin/Settings.php:304
+#: classes/WP_Piwik/Admin/Settings.php:305
 msgid "Define a specific user agent"
 msgstr "Definisci uno specifico user agent"
 
-#: classes/WP_Piwik/Admin/Settings.php:306
+#: classes/WP_Piwik/Admin/Settings.php:307
 msgid "Specific user agent"
 msgstr "User agent specifico"
 
-#: classes/WP_Piwik/Admin/Settings.php:308
+#: classes/WP_Piwik/Admin/Settings.php:309
 msgid "Add data-cfasync=false"
 msgstr "Aggiungi attributo data-cfasync=false"
 
-#: classes/WP_Piwik/Admin/Settings.php:310
+#: classes/WP_Piwik/Admin/Settings.php:311
 msgid "CDN URL"
 msgstr "URL CDN"
 
-#: classes/WP_Piwik/Admin/Settings.php:312
+#: classes/WP_Piwik/Admin/Settings.php:313
 msgid "CDN URL (SSL)"
 msgstr "URL CDN (SSL)"
 
-#: classes/WP_Piwik/Admin/Settings.php:314
+#: classes/WP_Piwik/Admin/Settings.php:315
 msgid "Force Piwik to use a specific protocol"
 msgstr "Forza Piwik a utilizzare un protocollo specifico"
 
-#: classes/WP_Piwik/Admin/Settings.php:315
+#: classes/WP_Piwik/Admin/Settings.php:316
 msgid "Disabled (default)"
 msgstr "Disabilitato (default)"
 
-#: classes/WP_Piwik/Admin/Settings.php:316
+#: classes/WP_Piwik/Admin/Settings.php:317
 msgid "http"
 msgstr "http"
 
-#: classes/WP_Piwik/Admin/Settings.php:317
+#: classes/WP_Piwik/Admin/Settings.php:318
 msgid "https (SSL)"
 msgstr "https (SSL)"
 
-#: classes/WP_Piwik/Admin/Settings.php:318
+#: classes/WP_Piwik/Admin/Settings.php:319
 msgid ""
 "Choose if you want to explicitly force Piwik to use HTTP or HTTPS. Does not "
 "work with a CDN URL."
 msgstr "Scegli se vuoi esplicitamente forzare Piwik a utilizzare HTTP o HTTPS. Non funziona con URL CDN."
 
-#: classes/WP_Piwik/Admin/Settings.php:320
+#: classes/WP_Piwik/Admin/Settings.php:321
 msgid "Update notice"
 msgstr "Notifica aggiornamento"
 
-#: classes/WP_Piwik/Admin/Settings.php:321
+#: classes/WP_Piwik/Admin/Settings.php:322
 msgid "Show always if WP-Piwik is updated"
 msgstr "Mostra sempre se WP-Piwik è aggiornato"
 
-#: classes/WP_Piwik/Admin/Settings.php:322
+#: classes/WP_Piwik/Admin/Settings.php:323
 msgid "Show only if WP-Piwik is updated and settings were changed"
 msgstr "Mostra solo se WP-Piwik è aggiornato e le impostazioni sono state cambiate"
 
-#: classes/WP_Piwik/Admin/Settings.php:324
+#: classes/WP_Piwik/Admin/Settings.php:325
 msgid "Choose if you want to get an update notice if WP-Piwik is updated."
 msgstr "Scegli se vuoi ricevere una notifica di aggiornamento se WP-Piwik è aggiornato."
 
-#: classes/WP_Piwik/Admin/Settings.php:326
+#: classes/WP_Piwik/Admin/Settings.php:327
 msgid "Define all file types for download tracking"
 msgstr "Definisci tutti i tipi di file per il tracciamento dei download"
 
-#: classes/WP_Piwik/Admin/Settings.php:326
+#: classes/WP_Piwik/Admin/Settings.php:327
 msgid ""
 "Replace Piwik's default file extensions for download tracking, divided by a "
 "vertical bar (&#124;). Leave blank to keep Piwik's default settings."
 msgstr "Sostituisci le estensione predefinite dei file per il tracciamento dei download, divise da una barra verticale (&#124;). Lascia vuoto per mantenere le impostazioni predefinite di Piwik."
 
-#: classes/WP_Piwik/Admin/Settings.php:487
+#: classes/WP_Piwik/Admin/Settings.php:488
 msgid "Donate"
 msgstr "Donazioni"
 
-#: classes/WP_Piwik/Admin/Settings.php:490
+#: classes/WP_Piwik/Admin/Settings.php:491
 msgid "If you like WP-Piwik, you can support its development by a donation:"
 msgstr "Se ti piace WP-Piwik e vuoi contribuire al suo sviluppo,  considera una donazione."
 
-#: classes/WP_Piwik/Admin/Settings.php:521
+#: classes/WP_Piwik/Admin/Settings.php:522
 msgid "My Amazon.de wishlist"
 msgstr "Mia lista di desideri pressom Amazon.de"
 
-#: classes/WP_Piwik/Admin/Settings.php:524
-#: classes/WP_Piwik/Admin/Settings.php:567
+#: classes/WP_Piwik/Admin/Settings.php:525
+#: classes/WP_Piwik/Admin/Settings.php:568
 msgid "Please don't forget to vote the compatibility at the"
 msgstr "Non scordarti di dare una valutazione di compatibilità nella "
 
-#: classes/WP_Piwik/Admin/Settings.php:553
+#: classes/WP_Piwik/Admin/Settings.php:554
 msgid "Thank you very much for your donation"
 msgstr "Grazie per le vostre donazioni"
 
-#: classes/WP_Piwik/Admin/Settings.php:553
+#: classes/WP_Piwik/Admin/Settings.php:554
 msgid "the Piwik team itself"
 msgstr "il team di Piwik stesso"
 
-#: classes/WP_Piwik/Admin/Settings.php:553
+#: classes/WP_Piwik/Admin/Settings.php:554
 msgid ", and all people flattering this"
 msgstr ", è tutti che usano Flattr per donazioni a  WP-Piwik"
 
-#: classes/WP_Piwik/Admin/Settings.php:554
+#: classes/WP_Piwik/Admin/Settings.php:555
 msgid ""
 "Graphs powered by <a href=\"http://www.jqplot.com/\">jqPlot</a> (License: "
 "GPL 2.0 and MIT) and <a "
@@ -860,107 +865,107 @@ msgid ""
 "(License: New BSD License)."
 msgstr "I grafici sono generati con <a href=\"http://wwwjqplot.com/\">jqPlot</a> e <a href=\"http://omnipotent.net/jquery.sparkline/\">jQuery Sparklines</a> (Licenza: New BSD License)."
 
-#: classes/WP_Piwik/Admin/Settings.php:555
+#: classes/WP_Piwik/Admin/Settings.php:556
 msgid "Thank you very much"
 msgstr "Mille grazie"
 
-#: classes/WP_Piwik/Admin/Settings.php:555
+#: classes/WP_Piwik/Admin/Settings.php:556
 msgid "for your translation work"
 msgstr "per il vostro lavoro di traduzione"
 
-#: classes/WP_Piwik/Admin/Settings.php:556
+#: classes/WP_Piwik/Admin/Settings.php:557
 msgid ""
 "Thank you very much, all users who send me mails containing criticism, "
 "commendation, feature requests and bug reports! You help me to make WP-Piwik"
 " much better."
 msgstr "Un ringraziamento sentito per tutti gli utenti che mi inviano critiche, proposte e bug reports! Mi aiutate di migliorare WP-Piwik."
 
-#: classes/WP_Piwik/Admin/Settings.php:557
+#: classes/WP_Piwik/Admin/Settings.php:558
 msgid ""
 "Thank <strong>you</strong> for using my plugin. It is the best commendation "
 "if my piece of code is really used!"
 msgstr "Grazie <strong> a te</strong> per usare il mio plugin. E' la più grande soddisfazione se il mio codice viene usato realmente!"
 
-#: classes/WP_Piwik/Admin/Settings.php:566
+#: classes/WP_Piwik/Admin/Settings.php:567
 msgid "The best place to get help:"
 msgstr "Il posto migliore dove trovare aiuto:"
 
-#: classes/WP_Piwik/Admin/Settings.php:566
+#: classes/WP_Piwik/Admin/Settings.php:567
 msgid "WP-Piwik support forum"
 msgstr "Forum di assistenza WP-Piwik"
 
-#: classes/WP_Piwik/Admin/Settings.php:569
+#: classes/WP_Piwik/Admin/Settings.php:570
 msgid "Debugging"
 msgstr "Debugging"
 
-#: classes/WP_Piwik/Admin/Settings.php:570
+#: classes/WP_Piwik/Admin/Settings.php:571
 msgid ""
 "Either allow_url_fopen has to be enabled <em>or</em> cURL has to be "
 "available:"
 msgstr "O allow_url_fopen deve essere  attivato  <em>o</em> cURL deve essere disponibile:"
 
-#: classes/WP_Piwik/Admin/Settings.php:573
+#: classes/WP_Piwik/Admin/Settings.php:574
 msgid "cURL is"
 msgstr "cURL è"
 
-#: classes/WP_Piwik/Admin/Settings.php:574
-#: classes/WP_Piwik/Admin/Settings.php:579
+#: classes/WP_Piwik/Admin/Settings.php:575
+#: classes/WP_Piwik/Admin/Settings.php:580
 msgid "not"
 msgstr "non"
 
-#: classes/WP_Piwik/Admin/Settings.php:575
+#: classes/WP_Piwik/Admin/Settings.php:576
 msgid "available"
 msgstr "disponibile"
 
-#: classes/WP_Piwik/Admin/Settings.php:578
+#: classes/WP_Piwik/Admin/Settings.php:579
 msgid "allow_url_fopen is"
 msgstr "allow_url_fopen è"
 
-#: classes/WP_Piwik/Admin/Settings.php:580
+#: classes/WP_Piwik/Admin/Settings.php:581
 msgid "enabled"
 msgstr "attivato"
 
-#: classes/WP_Piwik/Admin/Settings.php:582
+#: classes/WP_Piwik/Admin/Settings.php:583
 msgid "is used."
 msgstr "è utilizzato."
 
-#: classes/WP_Piwik/Admin/Settings.php:584
+#: classes/WP_Piwik/Admin/Settings.php:585
 msgid "Determined Piwik base URL is"
 msgstr "L'URL base di Piwik è stata individuata in"
 
-#: classes/WP_Piwik/Admin/Settings.php:588
+#: classes/WP_Piwik/Admin/Settings.php:589
 msgid "Tools"
 msgstr "Strumenti"
 
-#: classes/WP_Piwik/Admin/Settings.php:590
+#: classes/WP_Piwik/Admin/Settings.php:591
 msgid "Run testscript"
 msgstr "Esegui script di prova"
 
-#: classes/WP_Piwik/Admin/Settings.php:591
+#: classes/WP_Piwik/Admin/Settings.php:592
 msgid "Sitebrowser"
 msgstr "Sitebrowser"
 
-#: classes/WP_Piwik/Admin/Settings.php:592
+#: classes/WP_Piwik/Admin/Settings.php:593
 msgid "Clear cache"
 msgstr "Svuota cache"
 
-#: classes/WP_Piwik/Admin/Settings.php:593
+#: classes/WP_Piwik/Admin/Settings.php:594
 msgid "Are you sure you want to clear all settings?"
 msgstr "Sei sicuro di voler azzerare tutte le impostazioni?"
 
-#: classes/WP_Piwik/Admin/Settings.php:593
+#: classes/WP_Piwik/Admin/Settings.php:594
 msgid "Reset WP-Piwik"
 msgstr "Reimposta WP-Piwik"
 
-#: classes/WP_Piwik/Admin/Settings.php:595
+#: classes/WP_Piwik/Admin/Settings.php:596
 msgid "Latest support threads on WordPress.org"
 msgstr "Gli ultimi thread di supporto su  WordPress.org"
 
-#: classes/WP_Piwik/Admin/Settings.php:646
+#: classes/WP_Piwik/Admin/Settings.php:647
 msgid "Settings cleared (except connection settings)."
 msgstr "Impostazioni azzerate (eccetto le impostazioni di connessione)"
 
-#: classes/WP_Piwik/Admin/Settings.php:662
+#: classes/WP_Piwik/Admin/Settings.php:663
 msgid "Cache cleared."
 msgstr "Cache svuotata."
 
@@ -1093,7 +1098,7 @@ msgid "Browsers"
 msgstr "Browser"
 
 #: classes/WP_Piwik/Widget/Chart.php:19
-#: classes/WP_Piwik/Widget/Overview.php:41 classes/WP_Piwik/Widget/Post.php:37
+#: classes/WP_Piwik/Widget/Overview.php:44 classes/WP_Piwik/Widget/Post.php:37
 #: classes/WP_Piwik/Widget/Visitors.php:17
 msgid "Visitors"
 msgstr "Visitatori"
@@ -1101,8 +1106,8 @@ msgstr "Visitatori"
 #: classes/WP_Piwik/Widget/Chart.php:71
 msgid ""
 "The graph contains the values shown in the table below (visitors / unique / "
-"bounces). The red line show a linear trendline (unique)."
-msgstr "Il grafico contiene i valori mostrati nella tabella qui sotto (visitatori / visitatori unici / rimbalzi). La linea rossa mostra una linea di tendenza lineare (visitatori unici)."
+"bounces). The red line shows a linear trendline (unique)."
+msgstr "Il grafico contiene i valori mostrati nella tabella qui sotto (visitatori / unici / rimbalzi). La riga rossa mostra una linea di tendenza lineare (visitatori unici)."
 
 #: classes/WP_Piwik/Widget/Country.php:18
 msgid "Countries"
@@ -1141,31 +1146,31 @@ msgstr "Uscite"
 msgid "Overview"
 msgstr "Resoconto"
 
-#: classes/WP_Piwik/Widget/Overview.php:42 classes/WP_Piwik/Widget/Post.php:38
+#: classes/WP_Piwik/Widget/Overview.php:46 classes/WP_Piwik/Widget/Post.php:38
 msgid "Unique visitors"
 msgstr "Visitatori unici"
 
-#: classes/WP_Piwik/Widget/Overview.php:43 classes/WP_Piwik/Widget/Post.php:39
+#: classes/WP_Piwik/Widget/Overview.php:48 classes/WP_Piwik/Widget/Post.php:39
 msgid "Page views"
 msgstr "Pagine viste"
 
-#: classes/WP_Piwik/Widget/Overview.php:44 classes/WP_Piwik/Widget/Post.php:40
+#: classes/WP_Piwik/Widget/Overview.php:49 classes/WP_Piwik/Widget/Post.php:40
 msgid "Total time spent"
 msgstr "Tempo di rimanenza"
 
-#: classes/WP_Piwik/Widget/Overview.php:45 classes/WP_Piwik/Widget/Post.php:42
+#: classes/WP_Piwik/Widget/Overview.php:50 classes/WP_Piwik/Widget/Post.php:42
 msgid "Bounce count"
 msgstr "Rimbalzi "
 
-#: classes/WP_Piwik/Widget/Overview.php:48 classes/WP_Piwik/Widget/Post.php:41
+#: classes/WP_Piwik/Widget/Overview.php:53 classes/WP_Piwik/Widget/Post.php:41
 msgid "Time/visit"
 msgstr "Media durata per visita"
 
-#: classes/WP_Piwik/Widget/Overview.php:48
+#: classes/WP_Piwik/Widget/Overview.php:53
 msgid "Max. page views in one visit"
 msgstr "Massimo di pagine viste in una visita"
 
-#: classes/WP_Piwik/Widget/Overview.php:49 classes/WP_Piwik/Widget/Post.php:46
+#: classes/WP_Piwik/Widget/Overview.php:54 classes/WP_Piwik/Widget/Post.php:46
 msgid "Shortcut"
 msgstr "Scorciatoia"
 
@@ -1295,7 +1300,7 @@ msgstr "%s aggiornato a %s."
 msgid "Please validate your configuration"
 msgstr "Per favore controlla la tua configurazione"
 
-#: classes/WP_Piwik.php:260 classes/WP_Piwik.php:494
+#: classes/WP_Piwik.php:260 classes/WP_Piwik.php:495
 msgid "Settings"
 msgstr "Impostazioni"
 
@@ -1303,19 +1308,19 @@ msgstr "Impostazioni"
 msgid "Important"
 msgstr "Wichtig"
 
-#: classes/WP_Piwik.php:356 classes/WP_Piwik.php:378
+#: classes/WP_Piwik.php:357 classes/WP_Piwik.php:379
 msgid "Piwik Statistics"
 msgstr "Statistiche Piwik"
 
-#: classes/WP_Piwik.php:466
+#: classes/WP_Piwik.php:467
 msgid "Configure WP-Piwik"
 msgstr "Configura WP-Piwik"
 
-#: classes/WP_Piwik.php:924
+#: classes/WP_Piwik.php:925
 msgid "An error occured"
 msgstr "E' successo un errore"
 
-#: classes/WP_Piwik.php:1197
+#: classes/WP_Piwik.php:1198
 msgid "Cheatin&#8217; uh?"
 msgstr "Stai &#8217;barando&#8217, vero?"
 
