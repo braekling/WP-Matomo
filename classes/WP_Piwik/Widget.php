@@ -20,7 +20,7 @@ abstract class Widget {
 	 *
 	 * @var Configuration parameters
 	 */
-	protected $isShortcode = false, $method = '', $title = '', $context = 'side', $priority = 'core', $parameter = array (), $apiID = array (), $pageId = 'dashboard', $blogId = null, $name = 'Value', $limit = 10, $content = '';
+	protected $isShortcode = false, $method = '', $title = '', $context = 'side', $priority = 'core', $parameter = array (), $apiID = array (), $pageId = 'dashboard', $blogId = null, $name = 'Value', $limit = 10, $content = '', $output = '';
 	
 	/**
 	 * Widget constructor
