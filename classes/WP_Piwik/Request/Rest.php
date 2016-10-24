@@ -20,7 +20,8 @@
 			$results = ((function_exists('curl_init') && ini_get('allow_url_fopen') && self::$settings->getGlobalOption('http_connection') == 'curl') || (function_exists('curl_init') && !ini_get('allow_url_fopen')))?$this->curl($id, $url, $params):$this->fopen($id, $url, $params);
 			if (is_array($results))
 				foreach ($results as $num => $result)
-					self::$results[$map[$num]] = $result;
+				    if (isset($map[$num]))
+					    self::$results[$map[$num]] = $result;
 		}
 			
 		private function curl($id, $url, $params) {
