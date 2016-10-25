@@ -57,7 +57,7 @@
 		}
 
 		private function fopen($id, $url, $params) {
-			$contextDefinition = array('http'=>array('timeout' => self::$settings->getGlobalOption('connection_timeout')) );
+			$contextDefinition = array('http'=>array('timeout' => self::$settings->getGlobalOption('connection_timeout'), 'header' => "Content-type: application/x-www-form-urlencoded\r\n") );
 			$contextDefinition['ssl'] = array();
 			if (self::$settings->getGlobalOption('disable_ssl_verify'))
 				$contextDefinition['ssl'] = array('allow_self_signed' => true, 'verify_peer' => false );
@@ -67,7 +67,7 @@
 				$fullUrl = $url;
 				$contextDefinition['http']['method'] = 'POST';
 				$contextDefinition['http']['content'] = $params.'&token_auth='.self::$settings->getGlobalOption('piwik_token');
-			} else $fullUrl = $url.'?'.$params.'&token_auth='.self::$settings->getGlobalOption('piwik_token');	
+			} else $fullUrl = $url.'?'.$params.'&token_auth='.self::$settings->getGlobalOption('piwik_token');
 			$context = stream_context_create($contextDefinition);
 			$result = $this->unserialize(@file_get_contents($fullUrl, false, $context));
 			if ($GLOBALS ['wp-piwik_debug'])
