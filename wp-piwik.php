@@ -6,7 +6,7 @@ Plugin URI: http://wordpress.org/extend/plugins/wp-piwik/
 
 Description: Adds Piwik stats to your dashboard menu and Piwik code to your wordpress header.
 
-Version: 1.0.11
+Version: 1.0.12
 Author: Andr&eacute; Br&auml;kling
 Author URI: http://www.braekling.de
 Text Domain: wp-piwik
@@ -14,7 +14,7 @@ Domain Path: /languages/
 License: GPL3
 
 ****************************************************************************************** 
-	Copyright (C) 2009-2016 Andre Braekling (email: webmaster@braekling.de)
+	Copyright (C) 2009-today Andre Braekling (email: webmaster@braekling.de)
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by

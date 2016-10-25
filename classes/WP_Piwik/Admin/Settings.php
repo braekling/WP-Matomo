@@ -127,20 +127,24 @@ class Settings extends \WP_Piwik\Admin {
 			$this->showCheckbox ( 'auto_site_config', __ ( 'Auto config', 'wp-piwik' ), __ ( 'Check this to automatically choose your blog from your Piwik sites by URL. If your blog is not added to Piwik yet, WP-Piwik will add a new site.', 'wp-piwik' ), false, '$j(\'tr.wp-piwik-auto-option\').toggle(\'hidden\');' . ($piwikSiteId ? '$j(\'#site_id\').val(' . $piwikSiteId . ');' : '') );
 			if (self::$wpPiwik->isConfigured ()) {
 				$piwikSiteList = self::$wpPiwik->getPiwikSiteDetails ();
-				if (is_array($piwikSiteList))
-					foreach ($piwikSiteList as $details)
-						$piwikSiteDetails[$details['idsite']] = $details;
-				unset($piwikSiteList);
-				if ( $piwikSiteId != 'n/a' && isset( $piwikSiteDetails ) && is_array( $piwikSiteDetails ) )
-					$piwikSiteDescription = $piwikSiteDetails [$piwikSiteId] ['name'] . ' (' . $piwikSiteDetails [$piwikSiteId] ['main_url'] . ')';
-				else
-					$piwikSiteDescription = 'n/a';
-				echo '<tr class="wp-piwik-auto-option' . (! self::$settings->getGlobalOption ( 'auto_site_config' ) ? ' hidden' : '') . '"><th scope="row">' . __ ( 'Determined site', 'wp-piwik' ) . ':</th><td>' . $piwikSiteDescription . '</td></tr>';
-				if (isset ( $piwikSiteDetails ) && is_array ( $piwikSiteDetails ))
-					foreach ( $piwikSiteDetails as $key => $siteData )
-						$siteList [$siteData['idsite']] = $siteData ['name'] . ' (' . $siteData ['main_url'] . ')';
+				if (isset($piwikSiteList['result']) && $piwikSiteList['result'] == 'error') {
+					$this->showBox ( 'error', 'no', sprintf ( __ ( 'WP-Piwik %s was not able to get sites with at least view access: <br /><code>%s</code>', 'wp-piwik' ), self::$wpPiwik->getPluginVersion (), $errorMessage ) );
+				} else {
+					if (is_array($piwikSiteList))
+						foreach ($piwikSiteList as $details)
+							$piwikSiteDetails[$details['idsite']] = $details;
+					unset($piwikSiteList);
+					if ($piwikSiteId != 'n/a' && isset($piwikSiteDetails) && is_array($piwikSiteDetails))
+						$piwikSiteDescription = $piwikSiteDetails [$piwikSiteId] ['name'] . ' (' . $piwikSiteDetails [$piwikSiteId] ['main_url'] . ')';
+					else
+						$piwikSiteDescription = 'n/a';
+					echo '<tr class="wp-piwik-auto-option' . (!self::$settings->getGlobalOption('auto_site_config') ? ' hidden' : '') . '"><th scope="row">' . __('Determined site', 'wp-piwik') . ':</th><td>' . $piwikSiteDescription . '</td></tr>';
+					if (isset ($piwikSiteDetails) && is_array($piwikSiteDetails))
+						foreach ($piwikSiteDetails as $key => $siteData)
+							$siteList [$siteData['idsite']] = $siteData ['name'] . ' (' . $siteData ['main_url'] . ')';
 					if (isset($siteList))
-						$this->showSelect ( 'site_id', __ ( 'Select site', 'wp-piwik' ), $siteList, 'Choose the Piwik site corresponding to this blog.', '', self::$settings->getGlobalOption ( 'auto_site_config' ), 'wp-piwik-auto-option', true, false );
+						$this->showSelect('site_id', __('Select site', 'wp-piwik'), $siteList, 'Choose the Piwik site corresponding to this blog.', '', self::$settings->getGlobalOption('auto_site_config'), 'wp-piwik-auto-option', true, false);
+				}
 			}
 		} else echo '<tr class="hidden"><td colspan="2"><input type="hidden" name="wp-piwik[auto_site_config]" value="1" /></td></tr>';
 
