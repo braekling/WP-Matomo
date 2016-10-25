@@ -13,7 +13,7 @@ This plugin adds a Piwik stats site to your WordPress or WordPress multisite das
 
 This plugin adds a Piwik stats site to your WordPress dashboard. It's also able to add the Piwik tracking code to your blog.
 
-To use this plugin you will need your own Piwik instance. If you do not already have a Piwik setup, you have two simple options: use either [Self-hosted](http://piwik.org/) or [Cloud-hosted](http://piwik.org/hosting/). 
+To use this plugin you will need your own Piwik instance. If you do not already have a Piwik setup, you have two simple options: use either [Self-hosted](http://piwik.org/) or [Cloud-hosted](http://piwik.org/hosting/).
 
 **Requirements:** PHP 5.4 (or higher)/PHP 7.0 (or higher), WordPress 4.0 (or higher), Piwik 2.16 (or higher)
  
@@ -55,6 +55,15 @@ As soon as Piwik works, you'll be able to configure WP-Piwik: The Piwik URL is t
 
 You can get a more detailed description here: https://piwik.org/blog/2015/05/wordpress-integration-wp-piwik-1-0/
 
+= I get this message: "WP-Piwik was not able to connect to Piwik using our configuration". How to proceed? =
+
+First, please make sure your configuration is valid, e.g., if you are using the right Piwik URL (see description above). Then, go to the "Support" tab and run the test script. This test script will try to get some information from Piwik and shows the full response. Usually, the response output gives a clear hint what's wrong:
+
+The response output contains...
+* **bool(false)** and **HTTP/1.1 403 Forbidden**: WP-Piwik is not allowed to connect to Piwik. Please check your Piwik server's configuration. Maybe you are using a password protection via .htaccess or you are blocking requests from localhost/127.0.0.1. If you aren’t sure about this, please contact your web hoster for support.
+* **bool(false)** and **HTTP/1.1 404 Not Found**: The Piwik URL is wrong. Try to copy & paste the URL you use to access Piwik itself via browser.
+* **bool(false)** and no further HTTP response code: The Piwik server does not respond. Very often, this is caused by firewall or mod_security settings. Check your server logfiles to get further information. If you aren’t sure about this, please contact your web hoster for support.
+
 = Can I contribute to WP-Piwik as a translator? =
 
 You like to contribute to WP-Piwik translations? Please use the [Transifex translation community](https://www.transifex.com/projects/p/wp-piwik/).
@@ -69,7 +78,8 @@ Thank you very much! :-)
 
 WP-Piwik requires a working Piwik instance which requires a higher PHP version, too. Furthermore, please have a look at the [official PHP Unsupported Branches page](http://php.net/eol.php). Even if your software still works with PHP 5.2, the PHP team stopped to deliver **security** patches in January 2011. Even PHP 5.3 does not get security patches anymore (end of life date was August 2014).
 
-= Tracking does not work on HostGator! / The test script shows an empty response. =
+
+= Tracking does not work on HostGator! =
 
 Try to enable the "avoid mod_security" option (WP-Piwik settings, Tracking tab) or create a mod_security whitelist.
 
@@ -79,16 +89,16 @@ See [Piwik FAQ](http://piwik.org/faq/how-to/#faq_113).
 
 == Installation ==
 
+= General Notes =
+* First, you have to set up a running Piwik instance. You can get Piwik [here](http://piwik.org/) and its documentation [here](http://piwik.org/docs/).
+* If you want to update your Piwik instance, you should set your WordPress blog to maintenance while the update process is running.
+
 = Install WP-Piwik on a simple WordPress blog =
 
 1. Upload the full `wp-piwik` directory into your `wp-content/plugins` directory.
-
-2. Activate the plugin through the 'Plugins' menu in WordPress. 
-
+2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Open the new 'Settings/WP-Piwik Settings' menu and follow the instructions to configure your Piwik connection. Save settings.
-
 4. If you have view access to multiple site stats and did not enable "auto config", choose your blog and save settings again.
-
 5. Look at 'Dashboard/WP-Piwik' to see your site stats.
 
 = Install WP-Piwik on a WordPress blog network (WPMU/WP multisite) =
