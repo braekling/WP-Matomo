@@ -127,6 +127,11 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 
 == Changelog ==
 
+= 1.0.12 =
+* Removed notices and warnings
+* Allow to modify the tracking code using the filter "wp-piwik_tracking_code"
+* Network: Don't show plugin overview settings link on individual sites
+
 = 1.0.11 =
 * Security improvements
 * Removed some division by zero warnings
