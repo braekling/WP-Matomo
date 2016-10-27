@@ -26,7 +26,7 @@ class TrackingCode {
 			$this->applySearchChanges ();
 		if (is_single () || is_page())
 			$this->addCustomValues ();
-		$this->trackingCode = apply_filters('wppiwik_tracking_code', $this->trackingCode);
+		$this->trackingCode = apply_filters('wp-piwik_tracking_code', $this->trackingCode);
 		return $this->trackingCode;
 	}
 
