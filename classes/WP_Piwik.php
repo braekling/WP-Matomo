@@ -1169,8 +1169,8 @@ class WP_Piwik {
 		new \WP_Piwik\Widget\SystemDetails ( $this, self::$settings, $this->statsPageId );
 		new \WP_Piwik\Widget\Country ( $this, self::$settings, $this->statsPageId );
 
-        do_action( 'WP-Piwik_load_stats_page', $this, self::$settings, $this->statsPageId );
-    }
+		do_action( 'WP-Piwik_load_stats_page', $this, self::$settings, $this->statsPageId );
+	}
 
 	/**
 	 * Add per post statistics to a post's page
