@@ -162,6 +162,21 @@ class Settings extends \WP_Piwik\Admin {
 		), __ ( 'Default date shown on statistics page.', 'wp-piwik' ) );
 
 		$this->showCheckbox ( 'stats_seo', __ ( 'Show SEO data', 'wp-piwik' ), __ ( 'Display SEO ranking data on statistics page.', 'wp-piwik' ) . ' (' . __ ( 'Slow!', 'wp-piwik' ) . ')' );
+		$this->showCheckbox ( 'stats_chart', __ ( 'Show Chart', 'wp-piwik' ), __ ( 'Display Chart on statistics page.', 'wp-piwik' ) );
+		$this->showCheckbox ( 'stats_visitors', __ ( 'Show Visitors data', 'wp-piwik' ), __ ( 'Display Visitors data on statistics page.', 'wp-piwik' ) );
+		$this->showCheckbox ( 'stats_overview', __ ( 'Show Overview of visits', 'wp-piwik' ), __ ( 'Display Overview of visits on statistics page.', 'wp-piwik' ) );
+		$this->showCheckbox ( 'stats_pages', __ ( 'Show Pages data', 'wp-piwik' ), __ ( 'Display Pages data on statistics page.', 'wp-piwik' ) );
+		$this->showCheckbox ( 'stats_keywords', __ ( 'Show Keywords data', 'wp-piwik' ), __ ( 'Display Keywords data on statistics page.', 'wp-piwik' ) );
+		$this->showCheckbox ( 'stats_referrers', __ ( 'Show Referrers data', 'wp-piwik' ), __ ( 'Display Referrers data on statistics page.', 'wp-piwik' ) );
+		$this->showCheckbox ( 'stats_plugins', __ ( 'Show Plugins data', 'wp-piwik' ), __ ( 'Display Plugins data on statistics page.', 'wp-piwik' ) );
+		$this->showCheckbox ( 'stats_search', __ ( 'Show Search data', 'wp-piwik' ), __ ( 'Display Search data on statistics page.', 'wp-piwik' ) );
+		$this->showCheckbox ( 'stats_noresult', __ ( 'Show Search no results data', 'wp-piwik' ), __ ( 'Display Search no results data on statistics page.', 'wp-piwik' ) );
+		$this->showCheckbox ( 'stats_browsers', __ ( 'Show Browsers data', 'wp-piwik' ), __ ( 'Display Browsers data on statistics page.', 'wp-piwik' ) );
+		$this->showCheckbox ( 'stats_browserdetails', __ ( 'Show Browser details data', 'wp-piwik' ), __ ( 'Display Browser details data on statistics page.', 'wp-piwik' ) );
+		$this->showCheckbox ( 'stats_screens', __ ( 'Show Screens data', 'wp-piwik' ), __ ( 'Display Screens data on statistics page.', 'wp-piwik' ) );
+		$this->showCheckbox ( 'stats_systems', __ ( 'Show Systems data', 'wp-piwik' ), __ ( 'Display Systems data on statistics page.', 'wp-piwik' ) );
+		$this->showCheckbox ( 'stats_systemdetails', __ ( 'Show System details data', 'wp-piwik' ), __ ( 'Display System details data on statistics page.', 'wp-piwik' ) );
+		$this->showCheckbox ( 'stats_country', __ ( 'Show Country data', 'wp-piwik' ), __ ( 'Display Country data on statistics page.', 'wp-piwik' ) );
 
 		$this->showSelect ( 'dashboard_widget', __ ( 'Dashboard overview', 'wp-piwik' ), array (
 				'disabled' => __ ( 'Disabled', 'wp-piwik' ),

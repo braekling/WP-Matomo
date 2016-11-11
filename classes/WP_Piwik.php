@@ -1151,23 +1151,38 @@ class WP_Piwik {
 		wp_enqueue_script ( 'wp-piwik-jqplot', $this->getPluginURL () . 'js/jqplot/wp-piwik.jqplot.js', array (
 				'jquery'
 		), self::$version );
-		new \WP_Piwik\Widget\Chart ( $this, self::$settings, $this->statsPageId );
-		new \WP_Piwik\Widget\Visitors ( $this, self::$settings, $this->statsPageId );
-		new \WP_Piwik\Widget\Overview ( $this, self::$settings, $this->statsPageId );
 		if (self::$settings->getGlobalOption ( 'stats_seo' ))
 			new \WP_Piwik\Widget\Seo ( $this, self::$settings, $this->statsPageId );
-		new \WP_Piwik\Widget\Pages ( $this, self::$settings, $this->statsPageId );
-		new \WP_Piwik\Widget\Keywords ( $this, self::$settings, $this->statsPageId );
-		new \WP_Piwik\Widget\Referrers ( $this, self::$settings, $this->statsPageId );
-		new \WP_Piwik\Widget\Plugins ( $this, self::$settings, $this->statsPageId );
-		new \WP_Piwik\Widget\Search ( $this, self::$settings, $this->statsPageId );
-		new \WP_Piwik\Widget\Noresult ( $this, self::$settings, $this->statsPageId );
-		new \WP_Piwik\Widget\Browsers ( $this, self::$settings, $this->statsPageId );
-		new \WP_Piwik\Widget\BrowserDetails ( $this, self::$settings, $this->statsPageId );
-		new \WP_Piwik\Widget\Screens ( $this, self::$settings, $this->statsPageId );
-		new \WP_Piwik\Widget\Systems ( $this, self::$settings, $this->statsPageId );
-		new \WP_Piwik\Widget\SystemDetails ( $this, self::$settings, $this->statsPageId );
-		new \WP_Piwik\Widget\Country ( $this, self::$settings, $this->statsPageId );
+		if (self::$settings->getGlobalOption ( 'stats_chart' ))
+			new \WP_Piwik\Widget\Chart ( $this, self::$settings, $this->statsPageId );
+		if (self::$settings->getGlobalOption ( 'stats_visitors' ))
+			new \WP_Piwik\Widget\Visitors ( $this, self::$settings, $this->statsPageId );
+		if (self::$settings->getGlobalOption ( 'stats_overview' ))
+			new \WP_Piwik\Widget\Overview ( $this, self::$settings, $this->statsPageId );
+		if (self::$settings->getGlobalOption ( 'stats_pages' ))
+			new \WP_Piwik\Widget\Pages ( $this, self::$settings, $this->statsPageId );
+		if (self::$settings->getGlobalOption ( 'stats_keywords' ))
+			new \WP_Piwik\Widget\Keywords ( $this, self::$settings, $this->statsPageId );
+		if (self::$settings->getGlobalOption ( 'stats_referrers' ))
+			new \WP_Piwik\Widget\Referrers ( $this, self::$settings, $this->statsPageId );
+		if (self::$settings->getGlobalOption ( 'stats_plugins' ))
+			new \WP_Piwik\Widget\Plugins ( $this, self::$settings, $this->statsPageId );
+		if (self::$settings->getGlobalOption ( 'stats_search' ))
+			new \WP_Piwik\Widget\Search ( $this, self::$settings, $this->statsPageId );
+		if (self::$settings->getGlobalOption ( 'stats_noresult' ))
+			new \WP_Piwik\Widget\Noresult ( $this, self::$settings, $this->statsPageId );
+		if (self::$settings->getGlobalOption ( 'stats_browsers' ))
+			new \WP_Piwik\Widget\Browsers ( $this, self::$settings, $this->statsPageId );
+		if (self::$settings->getGlobalOption ( 'stats_browserdetails' ))
+			new \WP_Piwik\Widget\BrowserDetails ( $this, self::$settings, $this->statsPageId );
+		if (self::$settings->getGlobalOption ( 'stats_screens' ))
+			new \WP_Piwik\Widget\Screens ( $this, self::$settings, $this->statsPageId );
+		if (self::$settings->getGlobalOption ( 'stats_systems' ))
+			new \WP_Piwik\Widget\Systems ( $this, self::$settings, $this->statsPageId );
+		if (self::$settings->getGlobalOption ( 'stats_systemdetails' ))
+			new \WP_Piwik\Widget\SystemDetails ( $this, self::$settings, $this->statsPageId );
+		if (self::$settings->getGlobalOption ( 'stats_country' ))
+			new \WP_Piwik\Widget\Country ( $this, self::$settings, $this->statsPageId );
 
 		do_action( 'WP-Piwik_load_stats_page', $this, self::$settings, $this->statsPageId );
 	}
