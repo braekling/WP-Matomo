@@ -17,7 +17,7 @@ To use this plugin you will need your own Piwik instance. If you do not already 
 
 **Requirements:** PHP 5.4 (or higher)/PHP 7.0 (or higher), WordPress 4.0 (or higher), Piwik 2.16 (or higher)
  
-**Languages:** English, Albania, Dutch, French, German, Greek, Hungarian, Italian, Portuguese (Brazil). Partially supported: Azerbaijani, Belarusian, Chinese (simplified),  Hindi, Lithuanian, Luxembourgish, Norwegian, Persian, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian
+**Languages:** English, Albanian, Chinese, Dutch, French, German, Greek, Hungarian, Italian, Polish, Portuguese (Brazil). Partially supported: Azerbaijani, Belarusian, Hindi, Lithuanian, Luxembourgish, Norwegian, Persian, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian
 
 **Note:** If you vote "It's broken", please tell me about your problem. It's hard to fix a bug I don't know about! ;-)
 
@@ -40,7 +40,7 @@ is equal to *[wp-piwik module="overview" title="" period="day" date="yesterday"]
 
 * Graphs powered by [jqPlot](http://www.jqplot.com/) (GPL 2.0 and MIT) and and [jQuery Sparklines](http://omnipotent.net/jquery.sparkline/) (New BSD License).
 * All translators at the [Transifex translation community](https://www.transifex.com/projects/p/wp-piwik/).
-* Donations: Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., Helmut O., Valerie S., the Piwik team itself, and all people flattering this.
+* Donations: Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., Helmut O., Valerie S., Jochen D., the Piwik team itself, and all people flattering this.
 * All users who send me mails containing criticism, commendation, feature requests and bug reports - you help me to make WP-Piwik much better!
 
 Thank you all!
@@ -126,6 +126,11 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 5. Piwik: Here you'll find your auth token.
 
 == Changelog ==
+
+= 1.0.13 =
+* Language updates
+* Readme typo fixes (thx to ujdhesa)
+* Perform your own code after site creation by using the action "wp-piwik_site_created"
 
 = 1.0.12 =
 * Removed notices and warnings
@@ -292,7 +297,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 = 0.9.9.12 =
 * Bugfix: Avoid forced relogin on site change (WP network)
 * Bugfix: Avoid multiple annotations on post updates
-* Bugfix: User mergeSubdomains instead of mergeAliasURLs
+* Bugfix: Use mergeSubdomains instead of mergeAliasURLs
 * Feature: Added mergeAliasURLs as additional feature
 
 = 0.9.9.11 =
@@ -503,8 +508,8 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Fixed js/css links if symbolic links are used
 * Changed experimental WPMU support to experimental WP multisite support
 * Try curl() before fopen() to avoid an [OpenSSL bug](http://wordpress.org/support/topic/plugin-wp-piwik-problems-reaching-an-ssl-installation-of-piwiki)
-* Added Norwegian language file by Gormer.
-* Don't worry - new features will follow soon. ;)
+* Added Norwegian language file by Gormer
+* Don't worry - new features will follow soon ;)
 
 = 0.8.0 =
 * Using jqPlot instead of Google Chart API
@@ -531,7 +536,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * WordPress dashboard widget: last 30 days view added
 
 = 0.6.3 =
-* Click at a visitor stats day-row to load its details.
+* Click at a visitor stats day-row to load its details
 * Add stats overview to your WordPress dashboard
 
 = 0.6.0 =
@@ -551,7 +556,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Plugin stats
 
 = 0.3.2 =
-* If allow_url_fopen is disabled in php.ini, WP-Piwik tries to use CURL instead of file_get_contents.
+* If allow_url_fopen is disabled in php.ini, WP-Piwik tries to use CURL instead of file_get_contents
 
 = 0.3.1 =
 * WordPress 2.8 compatible
@@ -560,10 +565,10 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Partly optimized code
 
 = 0.3.0 =
-* WP-Piwik dashboard widgetized.
-* Stats-boxes sortable and closeable.
+* WP-Piwik dashboard widgetized
+* Stats-boxes sortable and closeable
 * German language file added
 * Browser stats and bounced visitors
 
 = 0.2.0 =
-* First public version.
+* First public version

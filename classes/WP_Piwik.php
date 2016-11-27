@@ -12,7 +12,7 @@ class WP_Piwik {
 	 *
 	 * @var Runtime environment variables
 	 */
-	private static $revisionId = 2016100123, $version = '1.0.12', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
+	private static $revisionId = 2016112701, $version = '1.0.13', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
 
 	/**
 	 * Constructor class to configure and register all WP-Piwik components
@@ -1054,8 +1054,10 @@ class WP_Piwik {
 		self::$logger->log ( 'Get Piwik ID: WordPress site ' . ($isCurrent ? get_bloginfo ( 'url' ) : get_blog_details ( $blogId )->siteurl) . ' = Piwik ID ' . ( int ) $result );
 		if (empty ( $result ) || ! isset ( $result [0] ))
 			return null;
-		else
-			return $result [0] ['idsite'];
+		else {
+            do_action('wp-piwik_site_created');
+            return $result [0] ['idsite'];
+        }
 	}
 
 	/**
