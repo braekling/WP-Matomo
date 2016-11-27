@@ -38,7 +38,7 @@ is equal to *[wp-piwik module="overview" title="" period="day" date="yesterday"]
 
 = Credits =
 
-* Graphs powered by [jqPlot](http://www.jqplot.com/) (GPL 2.0 and MIT) and  and [jQuery Sparklines](http://omnipotent.net/jquery.sparkline/) (New BSD License).
+* Graphs powered by [jqPlot](http://www.jqplot.com/) (GPL 2.0 and MIT) and and [jQuery Sparklines](http://omnipotent.net/jquery.sparkline/) (New BSD License).
 * All translators at the [Transifex translation community](https://www.transifex.com/projects/p/wp-piwik/).
 * Donations: Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., Helmut O., Valerie S., the Piwik team itself, and all people flattering this.
 * All users who send me mails containing criticism, commendation, feature requests and bug reports - you help me to make WP-Piwik much better!
@@ -360,7 +360,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Made <noscript> code optional. Move <noscript> code to site footer.
 
 = 0.9.9.0 =
-* Piwik 1.11 compaitbility fixes (Piwik 1.11 required now!) 
+* Piwik 1.11 compatibility fixes (Piwik 1.11 required now!) 
 * Depending on Piwik 1.11 WP-Piwik will use async tracking now
 * CDN support added, see http://wordpress.org/support/topic/request-cdn-support-1
 
