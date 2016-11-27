@@ -453,7 +453,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * WordPress dashboard SEO rank widget (very slow, caching will be added in 0.9.1)
 * New option: use js/index.php
 * New option: avoid mod_security
-* Mulisite: Order blog list alphabetically (Network Admin stats site)
+* Multisite: Order blog list alphabetically (Network Admin stats site)
 * Settings: Order site list alphabetically (site list shown if order conf is disabled)
 
 = 0.8.10 =
