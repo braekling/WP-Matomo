@@ -229,7 +229,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Bugfix: Opt-out shortcode will also work in "pro" and "php" mode
 * Bugfix: Test script link (settings page, support) fixed
 * Bugfix: Removed test script errors and notices
-* Bugfix: Keep sure the revion ID is stored and avoid re-installing the plugin again and again
+* Bugfix: Keep sure the revision ID is stored and avoid re-installing the plugin again and again
 * Bugfix: http/pro - after configuration the settings page had to be reloaded once to start working
 * Typo fixes
  
