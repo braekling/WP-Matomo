@@ -131,6 +131,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Language updates
 * Readme typo fixes (thx to ujdhesa)
 * Perform your own code after site creation by using the action "wp-piwik_site_created"
+* Improved caching ID to avoid interferences, see https://github.com/braekling/WP-Piwik/issues/42
 
 = 1.0.12 =
 * Removed notices and warnings
