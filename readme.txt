@@ -3,7 +3,7 @@
 Contributors: Braekling
 Requires at least: 4.0
 Tested up to: 4.6.1
-Stable tag: 1.0.13
+Stable tag: 1.0.14
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
 Tags: piwik, tracking, statistics, stats, analytics
 
@@ -126,6 +126,11 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 5. Piwik: Here you'll find your auth token.
 
 == Changelog ==
+
+= 1.0.14 =
+* Action "wp-piwik_site_created" was extended by a site ID parameter, so it will deliver the Piwik site ID of the created site
+* Bugfix: Fixed an issue with Piwik site creation
+* Bugfix: Allow changes of a manually defined tracking code on networks, see https://github.com/braekling/WP-Piwik/issues/46
 
 = 1.0.13 =
 * Language updates
