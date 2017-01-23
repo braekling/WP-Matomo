@@ -68,6 +68,14 @@ class TrackingCode {
 			$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['addDownloadExtensions', '" . ($settings->getGlobalOption ( 'add_download_extensions' )) . "']);\n_paq.push(['trackPageView']);", $code );
 		if ($settings->getGlobalOption ( 'limit_cookies' ))
 			$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['setVisitorCookieTimeout', '" . $settings->getGlobalOption ( 'limit_cookies_visitor' ) . "']);\n_paq.push(['setSessionCookieTimeout', '" . $settings->getGlobalOption ( 'limit_cookies_session' ) . "']);\n_paq.push(['setReferralCookieTimeout', '" . $settings->getGlobalOption ( 'limit_cookies_referral' ) . "']);\n_paq.push(['trackPageView']);", $code );
+		if ($settings->getGlobalOption ( 'track_domains_local' )) {
+			$localDomains = self::commaSeparatedStringToArray($settings->getGlobalOption ( 'track_domains_local' ));
+			if (!empty($localDomains)) {
+				$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['setDomains', " . json_encode($localDomains) . "]);\n_paq.push(['trackPageView']);", $code );
+			}
+		}
+		if ($settings->getGlobalOption ( 'track_crossdomain_linking' ))
+			$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['enableCrossDomainLinking']);\n_paq.push(['trackPageView']);", $code );
 
 		if ($settings->getGlobalOption ( 'force_protocol' ) != 'disabled')
 			$code = str_replace ( '"//', '"' . $settings->getGlobalOption ( 'force_protocol' ) . '://', $code );
@@ -110,6 +118,24 @@ class TrackingCode {
 		$objSearch = new \WP_Query ( "s=" . get_search_query () . '&showposts=-1' );
 		$intResultCount = $objSearch->post_count;
 		$this->trackingCode = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['trackSiteSearch','" . get_search_query () . "', false, " . $intResultCount . "]);\n_paq.push(['trackPageView']);", $this->trackingCode );
+	}
+
+	private static function commaSeparatedStringToArray($theString)
+	{
+		if (!is_string($theString)) {
+			return array();
+		}
+
+		$theString = trim($theString);
+		if (empty($theString)) {
+			return array();
+		}
+
+		$parts = explode(',', $theString);
+		foreach ($parts as $index => $part) {
+			$parts[$index] = trim($part);
+		}
+		return $parts;
 	}
 
 	private function applyUserTracking() {
