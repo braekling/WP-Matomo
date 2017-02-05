@@ -44,6 +44,7 @@ $globalSettings = array(
 	'capability_stealth',
 	'track_across',
 	'track_across_alias',
+	'track_crossdomain_linking',
 	'track_feed',
 	'track_feed_addcampaign',
 	'track_feed_campaign',
