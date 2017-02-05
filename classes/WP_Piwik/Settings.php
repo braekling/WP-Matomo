@@ -79,6 +79,7 @@ class Settings {
 			'capability_stealth' => array (),
 			'track_across' => false,
 			'track_across_alias' => false,
+			'track_crossdomain_linking' => false,
 			'track_feed' => false,
 			'track_feed_addcampaign' => false,
 			'track_feed_campaign' => 'feed',

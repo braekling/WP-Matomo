@@ -166,11 +166,18 @@ class WP_Piwik {
 						'addFeedTracking'
 				) );
 			}
-			if ($this->isAddFeedCampaign ())
+			if ($this->isAddFeedCampaign ()) {
 				add_filter ( 'post_link', array (
 						$this,
 						'addFeedCampaign'
 				) );
+			}
+			if ($this->isCrossDomainLinkingEnabled ()) {
+				add_filter ( 'wp_redirect', array (
+					$this,
+					'forwardCrossDomainVisitorId'
+				) );
+			}
 		}
 	}
 
@@ -559,6 +566,27 @@ class WP_Piwik {
 	}
 
 	/**
+	 * Forwards the cross domain parameter pk_vid if the URL parameter is set and a user is about to be redirected.
+     * When another website links to WooCommerce with a pk_vid parameter, and WooCommerce redirects the user to another
+     * URL, the pk_vid parameter would get lost and the visitorId would later not be applied by the tracking code
+     * due to the lost pk_vid URL parameter. If the URL parameter is set, we make sure to forward this parameter.
+	 *
+	 * @param string $location
+	 *
+	 * @return string location extended by pk_vid URL parameter if the URL parameter is set
+	 */
+	public function forwardCrossDomainVisitorId($location) {
+
+		if (!empty($_GET['pk_vid'])
+			&& preg_match('/^[a-zA-Z0-9]{24,48}$/', $_GET['pk_vid'])) {
+			// currently, the pk_vid parameter is 32 characters long, but it may vary over time.
+			$location = add_query_arg( 'pk_vid', $_GET['pk_vid'], $location );
+		}
+
+		return $location;
+	}
+
+	/**
 	 * Apply settings update
 	 *
 	 * @return boolean settings update applied
@@ -697,6 +725,15 @@ class WP_Piwik {
 	 */
 	private function isAddFeedCampaign() {
 		return self::$settings->getGlobalOption ( 'track_feed_addcampaign' );
+	}
+
+	/**
+	 * Check if feed permalinks get a campaign parameter
+	 *
+	 * @return boolean Add campaign parameter to feed permalinks?
+	 */
+	private function isCrossDomainLinkingEnabled() {
+		return self::$settings->getGlobalOption ( 'track_crossdomain_linking' );
 	}
 
 	/**
@@ -1097,7 +1134,8 @@ class WP_Piwik {
 				'idSite' => $siteId,
 				'mergeSubdomains' => self::$settings->getGlobalOption ( 'track_across' ) ? 1 : 0,
 				'mergeAliasUrls' => self::$settings->getGlobalOption ( 'track_across_alias' ) ? 1 : 0,
-				'disableCookies' => self::$settings->getGlobalOption ( 'disable_cookies' ) ? 1 : 0
+				'disableCookies' => self::$settings->getGlobalOption ( 'disable_cookies' ) ? 1 : 0,
+				'crossDomain' => self::$settings->getGlobalOption ( 'track_crossdomain_linking' ) ? 1 : 0
 			) );
 		$code = $this->request ( $id );
 		if (is_array($code) && isset($code['value']))
