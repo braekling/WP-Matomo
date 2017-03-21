@@ -128,9 +128,7 @@ class TrackingCode {
 				$pkUserId = $current_user->display_name;
 			}
 		}
-
 		$pkUserId = apply_filters('wp-piwik_tracking_user_id', $pkUserId);
-
          	// Check we got a User ID to track, and track it
          	if ( isset( $pkUserId ) && ! empty( $pkUserId ))
 			$this->trackingCode = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['setUserId', '" . esc_js( $pkUserId ) . "']);\n_paq.push(['trackPageView']);", $this->trackingCode );
