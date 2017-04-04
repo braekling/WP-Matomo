@@ -37,7 +37,7 @@
 			curl_setopt($c, CURLOPT_HEADER, $GLOBALS ['wp-piwik_debug'] );
 			curl_setopt($c, CURLOPT_TIMEOUT, self::$settings->getGlobalOption('connection_timeout'));
 			$httpProxyClass = new \WP_HTTP_Proxy();
-			if ($httpProxyClass->is_enabled() && $httpProxyClass->send_through_proxy($strURL)) {
+			if ($httpProxyClass->is_enabled() && $httpProxyClass->send_through_proxy($url)) {
 				curl_setopt($c, CURLOPT_PROXY, $httpProxyClass->host());
 				curl_setopt($c, CURLOPT_PROXYPORT, $httpProxyClass->port());
 				if ($httpProxyClass->use_authentication())
