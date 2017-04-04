@@ -27,7 +27,7 @@
 				if (isset($response[0]))
 					$response = $response[0];
 				if ($this->parameter['key']) {
-					echo isset($response[$this->parameter['key']])?$response[$this->parameter['key']]:'<em>not defined</em>';
+					$this->out(isset($response[$this->parameter['key']])?$response[$this->parameter['key']]:'<em>not defined</em>');
 					return;
 				}
 				$time = isset($response['entry_sum_visit_length'])?$this->timeFormat($response['entry_sum_visit_length']):'-';
