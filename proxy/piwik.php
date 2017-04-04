@@ -42,7 +42,7 @@ function arrayValue($array, $key, $value = null)
     }
     return $value;
 }
-function getContents($url, $options = false)
+function getContents($useCurl, $url, $options = false)
 {
 	if (!$useCurl && ini_get('allow_url_fopen')) {
 		$ctx = ($options?stream_context_create($options):NULL);
@@ -87,7 +87,7 @@ if (empty($_GET)) {
     } else {
         sendHeader('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT');
         sendHeader('Content-Type: application/javascript; charset=UTF-8');
-        if ($piwikJs = getContents($PIWIK_URL . 'piwik.js')) {
+        if ($piwikJs = getContents($useCurl, $PIWIK_URL . 'piwik.js')) {
             echo $piwikJs;
         } else {
             sendHeader($_SERVER['SERVER_PROTOCOL'] . '505 Internal server error');
@@ -109,10 +109,10 @@ $stream_options = array('http' => array(
 ));
 if (version_compare(PHP_VERSION, '5.3.0', '<')) {
     // PHP 5.2 breaks with the new 204 status code so we force returning the image every time
-    echo getContents($url . '&send_image=1', $stream_options);
+    echo getContents($useCurl, $url . '&send_image=1', $stream_options);
 } else {
     // PHP 5.3 and above
-    $content = getContents($url, $stream_options);
+    $content = getContents($useCurl, $url, $stream_options);
     // Forward the HTTP response code
     if (!headers_sent() && isset($http_response_header[0])) {
         header($http_response_header[0]);

@@ -135,6 +135,8 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 = 1.0.15 =
 * Allow to modify the tracked user ID using the filter "wp-piwik_tracking_user_id"
 * Bugfix: Output of "post" shortcode was incorrectly placed, see https://wordpress.org/support/topic/post-shortcode-values-are-incorrectly-placed/
+* Bugfix: Usage of WP_PROXY_BYPASS_HOSTS, see https://wordpress.org/support/topic/bug-considering-wp_proxy_bypass_hosts-in-proxy-setups/
+* Bugfix: Proxy script did not work with cURL, see https://github.com/braekling/WP-Piwik/issues/48
 
 = 1.0.14 =
 * Action "wp-piwik_site_created" was extended by a site ID parameter, so it will deliver the Piwik site ID of the created site
