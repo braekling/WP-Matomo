@@ -34,6 +34,9 @@ class TrackingCode {
 		global $current_user;
 		$logger->log ( 'Apply tracking code changes:' );
 		$settings->setOption ( 'last_tracking_code_update', time () );
+        if (preg_match ( '/var u="([^"]*)";/', $code, $hits )) {
+            $fetchedProxyUrl = $hits [1];
+        } else $fetchedProxyUrl = '';
 		if ($settings->getGlobalOption ( 'track_mode' ) == 'js')
 			$code = str_replace ( array (
 					'piwik.js',
@@ -48,9 +51,6 @@ class TrackingCode {
 			$code = preg_replace ( '/var u="([^"]*)";/', 'var u="' . $proxy . '"', $code );
 			$code = preg_replace ( '/img src="([^"]*)piwik.php/', 'img src="' . $proxy . 'piwik.php', $code );
 		}
-		if (preg_match ( '/var u="([^"]*)";/', $code, $hits )) {
-			$fetchedProxyUrl = $hits [1];
-		} else $fetchedProxyUrl = '';
 		if ($settings->getGlobalOption ( 'track_cdnurl' ) || $settings->getGlobalOption ( 'track_cdnurlssl' ))
 			$code = str_replace ( array (
 					"var d=doc",
