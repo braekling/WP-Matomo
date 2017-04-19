@@ -3,7 +3,7 @@
 Contributors: Braekling
 Requires at least: 4.0
 Tested up to: 4.7.3
-Stable tag: 1.0.14
+Stable tag: 1.0.15
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
 Tags: piwik, tracking, statistics, stats, analytics
 
