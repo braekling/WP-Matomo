@@ -11,7 +11,7 @@ This plugin adds a Piwik stats site to your WordPress or WordPress multisite das
 
 == Description ==
 
-This plugin uses the Piwik API to show your Piwik statistics in your WordPress dashboard. It's also able to add the Piwik tracking code to your blog and to do some modifications to the tracking code. WP-Piwik also supports WordPress networks and manages multiple sites and their tracking codes.
+This plugin uses the Piwik API to show your Piwik statistics in your WordPress dashboard. It's also able to add the Piwik tracking code to your blog and to do some modifications to the tracking code. Additionally, WP-Piwik supports WordPress networks and manages multiple sites and their tracking codes.
 
 To use this plugin you will need your own Piwik instance. If you do not already have a Piwik setup, you have two simple options: use either [Self-hosted](http://piwik.org/) or [Cloud-hosted](http://piwik.org/hosting/).
 
@@ -61,7 +61,7 @@ Thank you all!
 
 To use this plugin you will need your own Piwik instance. If you do not already have a Piwik setup, you have two simple options: use either [Self-hosted](http://piwik.org/) or [Cloud-hosted](http://piwik.org/hosting/). 
 
-As soon as Piwik works, you'll be able to configure WP-Piwik: The Piwik URL is the same URL you use to access your Piwik, e.g. for the demo site: http://demo.piwik.org. The auth token is some kind of a secret password, which allows WP-Piwik to get the necessary data from Piwik. To get your auth token, log in to Piwik, click at your user name (top right) and click at "API" (left sidebar menu).
+As soon as Piwik works, you'll be able to configure WP-Piwik: The Piwik URL is the same URL you use to access your Piwik, e.g. for the demo site: http://demo.piwik.org. The auth token is some kind of a secret password, which allows WP-Piwik to get the necessary data from Piwik. To get your auth token, log in to Piwik, click at the preferences gear icon (top right) and click at "API" (left sidebar menu, near the bottom).
 
 You can get a more detailed description here: https://piwik.org/blog/2015/05/wordpress-integration-wp-piwik-1-0/
 
