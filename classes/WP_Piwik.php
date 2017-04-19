@@ -537,11 +537,15 @@ class WP_Piwik {
 			$title = the_title ( null, null, false );
 			$posturl = get_permalink ( $post->ID );
 			$urlref = get_bloginfo ( 'rss2_url' );
-			$url = self::$settings->getGlobalOption ( 'piwik_url' );
-			if (substr ( $url, - 10, 10 ) == '/index.php')
-				$url = str_replace ( '/index.php', '/piwik.php', $url );
-			else
-				$url .= 'piwik.php';
+			if (self::$settings->getGlobalOption ( 'track_mode' ) == 'proxy')
+			    $url = plugins_url ( 'wp-piwik' ) . '/proxy/piwik.php';
+            else {
+                $url = self::$settings->getGlobalOption ( 'piwik_url' );
+                if (substr($url, -10, 10) == '/index.php')
+                    $url = str_replace('/index.php', '/piwik.php', $url);
+                else
+                    $url .= 'piwik.php';
+            }
 			$trackingImage = $url . '?idsite=' . self::$settings->getOption ( 'site_id' ) . '&amp;rec=1&amp;url=' . urlencode ( $posturl ) . '&amp;action_name=' . urlencode ( $title ) . '&amp;urlref=' . urlencode ( $urlref );
 			$content .= '<img src="' . $trackingImage . '" style="border:0;width:0;height:0" width="0" height="0" alt="" />';
 		}
