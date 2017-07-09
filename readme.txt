@@ -134,6 +134,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 
 = 1.0.16 =
 * Bugfix: Avoid unnecessary notices
+* Bugfix: Avoid a warning in proxy script
 
 = 1.0.15 =
 * Allow to modify the tracked user ID using the filter "wp-piwik_tracking_user_id"

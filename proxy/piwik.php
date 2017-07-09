@@ -57,7 +57,7 @@ function piwikFileGetContentsCurl($url, $options)
 	curl_setopt($ch, CURLOPT_HEADER, 0);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_USERAGENT, $options['http']['user_agent']);
-	curl_setopt($ch, CURLOPT_HTTPHEADER, $options['http']['header']);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array($options['http']['header']));
 	curl_setopt($ch, CURLOPT_TIMEOUT, $options['http']['timeout']);
 	curl_setopt($ch, CURLOPT_URL, $url);
 	$data = curl_exec($ch);
