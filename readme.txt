@@ -132,6 +132,9 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 
 == Changelog ==
 
+= 1.0.16 =
+* Bugfix: Avoid unnecessary notices
+
 = 1.0.15 =
 * Allow to modify the tracked user ID using the filter "wp-piwik_tracking_user_id"
 * Bugfix: Output of "post" shortcode was incorrectly placed, see https://wordpress.org/support/topic/post-shortcode-values-are-incorrectly-placed/
