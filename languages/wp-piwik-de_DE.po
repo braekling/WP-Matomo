@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2016-10-09 20:03:09+00:00\n"
-"PO-Revision-Date: 2017-08-06 20:44+0000\n"
+"PO-Revision-Date: 2017-08-06 21:05+0000\n"
 "Last-Translator: André Bräkling\n"
 "Language-Team: German (Germany) (http://www.transifex.com/piwik/wp-piwik/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
@@ -184,14 +184,14 @@ msgid "Enter the file path to your Piwik instance, e.g. /var/www/piwik/."
 msgstr "Gib den Dateipfad zu Deiner Piwik-Installation an, z.B. /var/www/piwik/."
 
 #: classes/WP_Piwik/Admin/Settings.php:121
-msgid "Piwik user"
-msgstr "Piwik-Benutzer"
+msgid "Piwik subdomain"
+msgstr "Piwik-Subdomain"
 
 #: classes/WP_Piwik/Admin/Settings.php:121
 msgid ""
-"Enter your InnoCraft Cloud username. It is also part of your URL: "
-"https://USERNAME.innocraft.cloud."
-msgstr "Gib Deinen InnoCraft Cloud Benutzernamen an. Er ist auch Teil der URL: https://USERNAME.innocraft.cloud."
+"Enter your InnoCraft Cloud subdomain. It is also part of your URL: "
+"https://SUBDOMAIN.innocraft.cloud."
+msgstr "Gib Deine InnoCraft Cloud Subdomain an. Sie ist Teil der URL: https://SUBDOMAIN.innocraft.cloud."
 
 #: classes/WP_Piwik/Admin/Settings.php:122
 msgid "Auth token"

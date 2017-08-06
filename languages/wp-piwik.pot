@@ -179,12 +179,12 @@ msgid "Enter the file path to your Piwik instance, e.g. /var/www/piwik/."
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:121
-msgid "Piwik user"
+msgid "Piwik subdomain"
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:121
 msgid ""
-"Enter your InnoCraft Cloud username. It is also part of your URL: https://USERNAME."
+"Enter your InnoCraft Cloud subdomain. It is also part of your URL: https://SUBDOMAIN."
 "innocraft.cloud."
 msgstr ""
 

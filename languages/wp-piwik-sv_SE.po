@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2016-10-09 20:03:09+00:00\n"
-"PO-Revision-Date: 2017-08-06 20:44+0000\n"
+"PO-Revision-Date: 2017-08-06 21:03+0000\n"
 "Last-Translator: André Bräkling\n"
 "Language-Team: Swedish (Sweden) (http://www.transifex.com/piwik/wp-piwik/language/sv_SE/)\n"
 "MIME-Version: 1.0\n"
@@ -184,13 +184,13 @@ msgid "Enter the file path to your Piwik instance, e.g. /var/www/piwik/."
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:121
-msgid "Piwik user"
+msgid "Piwik subdomain"
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:121
 msgid ""
-"Enter your InnoCraft Cloud username. It is also part of your URL: "
-"https://USERNAME.innocraft.cloud."
+"Enter your InnoCraft Cloud subdomain. It is also part of your URL: "
+"https://SUBDOMAIN.innocraft.cloud."
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:122

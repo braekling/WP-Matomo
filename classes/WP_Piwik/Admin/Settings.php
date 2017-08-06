@@ -118,7 +118,7 @@ class Settings extends \WP_Piwik\Admin {
 
 		$this->showInput ( 'piwik_url', __ ( 'Piwik URL', 'wp-piwik' ), __( 'Enter your Piwik URL. This is the same URL you use to access your Piwik instance, e.g. http://www.example.com/piwik/.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'http', 'wp-piwik-mode-option', 'http', self::$wpPiwik->isConfigured (), true );
 		$this->showInput ( 'piwik_path', __ ( 'Piwik path', 'wp-piwik' ), __( 'Enter the file path to your Piwik instance, e.g. /var/www/piwik/.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'php', 'wp-piwik-mode-option', 'php', self::$wpPiwik->isConfigured (), true );
-		$this->showInput ( 'piwik_user', __ ( 'Piwik user', 'wp-piwik' ), __( 'Enter your InnoCraft Cloud username. It is also part of your URL: https://USERNAME.innocraft.cloud.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'cloud', 'wp-piwik-mode-option', 'cloud', self::$wpPiwik->isConfigured () );
+		$this->showInput ( 'piwik_user', __ ( 'Piwik subdomain', 'wp-piwik' ), __( 'Enter your InnoCraft Cloud subdomain. It is also part of your URL: https://USERNAME.innocraft.cloud.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'cloud', 'wp-piwik-mode-option', 'cloud', self::$wpPiwik->isConfigured () );
 		$this->showInput ( 'piwik_token', __ ( 'Auth token', 'wp-piwik' ), __( 'Enter your Piwik auth token here. It is an alphanumerical code like 0a1b2c34d56e78901fa2bc3d45678efa.', 'wp-piwik' ).' '.sprintf ( __ ( 'See %sWP-Piwik FAQ%s.', 'wp-piwik' ), '<a href="https://wordpress.org/plugins/wp-piwik/faq/">', '</a>' ), false, '', '', self::$wpPiwik->isConfigured (), true );
 
 		// Site configuration
