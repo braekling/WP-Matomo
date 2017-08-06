@@ -2,7 +2,7 @@
 
 Contributors: Braekling
 Requires at least: 4.0
-Tested up to: 4.7.3
+Tested up to: 4.8.1
 Stable tag: 1.0.15
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
 Tags: piwik, tracking, statistics, stats, analytics
@@ -78,6 +78,12 @@ The response output contains...
 
 See [Piwik FAQ](http://piwik.org/faq/how-to/#faq_113).
 
+= WP-Piwik only shows the first 100 sites of my multisite network. How can I get all other sites? =
+
+The Piwik API is limited to 100 sites by default. Add the following line to the section [General] of Piwik's config/config.ini.php file:
+
+    API_datatable_default_limit = 1000
+
 = Tracking does not work on HostGator! =
 
 Try to enable the "avoid mod_security" option (WP-Piwik settings, Tracking tab) or create a mod_security whitelist.
@@ -135,6 +141,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 = 1.0.16 =
 * Bugfix: Avoid unnecessary notices
 * Bugfix: Avoid a warning in proxy script
+* Bugfix: NoScript code is working again
 
 = 1.0.15 =
 * Allow to modify the tracked user ID using the filter "wp-piwik_tracking_user_id"
