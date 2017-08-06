@@ -615,7 +615,7 @@ class WP_Piwik {
 	 * @return boolean Is WP-Piwik configured?
 	 */
 	public static function isConfigured() {
-		return (self::$settings->getGlobalOption ( 'piwik_token' ) && (self::$settings->getGlobalOption ( 'piwik_mode' ) != 'disabled') && (((self::$settings->getGlobalOption ( 'piwik_mode' ) == 'http') && (self::$settings->getGlobalOption ( 'piwik_url' ))) || ((self::$settings->getGlobalOption ( 'piwik_mode' ) == 'php') && (self::$settings->getGlobalOption ( 'piwik_path' ))) || ((self::$settings->getGlobalOption ( 'piwik_mode' ) == 'pro') && (self::$settings->getGlobalOption ( 'piwik_user' )))));
+		return (self::$settings->getGlobalOption ( 'piwik_token' ) && (self::$settings->getGlobalOption ( 'piwik_mode' ) != 'disabled') && (((self::$settings->getGlobalOption ( 'piwik_mode' ) == 'http') && (self::$settings->getGlobalOption ( 'piwik_url' ))) || ((self::$settings->getGlobalOption ( 'piwik_mode' ) == 'php') && (self::$settings->getGlobalOption ( 'piwik_path' ))) || ((self::$settings->getGlobalOption ( 'piwik_mode' ) == 'cloud') && (self::$settings->getGlobalOption ( 'piwik_user' )))));
 	}
 
 	/**
@@ -977,7 +977,7 @@ class WP_Piwik {
 		if ( self::$settings->getGlobalOption ( 'piwik_mode' ) == 'disabled' )
 			return 'n/a';
 		if (! isset ( self::$request ) || empty ( self::$request ))
-			self::$request = (self::$settings->getGlobalOption ( 'piwik_mode' ) == 'http' || self::$settings->getGlobalOption ( 'piwik_mode' ) == 'pro' ? new WP_Piwik\Request\Rest ( $this, self::$settings ) : new WP_Piwik\Request\Php ( $this, self::$settings ));
+			self::$request = (self::$settings->getGlobalOption ( 'piwik_mode' ) == 'http' || self::$settings->getGlobalOption ( 'piwik_mode' ) == 'cloud' ? new WP_Piwik\Request\Rest ( $this, self::$settings ) : new WP_Piwik\Request\Php ( $this, self::$settings ));
 		if ($debug)
 			return self::$request->getDebug ( $id );
 		return self::$request->perform ( $id );

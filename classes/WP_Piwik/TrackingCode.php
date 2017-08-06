@@ -77,9 +77,6 @@ class TrackingCode {
 		if ((int) $settings->getGlobalOption ( 'track_heartbeat' ) > 0)
 			$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['trackPageView']);\n_paq.push(['enableHeartBeatTimer', ".(int) $settings->getGlobalOption ( 'track_heartbeat' )."]);", $code );
 
-		if ($settings->getGlobalOption ( 'piwik_mode' ) == 'pro')
-			$code = str_replace ( '.piwik.pro', '.piwikpro.com', $code );
-
 		$noScript = array ();
 		preg_match ( '/<noscript>(.*)<\/noscript>/', $code, $noScript );
 		if (isset ( $noScript [0] )) {

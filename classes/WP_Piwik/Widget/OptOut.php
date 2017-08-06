@@ -16,8 +16,8 @@
 				case 'php' :
 					$PIWIK_URL = $protocol . ':' . self::$settings->getGlobalOption ( 'proxy_url' );
 					break;
-				case 'pro' :
-					$PIWIK_URL = 'https://' . self::$settings->getGlobalOption ( 'piwik_user' ) . '.piwik.pro/';
+				case 'cloud' :
+					$PIWIK_URL = 'https://' . self::$settings->getGlobalOption ( 'piwik_user' ) . '.innocraft.cloud/';
 					break;
 				default :
 					$PIWIK_URL = self::$settings->getGlobalOption ( 'piwik_url' );
