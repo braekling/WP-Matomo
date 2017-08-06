@@ -144,6 +144,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 
 = 1.0.16 =
 * Added Innocraft Cloud support (the new service created by the people behind Piwik). Piwik.pro is still usable via HTTP mode, the configuration will be updated automatically.
+* Bugfix: Opening Piwik stats of a specific network site does not lead to the sitebrowser anymore
 * Bugfix: Avoid unnecessary notices
 * Bugfix: Avoid a warning in proxy script
 * Bugfix: NoScript code is working again
