@@ -74,6 +74,10 @@ The response output contains...
 * **bool(false)** and **HTTP/1.1 404 Not Found**: The Piwik URL is wrong. Try to copy & paste the URL you use to access Piwik itself via browser.
 * **bool(false)** and no further HTTP response code: The Piwik server does not respond. Very often, this is caused by firewall or mod_security settings. Check your server logfiles to get further information. If you aren’t sure about this, please contact your web hoster for support.
 
+= PHP Compatibility Checker reports PHP7 compatbility issues with WP-Piwik. =
+
+The Compatibility Checker shows two false positives. WP-Piwik is 100% PHP7 compatible, you can ignore the report.
+
 = Overview shortcode shows no unique visitors using a yearly range. =
 
 See [Piwik FAQ](http://piwik.org/faq/how-to/#faq_113).
@@ -139,6 +143,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 == Changelog ==
 
 = 1.0.16 =
+* Added Innocraft Cloud support (the new service created by the people behind Piwik). Piwik.pro is still usable via HTTP mode, the configuration will be updated automatically.
 * Bugfix: Avoid unnecessary notices
 * Bugfix: Avoid a warning in proxy script
 * Bugfix: NoScript code is working again

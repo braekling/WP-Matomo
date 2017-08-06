@@ -106,19 +106,19 @@ class Settings extends \WP_Piwik\Admin {
 			$this->showBox ( 'updated', 'info', sprintf ( '%s <a href="%s">%s</a> %s <a href="%s">%s</a>.', __ ( 'WP-Piwik is a WordPress plugin to show a selection of Piwik stats in your WordPress admin dashboard and to add and configure your Piwik tracking code. To use this you will need your own Piwik instance. If you do not already have a Piwik setup, you have two simple options: use either', 'wp-piwik' ), 'http://piwik.org/', __ ( 'Self-hosted', 'wp-piwik' ), __ ( 'or', 'wp-piwik' ), 'http://piwik.org/hosting/', __ ( 'Cloud-hosted', 'wp-piwik' ) ) );
 
 		if (! function_exists ( 'curl_init' ) && ! ini_get ( 'allow_url_fopen' ))
-			$this->showBox ( 'error', 'no', __ ( 'Neither cURL nor fopen are available. So WP-Piwik can not use the HTTP API and not connect to Piwik Pro.' ) . ' ' . sprintf ( '<a href="%s">%s.</a>', 'https://wordpress.org/plugins/wp-piwik/faq/', __ ( 'More information', 'wp-piwik' ) ) );
+			$this->showBox ( 'error', 'no', __ ( 'Neither cURL nor fopen are available. So WP-Piwik can not use the HTTP API and not connect to InnoCraft Cloud.' ) . ' ' . sprintf ( '<a href="%s">%s.</a>', 'https://wordpress.org/plugins/wp-piwik/faq/', __ ( 'More information', 'wp-piwik' ) ) );
 
-		$description = sprintf ( '%s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s', __ ( 'You can choose between three connection methods:', 'wp-piwik' ), __ ( 'Self-hosted (HTTP API, default)', 'wp-piwik' ), __ ( 'This is the default option for a self-hosted Piwik and should work for most configurations. WP-Piwik will connect to Piwik using http(s).', 'wp-piwik' ), __ ( 'Self-hosted (PHP API)', 'wp-piwik' ), __ ( 'Choose this, if your self-hosted Piwik and WordPress are running on the same machine and you know the full server path to your Piwik instance.', 'wp-piwik' ), __ ( 'Cloud-hosted (Piwik Pro)', 'wp-piwik' ), __ ( 'If you are using a cloud-hosted Piwik by Piwik Pro, you can simply use this option.', 'wp-piwik' ) );
+		$description = sprintf ( '%s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s', __ ( 'You can choose between three connection methods:', 'wp-piwik' ), __ ( 'Self-hosted (HTTP API, default)', 'wp-piwik' ), __ ( 'This is the default option for a self-hosted Piwik and should work for most configurations. WP-Piwik will connect to Piwik using http(s).', 'wp-piwik' ), __ ( 'Self-hosted (PHP API)', 'wp-piwik' ), __ ( 'Choose this, if your self-hosted Piwik and WordPress are running on the same machine and you know the full server path to your Piwik instance.', 'wp-piwik' ), __ ( 'Cloud-hosted (InnoCraft Cloud)', 'wp-piwik' ), __ ( 'If you are using a cloud-hosted Piwik by InnoCraft, you can simply use this option.', 'wp-piwik' ) );
 		$this->showSelect ( 'piwik_mode', __ ( 'Piwik Mode', 'wp-piwik' ), array (
 				'disabled' => __ ( 'Disabled (WP-Piwik will not connect to Piwik)', 'wp-piwik' ),
 				'http' => __ ( 'Self-hosted (HTTP API, default)', 'wp-piwik' ),
 				'php' => __ ( 'Self-hosted (PHP API)', 'wp-piwik' ),
-				'pro' => __ ( 'Cloud-hosted (Piwik Pro)', 'wp-piwik' )
+				'pro' => __ ( 'Cloud-hosted (InnoCraft Cloud)', 'wp-piwik' )
 		), $description, '$j(\'tr.wp-piwik-mode-option\').addClass(\'hidden\'); $j(\'#wp-piwik-mode-option-\' + $j(\'#piwik_mode\').val()).removeClass(\'hidden\');', false, '', self::$wpPiwik->isConfigured () );
 
 		$this->showInput ( 'piwik_url', __ ( 'Piwik URL', 'wp-piwik' ), __( 'Enter your Piwik URL. This is the same URL you use to access your Piwik instance, e.g. http://www.example.com/piwik/.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'http', 'wp-piwik-mode-option', 'http', self::$wpPiwik->isConfigured (), true );
 		$this->showInput ( 'piwik_path', __ ( 'Piwik path', 'wp-piwik' ), __( 'Enter the file path to your Piwik instance, e.g. /var/www/piwik/.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'php', 'wp-piwik-mode-option', 'php', self::$wpPiwik->isConfigured (), true );
-		$this->showInput ( 'piwik_user', __ ( 'Piwik user', 'wp-piwik' ), __( 'Enter your Piwik Pro username. It is also part of your URL: http://USERNAME.piwik.pro.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'pro', 'wp-piwik-mode-option', 'pro', self::$wpPiwik->isConfigured () );
+		$this->showInput ( 'piwik_user', __ ( 'Piwik user', 'wp-piwik' ), __( 'Enter your InnoCraft Cloud username. It is also part of your URL: https://USERNAME.innocraft.cloud.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'pro', 'wp-piwik-mode-option', 'pro', self::$wpPiwik->isConfigured () );
 		$this->showInput ( 'piwik_token', __ ( 'Auth token', 'wp-piwik' ), __( 'Enter your Piwik auth token here. It is an alphanumerical code like 0a1b2c34d56e78901fa2bc3d45678efa.', 'wp-piwik' ).' '.sprintf ( __ ( 'See %sWP-Piwik FAQ%s.', 'wp-piwik' ), '<a href="https://wordpress.org/plugins/wp-piwik/faq/">', '</a>' ), false, '', '', self::$wpPiwik->isConfigured (), true );
 
 		// Site configuration
@@ -292,12 +292,12 @@ class Settings extends \WP_Piwik\Admin {
 			$this->showSelect ( 'http_connection', __ ( 'HTTP connection via', 'wp-piwik' ), array (
 				'curl' => __ ( 'cURL', 'wp-piwik' ),
 				'fopen' => __ ( 'fopen', 'wp-piwik' )
-			), __('Choose whether WP-Piwik should use cURL or fopen to connect to Piwik in HTTP or Pro mode.', 'wp-piwik' ) );
+			), __('Choose whether WP-Piwik should use cURL or fopen to connect to Piwik in HTTP or Cloud mode.', 'wp-piwik' ) );
 
 		$this->showSelect ( 'http_method', __ ( 'HTTP method', 'wp-piwik' ), array (
 				'post' => __ ( 'POST', 'wp-piwik' ),
 				'get' => __ ( 'GET', 'wp-piwik' )
-		), __('Choose whether WP-Piwik should use POST or GET in HTTP or Pro mode.', 'wp-piwik' ) );
+		), __('Choose whether WP-Piwik should use POST or GET in HTTP or Cloud mode.', 'wp-piwik' ) );
 
 		$this->showCheckbox ( 'disable_timelimit', __ ( 'Disable time limit', 'wp-piwik' ), __ ( 'Use set_time_limit(0) if stats page causes a time out.', 'wp-piwik' ) );
 

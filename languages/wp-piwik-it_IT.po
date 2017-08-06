@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2016-10-09 20:03:09+00:00\n"
-"PO-Revision-Date: 2017-08-06 10:36+0000\n"
+"PO-Revision-Date: 2017-08-06 12:32+0000\n"
 "Last-Translator: André Bräkling\n"
 "Language-Team: Italian (Italy) (http://www.transifex.com/piwik/wp-piwik/language/it_IT/)\n"
 "MIME-Version: 1.0\n"
@@ -114,8 +114,8 @@ msgstr "Installazione cloud"
 #: classes/WP_Piwik/Admin/Settings.php:109
 msgid ""
 "Neither cURL nor fopen are available. So WP-Piwik can not use the HTTP API "
-"and not connect to Piwik Pro."
-msgstr "Non sono disponibili né cURL né fopen. Dunque Piwik non può utilizzare l'API HTTP e connettersi a Piwik Pro."
+"and not connect to InnoCraft Cloud."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:109
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:30
@@ -150,14 +150,14 @@ msgstr "Scegli questo se le tue installazioni autonome di Piwik e WordPress gira
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 #: classes/WP_Piwik/Admin/Settings.php:116
-msgid "Cloud-hosted (Piwik Pro)"
-msgstr "Cloud-hosted (Piwik Pro)"
+msgid "Cloud-hosted (InnoCraft Cloud)"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid ""
-"If you are using a cloud-hosted Piwik by Piwik Pro, you can simply use this "
+"If you are using a cloud-hosted Piwik by InnoCraft, you can simply use this "
 "option."
-msgstr "Se stai utilizzando un'installazione cloud di Piwik da Piwik Pro, puoi usare questa opzione semplicemente."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:112
 msgid "Piwik Mode"
@@ -191,9 +191,9 @@ msgstr "Utente Piwik"
 
 #: classes/WP_Piwik/Admin/Settings.php:121
 msgid ""
-"Enter your Piwik Pro username. It is also part of your URL: "
-"http://USERNAME.piwik.pro."
-msgstr "Inserisci il nome utente di Piwik Pro. Esso è anche parte del tuo URL: http://USERNAME.piwik.pro"
+"Enter your InnoCraft Cloud username. It is also part of your URL: "
+"https://USERNAME.innocraft.cloud."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:122
 msgid "Auth token"
@@ -702,8 +702,8 @@ msgstr "fopen"
 #: classes/WP_Piwik/Admin/Settings.php:289
 msgid ""
 "Choose whether WP-Piwik should use cURL or fopen to connect to Piwik in HTTP"
-" or Pro mode."
-msgstr "Scegli se WP-Piwik deve utilizzare cURL o fopen per connettersi a Piwik in HTTP o in modalità Pro."
+" or Cloud mode."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:291
 msgid "HTTP method"
@@ -720,8 +720,8 @@ msgid "GET"
 msgstr "GET"
 
 #: classes/WP_Piwik/Admin/Settings.php:294
-msgid "Choose whether WP-Piwik should use POST or GET in HTTP or Pro mode."
-msgstr "Scegli se WP-Piwik deve utilizzare POST o GET in HTTP o in modalità Pro."
+msgid "Choose whether WP-Piwik should use POST or GET in HTTP or Cloud mode."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:296
 msgid "Disable time limit"

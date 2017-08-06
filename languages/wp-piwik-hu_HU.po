@@ -2,13 +2,14 @@
 # This file is distributed under the same license as the WP-Piwik package.
 # Translators:
 # Márk Kökény <oregapamgroup@gmail.com>, 2015-2016
+# Márk Kökény <oregapamgroup@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2016-10-09 20:03:09+00:00\n"
-"PO-Revision-Date: 2016-10-10 10:04+0000\n"
-"Last-Translator: Stefan Giehl <stefan@piwik.org>\n"
+"PO-Revision-Date: 2017-08-06 12:32+0000\n"
+"Last-Translator: André Bräkling\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/piwik/wp-piwik/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,8 +112,8 @@ msgstr "Felhő-üzemeltetett"
 #: classes/WP_Piwik/Admin/Settings.php:109
 msgid ""
 "Neither cURL nor fopen are available. So WP-Piwik can not use the HTTP API "
-"and not connect to Piwik Pro."
-msgstr "Sem a cURL, sem pedig az fopen nem elérhető, tehát a WP-Piwik nem tudja használni a HTTP API-t és nem tud kapcsolódni a Piwik Pro-hoz."
+"and not connect to InnoCraft Cloud."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:109
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:30
@@ -147,14 +148,14 @@ msgstr "Válaszd ezt, ha az általad-üzemeltetett Piwik és a WordPress ugyanaz
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 #: classes/WP_Piwik/Admin/Settings.php:116
-msgid "Cloud-hosted (Piwik Pro)"
-msgstr "Felhő-üzemeltetett (Piwik Pro)"
+msgid "Cloud-hosted (InnoCraft Cloud)"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid ""
-"If you are using a cloud-hosted Piwik by Piwik Pro, you can simply use this "
+"If you are using a cloud-hosted Piwik by InnoCraft, you can simply use this "
 "option."
-msgstr "Ha felhő-üzemeltetett Piwik-et használsz a Piwik Pro-n keresztül, csak egyszerűen válaszd ezt az opciót."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:112
 msgid "Piwik Mode"
@@ -188,9 +189,9 @@ msgstr "Piwik felhasználó"
 
 #: classes/WP_Piwik/Admin/Settings.php:121
 msgid ""
-"Enter your Piwik Pro username. It is also part of your URL: "
-"http://USERNAME.piwik.pro."
-msgstr "Add meg Piwik Pro felhasználóneved. Ez része az URL címednek: http://USERNAME.piwik.pro."
+"Enter your InnoCraft Cloud username. It is also part of your URL: "
+"https://USERNAME.innocraft.cloud."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:122
 msgid "Auth token"
@@ -699,8 +700,8 @@ msgstr "fopen"
 #: classes/WP_Piwik/Admin/Settings.php:289
 msgid ""
 "Choose whether WP-Piwik should use cURL or fopen to connect to Piwik in HTTP"
-" or Pro mode."
-msgstr "Válaszd ki, hogy a WP-Piwik a cURL-t vagy az fopen-t használja, a HTTP-n kereszüli Piwik, illetve Piwik Pro-hoz történő kapcsolódáskor."
+" or Cloud mode."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:291
 msgid "HTTP method"
@@ -717,8 +718,8 @@ msgid "GET"
 msgstr "GET"
 
 #: classes/WP_Piwik/Admin/Settings.php:294
-msgid "Choose whether WP-Piwik should use POST or GET in HTTP or Pro mode."
-msgstr "Válaszd ki, hogy a WP-Piwik a POST-ot vagy a GET-et használja HTTP vagy Pro módban."
+msgid "Choose whether WP-Piwik should use POST or GET in HTTP or Cloud mode."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:296
 msgid "Disable time limit"
@@ -743,7 +744,7 @@ msgstr "nem ajánlott"
 
 #: classes/WP_Piwik/Admin/Settings.php:301
 msgid "Disable SSL host verification"
-msgstr ""
+msgstr "SSL hoszt ellenőrzésének letiltása"
 
 #: classes/WP_Piwik/Admin/Settings.php:303
 msgid "User agent"
@@ -1104,7 +1105,7 @@ msgstr "Látogatók"
 msgid ""
 "The graph contains the values shown in the table below (visitors / unique / "
 "bounces). The red line shows a linear trendline (unique)."
-msgstr ""
+msgstr "A grafikon tartalmazza az értékeket, melyek láthatóak a lentebbi táblázatban (látogatók / egyedi / visszapattanások). A vörös vonal mutatja a lineáris trendvonalat (egyedi)."
 
 #: classes/WP_Piwik/Widget/Country.php:18
 msgid "Countries"

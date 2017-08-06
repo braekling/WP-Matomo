@@ -184,7 +184,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:121
 msgid ""
-"Enter your InnoCraft Cloud username. It is also part of your URL: http://USERNAME."
+"Enter your InnoCraft Cloud username. It is also part of your URL: https://USERNAME."
 "innocraft.cloud."
 msgstr ""
 

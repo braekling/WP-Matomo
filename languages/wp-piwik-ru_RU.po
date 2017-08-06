@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2016-10-09 20:03:09+00:00\n"
-"PO-Revision-Date: 2016-10-10 10:04+0000\n"
-"Last-Translator: Stefan Giehl <stefan@piwik.org>\n"
+"PO-Revision-Date: 2017-08-06 12:32+0000\n"
+"Last-Translator: André Bräkling\n"
 "Language-Team: Russian (Russia) (http://www.transifex.com/piwik/wp-piwik/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,7 +111,7 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:109
 msgid ""
 "Neither cURL nor fopen are available. So WP-Piwik can not use the HTTP API "
-"and not connect to Piwik Pro."
+"and not connect to InnoCraft Cloud."
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:109
@@ -147,12 +147,12 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 #: classes/WP_Piwik/Admin/Settings.php:116
-msgid "Cloud-hosted (Piwik Pro)"
+msgid "Cloud-hosted (InnoCraft Cloud)"
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid ""
-"If you are using a cloud-hosted Piwik by Piwik Pro, you can simply use this "
+"If you are using a cloud-hosted Piwik by InnoCraft, you can simply use this "
 "option."
 msgstr ""
 
@@ -188,8 +188,8 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:121
 msgid ""
-"Enter your Piwik Pro username. It is also part of your URL: "
-"http://USERNAME.piwik.pro."
+"Enter your InnoCraft Cloud username. It is also part of your URL: "
+"https://USERNAME.innocraft.cloud."
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:122
@@ -699,7 +699,7 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:289
 msgid ""
 "Choose whether WP-Piwik should use cURL or fopen to connect to Piwik in HTTP"
-" or Pro mode."
+" or Cloud mode."
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:291
@@ -717,7 +717,7 @@ msgid "GET"
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:294
-msgid "Choose whether WP-Piwik should use POST or GET in HTTP or Pro mode."
+msgid "Choose whether WP-Piwik should use POST or GET in HTTP or Cloud mode."
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:296
