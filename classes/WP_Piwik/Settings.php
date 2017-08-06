@@ -237,7 +237,8 @@ class Settings {
 		if ( $this->checkNetworkActivation() ) {
 			$aryBlogs = self::getBlogList();
 			if (is_array($aryBlogs))
-				foreach ($aryBlogs as $aryBlog) {
+				foreach ($aryBlogs as $classBlog) {
+                    $aryBlog = $classBlog->to_array();
 					switch_to_blog($aryBlog['blog_id']);
 					$wpdb->query("DELETE FROM $wpdb->options WHERE option_name LIKE 'wp-piwik-%'");
 					restore_current_blog();
@@ -252,7 +253,7 @@ class Settings {
 	 */
 	public static function getBlogList($limit = null, $page = null) {
 		if ( !\wp_is_large_network() )
-			return \wp_get_sites ( array('limit' => $limit, 'offset' => $page?($page - 1) * $limit:null));
+			return \get_sites ( array('number' => $limit, 'offset' => $page?($page - 1) * $limit:null));
 		if ($limit && $page)
 			$queryLimit = ' LIMIT '.(int) (($page - 1) * $limit).','.(int) $limit;
 		global $wpdb;

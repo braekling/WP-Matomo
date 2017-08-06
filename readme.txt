@@ -147,6 +147,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Bugfix: Avoid unnecessary notices
 * Bugfix: Avoid a warning in proxy script
 * Bugfix: NoScript code is working again
+* Replaced deprecated wp_get_sites by get_sites
 
 = 1.0.15 =
 * Allow to modify the tracked user ID using the filter "wp-piwik_tracking_user_id"

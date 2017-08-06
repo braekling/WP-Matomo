@@ -11,13 +11,14 @@
 			echo '<div id="wp-piwik-stats-general" class="wrap">';
 			echo '<h2>'.(self::$settings->getGlobalOption('plugin_display_name') == 'WP-Piwik'?'Piwik '.__('Statistics', 'wp-piwik'):self::$settings->getGlobalOption('plugin_display_name')).'</h2>';
 			if (self::$settings->checkNetworkActivation() && function_exists('is_super_admin') && is_super_admin()) {
-				if (isset($_GET['wpmu_show_stats'])) {
+
+                if (isset($_GET['wpmu_show_stats'])) {
 					switch_to_blog((int) $_GET['wpmu_show_stats']);
-				} else {
+				} elseif ((isset($_GET['overview']) && $_GET['overview']) || (function_exists('is_network_admin') && is_network_admin())) {
 					new \WP_Piwik\Admin\Sitebrowser(self::$wpPiwik);
 					return;
 				}
-				echo '<p>'.__('Currently shown stats:').' <a href="'.get_bloginfo('url').'">'.(int) $_GET['wpmu_show_stats'].' - '.get_bloginfo('name').'</a>.'.' <a href="?page=wp-piwik_stats">Show site overview</a>.</p>';
+				echo '<p>'.__('Currently shown stats:').' <a href="'.get_bloginfo('url').'">'.get_bloginfo('name').'</a>.'.' <a href="?page=wp-piwik_stats&overview=1">Show site overview</a>.</p>';
 				echo '</form>'."\n";
 			}
 			echo '<form action="admin-post.php" method="post"><input type="hidden" name="action" value="save_wp-piwik_stats_general" /><div id="dashboard-widgets" class="metabox-holder columns-'.$screen_layout_columns.(2 <= $screen_layout_columns?' has-right-sidebar':'').'">';

@@ -74,7 +74,7 @@ global $wpdb;
 
 if (function_exists('is_multisite') && is_multisite()) {
 	if ( !wp_is_large_network() )
-		$aryBlogs = wp_get_sites ( array('limit' => $limit, 'offset' => $page?($page - 1) * $limit:null));
+		$aryBlogs = get_sites ( array('number' => $limit, 'offset' => $page?($page - 1) * $limit:null));
 	else {
 		if ($limit && $page) 
 			$queryLimit = 'LIMIT '.(int) (($page - 1) * $limit).','.(int) $limit.' ';
@@ -82,7 +82,8 @@ if (function_exists('is_multisite') && is_multisite()) {
 	}
 
 	if (is_array($aryBlogs))
-		foreach ($aryBlogs as $aryBlog) {
+		foreach ($aryBlogs as $classBlog) {
+	        $aryBlog = $classBlog->to_array();
 			foreach ($settings as $key) {
 				delete_blog_option($aryBlog['blog_id'], 'wp-piwik-'.$key);
 			}
