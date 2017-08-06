@@ -1139,7 +1139,8 @@ class WP_Piwik {
 				'mergeSubdomains' => self::$settings->getGlobalOption ( 'track_across' ) ? 1 : 0,
 				'mergeAliasUrls' => self::$settings->getGlobalOption ( 'track_across_alias' ) ? 1 : 0,
 				'disableCookies' => self::$settings->getGlobalOption ( 'disable_cookies' ) ? 1 : 0,
-				'crossDomain' => self::$settings->getGlobalOption ( 'track_crossdomain_linking' ) ? 1 : 0
+				'crossDomain' => self::$settings->getGlobalOption ( 'track_crossdomain_linking' ) ? 1 : 0,
+                'trackNoScript' => 1
 			) );
 		$code = $this->request ( $id );
 		if (is_array($code) && isset($code['value']))
