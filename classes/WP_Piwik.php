@@ -118,21 +118,23 @@ class WP_Piwik {
 			), 1000 );
 		}
 		if ($this->isTrackingActive ()) {
-			if ( !is_admin () ) {
-				add_action ( self::$settings->getGlobalOption ( 'track_codeposition' ) == 'footer' ? 'wp_footer' : 'wp_head', array (
+			if ( !is_admin () || $this->isAdminTrackingActive ()) {
+			    $prefix = is_admin ()?'admin':'wp';
+				add_action ( self::$settings->getGlobalOption ( 'track_codeposition' ) == 'footer' ? $prefix.'_footer' : $prefix.'_head', array (
 						$this,
 						'addJavascriptCode'
 					) );
+                if (self::$settings->getGlobalOption ( 'dnsprefetch' ))
+                    add_action ( $prefix.'_head', array (
+                        $this,
+                        'addDNSPrefetchTag'
+                    ) );
 				if ($this->isAddNoScriptCode ())
-					add_action ( 'wp_footer', array (
+					add_action ( $prefix.'_footer', array (
 							$this,
 							'addNoscriptCode'
 					) );
-			} else if ($this->isAdminTrackingActive ())
-				add_action ( self::$settings->getGlobalOption ( 'track_codeposition' ) == 'footer' ? 'admin_footer' : 'admin_head', array (
-						$this,
-						'addJavascriptCode'
-				) );
+			}
 			if (self::$settings->getGlobalOption ( 'add_post_annotations' ))
 				add_action ( 'transition_post_status', array (
 						$this,
@@ -306,6 +308,27 @@ class WP_Piwik {
 		} else
 			echo $trackingCode->getTrackingCode ();
 	}
+
+    /**
+     * Echo DNS prefetch tag
+     */
+    public function addDNSPrefetchTag() {
+        echo '<link rel="dns-prefetch" href="'.$this->getPiwikDomain().'" />';
+    }
+
+    /**
+     * Get Piwik Domain
+     */
+    public function getPiwikDomain() {
+        switch (self::$settings->getGlobalOption ( 'piwik_mode' )) {
+            case 'php' :
+                return '//' . parse_url(self::$settings->getGlobalOption ( 'proxy_url' ), PHP_URL_HOST);
+            case 'cloud' :
+                return '//' . self::$settings->getGlobalOption ( 'piwik_user' ) . '.innocraft.cloud';
+            default :
+                return '//' . parse_url(self::$settings->getGlobalOption ( 'piwik_url' ), PHP_URL_HOST);
+        }
+    }
 
 	/**
 	 * Echo noscript tracking code

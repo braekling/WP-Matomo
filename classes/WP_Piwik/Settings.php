@@ -95,6 +95,7 @@ class Settings {
 			'disable_ssl_verify_host' => false,
 			'piwik_useragent' => 'php',
 			'piwik_useragent_string' => 'WP-Piwik',
+            'dnsprefetch' => false,
 			'track_datacfasync' => false,
 			'track_cdnurl' => '',
 			'track_cdnurlssl' => '',
@@ -254,7 +255,7 @@ class Settings {
 		if ($limit && $page)
 			$queryLimit = ' LIMIT '.(int) (($page - 1) * $limit).','.(int) $limit;
 		global $wpdb;
-		return $wpdb->get_results($wpdb->prepare('SELECT blog_id FROM '.$wpdb->blogs.' WHERE CONCAT(domain, path) LIKE "%%%s%%" ORDER BY blog_id'.$queryLimit, $search), ARRAY_A);
+		return $wpdb->get_results($wpdb->prepare('SELECT blog_id FROM '.$wpdb->blogs.' WHERE CONCAT(domain, path) LIKE "%%%s%%" AND spam = 0 AND deleted = 0 ORDER BY blog_id'.$queryLimit, $search), ARRAY_A);
 	}
 
 	/**

@@ -46,7 +46,7 @@ class Sitebrowser extends \WP_List_Table {
 		global $wpdb;
 		global $pagenow;
 		if (is_plugin_active_for_network ( 'wp-piwik/wp-piwik.php' )) {
-			$total_items = $wpdb->get_var ( $wpdb->prepare('SELECT COUNT(*) FROM ' . $wpdb->blogs . ' WHERE CONCAT(domain, path) LIKE "%%%s%%"', $search));
+			$total_items = $wpdb->get_var ( $wpdb->prepare('SELECT COUNT(*) FROM ' . $wpdb->blogs . ' WHERE CONCAT(domain, path) LIKE "%%%s%%" AND spam = 0 AND deleted = 0', $search));
 			$blogs = \WP_Piwik\Settings::getBlogList($per_page, $current_page, $search);
 			foreach ( $blogs as $blog ) {
             	$blogDetails = get_blog_details ( $blog['blog_id'], true );

@@ -3,14 +3,14 @@
 # Translators:
 # Andre Braekling <webmaster@braekling.de>, 2009
 # FatCow http://www.fatcow.com, 2009
-# Moo, 2016
+# Moo, 2016-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-piwik\n"
 "POT-Creation-Date: 2016-10-09 20:03:09+00:00\n"
-"PO-Revision-Date: 2017-08-06 21:03+0000\n"
-"Last-Translator: André Bräkling\n"
+"PO-Revision-Date: 2017-08-06 21:34+0000\n"
+"Last-Translator: Moo\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/piwik/wp-piwik/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,7 +40,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:58
 msgid "You are running WordPress %s."
-msgstr ""
+msgstr "Jūs naudojate WordPress %s."
 
 #: classes/WP_Piwik/Admin/Settings.php:58
 msgid ""
@@ -160,7 +160,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:112
 msgid "Piwik Mode"
-msgstr ""
+msgstr "Piwik veiksena"
 
 #: classes/WP_Piwik/Admin/Settings.php:113
 msgid "Disabled (WP-Piwik will not connect to Piwik)"
@@ -178,7 +178,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:120
 msgid "Piwik path"
-msgstr ""
+msgstr "Piwik kelias"
 
 #: classes/WP_Piwik/Admin/Settings.php:120
 msgid "Enter the file path to your Piwik instance, e.g. /var/www/piwik/."
@@ -262,7 +262,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:160
 msgid "Show SEO data"
-msgstr ""
+msgstr "Rodyti SEO duomenis"
 
 #: classes/WP_Piwik/Admin/Settings.php:160
 msgid "Display SEO ranking data on statistics page."
@@ -649,7 +649,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:272
 msgid "WP User ID"
-msgstr ""
+msgstr "WP naudotojo ID"
 
 #: classes/WP_Piwik/Admin/Settings.php:273
 msgid "Email Address"
@@ -678,7 +678,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:283
 msgid "Enable cache"
-msgstr ""
+msgstr "Įjungti podėlį"
 
 #: classes/WP_Piwik/Admin/Settings.php:283
 msgid "Cache API calls, which not contain today's values, for a week."
@@ -691,12 +691,12 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:287
 #: classes/WP_Piwik/Admin/Settings.php:583
 msgid "cURL"
-msgstr ""
+msgstr "cURL"
 
 #: classes/WP_Piwik/Admin/Settings.php:288
 #: classes/WP_Piwik/Admin/Settings.php:583
 msgid "fopen"
-msgstr ""
+msgstr "fopen"
 
 #: classes/WP_Piwik/Admin/Settings.php:289
 msgid ""
@@ -711,12 +711,12 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:292
 #: classes/WP_Piwik/Admin/Settings.php:583
 msgid "POST"
-msgstr ""
+msgstr "POST"
 
 #: classes/WP_Piwik/Admin/Settings.php:293
 #: classes/WP_Piwik/Admin/Settings.php:583
 msgid "GET"
-msgstr ""
+msgstr "GET"
 
 #: classes/WP_Piwik/Admin/Settings.php:294
 msgid "Choose whether WP-Piwik should use POST or GET in HTTP or Cloud mode."
@@ -773,11 +773,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:311
 msgid "CDN URL"
-msgstr ""
+msgstr "CDN URL"
 
 #: classes/WP_Piwik/Admin/Settings.php:313
 msgid "CDN URL (SSL)"
-msgstr ""
+msgstr "CDN URL (SSL)"
 
 #: classes/WP_Piwik/Admin/Settings.php:315
 msgid "Force Piwik to use a specific protocol"
@@ -789,11 +789,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:317
 msgid "http"
-msgstr ""
+msgstr "http"
 
 #: classes/WP_Piwik/Admin/Settings.php:318
 msgid "https (SSL)"
-msgstr ""
+msgstr "https (SSL)"
 
 #: classes/WP_Piwik/Admin/Settings.php:319
 msgid ""
@@ -946,15 +946,15 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:593
 msgid "Clear cache"
-msgstr ""
+msgstr "Išvalyti podėlį"
 
 #: classes/WP_Piwik/Admin/Settings.php:594
 msgid "Are you sure you want to clear all settings?"
-msgstr ""
+msgstr "Ar tikrai norite išvalyti visus nustatymus?"
 
 #: classes/WP_Piwik/Admin/Settings.php:594
 msgid "Reset WP-Piwik"
-msgstr ""
+msgstr "Atstatyti WP-Piwik"
 
 #: classes/WP_Piwik/Admin/Settings.php:596
 msgid "Latest support threads on WordPress.org"
@@ -966,7 +966,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:663
 msgid "Cache cleared."
-msgstr ""
+msgstr "Podėlis išvalytas."
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:17
 msgid "site"
@@ -982,7 +982,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:29
 msgid "Blog ID"
-msgstr ""
+msgstr "Tinklaraščio ID"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:30
 msgid "Title"
@@ -990,7 +990,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:31
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:32
 msgid "Site ID (Piwik)"
@@ -1002,7 +1002,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Statistics.php:12
 msgid "Statistics"
-msgstr ""
+msgstr "Statistika"
 
 #: classes/WP_Piwik/Admin/Statistics.php:20
 msgid "Currently shown stats:"
@@ -1056,7 +1056,7 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Systems.php:33
 #: classes/WP_Piwik/Widget/Visitors.php:35 classes/WP_Piwik/Widget.php:91
 msgid "Piwik error"
-msgstr ""
+msgstr "Piwik klaida"
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:39
 #: classes/WP_Piwik/Widget/Browsers.php:39
@@ -1216,7 +1216,7 @@ msgstr "Rezoliucija"
 
 #: classes/WP_Piwik/Widget/Seo.php:13
 msgid "SEO"
-msgstr ""
+msgstr "SEO"
 
 #: classes/WP_Piwik/Widget/SystemDetails.php:14
 msgid "Operation System Details"
@@ -1335,7 +1335,7 @@ msgstr "WP-Piwik"
 
 #. Plugin URI of the plugin/theme
 msgid "http://wordpress.org/extend/plugins/wp-piwik/"
-msgstr ""
+msgstr "http://wordpress.org/extend/plugins/wp-piwik/"
 
 #. Description of the plugin/theme
 msgid ""
