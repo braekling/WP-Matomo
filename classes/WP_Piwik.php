@@ -12,7 +12,7 @@ class WP_Piwik {
 	 *
 	 * @var Runtime environment variables
 	 */
-	private static $revisionId = 2017080601, $version = '1.0.16', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
+	private static $revisionId = 2017080701, $version = '1.0.16', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
 
 	/**
 	 * Constructor class to configure and register all WP-Piwik components
@@ -893,7 +893,8 @@ class WP_Piwik {
 	 *        	current post object
 	 */
 	public function addPiwikAnnotation($newStatus, $oldStatus, $post) {
-		if ($newStatus == 'publish' && $oldStatus != 'publish') {
+	    $enabledPostTypes = self::$settings->getGlobalOption ( 'add_post_annotations' );
+		if (isset($enabledPostTypes[$post->post_type]) && $enabledPostTypes[$post->post_type] && $newStatus == 'publish' && $oldStatus != 'publish') {
 			$note = 'Published: ' . $post->post_title . ' - URL: ' . get_permalink ( $post->ID );
 			$id = WP_Piwik\Request::register ( 'Annotations.add', array (
 				'idSite' => $this->getPiwikSiteId (),

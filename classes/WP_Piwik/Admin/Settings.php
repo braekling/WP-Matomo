@@ -234,7 +234,12 @@ class Settings extends \WP_Piwik\Admin {
 
 		$this->showCheckbox ( 'track_404', __ ( 'Track 404', 'wp-piwik' ), __ ( 'WP-Piwik can automatically add a 404-category to track 404-page-visits.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik FAQ%s.', 'wp-piwik' ), '<a href="http://piwik.org/faq/how-to/faq_60/" target="_BLANK">', '</a>' ), $isNotTracking, $fullGeneratedTrackingGroup . ' wp-piwik-track-option-manually' );
 
-		$this->showCheckbox ( 'add_post_annotations', __ ( 'Add annotation on new post', 'wp-piwik' ), __ ( 'Add a Piwik annotation on each new post.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik documentation%s.', 'wp-piwik' ), '<a href="http://piwik.org/docs/annotations/" target="_BLANK">', '</a>' ), $isNotTracking, $fullGeneratedTrackingGroup . ' wp-piwik-track-option-manually' );
+        echo '<tr class="' . $fullGeneratedTrackingGroup . ' wp-piwik-track-option-manually' . ($isNotTracking ? ' hidden' : '') . '">';
+        echo '<th scope="row"><label for="add_post_annotations">' . __ ( 'Add annotation on new post of type', 'wp-piwik' ) . '</label>:</th><td>';
+        $filter = self::$settings->getGlobalOption ( 'add_post_annotations' );
+        foreach ( get_post_types(array(), 'objects') as $post_type )
+            echo '<input type="checkbox" ' . (isset ( $filter [$post_type->name] ) && $filter [$post_type->name] ? 'checked="checked" ' : '') . 'value="1" name="wp-piwik[add_post_annotations][' . $post_type->name . ']" /> ' . $post_type->label . ' &nbsp; ';
+        echo '<span class="dashicons dashicons-editor-help" onclick="$j(\'#add_post_annotations-desc\').toggleClass(\'hidden\');"></span> <p class="description hidden" id="add_post_annotations-desc">' . sprintf ( __ ( 'See %sPiwik documentation%s.', 'wp-piwik' ), '<a href="http://piwik.org/docs/annotations/" target="_BLANK">', '</a>' ) . '</p></td></tr>';
 
 		$this->showCheckbox ( 'add_customvars_box', __ ( 'Show custom variables box', 'wp-piwik' ), __ ( ' Show a &quot;custom variables&quot; edit box on post edit page.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik documentation%s.', 'wp-piwik' ), '<a href="http://piwik.org/docs/custom-variables/" target="_BLANK">', '</a>' ), $isNotGeneratedTracking, $fullGeneratedTrackingGroup . ' wp-piwik-track-option-manually' );
 

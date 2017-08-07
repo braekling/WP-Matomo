@@ -66,7 +66,7 @@ class Settings {
 			'track_content' => 'disabled',
 			'track_search' => false,
 			'track_404' => false,
-			'add_post_annotations' => false,
+			'add_post_annotations' => array(),
 			'add_customvars_box' => false,
 			'add_download_extensions' => '',
 			'set_download_extensions' => '',

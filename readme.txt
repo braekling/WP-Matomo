@@ -147,6 +147,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Add search functionality to site browser
 * Added preload DNS option, see https://piwik.org/blog/2017/04/important-performance-optimizations-load-piwik-javascript-tracker-faster/
 * Added option to set link and download classes (expert settings)
+* Added option to choose which post types should be considered for annotations
 * Bugfix: Opening Piwik stats of a specific network site does not lead to the sitebrowser anymore
 * Bugfix: Avoid unnecessary notices
 * Bugfix: Avoid a warning in proxy script
