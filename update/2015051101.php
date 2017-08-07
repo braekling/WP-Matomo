@@ -16,9 +16,8 @@ if (self::$settings->checkNetworkActivation ()) {
 	global $wpdb;
 	$aryBlogs = \WP_Piwik\Settings::getBlogList();
 	if (is_array($aryBlogs))
-		foreach ($aryBlogs as $classBlog) {
-            $aryBlog = $classBlog->to_array();
-			$oldOptions = get_blog_option ( $aryBlog['blog_id'], 'wp-piwik_settings', array () );
+		foreach ($aryBlogs as $aryBlog) {
+            $oldOptions = get_blog_option ( $aryBlog['blog_id'], 'wp-piwik_settings', array () );
 			if (!$this->isConfigured())
 				foreach ( $oldOptions as $key => $value )
 					self::$settings->setOption ( $key, $value, $aryBlog['blog_id'] );

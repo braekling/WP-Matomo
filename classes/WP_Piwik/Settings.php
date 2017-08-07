@@ -237,9 +237,8 @@ class Settings {
 		if ( $this->checkNetworkActivation() ) {
 			$aryBlogs = self::getBlogList();
 			if (is_array($aryBlogs))
-				foreach ($aryBlogs as $classBlog) {
-                    $aryBlog = $classBlog->to_array();
-					switch_to_blog($aryBlog['blog_id']);
+				foreach ($aryBlogs as $aryBlog) {
+                    switch_to_blog($aryBlog['blog_id']);
 					$wpdb->query("DELETE FROM $wpdb->options WHERE option_name LIKE 'wp-piwik-%'");
 					restore_current_blog();
 				}
@@ -251,13 +250,11 @@ class Settings {
 	/**
 	 * Get blog list
 	 */
-	public static function getBlogList($limit = null, $page = null) {
-		if ( !\wp_is_large_network() )
-			return \get_sites ( array('number' => $limit, 'offset' => $page?($page - 1) * $limit:null));
+	public static function getBlogList($limit = null, $page = null, $search = '') {
 		if ($limit && $page)
 			$queryLimit = ' LIMIT '.(int) (($page - 1) * $limit).','.(int) $limit;
 		global $wpdb;
-		return $wpdb->get_results('SELECT blog_id FROM '.$wpdb->blogs.' ORDER BY blog_id'.$queryLimit, ARRAY_A);
+		return $wpdb->get_results($wpdb->prepare('SELECT blog_id FROM '.$wpdb->blogs.' WHERE CONCAT(domain, path) LIKE "%%%s%%" ORDER BY blog_id'.$queryLimit, $search), ARRAY_A);
 	}
 
 	/**

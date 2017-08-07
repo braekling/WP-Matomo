@@ -73,18 +73,12 @@ $settings = array (
 global $wpdb;
 
 if (function_exists('is_multisite') && is_multisite()) {
-	if ( !wp_is_large_network() )
-		$aryBlogs = get_sites ( array('number' => $limit, 'offset' => $page?($page - 1) * $limit:null));
-	else {
-		if ($limit && $page) 
-			$queryLimit = 'LIMIT '.(int) (($page - 1) * $limit).','.(int) $limit.' ';
-		$aryBlogs = $wpdb->get_results('SELECT blog_id FROM '.$wpdb->blogs.' '.$queryLimit.'ORDER BY blog_id', ARRAY_A);
-	}
-
+	if ($limit && $page)
+		$queryLimit = 'LIMIT '.(int) (($page - 1) * $limit).','.(int) $limit.' ';
+	$aryBlogs = $wpdb->get_results('SELECT blog_id FROM '.$wpdb->blogs.' '.$queryLimit.'ORDER BY blog_id', ARRAY_A);
 	if (is_array($aryBlogs))
-		foreach ($aryBlogs as $classBlog) {
-	        $aryBlog = $classBlog->to_array();
-			foreach ($settings as $key) {
+		foreach ($aryBlogs as $aryBlog) {
+	        foreach ($settings as $key) {
 				delete_blog_option($aryBlog['blog_id'], 'wp-piwik-'.$key);
 			}
 			switch_to_blog($aryBlog['blog_id']);
