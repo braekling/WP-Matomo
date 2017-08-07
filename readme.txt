@@ -146,11 +146,12 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Added Innocraft Cloud support (the new service created by the people behind Piwik). Piwik.pro is still usable via HTTP mode, the configuration will be updated automatically.
 * Add search functionality to site browser
 * Added preload DNS option, see https://piwik.org/blog/2017/04/important-performance-optimizations-load-piwik-javascript-tracker-faster/
+* Added option to set link and download classes (expert settings)
 * Bugfix: Opening Piwik stats of a specific network site does not lead to the sitebrowser anymore
 * Bugfix: Avoid unnecessary notices
 * Bugfix: Avoid a warning in proxy script
 * Bugfix: NoScript code is working again
-* Replaced deprecated wp_get_sites by get_sites
+* Replaced deprecated wp_get_sites
 
 = 1.0.15 =
 * Allow to modify the tracked user ID using the filter "wp-piwik_tracking_user_id"

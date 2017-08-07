@@ -334,6 +334,10 @@ class Settings extends \WP_Piwik\Admin {
 
 		$this->showInput ( 'set_download_extensions', __ ( 'Define all file types for download tracking', 'wp-piwik' ), __ ( 'Replace Piwik\'s default file extensions for download tracking, divided by a vertical bar (&#124;). Leave blank to keep Piwik\'s default settings.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik documentation%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/guides/tracking-javascript-guide#file-extensions-for-tracking-downloads" target="_BLANK">', '</a>' ) );
 
+        $this->showInput ( 'set_download_classes', __ ( 'Set classes to be treated as downloads', 'wp-piwik' ), __ ( 'Set classes to be treated as downloads (in addition to piwik_download), divided by a vertical bar (&#124;). Leave blank to keep Piwik\'s default settings.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik JavaScript Tracking Client reference%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/api-reference/tracking-javascript" target="_BLANK">', '</a>' ) );
+
+        $this->showInput ( 'set_link_classes', __ ( 'Set classes to be treated as outlinks', 'wp-piwik' ), __ ( 'Set classes to be treated as outlinks (in addition to piwik_link), divided by a vertical bar (&#124;). Leave blank to keep Piwik\'s default settings.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik JavaScript Tracking Client reference%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/api-reference/tracking-javascript" target="_BLANK">', '</a>' ) );
+
 		echo $submitButton;
 		?>
 			</tbody>

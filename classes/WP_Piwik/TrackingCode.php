@@ -66,6 +66,10 @@ class TrackingCode {
 			$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['setDownloadExtensions', '" . ($settings->getGlobalOption ( 'set_download_extensions' )) . "']);\n_paq.push(['trackPageView']);", $code );
 		if ($settings->getGlobalOption ( 'add_download_extensions' ))
 			$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['addDownloadExtensions', '" . ($settings->getGlobalOption ( 'add_download_extensions' )) . "']);\n_paq.push(['trackPageView']);", $code );
+        if ($settings->getGlobalOption ( 'set_download_classes' ))
+            $code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['setDownloadClasses', '" . ($settings->getGlobalOption ( 'set_download_classes' )) . "']);\n_paq.push(['trackPageView']);", $code );
+        if ($settings->getGlobalOption ( 'set_link_classes' ))
+            $code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['setLinkClasses', '" . ($settings->getGlobalOption ( 'set_link_classes' )) . "']);\n_paq.push(['trackPageView']);", $code );
 		if ($settings->getGlobalOption ( 'limit_cookies' ))
 			$code = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['setVisitorCookieTimeout', '" . $settings->getGlobalOption ( 'limit_cookies_visitor' ) . "']);\n_paq.push(['setSessionCookieTimeout', '" . $settings->getGlobalOption ( 'limit_cookies_session' ) . "']);\n_paq.push(['setReferralCookieTimeout', '" . $settings->getGlobalOption ( 'limit_cookies_referral' ) . "']);\n_paq.push(['trackPageView']);", $code );
 		if ($settings->getGlobalOption ( 'force_protocol' ) != 'disabled')

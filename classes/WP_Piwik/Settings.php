@@ -70,6 +70,8 @@ class Settings {
 			'add_customvars_box' => false,
 			'add_download_extensions' => '',
 			'set_download_extensions' => '',
+			'set_link_classes' => '',
+			'set_download_classes' => '',
 			'disable_cookies' => false,
 			'limit_cookies' => false,
 			'limit_cookies_visitor' => 34186669, // Piwik default 13 months
