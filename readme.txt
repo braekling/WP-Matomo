@@ -7,13 +7,13 @@ Stable tag: 1.0.16
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
 Tags: piwik, tracking, statistics, stats, analytics
 
-This plugin adds a Piwik stats site to your WordPress or WordPress multisite dashboard.
+Adds Piwik statistics to your WordPress dashboard and is also able to add the Piwik Tracking Code to your blog.
 
 == Description ==
 
 This plugin uses the Piwik API to show your Piwik statistics in your WordPress dashboard. It's also able to add the Piwik tracking code to your blog and to do some modifications to the tracking code. Additionally, WP-Piwik supports WordPress networks and manages multiple sites and their tracking codes.
 
-To use this plugin you will need your own Piwik instance. If you do not already have a Piwik setup, you have two simple options: use either [Self-hosted](http://piwik.org/) or [Cloud-hosted](http://piwik.org/hosting/).
+To use this plugin the Piwik web analytics application is required. If you do not already have a Piwik setup (e.g., provided by your web hosting service), you have two simple options: use either a [self-hosted Piwik](http://piwik.org/) or a [cloud-hosted Piwik by InnoCraft](https://www.innocraft.cloud/?pk_campaign=WP-Piwik).
 
 **Requirements:** PHP 7.0 (or higher), WordPress 4.0 (or higher), Piwik 3.0 (or higher)
  
@@ -59,7 +59,7 @@ Thank you all!
 
 = Where can I find the Piwik URL and the Piwik auth token? =
 
-To use this plugin you will need your own Piwik instance. If you do not already have a Piwik setup, you have two simple options: use either [Self-hosted](http://piwik.org/) or [Cloud-hosted](http://piwik.org/hosting/). 
+To use this plugin you will need your own Piwik instance. If you do not already have a Piwik setup, you have two simple options: use either a [self-hosted Piwik](http://piwik.org/) or [cloud-hosted Piwik by InnoCraft](https://www.innocraft.cloud/?pk_campaign=WP-Piwik).
 
 As soon as Piwik works, you'll be able to configure WP-Piwik: The Piwik URL is the same URL you use to access your Piwik, e.g. for the demo site: http://demo.piwik.org. The auth token is some kind of a secret password, which allows WP-Piwik to get the necessary data from Piwik. To get your auth token, log in to Piwik, click at the preferences gear icon (top right) and click at "API" (left sidebar menu, near the bottom).
 
@@ -143,8 +143,8 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 == Changelog ==
 
 = 1.0.16 =
-* Added Innocraft Cloud support (the new service created by the people behind Piwik). Piwik.pro is still usable via HTTP mode, the configuration will be updated automatically.
-* Add search functionality to site browser
+* Added InnoCraft Cloud support (the new service created by the people behind Piwik). Piwik.pro is still usable via HTTP mode, the configuration will be updated automatically.
+* Added search functionality to site browser
 * Added preload DNS option, see https://piwik.org/blog/2017/04/important-performance-optimizations-load-piwik-javascript-tracker-faster/
 * Added option to set link and download classes (expert settings)
 * Added option to choose which post types should be considered for annotations

@@ -103,7 +103,7 @@ class Settings extends \WP_Piwik\Admin {
 		echo '</h2></td></tr></tbody></table><table id="connect" class="wp-piwik_menu-tab"><tbody>';
 
 		if (! self::$wpPiwik->isConfigured ())
-			$this->showBox ( 'updated', 'info', sprintf ( '%s <a href="%s">%s</a> %s <a href="%s">%s</a>.', __ ( 'WP-Piwik is a WordPress plugin to show a selection of Piwik stats in your WordPress admin dashboard and to add and configure your Piwik tracking code. To use this you will need your own Piwik instance. If you do not already have a Piwik setup, you have two simple options: use either', 'wp-piwik' ), 'http://piwik.org/', __ ( 'Self-hosted', 'wp-piwik' ), __ ( 'or', 'wp-piwik' ), 'http://piwik.org/hosting/', __ ( 'Cloud-hosted', 'wp-piwik' ) ) );
+			$this->showBox ( 'updated', 'info', sprintf ( '%s <a href="%s">%s</a> %s <a href="%s">%s</a>.', __ ( 'WP-Piwik is a WordPress plugin to show a selection of Piwik stats in your WordPress admin dashboard and to add and configure your Piwik tracking code. To use this you will need your own Piwik instance. If you do not already have a Piwik setup, you have two simple options: use either', 'wp-piwik' ), 'http://piwik.org/', __ ( 'a self-hosted Piwik', 'wp-piwik' ), __ ( 'or', 'wp-piwik' ), 'https://www.innocraft.cloud/?pk_campaign=WP-Piwik', __ ( 'a cloud-hosted Piwik by InnoCraft', 'wp-piwik' ) ) );
 
 		if (! function_exists ( 'curl_init' ) && ! ini_get ( 'allow_url_fopen' ))
 			$this->showBox ( 'error', 'no', __ ( 'Neither cURL nor fopen are available. So WP-Piwik can not use the HTTP API and not connect to InnoCraft Cloud.' ) . ' ' . sprintf ( '<a href="%s">%s.</a>', 'https://wordpress.org/plugins/wp-piwik/faq/', __ ( 'More information', 'wp-piwik' ) ) );

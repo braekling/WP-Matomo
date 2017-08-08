@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
-"POT-Creation-Date: 2017-08-07 13:35+0200\n"
-"PO-Revision-Date: 2017-08-07 12:32+0000\n"
+"POT-Creation-Date: 2017-08-08 21:59+0200\n"
+"PO-Revision-Date: 2017-08-08 20:04+0000\n"
 "Last-Translator: André Bräkling\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/piwik/wp-piwik/language/nl_NL/)\n"
 "MIME-Version: 1.0\n"
@@ -142,16 +142,16 @@ msgid ""
 msgstr "WP-Piwik is een WordPress plugin om een gedeelte van je Piwik statistieken weer te geven in je WordPress beheer paneel en om je Piwik tracking code toe te voegen en te configureren. Om dit te kunnen gebruiken moet je je eigen Piwik instantie gebruik. Indien je Piwik nog niet hebt geïnstalleerd, heb je 2 eenvoudige mogelijkheden: gebruik ofwel "
 
 #: classes/WP_Piwik/Admin/Settings.php:106
-msgid "Self-hosted"
-msgstr "Zelf gehoste"
+msgid "a self-hosted Piwik"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:106
 msgid "or"
 msgstr "of"
 
 #: classes/WP_Piwik/Admin/Settings.php:106
-msgid "Cloud-hosted"
-msgstr "Cloud gehoste"
+msgid "a cloud-hosted Piwik by InnoCraft"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:109
 msgid ""
