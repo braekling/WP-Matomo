@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
-"POT-Creation-Date: 2017-08-07 13:35+0200\n"
-"PO-Revision-Date: 2017-08-07 12:32+0000\n"
+"POT-Creation-Date: 2017-08-08 21:59+0200\n"
+"PO-Revision-Date: 2017-08-08 20:04+0000\n"
 "Last-Translator: André Bräkling\n"
 "Language-Team: Norwegian Bokmål (Norway) (http://www.transifex.com/piwik/wp-piwik/language/nb_NO/)\n"
 "MIME-Version: 1.0\n"
@@ -139,7 +139,7 @@ msgid ""
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:106
-msgid "Self-hosted"
+msgid "a self-hosted Piwik"
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:106
@@ -147,7 +147,7 @@ msgid "or"
 msgstr "eller"
 
 #: classes/WP_Piwik/Admin/Settings.php:106
-msgid "Cloud-hosted"
+msgid "a cloud-hosted Piwik by InnoCraft"
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:109

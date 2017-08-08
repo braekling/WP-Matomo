@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
-"POT-Creation-Date: 2017-08-07 13:35+0200\n"
-"PO-Revision-Date: 2017-08-07 12:32+0000\n"
+"POT-Creation-Date: 2017-08-08 21:59+0200\n"
+"PO-Revision-Date: 2017-08-08 20:04+0000\n"
 "Last-Translator: André Bräkling\n"
 "Language-Team: Turkish (Turkey) (http://www.transifex.com/piwik/wp-piwik/language/tr_TR/)\n"
 "MIME-Version: 1.0\n"
@@ -140,16 +140,16 @@ msgid ""
 msgstr "WP-Piwik seçilen Piwik istatistiklerinin WordPress yönetici panelinde gösterilmesine, Piwik izleme kodlarının yapılandırılmasına ve eklenmesine yarayan bir WordPress eklentisidir. Bunu kullanmak için kendi Piwik kurulumunuza ihtiyacınız vardır. Eğer halihazırda bir Piwik kurulumunuz yoksa, iki basit seçeneğiniz var: barındırma için"
 
 #: classes/WP_Piwik/Admin/Settings.php:106
-msgid "Self-hosted"
-msgstr "Kendi-sunucuzda"
+msgid "a self-hosted Piwik"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:106
 msgid "or"
 msgstr "veya"
 
 #: classes/WP_Piwik/Admin/Settings.php:106
-msgid "Cloud-hosted"
-msgstr "Bulut-barındırma"
+msgid "a cloud-hosted Piwik by InnoCraft"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:109
 msgid ""

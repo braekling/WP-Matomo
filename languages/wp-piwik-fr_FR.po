@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
-"POT-Creation-Date: 2017-08-07 13:35+0200\n"
-"PO-Revision-Date: 2017-08-07 12:48+0000\n"
+"POT-Creation-Date: 2017-08-08 21:59+0200\n"
+"PO-Revision-Date: 2017-08-08 20:04+0000\n"
 "Last-Translator: André Bräkling\n"
 "Language-Team: French (France) (http://www.transifex.com/piwik/wp-piwik/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
@@ -142,16 +142,16 @@ msgid ""
 msgstr "WP-Piwik est une extension WordPress pour afficher une sélection de stats Piwik dans votre tableau de bord d'admin WordPress et pour ajouter et configurer votre code de suivi Piwik. Pour utiliser cela, vous aurez besoin de votre propre instance Piwik. Si vous ne possédez pas encore de configuration Piwik, vous avez deux options simples&nbsp;: utilisez au choix"
 
 #: classes/WP_Piwik/Admin/Settings.php:106
-msgid "Self-hosted"
-msgstr "auto-hébergé"
+msgid "a self-hosted Piwik"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:106
 msgid "or"
 msgstr "ou"
 
 #: classes/WP_Piwik/Admin/Settings.php:106
-msgid "Cloud-hosted"
-msgstr "hébergé dans un Cloud"
+msgid "a cloud-hosted Piwik by InnoCraft"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:109
 msgid ""
