@@ -19,8 +19,6 @@ To use this plugin the Piwik web analytics application is required. If you do no
  
 **Languages:** English, Albanian, Chinese, Dutch, French, German, Greek, Hungarian, Italian, Polish, Portuguese (Brazil). Partially supported: Azerbaijani, Belarusian, Hindi, Lithuanian, Luxembourgish, Norwegian, Persian, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian
 
-**Note:** If you vote "It's broken", please tell me about your problem. It's hard to fix a bug I don't know about! ;-)
-
 = What is Piwik? =
 
 [youtube https://youtu.be/OslfF_EH81g]
@@ -119,6 +117,7 @@ Thank you very much! :-)
 = Install WP-Piwik on a WordPress blog network (WPMU/WP multisite) =
 
 There are two differents methods to use WP-Piwik in a multisite environment:
+
 * As a Site Specific Plugin it behaves like a plugin installed on a simple WordPress blog. Each user can enable, configure and use WP-Piwik on his own. Users can even use their own Piwik instances (and accordingly they have to). 
 * Using WP-Piwik as a Network Plugin equates to a central approach. A single Piwik instance is used and the site admin configures the plugin completely. Users are just allowed to see their own statistics, site admins can see each blog's stats.
 
@@ -141,6 +140,11 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 5. Piwik: Here you'll find your auth token.
 
 == Changelog ==
+
+= 1.0.17 =
+* Header issue solved which caused incompatibilities with other plugins like Yoast SEO
+* Update of InnoCraft cloud links (InnoCraft is the team behind Piwik)
+* Bugfix: Avoid a broken page if Piwik is misconfigured and WordPress debugging enabled
 
 = 1.0.16 =
 * Added InnoCraft Cloud support (the new service created by the people behind Piwik). Piwik.pro is still usable via HTTP mode, the configuration will be updated automatically.

@@ -6,7 +6,7 @@ Plugin URI: http://wordpress.org/extend/plugins/wp-piwik/
 
 Description: Adds Piwik statistics to your WordPress dashboard and is also able to add the Piwik Tracking Code to your blog.
 
-Version: 1.0.16
+Version: 1.0.17
 Author: Andr&eacute; Br&auml;kling
 Author URI: http://www.braekling.de
 Text Domain: wp-piwik

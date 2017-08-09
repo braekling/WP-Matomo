@@ -12,7 +12,7 @@ class WP_Piwik {
 	 *
 	 * @var Runtime environment variables
 	 */
-	private static $revisionId = 2017080701, $version = '1.0.16', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
+	private static $revisionId = 2017080901, $version = '1.0.17', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
 
 	/**
 	 * Constructor class to configure and register all WP-Piwik components
@@ -777,7 +777,7 @@ class WP_Piwik {
 	 */
 	public static function definePiwikConstants() {
 		if (! defined ( 'PIWIK_INCLUDE_PATH' )) {
-			@header ( 'Content-type: text/xml' );
+            //@header('Content-type: text/html');
 			define ( 'PIWIK_INCLUDE_PATH', self::$settings->getGlobalOption ( 'piwik_path' ) );
 			define ( 'PIWIK_USER_PATH', self::$settings->getGlobalOption ( 'piwik_path' ) );
 			define ( 'PIWIK_ENABLE_DISPATCH', false );
@@ -1084,8 +1084,9 @@ class WP_Piwik {
 			$this->log ( 'Tried to identify current site, result: ' . serialize ( $result ) );
 			if (is_array( $result ) && empty( $result ))
 				$result = $this->addPiwikSite ( $blogId );
-			elseif ( $result != 'n/a' )
+			elseif ( $result != 'n/a' && isset($result [0]) )
 				$result = $result [0] ['idsite'];
+			else $result = null;
 		} else $result = null;
 		self::$logger->log ( 'Get Piwik ID: WordPress site ' . ($isCurrent ? get_bloginfo ( 'url' ) : get_blog_details ( $blogId )->siteurl) . ' = Piwik ID ' . $result );
 		if ($result !== null) {
