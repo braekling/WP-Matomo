@@ -3,7 +3,7 @@
 Contributors: Braekling
 Requires at least: 4.0
 Tested up to: 4.8.1
-Stable tag: 1.0.16
+Stable tag: 1.0.17
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
 Tags: piwik, tracking, statistics, stats, analytics
 
@@ -140,6 +140,10 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 5. Piwik: Here you'll find your auth token.
 
 == Changelog ==
+
+= 1.0.18 =
+* WPML.org support: Use different site IDs for different languages
+* Ecommerce widgets
 
 = 1.0.17 =
 * Header issue solved which caused incompatibilities with other plugins like Yoast SEO

@@ -1,14 +1,14 @@
 # 
 # Translators:
 # Andr&eacute; Br&auml;kling <webmaster@braekling.de>, 2011
-# Vasilis Lourdas, 2016
+# Vasilis Lourdas, 2016-2017
 # Vasilis Lourdas, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "POT-Creation-Date: 2017-08-08 21:59+0200\n"
-"PO-Revision-Date: 2017-08-08 20:04+0000\n"
-"Last-Translator: André Bräkling\n"
+"PO-Revision-Date: 2017-10-09 18:49+0000\n"
+"Last-Translator: Vasilis Lourdas\n"
 "Language-Team: Greek (http://www.transifex.com/piwik/wp-piwik/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -142,7 +142,7 @@ msgstr "Το WP-Piwik είναι ένα πρόσθετο για το WordPress �
 
 #: classes/WP_Piwik/Admin/Settings.php:106
 msgid "a self-hosted Piwik"
-msgstr ""
+msgstr "ένα Piwik στημένο τοπικά"
 
 #: classes/WP_Piwik/Admin/Settings.php:106
 msgid "or"
@@ -150,13 +150,13 @@ msgstr "ή"
 
 #: classes/WP_Piwik/Admin/Settings.php:106
 msgid "a cloud-hosted Piwik by InnoCraft"
-msgstr ""
+msgstr "ένα Piwik στημένο στο σύννεφο από την InnoCraft"
 
 #: classes/WP_Piwik/Admin/Settings.php:109
 msgid ""
 "Neither cURL nor fopen are available. So WP-Piwik can not use the HTTP API "
 "and not connect to InnoCraft Cloud."
-msgstr ""
+msgstr "Ούτε το cURL ούτε η fopen είναι διαθέσιμα. Έτσι, το WP-Piwik δεν μπορεί να χρησιμοποιήσει το HTTP API και να συνδεθεί με το σύννεφο InnoCraft."
 
 #: classes/WP_Piwik/Admin/Settings.php:109
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:30
@@ -192,7 +192,7 @@ msgstr "Επιλέξτε αυτή την επιλογή, αν το Piwik που 
 #: classes/WP_Piwik/Admin/Settings.php:111
 #: classes/WP_Piwik/Admin/Settings.php:116
 msgid "Cloud-hosted (InnoCraft Cloud)"
-msgstr ""
+msgstr "Στημένο στο σύννεφο (Σύννεφο InnoCraft)"
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid ""
@@ -228,7 +228,7 @@ msgstr "Εισάγετε την πλήρη διαδρομή για το στιγ
 
 #: classes/WP_Piwik/Admin/Settings.php:121
 msgid "Piwik subdomain"
-msgstr ""
+msgstr "Υποόνομα χώρου Piwik"
 
 #: classes/WP_Piwik/Admin/Settings.php:121
 msgid ""
@@ -1238,7 +1238,7 @@ msgstr "τελευταίες 30 ημέρες"
 
 #: classes/WP_Piwik/Widget.php:330
 msgid "last 12 "
-msgstr ""
+msgstr "τελευταία 12"
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:18
 msgid "Browser Details"
@@ -1323,7 +1323,7 @@ msgstr "Επισκόπηση"
 
 #: classes/WP_Piwik/Widget/Overview.php:17
 msgid "dashboard"
-msgstr ""
+msgstr "κεντρικός πίνακας"
 
 #: classes/WP_Piwik/Widget/Overview.php:50 classes/WP_Piwik/Widget/Post.php:38
 msgid "Unique visitors"

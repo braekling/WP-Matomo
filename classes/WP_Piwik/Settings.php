@@ -46,7 +46,9 @@ class Settings {
 			// User settings: Stats configuration
 			'default_date' => 'yesterday',
 			'stats_seo' => false,
+            'stats_ecommerce' => false,
 			'dashboard_widget' => false,
+			'dashboard_ecommerce' => false,
 			'dashboard_chart' => false,
 			'dashboard_seo' => false,
 			'toolbar' => false,

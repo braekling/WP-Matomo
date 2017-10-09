@@ -162,6 +162,7 @@ class Settings extends \WP_Piwik\Admin {
 		), __ ( 'Default date shown on statistics page.', 'wp-piwik' ) );
 
 		$this->showCheckbox ( 'stats_seo', __ ( 'Show SEO data', 'wp-piwik' ), __ ( 'Display SEO ranking data on statistics page.', 'wp-piwik' ) . ' (' . __ ( 'Slow!', 'wp-piwik' ) . ')' );
+        $this->showCheckbox ( 'stats_ecommerce', __ ( 'Show e-commerce data', 'wp-piwik' ), __ ( 'Display e-commerce data on statistics page.', 'wp-piwik' ) );
 
 		$this->showSelect ( 'dashboard_widget', __ ( 'Dashboard overview', 'wp-piwik' ), array (
 				'disabled' => __ ( 'Disabled', 'wp-piwik' ),
@@ -173,6 +174,8 @@ class Settings extends \WP_Piwik\Admin {
 		$this->showCheckbox ( 'dashboard_chart', __ ( 'Dashboard graph', 'wp-piwik' ), __ ( 'Enable WP-Piwik dashboard widget &quot;Graph&quot;.', 'wp-piwik' ) );
 
 		$this->showCheckbox ( 'dashboard_seo', __ ( 'Dashboard SEO', 'wp-piwik' ), __ ( 'Enable WP-Piwik dashboard widget &quot;SEO&quot;.', 'wp-piwik' ) . ' (' . __ ( 'Slow!', 'wp-piwik' ) . ')' );
+
+        $this->showCheckbox ( 'dashboard_ecommerce', __ ( 'Dashboard e-commerce', 'wp-piwik' ), __ ( 'Enable WP-Piwik dashboard widget &quot;E-commerce&quot;.', 'wp-piwik' ) );
 
 		$this->showCheckbox ( 'toolbar', __ ( 'Show graph on WordPress Toolbar', 'wp-piwik' ), __ ( 'Display a last 30 days visitor graph on WordPress\' toolbar.', 'wp-piwik' ) );
 

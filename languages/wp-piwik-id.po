@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "POT-Creation-Date: 2017-08-08 21:59+0200\n"
-"PO-Revision-Date: 2017-08-08 20:04+0000\n"
+"PO-Revision-Date: 2017-09-23 21:47+0000\n"
 "Last-Translator: André Bräkling\n"
 "Language-Team: Indonesian (http://www.transifex.com/piwik/wp-piwik/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -143,7 +143,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:106
 msgid "or"
-msgstr ""
+msgstr "atau"
 
 #: classes/WP_Piwik/Admin/Settings.php:106
 msgid "a cloud-hosted Piwik by InnoCraft"
@@ -808,7 +808,7 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:311
 #: classes/WP_Piwik/Admin/Settings.php:312
 msgid "not recommended"
-msgstr ""
+msgstr "tidak direkomendasikan"
 
 #: classes/WP_Piwik/Admin/Settings.php:312
 msgid "Disable SSL host verification"
@@ -1104,7 +1104,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:35
 msgid "Title"
-msgstr ""
+msgstr "Judul"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:36
 msgid "URL"
@@ -1301,7 +1301,7 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Noresult.php:25
 #: classes/WP_Piwik/Widget/Search.php:25
 msgid "Keyword"
-msgstr ""
+msgstr "Katakunci"
 
 #: classes/WP_Piwik/Widget/Noresult.php:25
 #: classes/WP_Piwik/Widget/Search.php:25
@@ -1356,7 +1356,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget/Pages.php:18
 msgid "Page"
-msgstr ""
+msgstr "Halaman"
 
 #: classes/WP_Piwik/Widget/Plugins.php:16
 msgid "Plugins"
