@@ -12,7 +12,7 @@ class WP_Piwik {
 	 *
 	 * @var Runtime environment variables
 	 */
-	private static $revisionId = 2017100901, $version = '1.0.18', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
+	private static $revisionId = 2017101501, $version = '1.0.19', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
 
 	/**
 	 * Constructor class to configure and register all WP-Piwik components
@@ -1025,7 +1025,6 @@ class WP_Piwik {
 	 *        	attribute list
 	 */
 	public function shortcode($attributes) {
-		load_plugin_textdomain ( 'wp-piwik', false, 'wp-piwik' . DIRECTORY_SEPARATOR . 'languages' . DIRECTORY_SEPARATOR );
 		shortcode_atts ( array (
 				'title' => '',
 				'module' => 'overview',
