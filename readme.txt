@@ -1,45 +1,45 @@
-﻿=== WP-Piwik ===
+﻿=== WP-Matomo (WP-Piwik) ===
 
 Contributors: Braekling
 Requires at least: 4.0
 Tested up to: 4.8.2
 Stable tag: 1.0.19
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
-Tags: piwik, tracking, statistics, stats, analytics
+Tags: matomo, tracking, statistics, stats, analytics
 
-Adds Piwik statistics to your WordPress dashboard and is also able to add the Piwik Tracking Code to your blog.
+Adds Matomo (former Piwik) statistics to your WordPress dashboard and is also able to add the Matomo Tracking Code to your blog.
 
 == Description ==
 
-This plugin uses the Piwik API to show your Piwik statistics in your WordPress dashboard. It's also able to add the Piwik tracking code to your blog and to do some modifications to the tracking code. Additionally, WP-Piwik supports WordPress networks and manages multiple sites and their tracking codes.
+This plugin uses the Matomo API to show your Matomo statistics in your WordPress dashboard. It's also able to add the Matomo tracking code to your blog and to do some modifications to the tracking code. Additionally, WP-Matomo supports WordPress networks and manages multiple sites and their tracking codes.
 
-To use this plugin the Piwik web analytics application is required. If you do not already have a Piwik setup (e.g., provided by your web hosting service), you have two simple options: use either a [self-hosted Piwik](http://piwik.org/) or a [cloud-hosted Piwik by InnoCraft](https://www.innocraft.cloud/?pk_campaign=WP-Piwik).
+To use this plugin the Matomo web analytics application is required. If you do not already have a Matomo setup (e.g., provided by your web hosting service), you have two simple options: use either a [self-hosted Matomo](http://matomo.org/) or a [cloud-hosted Matomo by InnoCraft](https://www.innocraft.cloud/?pk_campaign=WP-Piwik).
 
-**Requirements:** PHP 7.0 (or higher), WordPress 4.0 (or higher), Piwik 3.0 (or higher)
+**Requirements:** PHP 7.0 (or higher), WordPress 4.0 (or higher), Matomo 3.0 (or higher)
  
 **Languages:** English, Albanian, Chinese, Dutch, French, German, Greek, Hungarian, Italian, Polish, Portuguese (Brazil). Partially supported: Azerbaijani, Belarusian, Hindi, Lithuanian, Luxembourgish, Norwegian, Persian, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian
 
-= What is Piwik? =
+= What is Matomo? =
 
 [youtube https://youtu.be/OslfF_EH81g]
-[Learn more.](https://piwik.org/what-is-piwik/)
+[Learn more.](https://matomo.org/what-is-matomo/)
 
 = First steps =
-- Learn how to install your own Piwik instance: [Requirements](https://piwik.org/docs/requirements/), [Installation](https://piwik.org/docs/installation-optimization/).
-- If you need support about Piwik, please have a look at the [Piwik forums](https://forum.piwik.org/).
-- Finally, you can start [setting up WP-Piwik](https://piwik.org/blog/2015/05/wordpress-integration-wp-piwik-1-0/).
+- Learn how to install your own Matomo instance: [Requirements](https://matomo.org/docs/requirements/), [Installation](https://matomo.org/docs/installation-optimization/).
+- If you need support about Matomo, please have a look at the [Matomo forums](https://forum.matomo.org/).
+- Finally, you can start [setting up WP-Matomo](https://matomo.org/blog/2015/05/wordpress-integration-wp-piwik-1-0/).
 
 = Shortcodes =
 You can use following shortcodes if activated:
 
     [wp-piwik module="overview" title="" period="day" date="yesterday"]
-Shows overview table like WP-Piwik's overview dashboard. See Piwik API documentation on VisitsSummary.get to get more information on period and day. Multiple data arrays will be cumulated. If you fill the title attribute, its content will be shown in the table's title.
+Shows overview table like WP-Matomo's overview dashboard. See Matomo API documentation on VisitsSummary.get to get more information on period and day. Multiple data arrays will be cumulated. If you fill the title attribute, its content will be shown in the table's title.
 
     [wp-piwik module="opt-out" language="en" width="100%" height="200px"]
-Shows the Piwik opt-out Iframe. You can change the Iframe's language by the language attribute (e.g. de for German language) and its width and height using the corresponding attributes.
+Shows the Matomo opt-out Iframe. You can change the Iframe's language by the language attribute (e.g. de for German language) and its width and height using the corresponding attributes.
 
     [wp-piwik module="post" range="last30" key="sum_daily_nb_uniq_visitors"]
-Shows the chosen keys value related to the current post. You can define a range (format: lastN, previousN or YYYY-MM-DD,YYYY-MM-DD) and the desired value's key (e.g., sum_daily_nb_uniq_visitors, nb_visits or nb_hits - for details see Piwik's API method Actions.getPageUrl using a range).
+Shows the chosen keys value related to the current post. You can define a range (format: lastN, previousN or YYYY-MM-DD,YYYY-MM-DD) and the desired value's key (e.g., sum_daily_nb_uniq_visitors, nb_visits or nb_hits - for details see Matomo's API method Actions.getPageUrl using a range).
 
     [wp-piwik]
 is equal to *[wp-piwik module="overview" title="" period="day" date="yesterday"]*.
@@ -48,96 +48,96 @@ is equal to *[wp-piwik module="overview" title="" period="day" date="yesterday"]
 
 * Graphs powered by [jqPlot](http://www.jqplot.com/) (GPL 2.0 and MIT) and and [jQuery Sparklines](http://omnipotent.net/jquery.sparkline/) (New BSD License).
 * All translators at the [Transifex translation community](https://www.transifex.com/projects/p/wp-piwik/).
-* Donations: Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., Helmut O., Valerie S., Jochen D., Atlas R., Harald W., Jan M., Addy K., Hans-Georg E.-B., Yvonne K., Andrew D., the Piwik team itself, and all people flattering this.
-* All users who send me mails containing criticism, commendation, feature requests and bug reports - you help me to make WP-Piwik much better!
+* Donations: Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., Helmut O., Valerie S., Jochen D., Atlas R., Harald W., Jan M., Addy K., Hans-Georg E.-B., Yvonne K., Andrew D., the Matomo team itself, and all people flattering this.
+* All users who send me mails containing criticism, commendation, feature requests and bug reports - you help me to make WP-Matomo much better!
 
 Thank you all!
 
 == Frequently Asked Questions ==
 
-= Where can I find the Piwik URL and the Piwik auth token? =
+= Where can I find the Matomo URL and the Matomo auth token? =
 
-To use this plugin you will need your own Piwik instance. If you do not already have a Piwik setup, you have two simple options: use either a [self-hosted Piwik](http://piwik.org/) or [cloud-hosted Piwik by InnoCraft](https://www.innocraft.cloud/?pk_campaign=WP-Piwik).
+To use this plugin you will need your own Matomo instance. If you do not already have a Matomo setup, you have two simple options: use either a [self-hosted Matomo](http://matomo.org/) or [cloud-hosted Matomo by InnoCraft](https://www.innocraft.cloud/?pk_campaign=WP-Piwik).
 
-As soon as Piwik works, you'll be able to configure WP-Piwik: The Piwik URL is the same URL you use to access your Piwik, e.g. for the demo site: http://demo.piwik.org. The auth token is some kind of a secret password, which allows WP-Piwik to get the necessary data from Piwik. To get your auth token, log in to Piwik, click at the preferences gear icon (top right) and click at "API" (left sidebar menu, near the bottom).
+As soon as Matomo works, you'll be able to configure WP-Matomo: The Matomo URL is the same URL you use to access your Matomo, e.g. for the demo site: http://demo.matomo.org. The auth token is some kind of a secret password, which allows WP-Matomo to get the necessary data from Matomo. To get your auth token, log in to Matomo, click at the preferences gear icon (top right) and click at "API" (left sidebar menu, near the bottom).
 
-You can get a more detailed description here: https://piwik.org/blog/2015/05/wordpress-integration-wp-piwik-1-0/
+You can get a more detailed description here: https://matomo.org/blog/2015/05/wordpress-integration-wp-piwik-1-0/
 
-= I get this message: "WP-Piwik was not able to connect to Piwik using our configuration". How to proceed? =
+= I get this message: "WP-Matomo (WP-Piwik) was not able to connect to Matomo (Piwik) using our configuration". How to proceed? =
 
-First, please make sure your configuration is valid, e.g., if you are using the right Piwik URL (see description above). Then, go to the "Support" tab and run the test script. This test script will try to get some information from Piwik and shows the full response. Usually, the response output gives a clear hint what's wrong:
+First, please make sure your configuration is valid, e.g., if you are using the right Matomo URL (see description above). Then, go to the "Support" tab and run the test script. This test script will try to get some information from Matomo and shows the full response. Usually, the response output gives a clear hint what's wrong:
 
 The response output contains...
-* **bool(false)** and **HTTP/1.1 403 Forbidden**: WP-Piwik is not allowed to connect to Piwik. Please check your Piwik server's configuration. Maybe you are using a password protection via .htaccess or you are blocking requests from localhost/127.0.0.1. If you aren’t sure about this, please contact your web hoster for support.
-* **bool(false)** and **HTTP/1.1 404 Not Found**: The Piwik URL is wrong. Try to copy & paste the URL you use to access Piwik itself via browser.
-* **bool(false)** and no further HTTP response code: The Piwik server does not respond. Very often, this is caused by firewall or mod_security settings. Check your server logfiles to get further information. If you aren’t sure about this, please contact your web hoster for support.
+* **bool(false)** and **HTTP/1.1 403 Forbidden**: WP-Matomo is not allowed to connect to Matomo. Please check your Matomo server's configuration. Maybe you are using a password protection via .htaccess or you are blocking requests from localhost/127.0.0.1. If you aren’t sure about this, please contact your web hoster for support.
+* **bool(false)** and **HTTP/1.1 404 Not Found**: The Matomo URL is wrong. Try to copy & paste the URL you use to access Matomo itself via browser.
+* **bool(false)** and no further HTTP response code: The Matomo server does not respond. Very often, this is caused by firewall or mod_security settings. Check your server logfiles to get further information. If you aren’t sure about this, please contact your web hoster for support.
 
-= PHP Compatibility Checker reports PHP7 compatbility issues with WP-Piwik. =
+= PHP Compatibility Checker reports PHP7 compatbility issues with WP-Matomo. =
 
-The Compatibility Checker shows two false positives. WP-Piwik is 100% PHP7 compatible, you can ignore the report.
+The Compatibility Checker shows two false positives. WP-Matomo is 100% PHP7 compatible, you can ignore the report.
 
 = Overview shortcode shows no unique visitors using a yearly range. =
 
-See [Piwik FAQ](http://piwik.org/faq/how-to/#faq_113).
+See [Matomo FAQ](http://piwik.org/faq/how-to/#faq_113).
 
-= WP-Piwik only shows the first 100 sites of my multisite network. How can I get all other sites? =
+= WP-Matomo only shows the first 100 sites of my multisite network. How can I get all other sites? =
 
-The Piwik API is limited to 100 sites by default. Add the following line to the section [General] of Piwik's config/config.ini.php file:
+The Matomo API is limited to 100 sites by default. Add the following line to the section [General] of Matomo's config/config.ini.php file:
 
     API_datatable_default_limit = 1000
 
 = Tracking does not work on HostGator! =
 
-Try to enable the "avoid mod_security" option (WP-Piwik settings, Tracking tab) or create a mod_security whitelist.
+Try to enable the "avoid mod_security" option (WP-Matomo settings, Tracking tab) or create a mod_security whitelist.
 
-= Can I contribute to WP-Piwik as a translator? =
+= Can I contribute to WP-Matomo as a translator? =
 
-You like to contribute to WP-Piwik translations? Please use the [Transifex translation community](https://www.transifex.com/projects/p/wp-piwik/).
+You like to contribute to WP-Matomo translations? Please use the [Transifex translation community](https://www.transifex.com/projects/p/wp-piwik/).
 
-Of course, I will add missing languages if requested, and I will also upload the existing language files of older WP-Piwik releases.
+Of course, I will add missing languages if requested, and I will also upload the existing language files of older WP-Matomo releases.
 
-If you can't (or don not want to) use transifex, you can also translate languages/wp-piwik.pot delivered with WP-Piwik.
+If you can't (or don not want to) use transifex, you can also translate languages/wp-piwik.pot delivered with WP-Matomo.
 
 Thank you very much! :-)
 
 == Installation ==
 
 = General Notes =
-* First, you have to set up a running Piwik instance. You can get Piwik [here](http://piwik.org/) and its documentation [here](http://piwik.org/docs/).
-* If you want to update your Piwik instance, you should set your WordPress blog to maintenance while the update process is running.
+* First, you have to set up a running Matomo instance. You can get Matomo [here](http://matomo.org/) and its documentation [here](http://matomo.org/docs/).
+* If you want to update your Matomo instance, you should set your WordPress blog to maintenance while the update process is running.
 
-= Install WP-Piwik on a simple WordPress blog =
+= Install WP-Matomo on a simple WordPress blog =
 
 1. Upload the full `wp-piwik` directory into your `wp-content/plugins` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Open the new 'Settings/WP-Piwik Settings' menu and follow the instructions to configure your Piwik connection. Save settings.
+3. Open the new 'Settings/WP-Matomo (WP-Piwik) Settings' menu and follow the instructions to configure your Matomo connection. Save settings.
 4. If you have view access to multiple site stats and did not enable "auto config", choose your blog and save settings again.
-5. Look at 'Dashboard/WP-Piwik' to see your site stats.
+5. Look at 'Dashboard/WP-Matomo (WP-Piwik)' to see your site stats.
 
-= Install WP-Piwik on a WordPress blog network (WPMU/WP multisite) =
+= Install WP-Matomo on a WordPress blog network (WPMU/WP multisite) =
 
-There are two differents methods to use WP-Piwik in a multisite environment:
+There are two differents methods to use WP-Matomo in a multisite environment:
 
-* As a Site Specific Plugin it behaves like a plugin installed on a simple WordPress blog. Each user can enable, configure and use WP-Piwik on his own. Users can even use their own Piwik instances (and accordingly they have to). 
-* Using WP-Piwik as a Network Plugin equates to a central approach. A single Piwik instance is used and the site admin configures the plugin completely. Users are just allowed to see their own statistics, site admins can see each blog's stats.
+* As a Site Specific Plugin it behaves like a plugin installed on a simple WordPress blog. Each user can enable, configure and use WP-Matomo on his own. Users can even use their own Matomo instances (and accordingly they have to). 
+* Using WP-Matomo as a Network Plugin equates to a central approach. A single Matomo instance is used and the site admin configures the plugin completely. Users are just allowed to see their own statistics, site admins can see each blog's stats.
 
 *Site Specific Plugin*
 
-Just add WP-Piwik to your /wp-content/plugins folder and enable the Plugins page for individual site administrators. Each user has to enable and configure WP-Piwik on his own if he want to use the plugin.
+Just add WP-Matomo to your /wp-content/plugins folder and enable the Plugins page for individual site administrators. Each user has to enable and configure WP-Matomo on his own if he want to use the plugin.
 
 *Network Plugin*
 
 The Network Plugin support is still experimental. Please test it on your own (e.g. using a local copy of your WP multisite) before you use it in an user context.
 
-Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin](http://codex.wordpress.org/Create_A_Network#WordPress_Plugins). Users can access their own statistics, site admins can access each blog's statistics and the plugin's configuration.
+Add WP-Matomo to your /wp-content/plugins folder and enable it as [Network Plugin](http://codex.wordpress.org/Create_A_Network#WordPress_Plugins). Users can access their own statistics, site admins can access each blog's statistics and the plugin's configuration.
 
 == Screenshots ==
 
-1. WP-Piwik settings.
-2. WP-Piwik statistics page.
+1. WP-Matomo settings.
+2. WP-Matomo statistics page.
 3. Closer look to a pie chart.
 4. WordPress toolbar graph.
-5. Piwik: Here you'll find your auth token.
+5. Matomo: Here you'll find your auth token.
 
 == Changelog ==
 
@@ -151,16 +151,16 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 
 = 1.0.17 =
 * Header issue solved which caused incompatibilities with other plugins like Yoast SEO
-* Update of InnoCraft cloud links (InnoCraft is the team behind Piwik)
-* Bugfix: Avoid a broken page if Piwik is misconfigured and WordPress debugging enabled
+* Update of InnoCraft cloud links (InnoCraft is the team behind Matomo)
+* Bugfix: Avoid a broken page if Matomo is misconfigured and WordPress debugging enabled
 
 = 1.0.16 =
-* Added InnoCraft Cloud support (the new service created by the people behind Piwik). Piwik.pro is still usable via HTTP mode, the configuration will be updated automatically.
+* Added InnoCraft Cloud support (the new service created by the people behind Matomo). Piwik.pro is still usable via HTTP mode, the configuration will be updated automatically.
 * Added search functionality to site browser
-* Added preload DNS option, see https://piwik.org/blog/2017/04/important-performance-optimizations-load-piwik-javascript-tracker-faster/
+* Added preload DNS option, see https://matomo.org/blog/2017/04/important-performance-optimizations-load-piwik-javascript-tracker-faster/
 * Added option to set link and download classes (expert settings)
 * Added option to choose which post types should be considered for annotations
-* Bugfix: Opening Piwik stats of a specific network site does not lead to the sitebrowser anymore
+* Bugfix: Opening Matomo stats of a specific network site does not lead to the sitebrowser anymore
 * Bugfix: Avoid unnecessary notices
 * Bugfix: Avoid a warning in proxy script
 * Bugfix: NoScript code is working again
@@ -170,19 +170,19 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Allow to modify the tracked user ID using the filter "wp-piwik_tracking_user_id"
 * Bugfix: Output of "post" shortcode was incorrectly placed, see https://wordpress.org/support/topic/post-shortcode-values-are-incorrectly-placed/
 * Bugfix: Usage of WP_PROXY_BYPASS_HOSTS, see https://wordpress.org/support/topic/bug-considering-wp_proxy_bypass_hosts-in-proxy-setups/
-* Bugfix: Proxy script did not work with cURL, see https://github.com/braekling/WP-Piwik/issues/48
+* Bugfix: Proxy script did not work with cURL, see https://github.com/braekling/WP-Matomo/issues/48
 * Bugfix: RSS feed tracking did not use proxy URL
 
 = 1.0.14 =
-* Action "wp-piwik_site_created" was extended by a site ID parameter, so it will deliver the Piwik site ID of the created site
-* Bugfix: Fixed an issue with Piwik site creation
-* Bugfix: Allow changes of a manually defined tracking code on networks, see https://github.com/braekling/WP-Piwik/issues/46
+* Action "wp-piwik_site_created" was extended by a site ID parameter, so it will deliver the Matomo site ID of the created site
+* Bugfix: Fixed an issue with Matomo site creation
+* Bugfix: Allow changes of a manually defined tracking code on networks, see https://github.com/braekling/WP-Matomo/issues/46
 
 = 1.0.13 =
 * Language updates
 * Readme typo fixes (thx to ujdhesa)
 * Perform your own code after site creation by using the action "wp-piwik_site_created"
-* Improved caching ID to avoid interferences, see https://github.com/braekling/WP-Piwik/issues/42
+* Improved caching ID to avoid interferences, see https://github.com/braekling/WP-Matomo/issues/42
 
 = 1.0.12 =
 * Removed notices and warnings
@@ -201,25 +201,25 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 
 = 1.0.9 =
 * Language updates
-* Bugfix: Deprecated get_currentuserinfo() replace. Thx to the infinity, see https://github.com/braekling/WP-Piwik/pull/21
+* Bugfix: Deprecated get_currentuserinfo() replace. Thx to the infinity, see https://github.com/braekling/WP-Matomo/pull/21
 * Bugfix: Overview widget will show proper values even if a period > 1 day is selected, see https://wordpress.org/support/topic/weird-numbers-im-wp-piwik
 
 = 1.0.8 =
 * Feature: Show "per post stats" and the "custom variable meta box" also on page and custom post edit
 * Bugfix: Fixed user tracking (moved the user tracking changes from general modifications to runtime modifications)
-* Bugfix: Fixed namespace error. Thx to thelfensdrfer, see https://github.com/braekling/WP-Piwik/pull/18
+* Bugfix: Fixed namespace error. Thx to thelfensdrfer, see https://github.com/braekling/WP-Matomo/pull/18
 * Bugfix: Warning on blog name change, see https://wordpress.org/support/topic/wp-piwik-triggers-warning-when-changing-blog-name
 
 = 1.0.7 =
-* Feature: User ID Tracking. Thx to Danw33, see https://github.com/braekling/WP-Piwik/pull/16
-* Feature: Site ID parameter added to opt-out shortcode. Thx to christianhennen, see https://github.com/braekling/WP-Piwik/pull/17
+* Feature: User ID Tracking. Thx to Danw33, see https://github.com/braekling/WP-Matomo/pull/16
+* Feature: Site ID parameter added to opt-out shortcode. Thx to christianhennen, see https://github.com/braekling/WP-Matomo/pull/17
 * Feature: Allow a local config file to affect the proxy script, see https://wordpress.org/support/topic/proxy-config-require-wp-loadphp-path
 * Bugfix: No script tag is not auto-inserted if the tracking code is manually defined.
 
 = 1.0.6 =
 * Language updates
 * Encoding & gettext fixes
-* Better error messages. Thx to mcguffin, see https://github.com/braekling/WP-Piwik/pull/14
+* Better error messages. Thx to mcguffin, see https://github.com/braekling/WP-Matomo/pull/14
 
 = 1.0.5 =
 * Several language updates.
@@ -228,15 +228,15 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 = 1.0.4 =
 * Several language updates.
 * Feature: Offer setDownloadExtensions option (see expert settings).
-* Feature: Consider configured HHTP connection method in proxy script.
+* Feature: Consider configured HTTP connection method in proxy script.
 * Widget: Visitor country added.
 * Bugfix: Annotations on scheduled posts will work.
 * Bugfix: Donation button will work again.
 
 = 1.0.3 =
 * Several language updates.
-* Switch to JSON renderer (Piwik 3 compatibility preparation)
-* Workaround: PHP API will work with Piwik 2.14+, see https://github.com/piwik/piwik/issues/8311 for further information.
+* Switch to JSON renderer (Matomo 3 compatibility preparation)
+* Workaround: PHP API will work with Matomo 2.14+, see https://github.com/piwik/piwik/issues/8311 for further information.
 * Feature: Heartbeat timer support
 * Feature: Expanded token & URL/path input fields
 * Bugfix: Site duplication fix.
@@ -252,14 +252,14 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Feature: Choose between POST and GET (expert settings).
 * Widget: System details added.
 * Widget: SEO widget re-enabled.
-* Update: Replaced deprecated Piwik API calls.
+* Update: Replaced deprecated Matomo API calls.
 * Bugfix: Settings link (toolbar, network mode) fixed.
 * Bugfix: Encode blog titles in PHP mode.
 * Bugfix: Pie charts won't show to long legends if more than 10 items are available.
 
 = 1.0.1 =
 * Several language updates, amongst others Portuges (Brazil) finished. See https://www.transifex.com/organization/piwik/dashboard/wp-piwik for further information.
-* Bugfix: If WP-Piwik is not configured properly or the connection to Piwik could not be established, the toolbar graph won't cause a JavaScript error anymore.
+* Bugfix: If WP-Matomo is not configured properly or the connection to Matomo could not be established, the toolbar graph won't cause a JavaScript error anymore.
 
 = 1.0.0 =
 * Feature: Expand "other" values on click
@@ -291,8 +291,8 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Typo fixes
  
 = 0.10.0.6 =
-* Bugfix: Option storage bug if WP-Piwik is used as single site plugin on blog networks
-* Bugfix: WP-Piwik will work without Piwik superuser access, again
+* Bugfix: Option storage bug if WP-Matomo is used as single site plugin on blog networks
+* Bugfix: WP-Matomo will work without Matomo superuser access, again
 * Bugfix: Choosing the site without auto config works again
 
 = 0.10.0.5 =
@@ -302,11 +302,11 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 = 0.10.0.4 =
 * Bugfix: Settings link in admin notices fixed
 * Bugfix: Shortcode result will appear where expected
-* Bugfix: 0.9.9.18 settings will be kept (if WP-Piwik was not reconfigured after updating to 0.10.0.3, yet)
-* Feature: If Piwik returns an error instead of a tracking code, this error will be visible
+* Bugfix: 0.9.9.18 settings will be kept (if WP-Matomo was not reconfigured after updating to 0.10.0.3, yet)
+* Feature: If Matomo returns an error instead of a tracking code, this error will be visible
 
 = 0.10.0.3 =
-* Public beta of WP-Piwik 1.0
+* Public beta of WP-Matomo 1.0
 * Full refactored code
 * Feature: Limit referral cookie lifetime
 * Feature: Enable content tracking
@@ -314,11 +314,11 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 = 0.9.9.18 =
 * Improvement: Define additional file extensions for tracking downloads
 * Improvement: Added a POT file to support translators (Note: 1.0 will change a lot, so please don't spend too much time in translating the current version, e.g., by creating an all new translation. With 1.0 I will also offer a translation platform to support your work.)
-* Improvement: If necessary, you can force Piwik to use HTTP or HTTPS now (e.g., to avoid redirections from http to https)
+* Improvement: If necessary, you can force Matomo to use HTTP or HTTPS now (e.g., to avoid redirections from http to https)
 * Avoided a naming collision with Woo Theme
 
 = 0.9.9.17 =
-* Improvement: Updated the Piwik proxy script and added cURL support if url_fopen is not available
+* Improvement: Updated the Matomo proxy script and added cURL support if url_fopen is not available
 * Bugfix: Setup bug, see https://wordpress.org/support/topic/piwik-urlpath-not-saved
 * Bugfix: CDN URL notice, see https://wordpress.org/support/topic/tracking-cdn-blank-gives-php-notice-which-breaks-the-trackback-js-code
 * Bugfix: Fixed zlib compression notice, see https://wordpress.org/support/topic/v09914-is-bad
@@ -342,9 +342,9 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 
 = 0.9.9.13 =
 * Improvement: Only activate/ load admin components if an admin page is actually loaded. Thanks to Michael!
-* Bugfix: Proxy tracking will work again. Piwik 2.7 or higher is recommended.
+* Bugfix: Proxy tracking will work again. Matomo 2.7 or higher is recommended.
 * Bugfix: Avoid a PHP notice in dashboard
-* NOTE: If you update Piwik and use the "add tracking code" feature, please also update your WP-Piwik tracking code: Just open the WP-Piwik tracking code settings and save them again. 
+* NOTE: If you update Matomo and use the "add tracking code" feature, please also update your WP-Matomo tracking code: Just open the WP-Matomo tracking code settings and save them again. 
 
 = 0.9.9.12 =
 * Bugfix: Avoid forced relogin on site change (WP network)
@@ -356,7 +356,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Bugfix: PHP API causes plain text output issue, see http://wordpress.org/support/topic/bug-cant-access-to-tabs-in-setting-after-configuration
 * Bugfix: PHP API causes WordPress multisite login issue, see http://wordpress.org/support/topic/causes-multisite-superadmin-subsite-login-problem
 * Bugfix: Removed PHP warning if annotations are enabled and annotations will work again, see http://wordpress.org/support/topic/warning-message-everywhere-in-the-backend-call_user_func_array-expects
-* Feature: "Track visitors across all subdomains" script changes are done by Piwik now, see http://wordpress.org/support/topic/track-across-subdomains-wp-on-subdomain?replies=2
+* Feature: "Track visitors across all subdomains" script changes are done by Matomo now, see http://wordpress.org/support/topic/track-across-subdomains-wp-on-subdomain?replies=2
 * Update: Flattr API update
 
 = 0.9.9.10 =
@@ -365,8 +365,8 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Feature: Show page views (actions) in "visitors last 30"
 
 = 0.9.9.9 =
-* Update: PHP API will use namespaces (Piwik 2.x compatibility)
-* Update: Piwik URL isn't necessary to use PHP API anymore.
+* Update: PHP API will use namespaces (Matomo 2.x compatibility)
+* Update: Matomo URL isn't necessary to use PHP API anymore.
 * Feature: Limit cookie lifetime
 * Feature: Track visitors across all subdomains
 * Feature: Disable custom var box if necessary
@@ -407,7 +407,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 
 = 0.9.9.2 =
 * Bugfix regarding tracking code changes in proxy mode, see http://wordpress.org/support/topic/problem-with-https-in-proxy-mode
-* Feature: Change text "WP-Piwik" in menu items and dashboard widgets
+* Feature: Change text "WP-Matomo" in menu items and dashboard widgets
 * Code cleanup ("new" first step)
 * Debugging: Logger added
 * Avoid double slash (//) in tracking code
@@ -417,8 +417,8 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Made <noscript> code optional. Move <noscript> code to site footer.
 
 = 0.9.9.0 =
-* Piwik 1.11 compatibility fixes (Piwik 1.11 required now!) 
-* Depending on Piwik 1.11 WP-Piwik will use async tracking now
+* Matomo 1.11 compatibility fixes (Matomo 1.11 required now!) 
+* Depending on Matomo 1.11 WP-Matomo will use async tracking now
 * CDN support added, see http://wordpress.org/support/topic/request-cdn-support-1
 
 = 0.9.8.1 =
@@ -437,20 +437,20 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Uninstall script added
 * Stats metaboxes: Date formatted
 * Use proxy settings defined in wp-config.php
-* Piwik.php proxy script added (see http://piwik.org/faq/how-to/#faq_132)
-* Bugfix: After upgrade, Piwik automatically places cookies again (http://wordpress.org/support/topic/after-upgrade-piwik-automatically-places-cookies-again)
+* Matomo.php proxy script added (see http://piwik.org/faq/how-to/#faq_132)
+* Bugfix: After upgrade, Matomo automatically places cookies again (http://wordpress.org/support/topic/after-upgrade-piwik-automatically-places-cookies-again)
 
 = 0.9.7 =
 * Shortcodes added
-* WP-Piwik will rename sites in Piwik if site name changes in WordPress
-* Bugfix: Tracking code changes should stay active after WP-Piwik updates
+* WP-Matomo will rename sites in Matomo if site name changes in WordPress
+* Bugfix: Tracking code changes should stay active after WP-Matomo updates
 
 = 0.9.6.3 =
-* Piwik 1.9+ compatibility fix (Piwik 1.9 required!)
+* Matomo 1.9+ compatibility fix (Matomo 1.9 required!)
 * Browser version details added
 
 = 0.9.6.2 =
-* Bugfix: ["Create Piwik site" link (network dashboard)](http://wordpress.org/support/topic/plugin-wp-piwik-you-attempted-to-access-the-networks-dashboard-but-you-do-not)
+* Bugfix: ["Create Matomo site" link (network dashboard)](http://wordpress.org/support/topic/plugin-wp-piwik-you-attempted-to-access-the-networks-dashboard-but-you-do-not)
 
 = 0.9.6.1 =
 * Toolbar graph bugfix
@@ -470,11 +470,11 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * WordPress 3.4 compatible (workaround)
 
 = 0.9.4 = 
-* Requires at least Piwik 1.8.2!
+* Requires at least Matomo 1.8.2!
 * Choose between HTTP API or PHP API
 * Show graph on WordPress Toolbar
 * Add option to disable cookies - Thanks to Mathias T.!
-* Update bugfix: Upgrading from WP-Piwik 0.8.7 or less will work again
+* Update bugfix: Upgrading from WP-Matomo 0.8.7 or less will work again
 * Some minor bugfixes
 
 = 0.9.3 =
@@ -487,7 +487,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Bugfix: New network sites without title will be created
 * Bugfix: Upgrading from old versions will work again
 * Tabbed settings
-* Debug tools added (testscript, site configuration overview and WP-Piwik reset)
+* Debug tools added (testscript, site configuration overview and WP-Matomo reset)
 * Support forum RSS feed
 * Language updates
 * Optionally use of set_time_limit(0) on stats page time out
@@ -523,12 +523,12 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * WP 3.2 compatible, metabox support
 
 = 0.8.8 =
-* Bugfix: Will also work with index.php in Piwik path
+* Bugfix: Will also work with index.php in Matomo path
 * Bugfix: last30 dashboard widget - show correct bounce rate
 
 = 0.8.7 =
 * New language files (Azerbaijani, Greek, Russian)
-* Fixed hardcoded database prefix (WPMU-Piwik)
+* Fixed hardcoded database prefix (WPMU-Matomo)
 * Minor bugfixes: avoid some PHP warnings
 
 = 0.8.6 =
@@ -550,7 +550,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Code clean up (not finished)
 
 = 0.8.3 =
-* Piwik 1.1+ compatibility fix
+* Matomo 1.1+ compatibility fix
 
 = 0.8.2 =
 * Bugfix: [WPMU URL update bug](http://wordpress.org/support/topic/plugin-wp-piwik-jscode-not-updated-when-saving-new-url-in-wpmu-mode)
@@ -579,7 +579,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Visitor chart: Added a red unique visitor average line
 * Visitor table: Added a TOTAL stats line
 * Pie charts: Show top 9 + "others", new color range
-* Option: Show Piwik shortcut in overview box
+* Option: Show Matomo shortcut in overview box
 * Some performance optimization
 
 = 0.6.4 =
@@ -608,7 +608,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Plugin stats
 
 = 0.3.2 =
-* If allow_url_fopen is disabled in php.ini, WP-Piwik tries to use CURL instead of file_get_contents
+* If allow_url_fopen is disabled in php.ini, WP-Matomo tries to use CURL instead of file_get_contents
 
 = 0.3.1 =
 * WordPress 2.8 compatible
@@ -617,7 +617,7 @@ Add WP-Piwik to your /wp-content/plugins folder and enable it as [Network Plugin
 * Partly optimized code
 
 = 0.3.0 =
-* WP-Piwik dashboard widgetized
+* WP-Matomo dashboard widgetized
 * Stats-boxes sortable and closeable
 * German language file added
 * Browser stats and bounced visitors
