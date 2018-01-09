@@ -104,7 +104,7 @@ class Sitebrowser extends \WP_List_Table {
 	private function showSearchForm() {
         ?>
         <form method="post">
-            <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />
+            <input type="hidden" name="page" value="<?php echo filter_var($_REQUEST['page'], FILTER_SANITIZE_STRING) ?>" />
             <?php $this->search_box('Search domain and path', 'wpPiwikSiteSearch'); ?>
         </form>
         <?php
