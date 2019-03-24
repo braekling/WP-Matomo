@@ -43,25 +43,26 @@
 				$sum = 0;
 				$js = array();
 				$class = array();
-				foreach ($response as $row) {
-					$count++;
-					$sum += isset($row[$unique])?$row[$unique]:0;
-					if ($count < $this->limit)
-						$tableBody[$row['label']] = array($row['label'], $row[$unique], 0);
-					elseif (!isset($tableBody['Others'])) {
-						$tableBody['Others'] = array($row['label'], $row[$unique], 0);
-						$class['Others'] = 'wp-piwik-hideDetails';
-						$js['Others'] = '$j'."( '.wp-piwik-hideDetails' ).toggle( 'hidden' );";
-						$tableBody[$row['label']] = array($row['label'], $row[$unique], 0);
-						$class[$row['label']] = 'wp-piwik-hideDetails hidden';
-						$js[$row['label']] = '$j'."( '.wp-piwik-hideDetails' ).toggle( 'hidden' );";
-					} else {
-						$tableBody['Others'][1] += $row[$unique];
-						$tableBody[$row['label']] = array($row['label'], $row[$unique], 0);
-						$class[$row['label']] = 'wp-piwik-hideDetails hidden';
-						$js[$row['label']] = '$j'."( '.wp-piwik-hideDetails' ).toggle( 'hidden' );";
-					}
-				}
+                if (is_array($response))
+                    foreach ($response as $row) {
+                        $count++;
+                        $sum += isset($row[$unique])?$row[$unique]:0;
+                        if ($count < $this->limit)
+                            $tableBody[$row['label']] = array($row['label'], $row[$unique], 0);
+                        elseif (!isset($tableBody['Others'])) {
+                            $tableBody['Others'] = array($row['label'], $row[$unique], 0);
+                            $class['Others'] = 'wp-piwik-hideDetails';
+                            $js['Others'] = '$j'."( '.wp-piwik-hideDetails' ).toggle( 'hidden' );";
+                            $tableBody[$row['label']] = array($row['label'], $row[$unique], 0);
+                            $class[$row['label']] = 'wp-piwik-hideDetails hidden';
+                            $js[$row['label']] = '$j'."( '.wp-piwik-hideDetails' ).toggle( 'hidden' );";
+                        } else {
+                            $tableBody['Others'][1] += $row[$unique];
+                            $tableBody[$row['label']] = array($row['label'], $row[$unique], 0);
+                            $class[$row['label']] = 'wp-piwik-hideDetails hidden';
+                            $js[$row['label']] = '$j'."( '.wp-piwik-hideDetails' ).toggle( 'hidden' );";
+                        }
+                    }
 				if ($count > $this->limit)
 					$tableBody['Others'][0] = __('Others', 'wp-piwik');
 				elseif ($count == $this->limit) {

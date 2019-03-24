@@ -1,12 +1,12 @@
 <?php
 /*
-Plugin Name: WP-Piwik
+Plugin Name: WP-Matomo
 
 Plugin URI: http://wordpress.org/extend/plugins/wp-piwik/
 
-Description: Adds Piwik statistics to your WordPress dashboard and is also able to add the Piwik Tracking Code to your blog.
+Description: Adds Matomo statistics to your WordPress dashboard and is also able to add the Matomo Tracking Code to your blog.
 
-Version: 1.0.19
+Version: 1.0.20
 Author: Andr&eacute; Br&auml;kling
 Author URI: http://www.braekling.de
 Text Domain: wp-piwik

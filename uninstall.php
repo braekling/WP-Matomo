@@ -11,6 +11,7 @@ $globalSettings = array(
 	'piwik_url',
 	'piwik_path',
 	'piwik_user',
+	'matomo_user',
 	'piwik_token',
 	'auto_site_config',
 	'default_date',

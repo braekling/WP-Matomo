@@ -52,23 +52,23 @@ class Settings extends \WP_Piwik\Admin {
 			<tbody>
 			<?php
 		$submitButton = '<tr><td colspan="2"><p class="submit"><input name="Submit" type="submit" class="button-primary" value="' . esc_attr__ ( 'Save Changes' ) . '" /></p></td></tr>';
-		printf ( '<tr><td colspan="2">%s</td></tr>', __ ( 'Thanks for using WP-Piwik!', 'wp-piwik' ) );
+		printf ( '<tr><td colspan="2">%s</td></tr>', __ ( 'Thanks for using WP-Matomo!', 'wp-piwik' ) );
 		if (self::$wpPiwik->isConfigured ()) {
 			if (! empty ( $piwikVersion ) && !is_array( $piwikVersion )) {
-				$this->showText ( sprintf ( __ ( 'WP-Piwik %s is successfully connected to Piwik %s.', 'wp-piwik' ), self::$wpPiwik->getPluginVersion (), $piwikVersion ) . ' ' . (! self::$wpPiwik->isNetworkMode () ? sprintf ( __ ( 'You are running WordPress %s.', 'wp-piwik' ), get_bloginfo ( 'version' ) ) : sprintf ( __ ( 'You are running a WordPress %s blog network (WPMU). WP-Piwik will handle your sites as different websites.', 'wp-piwik' ), get_bloginfo ( 'version' ) )) );
+				$this->showText ( sprintf ( __ ( 'WP-Matomo %s is successfully connected to Matomo %s.', 'wp-piwik' ), self::$wpPiwik->getPluginVersion (), $piwikVersion ) . ' ' . (! self::$wpPiwik->isNetworkMode () ? sprintf ( __ ( 'You are running WordPress %s.', 'wp-piwik' ), get_bloginfo ( 'version' ) ) : sprintf ( __ ( 'You are running a WordPress %s blog network (WPMU). WP-Matomo will handle your sites as different websites.', 'wp-piwik' ), get_bloginfo ( 'version' ) )) );
 			} else {
 				$errorMessage = \WP_Piwik\Request::getLastError();
 				if ( empty( $errorMessage ) )
-					$this->showBox ( 'error', 'no', sprintf ( __ ( 'WP-Piwik %s was not able to connect to Piwik using your configuration. Check the &raquo;Connect to Piwik&laquo; section below.', 'wp-piwik' ), self::$wpPiwik->getPluginVersion () ) );
+					$this->showBox ( 'error', 'no', sprintf ( __ ( 'WP-Matomo %s was not able to connect to Matomo using your configuration. Check the &raquo;Connect to Matomo&laquo; section below.', 'wp-piwik' ), self::$wpPiwik->getPluginVersion () ) );
 				else
-					$this->showBox ( 'error', 'no', sprintf ( __ ( 'WP-Piwik %s was not able to connect to Piwik using your configuration. During connection the following error occured: <br /><code>%s</code>', 'wp-piwik' ), self::$wpPiwik->getPluginVersion (), $errorMessage ) );
+					$this->showBox ( 'error', 'no', sprintf ( __ ( 'WP-Matomo %s was not able to connect to Matomo using your configuration. During connection the following error occured: <br /><code>%s</code>', 'wp-piwik' ), self::$wpPiwik->getPluginVersion (), $errorMessage ) );
 			}
 		} else
-			$this->showBox ( 'error', 'no', sprintf ( __ ( 'WP-Piwik %s has to be connected to Piwik first. Check the &raquo;Connect to Piwik&laquo; section below.', 'wp-piwik' ), self::$wpPiwik->getPluginVersion () ) );
+			$this->showBox ( 'error', 'no', sprintf ( __ ( 'WP-Matomo %s has to be connected to Matomo first. Check the &raquo;Connect to Matomo&laquo; section below.', 'wp-piwik' ), self::$wpPiwik->getPluginVersion () ) );
 
 		$tabs ['connect'] = array (
 				'icon' => 'admin-plugins',
-				'name' => __('Connect to Piwik', 'wp-piwik')
+				'name' => __('Connect to Matomo', 'wp-piwik')
 		);
 		if (self::$wpPiwik->isConfigured ()) {
 			$tabs ['statistics'] = array (
@@ -103,32 +103,34 @@ class Settings extends \WP_Piwik\Admin {
 		echo '</h2></td></tr></tbody></table><table id="connect" class="wp-piwik_menu-tab"><tbody>';
 
 		if (! self::$wpPiwik->isConfigured ())
-			$this->showBox ( 'updated', 'info', sprintf ( '%s <a href="%s">%s</a> %s <a href="%s">%s</a>.', __ ( 'WP-Piwik is a WordPress plugin to show a selection of Piwik stats in your WordPress admin dashboard and to add and configure your Piwik tracking code. To use this you will need your own Piwik instance. If you do not already have a Piwik setup, you have two simple options: use either', 'wp-piwik' ), 'http://piwik.org/', __ ( 'a self-hosted Piwik', 'wp-piwik' ), __ ( 'or', 'wp-piwik' ), 'https://www.innocraft.cloud/?pk_campaign=WP-Piwik', __ ( 'a cloud-hosted Piwik by InnoCraft', 'wp-piwik' ) ) );
+			$this->showBox ( 'updated', 'info', sprintf ( '%s <a href="%s">%s</a> %s <a href="%s">%s</a>.', __ ( 'WP-Matomo is a WordPress plugin to show a selection of Matomo stats in your WordPress admin dashboard and to add and configure your Matomo tracking code. To use this you will need your own Matomo instance. If you do not already have a Matomo setup, you have two simple options: use either', 'wp-piwik' ), 'http://piwik.org/', __ ( 'a self-hosted Matomo', 'wp-piwik' ), __ ( 'or', 'wp-piwik' ), 'https://www.innocraft.cloud/?pk_campaign=WP-Matomo', __ ( 'a cloud-hosted Matomo by InnoCraft', 'wp-piwik' ) ) );
 
 		if (! function_exists ( 'curl_init' ) && ! ini_get ( 'allow_url_fopen' ))
-			$this->showBox ( 'error', 'no', __ ( 'Neither cURL nor fopen are available. So WP-Piwik can not use the HTTP API and not connect to InnoCraft Cloud.' ) . ' ' . sprintf ( '<a href="%s">%s.</a>', 'https://wordpress.org/plugins/wp-piwik/faq/', __ ( 'More information', 'wp-piwik' ) ) );
+			$this->showBox ( 'error', 'no', __ ( 'Neither cURL nor fopen are available. So WP-Matomo can not use the HTTP API and not connect to InnoCraft Cloud.' ) . ' ' . sprintf ( '<a href="%s">%s.</a>', 'https://wordpress.org/plugins/wp-piwik/faq/', __ ( 'More information', 'wp-piwik' ) ) );
 
-		$description = sprintf ( '%s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s', __ ( 'You can choose between three connection methods:', 'wp-piwik' ), __ ( 'Self-hosted (HTTP API, default)', 'wp-piwik' ), __ ( 'This is the default option for a self-hosted Piwik and should work for most configurations. WP-Piwik will connect to Piwik using http(s).', 'wp-piwik' ), __ ( 'Self-hosted (PHP API)', 'wp-piwik' ), __ ( 'Choose this, if your self-hosted Piwik and WordPress are running on the same machine and you know the full server path to your Piwik instance.', 'wp-piwik' ), __ ( 'Cloud-hosted (InnoCraft Cloud)', 'wp-piwik' ), __ ( 'If you are using a cloud-hosted Piwik by InnoCraft, you can simply use this option.', 'wp-piwik' ) );
-		$this->showSelect ( 'piwik_mode', __ ( 'Piwik Mode', 'wp-piwik' ), array (
-				'disabled' => __ ( 'Disabled (WP-Piwik will not connect to Piwik)', 'wp-piwik' ),
+		$description = sprintf ( '%s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s', __ ( 'You can choose between three connection methods:', 'wp-piwik' ), __ ( 'Self-hosted (HTTP API, default)', 'wp-piwik' ), __ ( 'This is the default option for a self-hosted Matomo and should work for most configurations. WP-Matomo will connect to Matomo using http(s).', 'wp-piwik' ), __ ( 'Self-hosted (PHP API)', 'wp-piwik' ), __ ( 'Choose this, if your self-hosted Matomo and WordPress are running on the same machine and you know the full server path to your Matomo instance.', 'wp-piwik' ), __ ( 'Cloud-hosted (Matomo Cloud)', 'wp-piwik' ), __ ( 'If you are using a cloud-hosted Matomo by InnoCraft, you can simply use this option.', 'wp-piwik' ) );
+		$this->showSelect ( 'piwik_mode', __ ( 'Matomo Mode', 'wp-piwik' ), array (
+				'disabled' => __ ( 'Disabled (WP-Matomo will not connect to Matomo)', 'wp-piwik' ),
 				'http' => __ ( 'Self-hosted (HTTP API, default)', 'wp-piwik' ),
 				'php' => __ ( 'Self-hosted (PHP API)', 'wp-piwik' ),
+                'cloud-matomo' => __('Cloud-hosted (Matomo Cloud)', 'wp-piwik'),
 				'cloud' => __ ( 'Cloud-hosted (InnoCraft Cloud)', 'wp-piwik' )
 		), $description, '$j(\'tr.wp-piwik-mode-option\').addClass(\'hidden\'); $j(\'#wp-piwik-mode-option-\' + $j(\'#piwik_mode\').val()).removeClass(\'hidden\');', false, '', self::$wpPiwik->isConfigured () );
 
-		$this->showInput ( 'piwik_url', __ ( 'Piwik URL', 'wp-piwik' ), __( 'Enter your Piwik URL. This is the same URL you use to access your Piwik instance, e.g. http://www.example.com/piwik/.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'http', 'wp-piwik-mode-option', 'http', self::$wpPiwik->isConfigured (), true );
-		$this->showInput ( 'piwik_path', __ ( 'Piwik path', 'wp-piwik' ), __( 'Enter the file path to your Piwik instance, e.g. /var/www/piwik/.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'php', 'wp-piwik-mode-option', 'php', self::$wpPiwik->isConfigured (), true );
-		$this->showInput ( 'piwik_user', __ ( 'Piwik subdomain', 'wp-piwik' ), __( 'Enter your InnoCraft Cloud subdomain. It is also part of your URL: https://SUBDOMAIN.innocraft.cloud.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'cloud', 'wp-piwik-mode-option', 'cloud', self::$wpPiwik->isConfigured () );
-		$this->showInput ( 'piwik_token', __ ( 'Auth token', 'wp-piwik' ), __( 'Enter your Piwik auth token here. It is an alphanumerical code like 0a1b2c34d56e78901fa2bc3d45678efa.', 'wp-piwik' ).' '.sprintf ( __ ( 'See %sWP-Piwik FAQ%s.', 'wp-piwik' ), '<a href="https://wordpress.org/plugins/wp-piwik/faq/" target="_BLANK">', '</a>' ), false, '', '', self::$wpPiwik->isConfigured (), true );
+		$this->showInput ( 'piwik_url', __ ( 'Matomo URL', 'wp-piwik' ), __( 'Enter your Matomo URL. This is the same URL you use to access your Matomo instance, e.g. http://www.example.com/matomo/.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'http', 'wp-piwik-mode-option', 'http', self::$wpPiwik->isConfigured (), true );
+		$this->showInput ( 'piwik_path', __ ( 'Matomo path', 'wp-piwik' ), __( 'Enter the file path to your Matomo instance, e.g. /var/www/matomo/.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'php', 'wp-piwik-mode-option', 'php', self::$wpPiwik->isConfigured (), true );
+		$this->showInput ( 'piwik_user', __ ( 'Innocraft subdomain', 'wp-piwik' ), __( 'Enter your InnoCraft Cloud subdomain. It is also part of your URL: https://SUBDOMAIN.innocraft.cloud.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'cloud', 'wp-piwik-mode-option', 'cloud', self::$wpPiwik->isConfigured () );
+        $this->showInput ( 'matomo_user', __ ( 'Matomo subdomain', 'wp-piwik' ), __( 'Enter your Matomo Cloud subdomain. It is also part of your URL: https://SUBDOMAIN.matomo.cloud.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'cloud-matomo', 'wp-piwik-mode-option', 'cloud-matomo', self::$wpPiwik->isConfigured () );
+		$this->showInput ( 'piwik_token', __ ( 'Auth token', 'wp-piwik' ), __( 'Enter your Matomo auth token here. It is an alphanumerical code like 0a1b2c34d56e78901fa2bc3d45678efa.', 'wp-piwik' ).' '.sprintf ( __ ( 'See %sWP-Matomo FAQ%s.', 'wp-piwik' ), '<a href="https://wordpress.org/plugins/wp-piwik/faq/" target="_BLANK">', '</a>' ), false, '', '', self::$wpPiwik->isConfigured (), true );
 
 		// Site configuration
 		$piwikSiteId = self::$wpPiwik->isConfigured () ? self::$wpPiwik->getPiwikSiteId () : false;
 		if (! self::$wpPiwik->isNetworkMode() ) {
-			$this->showCheckbox ( 'auto_site_config', __ ( 'Auto config', 'wp-piwik' ), __ ( 'Check this to automatically choose your blog from your Piwik sites by URL. If your blog is not added to Piwik yet, WP-Piwik will add a new site.', 'wp-piwik' ), false, '$j(\'tr.wp-piwik-auto-option\').toggle(\'hidden\');' . ($piwikSiteId ? '$j(\'#site_id\').val(' . $piwikSiteId . ');' : '') );
+			$this->showCheckbox ( 'auto_site_config', __ ( 'Auto config', 'wp-piwik' ), __ ( 'Check this to automatically choose your blog from your Matomo sites by URL. If your blog is not added to Matomo yet, WP-Matomo will add a new site.', 'wp-piwik' ), false, '$j(\'tr.wp-piwik-auto-option\').toggle(\'hidden\');' . ($piwikSiteId ? '$j(\'#site_id\').val(' . $piwikSiteId . ');' : '') );
 			if (self::$wpPiwik->isConfigured ()) {
 				$piwikSiteList = self::$wpPiwik->getPiwikSiteDetails ();
 				if (isset($piwikSiteList['result']) && $piwikSiteList['result'] == 'error') {
-					$this->showBox ( 'error', 'no', sprintf ( __ ( 'WP-Piwik %s was not able to get sites with at least view access: <br /><code>%s</code>', 'wp-piwik' ), self::$wpPiwik->getPluginVersion (), $errorMessage ) );
+					$this->showBox ( 'error', 'no', sprintf ( __ ( 'WP-Matomo %s was not able to get sites with at least view access: <br /><code>%s</code>', 'wp-piwik' ), self::$wpPiwik->getPluginVersion (), $errorMessage ) );
 				} else {
 					if (is_array($piwikSiteList))
 						foreach ($piwikSiteList as $details)
@@ -143,7 +145,7 @@ class Settings extends \WP_Piwik\Admin {
 						foreach ($piwikSiteDetails as $key => $siteData)
 							$siteList [$siteData['idsite']] = $siteData ['name'] . ' (' . $siteData ['main_url'] . ')';
 					if (isset($siteList))
-						$this->showSelect('site_id', __('Select site', 'wp-piwik'), $siteList, 'Choose the Piwik site corresponding to this blog.', '', self::$settings->getGlobalOption('auto_site_config'), 'wp-piwik-auto-option', true, false);
+						$this->showSelect('site_id', __('Select site', 'wp-piwik'), $siteList, 'Choose the Matomo site corresponding to this blog.', '', self::$settings->getGlobalOption('auto_site_config'), 'wp-piwik-auto-option', true, false);
 				}
 			}
 		} else echo '<tr class="hidden"><td colspan="2"><input type="hidden" name="wp-piwik[auto_site_config]" value="1" /></td></tr>';
@@ -152,7 +154,7 @@ class Settings extends \WP_Piwik\Admin {
 
 		echo '</tbody></table><table id="statistics" class="wp-piwik_menu-tab hidden"><tbody>';
 		// Stats configuration
-		$this->showSelect ( 'default_date', __ ( 'Piwik default date', 'wp-piwik' ), array (
+		$this->showSelect ( 'default_date', __ ( 'Matomo default date', 'wp-piwik' ), array (
 				'today' => __ ( 'Today', 'wp-piwik' ),
 				'yesterday' => __ ( 'Yesterday', 'wp-piwik' ),
 				'current_month' => __ ( 'Current month', 'wp-piwik' ),
@@ -169,13 +171,13 @@ class Settings extends \WP_Piwik\Admin {
 				'yesterday' => __ ( 'Yesterday', 'wp-piwik' ),
 				'today' => __ ( 'Today', 'wp-piwik' ),
 				'last30' => __ ( 'Last 30 days', 'wp-piwik' )
-		), __ ( 'Enable WP-Piwik dashboard widget &quot;Overview&quot;.', 'wp-piwik' ) );
+		), __ ( 'Enable WP-Matomo dashboard widget &quot;Overview&quot;.', 'wp-piwik' ) );
 
-		$this->showCheckbox ( 'dashboard_chart', __ ( 'Dashboard graph', 'wp-piwik' ), __ ( 'Enable WP-Piwik dashboard widget &quot;Graph&quot;.', 'wp-piwik' ) );
+		$this->showCheckbox ( 'dashboard_chart', __ ( 'Dashboard graph', 'wp-piwik' ), __ ( 'Enable WP-Matomo dashboard widget &quot;Graph&quot;.', 'wp-piwik' ) );
 
-		$this->showCheckbox ( 'dashboard_seo', __ ( 'Dashboard SEO', 'wp-piwik' ), __ ( 'Enable WP-Piwik dashboard widget &quot;SEO&quot;.', 'wp-piwik' ) . ' (' . __ ( 'Slow!', 'wp-piwik' ) . ')' );
+		$this->showCheckbox ( 'dashboard_seo', __ ( 'Dashboard SEO', 'wp-piwik' ), __ ( 'Enable WP-Matomo dashboard widget &quot;SEO&quot;.', 'wp-piwik' ) . ' (' . __ ( 'Slow!', 'wp-piwik' ) . ')' );
 
-        $this->showCheckbox ( 'dashboard_ecommerce', __ ( 'Dashboard e-commerce', 'wp-piwik' ), __ ( 'Enable WP-Piwik dashboard widget &quot;E-commerce&quot;.', 'wp-piwik' ) );
+        $this->showCheckbox ( 'dashboard_ecommerce', __ ( 'Dashboard e-commerce', 'wp-piwik' ), __ ( 'Enable WP-Matomo dashboard widget &quot;E-commerce&quot;.', 'wp-piwik' ) );
 
 		$this->showCheckbox ( 'toolbar', __ ( 'Show graph on WordPress Toolbar', 'wp-piwik' ), __ ( 'Display a last 30 days visitor graph on WordPress\' toolbar.', 'wp-piwik' ) );
 
@@ -190,9 +192,9 @@ class Settings extends \WP_Piwik\Admin {
 
 		$this->showCheckbox ( 'perpost_stats', __ ( 'Show per post stats', 'wp-piwik' ), __ ( 'Show stats about single posts at the post edit admin page.', 'wp-piwik' ) );
 
-		$this->showCheckbox ( 'piwik_shortcut', __ ( 'Piwik shortcut', 'wp-piwik' ), __ ( 'Display a shortcut to Piwik itself.', 'wp-piwik' ) );
+		$this->showCheckbox ( 'piwik_shortcut', __ ( 'Matomo shortcut', 'wp-piwik' ), __ ( 'Display a shortcut to Matomo itself.', 'wp-piwik' ) );
 
-		$this->showInput ( 'plugin_display_name', __ ( 'WP-Piwik display name', 'wp-piwik' ), __ ( 'Plugin name shown in WordPress.', 'wp-piwik' ) );
+		$this->showInput ( 'plugin_display_name', __ ( 'WP-Matomo display name', 'wp-piwik' ), __ ( 'Plugin name shown in WordPress.', 'wp-piwik' ) );
 
 		$this->showCheckbox ( 'shortcodes', __ ( 'Enable shortcodes', 'wp-piwik' ), __ ( 'Enable shortcodes in post or page content.', 'wp-piwik' ) );
 
@@ -205,7 +207,7 @@ class Settings extends \WP_Piwik\Admin {
 		$isNotGeneratedTracking = $isNotTracking || self::$settings->getGlobalOption ( 'track_mode' ) == 'manually';
 		$fullGeneratedTrackingGroup = 'wp-piwik-track-option wp-piwik-track-option-default wp-piwik-track-option-js wp-piwik-track-option-proxy';
 
-		$description = sprintf ( '%s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s', __ ( 'You can choose between four tracking code modes:', 'wp-piwik' ), __ ( 'Disabled', 'wp-piwik' ), __ ( 'WP-Piwik will not add the tracking code. Use this, if you want to add the tracking code to your template files or you use another plugin to add the tracking code.', 'wp-piwik' ), __ ( 'Default tracking', 'wp-piwik' ), __ ( 'WP-Piwik will use Piwik\'s standard tracking code.', 'wp-piwik' ), __ ( 'Use js/index.php', 'wp-piwik' ), __ ( 'You can choose this tracking code, to deliver a minified proxy code and to avoid using the files called piwik.js or piwik.php.', 'wp-piwik' ).' '.sprintf( __( 'See %sreadme file%s.', 'wp-piwik' ), '<a href="http://demo.piwik.org/js/README" target="_BLANK">', '</a>'), __ ( 'Use proxy script', 'wp-piwik' ), __ ( 'Use this tracking code to not reveal the Piwik server URL.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik FAQ%s.', 'wp-piwik' ), '<a href="http://piwik.org/faq/how-to/#faq_132" target="_BLANK">', '</a>' ) , __ ( 'Enter manually', 'wp-piwik' ), __ ( 'Enter your own tracking code manually. You can choose one of the prior options, pre-configure your tracking code and switch to manually editing at last.', 'wp-piwik' ).( self::$wpPiwik->isNetworkMode() ? ' '.__ ( 'Use the placeholder {ID} to add the Piwik site ID.', 'wp-piwik' ) : '' ) );
+		$description = sprintf ( '%s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s', __ ( 'You can choose between four tracking code modes:', 'wp-piwik' ), __ ( 'Disabled', 'wp-piwik' ), __ ( 'WP-Matomo will not add the tracking code. Use this, if you want to add the tracking code to your template files or you use another plugin to add the tracking code.', 'wp-piwik' ), __ ( 'Default tracking', 'wp-piwik' ), __ ( 'WP-Matomo will use Matomo\'s standard tracking code.', 'wp-piwik' ), __ ( 'Use js/index.php', 'wp-piwik' ), __ ( 'You can choose this tracking code, to deliver a minified proxy code and to avoid using the files called piwik.js or piwik.php.', 'wp-piwik' ).' '.sprintf( __( 'See %sreadme file%s.', 'wp-piwik' ), '<a href="http://demo.piwik.org/js/README" target="_BLANK">', '</a>'), __ ( 'Use proxy script', 'wp-piwik' ), __ ( 'Use this tracking code to not reveal the Matomo server URL.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sMatomo FAQ%s.', 'wp-piwik' ), '<a href="http://piwik.org/faq/how-to/#faq_132" target="_BLANK">', '</a>' ) , __ ( 'Enter manually', 'wp-piwik' ), __ ( 'Enter your own tracking code manually. You can choose one of the prior options, pre-configure your tracking code and switch to manually editing at last.', 'wp-piwik' ).( self::$wpPiwik->isNetworkMode() ? ' '.__ ( 'Use the placeholder {ID} to add the Matomo site ID.', 'wp-piwik' ) : '' ) );
 		$this->showSelect ( 'track_mode', __ ( 'Add tracking code', 'wp-piwik' ), array (
 				'disabled' => __ ( 'Disabled', 'wp-piwik' ),
 				'default' => __ ( 'Default tracking', 'wp-piwik' ),
@@ -225,28 +227,28 @@ class Settings extends \WP_Piwik\Admin {
 
 		$this->showCheckbox ( 'track_noscript', __ ( 'Add &lt;noscript&gt;', 'wp-piwik' ), __ ( 'Adds the &lt;noscript&gt; code to your footer.', 'wp-piwik' ) . ' ' . __ ( 'Disabled in proxy mode.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'track_mode' ) == 'proxy', 'wp-piwik-track-option wp-piwik-track-option-default wp-piwik-track-option-js wp-piwik-track-option-manually' );
 
-		$this->showCheckbox ( 'track_nojavascript', __ ( 'Add rec parameter to noscript code', 'wp-piwik' ), __ ( 'Enable tracking for visitors without JavaScript (not recommended).', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik FAQ%s.', 'wp-piwik' ), '<a href="http://piwik.org/faq/how-to/#faq_176" target="_BLANK">', '</a>' ) . ' ' . __ ( 'Disabled in proxy mode.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'track_mode' ) == 'proxy', 'wp-piwik-track-option wp-piwik-track-option-default wp-piwik-track-option-js wp-piwik-track-option-manually' );
+		$this->showCheckbox ( 'track_nojavascript', __ ( 'Add rec parameter to noscript code', 'wp-piwik' ), __ ( 'Enable tracking for visitors without JavaScript (not recommended).', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sMatomo FAQ%s.', 'wp-piwik' ), '<a href="http://piwik.org/faq/how-to/#faq_176" target="_BLANK">', '</a>' ) . ' ' . __ ( 'Disabled in proxy mode.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'track_mode' ) == 'proxy', 'wp-piwik-track-option wp-piwik-track-option-default wp-piwik-track-option-js wp-piwik-track-option-manually' );
 
 		$this->showSelect ( 'track_content', __ ( 'Enable content tracking', 'wp-piwik' ), array (
 				'disabled' => __ ( 'Disabled', 'wp-piwik' ),
 				'all' => __ ( 'Track all content blocks', 'wp-piwik' ),
 				'visible' => __ ( 'Track only visible content blocks', 'wp-piwik' )
-		), __ ( 'Content tracking allows you to track interaction with the content of a web page or application.' ) . ' ' . sprintf ( __ ( 'See %sPiwik documentation%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/guides/content-tracking" target="_BLANK">', '</a>' ), '', $isNotTracking, $fullGeneratedTrackingGroup . ' wp-piwik-track-option-manually' );
+		), __ ( 'Content tracking allows you to track interaction with the content of a web page or application.' ) . ' ' . sprintf ( __ ( 'See %sMatomo documentation%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/guides/content-tracking" target="_BLANK">', '</a>' ), '', $isNotTracking, $fullGeneratedTrackingGroup . ' wp-piwik-track-option-manually' );
 
-		$this->showCheckbox ( 'track_search', __ ( 'Track search', 'wp-piwik' ), __ ( 'Use Piwik\'s advanced Site Search Analytics feature.' ) . ' ' . sprintf ( __ ( 'See %sPiwik documentation%s.', 'wp-piwik' ), '<a href="http://piwik.org/docs/site-search/#track-site-search-using-the-tracking-api-advanced-users-only" target="_BLANK">', '</a>' ), $isNotTracking, $fullGeneratedTrackingGroup . ' wp-piwik-track-option-manually' );
+		$this->showCheckbox ( 'track_search', __ ( 'Track search', 'wp-piwik' ), __ ( 'Use Matomo\'s advanced Site Search Analytics feature.' ) . ' ' . sprintf ( __ ( 'See %sMatomo documentation%s.', 'wp-piwik' ), '<a href="http://piwik.org/docs/site-search/#track-site-search-using-the-tracking-api-advanced-users-only" target="_BLANK">', '</a>' ), $isNotTracking, $fullGeneratedTrackingGroup . ' wp-piwik-track-option-manually' );
 
-		$this->showCheckbox ( 'track_404', __ ( 'Track 404', 'wp-piwik' ), __ ( 'WP-Piwik can automatically add a 404-category to track 404-page-visits.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik FAQ%s.', 'wp-piwik' ), '<a href="http://piwik.org/faq/how-to/faq_60/" target="_BLANK">', '</a>' ), $isNotTracking, $fullGeneratedTrackingGroup . ' wp-piwik-track-option-manually' );
+		$this->showCheckbox ( 'track_404', __ ( 'Track 404', 'wp-piwik' ), __ ( 'WP-Matomo can automatically add a 404-category to track 404-page-visits.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sMatomo FAQ%s.', 'wp-piwik' ), '<a href="http://piwik.org/faq/how-to/faq_60/" target="_BLANK">', '</a>' ), $isNotTracking, $fullGeneratedTrackingGroup . ' wp-piwik-track-option-manually' );
 
         echo '<tr class="' . $fullGeneratedTrackingGroup . ' wp-piwik-track-option-manually' . ($isNotTracking ? ' hidden' : '') . '">';
         echo '<th scope="row"><label for="add_post_annotations">' . __ ( 'Add annotation on new post of type', 'wp-piwik' ) . '</label>:</th><td>';
         $filter = self::$settings->getGlobalOption ( 'add_post_annotations' );
         foreach ( get_post_types(array(), 'objects') as $post_type )
             echo '<input type="checkbox" ' . (isset ( $filter [$post_type->name] ) && $filter [$post_type->name] ? 'checked="checked" ' : '') . 'value="1" name="wp-piwik[add_post_annotations][' . $post_type->name . ']" /> ' . $post_type->label . ' &nbsp; ';
-        echo '<span class="dashicons dashicons-editor-help" onclick="$j(\'#add_post_annotations-desc\').toggleClass(\'hidden\');"></span> <p class="description hidden" id="add_post_annotations-desc">' . sprintf ( __ ( 'See %sPiwik documentation%s.', 'wp-piwik' ), '<a href="http://piwik.org/docs/annotations/" target="_BLANK">', '</a>' ) . '</p></td></tr>';
+        echo '<span class="dashicons dashicons-editor-help" onclick="$j(\'#add_post_annotations-desc\').toggleClass(\'hidden\');"></span> <p class="description hidden" id="add_post_annotations-desc">' . sprintf ( __ ( 'See %sMatomo documentation%s.', 'wp-piwik' ), '<a href="http://piwik.org/docs/annotations/" target="_BLANK">', '</a>' ) . '</p></td></tr>';
 
-		$this->showCheckbox ( 'add_customvars_box', __ ( 'Show custom variables box', 'wp-piwik' ), __ ( ' Show a &quot;custom variables&quot; edit box on post edit page.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik documentation%s.', 'wp-piwik' ), '<a href="http://piwik.org/docs/custom-variables/" target="_BLANK">', '</a>' ), $isNotGeneratedTracking, $fullGeneratedTrackingGroup . ' wp-piwik-track-option-manually' );
+		$this->showCheckbox ( 'add_customvars_box', __ ( 'Show custom variables box', 'wp-piwik' ), __ ( ' Show a &quot;custom variables&quot; edit box on post edit page.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sMatomo documentation%s.', 'wp-piwik' ), '<a href="http://piwik.org/docs/custom-variables/" target="_BLANK">', '</a>' ), $isNotGeneratedTracking, $fullGeneratedTrackingGroup . ' wp-piwik-track-option-manually' );
 
-		$this->showInput ( 'add_download_extensions', __ ( 'Add new file types for download tracking', 'wp-piwik' ), __ ( 'Add file extensions for download tracking, divided by a vertical bar (&#124;).', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik documentation%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/guides/tracking-javascript-guide#file-extensions-for-tracking-downloads" target="_BLANK">', '</a>' ), $isNotGeneratedTracking, $fullGeneratedTrackingGroup );
+		$this->showInput ( 'add_download_extensions', __ ( 'Add new file types for download tracking', 'wp-piwik' ), __ ( 'Add file extensions for download tracking, divided by a vertical bar (&#124;).', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sMatomo documentation%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/guides/tracking-javascript-guide#file-extensions-for-tracking-downloads" target="_BLANK">', '</a>' ), $isNotGeneratedTracking, $fullGeneratedTrackingGroup );
 
 		$this->showCheckbox ( 'disable_cookies', __ ( 'Disable cookies', 'wp-piwik' ), __ ( 'Disable all tracking cookies for a visitor.', 'wp-piwik' ), $isNotGeneratedTracking, $fullGeneratedTrackingGroup );
 
@@ -267,19 +269,19 @@ class Settings extends \WP_Piwik\Admin {
 			echo '<input type="checkbox" ' . (isset ( $filter [$key] ) && $filter [$key] ? 'checked="checked" ' : '') . 'value="1" name="wp-piwik[capability_stealth][' . $key . ']" /> ' . $name . ' &nbsp; ';
 		echo '<span class="dashicons dashicons-editor-help" onclick="$j(\'#capability_stealth-desc\').toggleClass(\'hidden\');"></span> <p class="description hidden" id="capability_stealth-desc">' . __ ( 'Choose users by user role you do <strong>not</strong> want to track.', 'wp-piwik' ) . '</p></td></tr>';
 
-		$this->showCheckbox ( 'track_across', __ ( 'Track subdomains in the same website', 'wp-piwik' ), __ ( 'Adds *.-prefix to cookie domain.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik documentation%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/guides/tracking-javascript-guide#tracking-subdomains-in-the-same-website" tagert="_BLANK">', '</a>' ), $isNotGeneratedTracking, $fullGeneratedTrackingGroup );
+		$this->showCheckbox ( 'track_across', __ ( 'Track subdomains in the same website', 'wp-piwik' ), __ ( 'Adds *.-prefix to cookie domain.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sMatomo documentation%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/guides/tracking-javascript-guide#tracking-subdomains-in-the-same-website" tagert="_BLANK">', '</a>' ), $isNotGeneratedTracking, $fullGeneratedTrackingGroup );
 
-		$this->showCheckbox ( 'track_across_alias', __ ( 'Do not count subdomains as outlink', 'wp-piwik' ), __ ( 'Adds *.-prefix to tracked domain.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik documentation%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/guides/tracking-javascript-guide#outlink-tracking-exclusions" target="_BLANK">', '</a>' ), $isNotGeneratedTracking, $fullGeneratedTrackingGroup );
+		$this->showCheckbox ( 'track_across_alias', __ ( 'Do not count subdomains as outlink', 'wp-piwik' ), __ ( 'Adds *.-prefix to tracked domain.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sMatomo documentation%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/guides/tracking-javascript-guide#outlink-tracking-exclusions" target="_BLANK">', '</a>' ), $isNotGeneratedTracking, $fullGeneratedTrackingGroup );
 
-		$this->showCheckbox ( 'track_crossdomain_linking', __ ( 'Enable cross domain linking', 'wp-piwik' ), __ ( 'When enabled, it will make sure to use the same visitor ID for the same visitor across several domains. This works only when this feature is enabled because the visitor ID is stored in a cookie and cannot be read on the other domain by default. When this feature is enabled, it will append a URL parameter "pk_vid" that contains the visitor ID when a user clicks on a URL that belongs to one of your domains. For this feature to work, you also have to configure which domains should be treated as local in your Piwik website settings. This feature requires Piwik 3.0.2.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'track_mode' ) == 'proxy', 'wp-piwik-track-option wp-piwik-track-option-default wp-piwik-track-option-js wp-piwik-track-option-manually');
+		$this->showCheckbox ( 'track_crossdomain_linking', __ ( 'Enable cross domain linking', 'wp-piwik' ), __ ( 'When enabled, it will make sure to use the same visitor ID for the same visitor across several domains. This works only when this feature is enabled because the visitor ID is stored in a cookie and cannot be read on the other domain by default. When this feature is enabled, it will append a URL parameter "pk_vid" that contains the visitor ID when a user clicks on a URL that belongs to one of your domains. For this feature to work, you also have to configure which domains should be treated as local in your Matomo website settings. This feature requires Matomo 3.0.2.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'track_mode' ) == 'proxy', 'wp-piwik-track-option wp-piwik-track-option-default wp-piwik-track-option-js wp-piwik-track-option-manually');
 
 		$this->showCheckbox ( 'track_feed', __ ( 'Track RSS feeds', 'wp-piwik' ), __ ( 'Enable to track posts in feeds via tracking pixel.', 'wp-piwik' ), $isNotTracking, $fullGeneratedTrackingGroup . ' wp-piwik-track-option-manually' );
 
-		$this->showCheckbox ( 'track_feed_addcampaign', __ ( 'Track RSS feed links as campaign', 'wp-piwik' ), __ ( 'This will add Piwik campaign parameters to the RSS feed links.' . ' ' . sprintf ( __ ( 'See %sPiwik documentation%s.', 'wp-piwik' ), '<a href="http://piwik.org/docs/tracking-campaigns/" target="_BLANK">', '</a>' ), 'wp-piwik' ), $isNotTracking, $fullGeneratedTrackingGroup . ' wp-piwik-track-option-manually', true, '$j(\'tr.wp-piwik-feed_campaign-option\').toggle(\'hidden\');' );
+		$this->showCheckbox ( 'track_feed_addcampaign', __ ( 'Track RSS feed links as campaign', 'wp-piwik' ), __ ( 'This will add Matomo campaign parameters to the RSS feed links.' . ' ' . sprintf ( __ ( 'See %sMatomo documentation%s.', 'wp-piwik' ), '<a href="http://piwik.org/docs/tracking-campaigns/" target="_BLANK">', '</a>' ), 'wp-piwik' ), $isNotTracking, $fullGeneratedTrackingGroup . ' wp-piwik-track-option-manually', true, '$j(\'tr.wp-piwik-feed_campaign-option\').toggle(\'hidden\');' );
 
 		$this->showInput ( 'track_feed_campaign', __ ( 'RSS feed campaign', 'wp-piwik' ), __ ( 'Keyword: post name.', 'wp-piwik' ), $isNotGeneratedTracking || ! self::$settings->getGlobalOption ( 'track_feed_addcampaign' ), $fullGeneratedTrackingGroup . ' wp-piwik-feed_campaign-option' );
 
-		$this->showInput ( 'track_heartbeat', __ ( 'Enable heartbeat timer', 'wp-piwik' ), __ ( 'Enable a heartbeat timer to get more accurate visit lengths by sending periodical HTTP ping requests as long as the site is opened. Enter the time between the pings in seconds (Piwik default: 15) to enable or 0 to disable this feature. <strong>Note:</strong> This will cause a lot of additional HTTP requests on your site.', 'wp-piwik' ), $isNotGeneratedTracking, $fullGeneratedTrackingGroup );
+		$this->showInput ( 'track_heartbeat', __ ( 'Enable heartbeat timer', 'wp-piwik' ), __ ( 'Enable a heartbeat timer to get more accurate visit lengths by sending periodical HTTP ping requests as long as the site is opened. Enter the time between the pings in seconds (Matomo default: 15) to enable or 0 to disable this feature. <strong>Note:</strong> This will cause a lot of additional HTTP requests on your site.', 'wp-piwik' ), $isNotGeneratedTracking, $fullGeneratedTrackingGroup );
 
 		$this->showSelect ( 'track_user_id', __ ( 'User ID Tracking', 'wp-piwik' ), array (
 				'disabled' => __ ( 'Disabled', 'wp-piwik' ),
@@ -300,16 +302,16 @@ class Settings extends \WP_Piwik\Admin {
 			$this->showSelect ( 'http_connection', __ ( 'HTTP connection via', 'wp-piwik' ), array (
 				'curl' => __ ( 'cURL', 'wp-piwik' ),
 				'fopen' => __ ( 'fopen', 'wp-piwik' )
-			), __('Choose whether WP-Piwik should use cURL or fopen to connect to Piwik in HTTP or Cloud mode.', 'wp-piwik' ) );
+			), __('Choose whether WP-Matomo should use cURL or fopen to connect to Matomo in HTTP or Cloud mode.', 'wp-piwik' ) );
 
 		$this->showSelect ( 'http_method', __ ( 'HTTP method', 'wp-piwik' ), array (
 				'post' => __ ( 'POST', 'wp-piwik' ),
 				'get' => __ ( 'GET', 'wp-piwik' )
-		), __('Choose whether WP-Piwik should use POST or GET in HTTP or Cloud mode.', 'wp-piwik' ) );
+		), __('Choose whether WP-Matomo should use POST or GET in HTTP or Cloud mode.', 'wp-piwik' ) );
 
 		$this->showCheckbox ( 'disable_timelimit', __ ( 'Disable time limit', 'wp-piwik' ), __ ( 'Use set_time_limit(0) if stats page causes a time out.', 'wp-piwik' ) );
 
-		$this->showInput ( 'connection_timeout', __ ( 'Connection timeout', 'wp-piwik' ), 'Define a connection timeout for all HTTP requests done by WP-Piwik in seconds.' );
+		$this->showInput ( 'connection_timeout', __ ( 'Connection timeout', 'wp-piwik' ), 'Define a connection timeout for all HTTP requests done by WP-Matomo in seconds.' );
 
 		$this->showCheckbox ( 'disable_ssl_verify', __ ( 'Disable SSL peer verification', 'wp-piwik' ), '(' . __ ( 'not recommended', 'wp-piwik' ) . ')' );
 		$this->showCheckbox ( 'disable_ssl_verify_host', __ ( 'Disable SSL host verification', 'wp-piwik' ), '(' . __ ( 'not recommended', 'wp-piwik' ) . ')' );
@@ -317,10 +319,10 @@ class Settings extends \WP_Piwik\Admin {
 		$this->showSelect ( 'piwik_useragent', __ ( 'User agent', 'wp-piwik' ), array (
 				'php' => __ ( 'Use the PHP default user agent', 'wp-piwik' ) . (ini_get ( 'user_agent' ) ? '(' . ini_get ( 'user_agent' ) . ')' : ' (' . __ ( 'empty', 'wp-piwik' ) . ')'),
 				'own' => __ ( 'Define a specific user agent', 'wp-piwik' )
-		), 'WP-Piwik can send the default user agent defined by your PHP settings or use a specific user agent below. The user agent is send by WP-Piwik if HTTP requests are performed.', '$j(\'tr.wp-piwik-useragent-option\').toggleClass(\'hidden\');' );
-		$this->showInput ( 'piwik_useragent_string', __ ( 'Specific user agent', 'wp-piwik' ), 'Define a user agent description which is send by WP-Piwik if HTTP requests are performed.', self::$settings->getGlobalOption ( 'piwik_useragent' ) != 'own', 'wp-piwik-useragent-option' );
+		), 'WP-Matomo can send the default user agent defined by your PHP settings or use a specific user agent below. The user agent is send by WP-Matomo if HTTP requests are performed.', '$j(\'tr.wp-piwik-useragent-option\').toggleClass(\'hidden\');' );
+		$this->showInput ( 'piwik_useragent_string', __ ( 'Specific user agent', 'wp-piwik' ), 'Define a user agent description which is send by WP-Matomo if HTTP requests are performed.', self::$settings->getGlobalOption ( 'piwik_useragent' ) != 'own', 'wp-piwik-useragent-option' );
 
-        $this->showCheckbox ( 'dnsprefetch', __ ( 'Enable DNS prefetch', 'wp-piwik' ), __ ( 'Add a DNS prefetch tag.' . ' ' . sprintf ( __ ( 'See %sPiwik Blog%s.', 'wp-piwik' ), '<a target="_BLANK" href="https://piwik.org/blog/2017/04/important-performance-optimizations-load-piwik-javascript-tracker-faster/">', '</a>' ), 'wp-piwik' ) );
+        $this->showCheckbox ( 'dnsprefetch', __ ( 'Enable DNS prefetch', 'wp-piwik' ), __ ( 'Add a DNS prefetch tag.' . ' ' . sprintf ( __ ( 'See %sMatomo Blog%s.', 'wp-piwik' ), '<a target="_BLANK" href="https://piwik.org/blog/2017/04/important-performance-optimizations-load-piwik-javascript-tracker-faster/">', '</a>' ), 'wp-piwik' ) );
 
         $this->showCheckbox ( 'track_datacfasync', __ ( 'Add data-cfasync=false', 'wp-piwik' ), __ ( 'Adds data-cfasync=false to the script tag, e.g., to ask Rocket Loader to ignore the script.' . ' ' . sprintf ( __ ( 'See %sCloudFlare Knowledge Base%s.', 'wp-piwik' ), '<a href="https://support.cloudflare.com/hc/en-us/articles/200169436-How-can-I-have-Rocket-Loader-ignore-my-script-s-in-Automatic-Mode-" target="_BLANK">', '</a>' ), 'wp-piwik' ) );
 
@@ -328,23 +330,23 @@ class Settings extends \WP_Piwik\Admin {
 
 		$this->showInput ( 'track_cdnurlssl', __ ( 'CDN URL (SSL)', 'wp-piwik' ).' https://', 'Enter URL if you want to load the tracking code via a separate SSL CDN.' );
 
-		$this->showSelect ( 'force_protocol', __ ( 'Force Piwik to use a specific protocol', 'wp-piwik' ), array (
+		$this->showSelect ( 'force_protocol', __ ( 'Force Matomo to use a specific protocol', 'wp-piwik' ), array (
 				'disabled' => __ ( 'Disabled (default)', 'wp-piwik' ),
 				'http' => __ ( 'http', 'wp-piwik' ),
 				'https' => __ ( 'https (SSL)', 'wp-piwik' )
-		), __ ( 'Choose if you want to explicitly force Piwik to use HTTP or HTTPS. Does not work with a CDN URL.', 'wp-piwik' ) );
+		), __ ( 'Choose if you want to explicitly force Matomo to use HTTP or HTTPS. Does not work with a CDN URL.', 'wp-piwik' ) );
 
 		$this->showSelect ( 'update_notice', __ ( 'Update notice', 'wp-piwik' ), array (
-				'enabled' => __ ( 'Show always if WP-Piwik is updated', 'wp-piwik' ),
-				'script' => __ ( 'Show only if WP-Piwik is updated and settings were changed', 'wp-piwik' ),
+				'enabled' => __ ( 'Show always if WP-Matomo is updated', 'wp-piwik' ),
+				'script' => __ ( 'Show only if WP-Matomo is updated and settings were changed', 'wp-piwik' ),
 				'disabled' => __ ( 'Disabled', 'wp-piwik' )
-		), __ ( 'Choose if you want to get an update notice if WP-Piwik is updated.', 'wp-piwik' ) );
+		), __ ( 'Choose if you want to get an update notice if WP-Matomo is updated.', 'wp-piwik' ) );
 
-		$this->showInput ( 'set_download_extensions', __ ( 'Define all file types for download tracking', 'wp-piwik' ), __ ( 'Replace Piwik\'s default file extensions for download tracking, divided by a vertical bar (&#124;). Leave blank to keep Piwik\'s default settings.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik documentation%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/guides/tracking-javascript-guide#file-extensions-for-tracking-downloads" target="_BLANK">', '</a>' ) );
+		$this->showInput ( 'set_download_extensions', __ ( 'Define all file types for download tracking', 'wp-piwik' ), __ ( 'Replace Matomo\'s default file extensions for download tracking, divided by a vertical bar (&#124;). Leave blank to keep Matomo\'s default settings.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sMatomo documentation%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/guides/tracking-javascript-guide#file-extensions-for-tracking-downloads" target="_BLANK">', '</a>' ) );
 
-        $this->showInput ( 'set_download_classes', __ ( 'Set classes to be treated as downloads', 'wp-piwik' ), __ ( 'Set classes to be treated as downloads (in addition to piwik_download), divided by a vertical bar (&#124;). Leave blank to keep Piwik\'s default settings.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik JavaScript Tracking Client reference%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/api-reference/tracking-javascript" target="_BLANK">', '</a>' ) );
+        $this->showInput ( 'set_download_classes', __ ( 'Set classes to be treated as downloads', 'wp-piwik' ), __ ( 'Set classes to be treated as downloads (in addition to piwik_download), divided by a vertical bar (&#124;). Leave blank to keep Matomo\'s default settings.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sMatomo JavaScript Tracking Client reference%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/api-reference/tracking-javascript" target="_BLANK">', '</a>' ) );
 
-        $this->showInput ( 'set_link_classes', __ ( 'Set classes to be treated as outlinks', 'wp-piwik' ), __ ( 'Set classes to be treated as outlinks (in addition to piwik_link), divided by a vertical bar (&#124;). Leave blank to keep Piwik\'s default settings.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sPiwik JavaScript Tracking Client reference%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/api-reference/tracking-javascript" target="_BLANK">', '</a>' ) );
+        $this->showInput ( 'set_link_classes', __ ( 'Set classes to be treated as outlinks', 'wp-piwik' ), __ ( 'Set classes to be treated as outlinks (in addition to piwik_link), divided by a vertical bar (&#124;). Leave blank to keep Matomo\'s default settings.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sMatomo JavaScript Tracking Client reference%s.', 'wp-piwik' ), '<a href="https://developer.piwik.org/api-reference/tracking-javascript" target="_BLANK">', '</a>' ) );
 
 		echo $submitButton;
 		?>
@@ -508,7 +510,7 @@ class Settings extends \WP_Piwik\Admin {
 		<strong><?php _e('Donate','wp-piwik'); ?></strong>
 	</p>
 	<p>
-		<?php _e('If you like WP-Piwik, you can support its development by a donation:', 'wp-piwik'); ?>
+		<?php _e('If you like WP-Matomo, you can support its development by a donation:', 'wp-piwik'); ?>
 	</p>
 	<div>
 		<script id='fb0ahsp'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//button.flattr.com/view/?fid=mkdp7z&url=https%3A%2F%2Fwww.braekling.de%2Fwp-piwik-wpmu-piwik-wordpress';f.title='Flattr';f.height=62;f.width=55;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fb0ahsp');</script>
@@ -558,10 +560,10 @@ class Settings extends \WP_Piwik\Admin {
 	 */
 	public function showCredits() {
 		?>
-		<p><strong><?php _e('Thank you very much for your donation', 'wp-piwik'); ?>:</strong> Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., Helmut O., Valerie S., Jochen D., Atlas R., Harald W., Jan M., Addy K., Hans-Georg E.-B., Yvonne K., Andrew D., <?php _e('the Piwik team itself','wp-piwik');?><?php _e(', and all people flattering this','wp-piwik'); ?>!</p>
+		<p><strong><?php _e('Thank you very much for your donation', 'wp-piwik'); ?>:</strong> Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., Helmut O., Valerie S., Jochen D., Atlas R., Harald W., Jan M., Addy K., Hans-Georg E.-B., Yvonne K., Andrew D., <?php _e('the Matomo team itself','wp-piwik');?><?php _e(', and all people flattering this','wp-piwik'); ?>!</p>
 		<p><?php _e('Graphs powered by <a href="http://www.jqplot.com/" target="_BLANK">jqPlot</a> (License: GPL 2.0 and MIT) and <a href="http://omnipotent.net/jquery.sparkline/" target="_BLANK">jQuery Sparklines</a> (License: New BSD License).','wp-piwik'); ?></p>
 		<p><?php _e('Thank you very much','wp-piwik'); ?> <a href="https://www.transifex.com/projects/p/wp-piwik/" target="_BLANK">Transifex Translation Community</a> <?php _e('for your translation work','wp-piwik'); ?>!</p>
-		<p><?php _e('Thank you very much, all users who send me mails containing criticism, commendation, feature requests and bug reports! You help me to make WP-Piwik much better.','wp-piwik'); ?></p>
+		<p><?php _e('Thank you very much, all users who send me mails containing criticism, commendation, feature requests and bug reports! You help me to make WP-Matomo much better.','wp-piwik'); ?></p>
 		<p><?php _e('Thank <strong>you</strong> for using my plugin. It is the best commendation if my piece of code is really used!','wp-piwik'); ?></p>
 		<?php
 	}
@@ -571,7 +573,7 @@ class Settings extends \WP_Piwik\Admin {
 	 */
 	public function showSupport() {
 		?><ul>
-			<li><?php _e('The best place to get help:', 'wp-piwik'); ?> <a href="https://wordpress.org/support/plugin/wp-piwik" target="_BLANK"><?php _e('WP-Piwik support forum','wp-piwik'); ?></a></li>
+			<li><?php _e('The best place to get help:', 'wp-piwik'); ?> <a href="https://wordpress.org/support/plugin/wp-piwik" target="_BLANK"><?php _e('WP-Matomo support forum','wp-piwik'); ?></a></li>
 			<li><?php _e('Please don\'t forget to vote the compatibility at the','wp-piwik'); ?> <a href="http://wordpress.org/extend/plugins/wp-piwik/" target="_BLANK">WordPress.org Plugin Directory</a>.</li>
 		</ul>
 		<h3><?php _e('Debugging', 'wp-piwik'); ?></h3>
@@ -589,7 +591,7 @@ class Settings extends \WP_Piwik\Admin {
 			?></strong>.</li>
 			<li><strong><?php echo (((function_exists('curl_init') && ini_get('allow_url_fopen') && self::$settings->getGlobalOption('http_connection') == 'curl') || (function_exists('curl_init') && !ini_get('allow_url_fopen')))?__('cURL', 'wp-piwik'):__('fopen', 'wp-piwik')).' ('.(self::$settings->getGlobalOption('http_method')=='post'?__('POST','wp-piwik'):__('GET','wp-piwik')).')</strong> '.__('is used.', 'wp-piwik'); ?></li>
 			<?php if (self::$settings->getGlobalOption('piwik_mode') == 'php') { ?><li><?php
-				_e('Determined Piwik base URL is', 'wp-piwik');
+				_e('Determined Matomo base URL is', 'wp-piwik');
 				echo ' <strong>'.(self::$settings->getGlobalOption('proxy_url')).'</strong>';
 			?></li><?php } ?>
 		</ol>
@@ -598,7 +600,7 @@ class Settings extends \WP_Piwik\Admin {
 			<li><a href="<?php echo admin_url( (self::$settings->checkNetworkActivation () ? 'network/settings' : 'options-general').'.php?page='.$_GET['page'].'&testscript=1' ); ?>"><?php _e('Run testscript', 'wp-piwik'); ?></a></li>
 			<li><a href="<?php echo admin_url( (self::$settings->checkNetworkActivation () ? 'network/settings' : 'options-general').'.php?page='.$_GET['page'].'&sitebrowser=1' ); ?>"><?php _e('Sitebrowser', 'wp-piwik'); ?></a></li>
 			<li><a href="<?php echo admin_url( (self::$settings->checkNetworkActivation () ? 'network/settings' : 'options-general').'.php?page='.$_GET['page'].'&clear=1' ); ?>"><?php _e('Clear cache', 'wp-piwik'); ?></a></li>
-			<li><a onclick="return confirm('<?php _e('Are you sure you want to clear all settings?', 'wp-piwik'); ?>')" href="<?php echo admin_url( (self::$settings->checkNetworkActivation () ? 'network/settings' : 'options-general').'.php?page='.$_GET['page'].'&clear=2' ); ?>"><?php _e('Reset WP-Piwik', 'wp-piwik'); ?></a></li>
+			<li><a onclick="return confirm('<?php _e('Are you sure you want to clear all settings?', 'wp-piwik'); ?>')" href="<?php echo admin_url( (self::$settings->checkNetworkActivation () ? 'network/settings' : 'options-general').'.php?page='.$_GET['page'].'&clear=2' ); ?>"><?php _e('Reset WP-Matomo', 'wp-piwik'); ?></a></li>
 		</ol>
 		<h3><?php _e('Latest support threads on WordPress.org', 'wp-piwik'); ?></h3><?php
 		$supportThreads = $this->readRSSFeed('http://wordpress.org/support/rss/plugin/wp-piwik');
@@ -682,7 +684,7 @@ class Settings extends \WP_Piwik\Admin {
 					switch_to_blog((int) $_GET['testscript_id']);
 		?>
 		<textarea cols="80" rows="10"><?php
-			echo '`WP-Piwik '.self::$wpPiwik->getPluginVersion()."\nMode: ".self::$settings->getGlobalOption('piwik_mode')."\n\n";
+			echo '`WP-Matomo '.self::$wpPiwik->getPluginVersion()."\nMode: ".self::$settings->getGlobalOption('piwik_mode')."\n\n";
 		?>Test 1/3: global.getPiwikVersion<?php
 			$GLOBALS ['wp-piwik_debug'] = true;
 			$id = \WP_Piwik\Request::register ( 'API.getPiwikVersion', array() );
@@ -708,7 +710,7 @@ class Settings extends \WP_Piwik\Admin {
 		<?php
 				if (isset($_GET['testscript_id']) && $_GET['testscript_id'])
 					restore_current_blog();
-			} else echo '<p>Please configure WP-Piwik first.</p>';
+			} else echo '<p>Please configure WP-Matomo first.</p>';
 		?>
 		</div>
 	<?php }

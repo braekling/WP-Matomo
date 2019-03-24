@@ -25,11 +25,12 @@
 				$tableHead = array(__('Plugin', 'wp-piwik'), __('Visits', 'wp-piwik'), __('Percent', 'wp-piwik'));
 				$tableBody = array();
 				$count = 0;
-				foreach ($response as $row) {
-					$count++;
-					$tableBody[] = array($row['label'], $row['nb_visits'], $row['nb_visits_percentage']);
-					if ($count == 10) break;
-				}
+				if (is_array($response))
+				    foreach ($response as $row) {
+					    $count++;
+					    $tableBody[] = array($row['label'], $row['nb_visits'], $row['nb_visits_percentage']);
+					    if ($count == 10) break;
+				    }
 				$this->table($tableHead, $tableBody, null);
 			}
 		}

@@ -19,6 +19,9 @@
 				case 'cloud' :
 					$PIWIK_URL = 'https://' . self::$settings->getGlobalOption ( 'piwik_user' ) . '.innocraft.cloud/';
 					break;
+                case 'cloud-matomo':
+                    $PIWIK_URL = 'https://' . self::$settings->getGlobalOption ( 'matomo_user' ) . '.matomo.cloud/';
+                    break;
 				default :
 					$PIWIK_URL = self::$settings->getGlobalOption ( 'piwik_url' );
 			}

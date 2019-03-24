@@ -106,14 +106,15 @@ abstract class Widget {
 				$tableHead ['nb_actions'] = __ ( 'Actions', 'wp-piwik' );
 			$tableBody = array ();
 			$count = 0;
-			foreach ( $response as $rowKey => $row ) {
-				$count ++;
-				$tableBody [$rowKey] = array ();
-				foreach ( $tableHead as $key => $value )
-					$tableBody [$rowKey] [] = isset ( $row [$key] ) ? $row [$key] : '-';
-				if ($count == 10)
-					break;
-			}
+			if (is_array($response))
+			    foreach ( $response as $rowKey => $row ) {
+				    $count ++;
+				    $tableBody [$rowKey] = array ();
+				    foreach ( $tableHead as $key => $value )
+					    $tableBody [$rowKey] [] = isset ( $row [$key] ) ? $row [$key] : '-';
+				    if ($count == 10)
+					    break;
+			    }
 			$this->table ( $tableHead, $tableBody, null );
 		}
 	}

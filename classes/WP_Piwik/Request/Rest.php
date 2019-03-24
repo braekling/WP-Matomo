@@ -8,7 +8,9 @@
 			$count = 0;
 			$url = self::$settings->getGlobalOption('piwik_mode') == 'http'?
 				self::$settings->getGlobalOption('piwik_url'):
-				'https://'.self::$settings->getGlobalOption('piwik_user').'.innocraft.cloud/';
+                self::$settings->getGlobalOption('piwik_mode') == 'cloud'?
+				    'https://'.self::$settings->getGlobalOption('piwik_user').'.innocraft.cloud/':
+                    'https://'.self::$settings->getGlobalOption('matomo_user').'.matomo.cloud/';
 			$params = 'module=API&method=API.getBulkRequest&format=json';
 			foreach (self::$requests as $requestID => $config) {
 				if (!isset(self::$results[$requestID])) {
