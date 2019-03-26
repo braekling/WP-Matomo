@@ -6,11 +6,11 @@
 			
 		protected function request($id) {
 			$count = 0;
-			$url = self::$settings->getGlobalOption('piwik_mode') == 'http'?
-				self::$settings->getGlobalOption('piwik_url'):
-                self::$settings->getGlobalOption('piwik_mode') == 'cloud'?
-				    'https://'.self::$settings->getGlobalOption('piwik_user').'.innocraft.cloud/':
-                    'https://'.self::$settings->getGlobalOption('matomo_user').'.matomo.cloud/';
+			if (self::$settings->getGlobalOption('piwik_mode') == 'http')
+				$url = self::$settings->getGlobalOption('piwik_url');
+			else if (self::$settings->getGlobalOption('piwik_mode') == 'cloud')
+				$url = 'https://'.self::$settings->getGlobalOption('piwik_user').'.innocraft.cloud/';
+			else $url = 'https://'.self::$settings->getGlobalOption('matomo_user').'.matomo.cloud/';
 			$params = 'module=API&method=API.getBulkRequest&format=json';
 			foreach (self::$requests as $requestID => $config) {
 				if (!isset(self::$results[$requestID])) {

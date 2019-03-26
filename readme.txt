@@ -3,7 +3,7 @@
 Contributors: Braekling
 Requires at least: 4.0
 Tested up to: 5.1.1
-Stable tag: 1.0.19
+Stable tag: 1.0.21
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
 Tags: matomo, tracking, statistics, stats, analytics
 
@@ -140,6 +140,9 @@ Add WP-Matomo to your /wp-content/plugins folder and enable it as [Network Plugi
 5. Matomo: Here you'll find your auth token.
 
 == Changelog ==
+
+= 1.0.21 =
+* Bugfix: Get HTTP mode working again
 
 = 1.0.20 =
 * Support for new Innocraft cloud URL (*.matomo.cloud)
