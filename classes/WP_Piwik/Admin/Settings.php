@@ -108,13 +108,13 @@ class Settings extends \WP_Piwik\Admin {
 		if (! function_exists ( 'curl_init' ) && ! ini_get ( 'allow_url_fopen' ))
 			$this->showBox ( 'error', 'no', __ ( 'Neither cURL nor fopen are available. So WP-Matomo can not use the HTTP API and not connect to InnoCraft Cloud.' ) . ' ' . sprintf ( '<a href="%s">%s.</a>', 'https://wordpress.org/plugins/wp-piwik/faq/', __ ( 'More information', 'wp-piwik' ) ) );
 
-		$description = sprintf ( '%s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s', __ ( 'You can choose between three connection methods:', 'wp-piwik' ), __ ( 'Self-hosted (HTTP API, default)', 'wp-piwik' ), __ ( 'This is the default option for a self-hosted Matomo and should work for most configurations. WP-Matomo will connect to Matomo using http(s).', 'wp-piwik' ), __ ( 'Self-hosted (PHP API)', 'wp-piwik' ), __ ( 'Choose this, if your self-hosted Matomo and WordPress are running on the same machine and you know the full server path to your Matomo instance.', 'wp-piwik' ), __ ( 'Cloud-hosted (Matomo Cloud)', 'wp-piwik' ), __ ( 'If you are using a cloud-hosted Matomo by InnoCraft, you can simply use this option.', 'wp-piwik' ) );
+		$description = sprintf ( '%s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s<br /><strong>%s:</strong> %s', __ ( 'You can choose between three connection methods:', 'wp-piwik' ), __ ( 'Self-hosted (HTTP API, default)', 'wp-piwik' ), __ ( 'This is the default option for a self-hosted Matomo and should work for most configurations. WP-Matomo will connect to Matomo using http(s).', 'wp-piwik' ), __ ( 'Self-hosted (PHP API)', 'wp-piwik' ), __ ( 'Choose this, if your self-hosted Matomo and WordPress are running on the same machine and you know the full server path to your Matomo instance.', 'wp-piwik' ), __ ( 'Cloud-hosted', 'wp-piwik' ), __ ( 'If you are using a cloud-hosted Matomo by InnoCraft, you can simply use this option. Be carefull to choose the option which fits to your cloud domain (matomo.cloud or innocraft.cloud).', 'wp-piwik' ) );
 		$this->showSelect ( 'piwik_mode', __ ( 'Matomo Mode', 'wp-piwik' ), array (
 				'disabled' => __ ( 'Disabled (WP-Matomo will not connect to Matomo)', 'wp-piwik' ),
 				'http' => __ ( 'Self-hosted (HTTP API, default)', 'wp-piwik' ),
 				'php' => __ ( 'Self-hosted (PHP API)', 'wp-piwik' ),
-                'cloud-matomo' => __('Cloud-hosted (Matomo Cloud)', 'wp-piwik'),
-				'cloud' => __ ( 'Cloud-hosted (InnoCraft Cloud)', 'wp-piwik' )
+                'cloud-matomo' => __('Cloud-hosted (Innocraft Cloud, *.matomo.cloud)', 'wp-piwik'),
+				'cloud' => __ ( 'Cloud-hosted (InnoCraft Cloud, *.innocraft.cloud)', 'wp-piwik' )
 		), $description, '$j(\'tr.wp-piwik-mode-option\').addClass(\'hidden\'); $j(\'#wp-piwik-mode-option-\' + $j(\'#piwik_mode\').val()).removeClass(\'hidden\');', false, '', self::$wpPiwik->isConfigured () );
 
 		$this->showInput ( 'piwik_url', __ ( 'Matomo URL', 'wp-piwik' ), __( 'Enter your Matomo URL. This is the same URL you use to access your Matomo instance, e.g. http://www.example.com/matomo/.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'http', 'wp-piwik-mode-option', 'http', self::$wpPiwik->isConfigured (), true );
@@ -560,9 +560,9 @@ class Settings extends \WP_Piwik\Admin {
 	 */
 	public function showCredits() {
 		?>
-		<p><strong><?php _e('Thank you very much for your donation', 'wp-piwik'); ?>:</strong> Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., Helmut O., Valerie S., Jochen D., Atlas R., Harald W., Jan M., Addy K., Hans-Georg E.-B., Yvonne K., Andrew D., <?php _e('the Matomo team itself','wp-piwik');?><?php _e(', and all people flattering this','wp-piwik'); ?>!</p>
+		<p><strong><?php _e('Thank you very much for your donation', 'wp-piwik'); ?>:</strong> Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., Helmut O., Valerie S., Jochen D., Atlas R., Harald W., Jan M., Addy K., Hans-Georg E.-B., Yvonne K., Andrew D., Nicolas, J., Andre M., Steve J., Jakub P., ditho.berlin, Robert R., Simon B., Grzegorz O., <?php _e('the Matomo team itself','wp-piwik');?><?php _e(', and all people flattering this','wp-piwik'); ?>!</p>
 		<p><?php _e('Graphs powered by <a href="http://www.jqplot.com/" target="_BLANK">jqPlot</a> (License: GPL 2.0 and MIT) and <a href="http://omnipotent.net/jquery.sparkline/" target="_BLANK">jQuery Sparklines</a> (License: New BSD License).','wp-piwik'); ?></p>
-		<p><?php _e('Thank you very much','wp-piwik'); ?> <a href="https://www.transifex.com/projects/p/wp-piwik/" target="_BLANK">Transifex Translation Community</a> <?php _e('for your translation work','wp-piwik'); ?>!</p>
+		<p><?php _e('Thank you very much','wp-piwik'); ?>, <?php _e('Transifex and WordPress translation community for your translation work.','wp-piwik'); ?>!</p>
 		<p><?php _e('Thank you very much, all users who send me mails containing criticism, commendation, feature requests and bug reports! You help me to make WP-Matomo much better.','wp-piwik'); ?></p>
 		<p><?php _e('Thank <strong>you</strong> for using my plugin. It is the best commendation if my piece of code is really used!','wp-piwik'); ?></p>
 		<?php

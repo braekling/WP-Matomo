@@ -2,7 +2,7 @@
 
 Contributors: Braekling
 Requires at least: 4.0
-Tested up to: 4.8.2
+Tested up to: 5.1.1
 Stable tag: 1.0.19
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
 Tags: matomo, tracking, statistics, stats, analytics
@@ -15,7 +15,7 @@ This plugin uses the Matomo API to show your Matomo statistics in your WordPress
 
 To use this plugin the Matomo web analytics application is required. If you do not already have a Matomo setup (e.g., provided by your web hosting service), you have two simple options: use either a [self-hosted Matomo](http://matomo.org/) or a [cloud-hosted Matomo by InnoCraft](https://www.innocraft.cloud/?pk_campaign=WP-Piwik).
 
-**Requirements:** PHP 7.0 (or higher), WordPress 4.0 (or higher), Matomo 3.0 (or higher)
+**Requirements:** PHP 7.0 (or higher), WordPress 5.0 (or higher), Matomo 3.0 (or higher)
  
 **Languages:** English, Albanian, Chinese, Dutch, French, German, Greek, Hungarian, Italian, Polish, Portuguese (Brazil). Partially supported: Azerbaijani, Belarusian, Hindi, Lithuanian, Luxembourgish, Norwegian, Persian, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian
 
@@ -47,8 +47,8 @@ is equal to *[wp-piwik module="overview" title="" period="day" date="yesterday"]
 = Credits =
 
 * Graphs powered by [jqPlot](http://www.jqplot.com/) (GPL 2.0 and MIT) and and [jQuery Sparklines](http://omnipotent.net/jquery.sparkline/) (New BSD License).
-* All translators at the [Transifex translation community](https://www.transifex.com/projects/p/wp-piwik/).
-* Donations: Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., Helmut O., Valerie S., Jochen D., Atlas R., Harald W., Jan M., Addy K., Hans-Georg E.-B., Yvonne K., Andrew D., the Matomo team itself, and all people flattering this.
+* All translators at Transifex and WordPress.
+* Donations: Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., Helmut O., Valerie S., Jochen D., Atlas R., Harald W., Jan M., Addy K., Hans-Georg E.-B., Yvonne K., Andrew D., Nicolas, J., Andre M., Steve J., Jakub P., ditho.berlin, Robert R., Simon B., Grzegorz O., the Matomo team itself, and all people flattering this.
 * All users who send me mails containing criticism, commendation, feature requests and bug reports - you help me to make WP-Matomo much better!
 
 Thank you all!
@@ -140,6 +140,12 @@ Add WP-Matomo to your /wp-content/plugins folder and enable it as [Network Plugi
 5. Matomo: Here you'll find your auth token.
 
 == Changelog ==
+
+= 1.0.20 =
+* Support for new Innocraft cloud URL (*.matomo.cloud)
+* Changed naming from Piwik to Matomo
+* Added City, Type and Model views
+* Bugfix: Avoid warnings on empty results
 
 = 1.0.19 =
 * Security fix: Escape request var
