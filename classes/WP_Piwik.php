@@ -212,7 +212,7 @@ class WP_Piwik {
 		self::$logger->log ( 'Running WP-Piwik uninstallation' );
 		if (! defined ( 'WP_UNINSTALL_PLUGIN' ))
 			exit ();
-		$this->deleteWordPressOption ( 'wp-piwik-notices' );
+		self::deleteWordPressOption ( 'wp-piwik-notices' );
 		self::$settings->resetSettings ( true );
 	}
 
