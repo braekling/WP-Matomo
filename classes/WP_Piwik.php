@@ -1243,8 +1243,11 @@ class WP_Piwik {
 		new \WP_Piwik\Widget\Browsers ( $this, self::$settings, $this->statsPageId );
 		new \WP_Piwik\Widget\BrowserDetails ( $this, self::$settings, $this->statsPageId );
 		new \WP_Piwik\Widget\Screens ( $this, self::$settings, $this->statsPageId );
+		new \WP_Piwik\Widget\Types ( $this, self::$settings, $this->statsPageId );
+		new \WP_Piwik\Widget\Models ( $this, self::$settings, $this->statsPageId );
 		new \WP_Piwik\Widget\Systems ( $this, self::$settings, $this->statsPageId );
 		new \WP_Piwik\Widget\SystemDetails ( $this, self::$settings, $this->statsPageId );
+		new \WP_Piwik\Widget\City ( $this, self::$settings, $this->statsPageId );
 		new \WP_Piwik\Widget\Country ( $this, self::$settings, $this->statsPageId );
 	}
 
