@@ -1,5 +1,5 @@
 <wpml-config>
     <admin-texts>
-        <key name="wp-piwik-site_id" />
+        <key name="wp-matomo-site_id" />
     </admin-texts>
 </wpml-config>
