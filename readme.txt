@@ -144,6 +144,7 @@ Add WP-Matomo to your /wp-content/plugins folder and enable it as [Network Plugi
 = 1.0.22 =
 * Bugfix: Innocraft cloud URL *.matomo.cloud will work
 * Option to configure filter_limit parameter (see expert settings)
+* Replaced piwik.php proxy script by matomo.php proxy script
 
 = 1.0.21 =
 * Bugfix: Get HTTP mode working again
