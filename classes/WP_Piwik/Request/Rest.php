@@ -12,6 +12,8 @@
 				$url = 'https://'.self::$settings->getGlobalOption('piwik_user').'.innocraft.cloud/';
 			else $url = 'https://'.self::$settings->getGlobalOption('matomo_user').'.matomo.cloud/';
 			$params = 'module=API&method=API.getBulkRequest&format=json';
+			if (self::$settings->getGlobalOption('filter_limit') != "" && self::$settings->getGlobalOption('filter_limit') == (int) self::$settings->getGlobalOption('filter_limit'))
+                $params .= '&filter_limit='.self::$settings->getGlobalOption('filter_limit');
 			foreach (self::$requests as $requestID => $config) {
 				if (!isset(self::$results[$requestID])) {
 					$params .= '&urls['.$count.']='.urlencode($this->buildURL($config));

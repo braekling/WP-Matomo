@@ -11,8 +11,10 @@
 			$url = self::$settings->getGlobalOption('piwik_url');
 			foreach (self::$requests as $requestID => $config) {
 				if (!isset(self::$results[$requestID])) {
+                    if (self::$settings->getGlobalOption('filter_limit') != "" && self::$settings->getGlobalOption('filter_limit') == (int) self::$settings->getGlobalOption('filter_limit'))
+                        $config['parameter']['filter_limit'] = self::$settings->getGlobalOption('filter_limit');
 					$params = 'module=API&format=json&'.$this->buildURL($config, true);
-					$map[$count] = $requestID;
+                    $map[$count] = $requestID;
 					$result = $this->call($id, $url, $params);
 					self::$results[$map[$count]] = $result;
 					$count++;

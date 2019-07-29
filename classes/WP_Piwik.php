@@ -12,7 +12,7 @@ class WP_Piwik {
 	 *
 	 * @var Runtime environment variables
 	 */
-	private static $revisionId = 2019032601, $version = '1.0.21', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
+	private static $revisionId = 2019072901, $version = '1.0.22', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
 
 	/**
 	 * Constructor class to configure and register all WP-Piwik components
@@ -1005,7 +1005,7 @@ class WP_Piwik {
 		if ( self::$settings->getGlobalOption ( 'piwik_mode' ) == 'disabled' )
 			return 'n/a';
 		if (! isset ( self::$request ) || empty ( self::$request ))
-			self::$request = (self::$settings->getGlobalOption ( 'piwik_mode' ) == 'http' || self::$settings->getGlobalOption ( 'piwik_mode' ) == 'cloud' ? new WP_Piwik\Request\Rest ( $this, self::$settings ) : new WP_Piwik\Request\Php ( $this, self::$settings ));
+			self::$request = (self::$settings->getGlobalOption ( 'piwik_mode' ) == 'http' || self::$settings->getGlobalOption ( 'piwik_mode' ) == 'cloud' || self::$settings->getGlobalOption ( 'piwik_mode' ) == 'cloud-matomo' ? new WP_Piwik\Request\Rest ( $this, self::$settings ) : new WP_Piwik\Request\Php ( $this, self::$settings ));
 		if ($debug)
 			return self::$request->getDebug ( $id );
 		return self::$request->perform ( $id );
