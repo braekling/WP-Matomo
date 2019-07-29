@@ -1145,7 +1145,7 @@ class WP_Piwik {
 				'siteName' => $isCurrent ? get_bloginfo ( 'name' ) : get_blog_details ( $blogId )->blogname
 		) );
 		$this->request ( $id );
-		self::$logger->log ( 'Update Piwik site: WordPress site ' . ($isCurrent ? get_bloginfo ( 'url' ) : get_blog_details ( $blogId )->$siteurl) );
+		self::$logger->log ( 'Update Piwik site: WordPress site ' . ($isCurrent ? get_bloginfo ( 'url' ) : get_blog_details ( $blogId )->siteurl) );
 	}
 
 	/**
