@@ -40,16 +40,20 @@ class TrackingCode {
 		if ($settings->getGlobalOption ( 'track_mode' ) == 'js')
 			$code = str_replace ( array (
 					'piwik.js',
-					'piwik.php'
+					'piwik.php',
+					'matomo.js',
+					'matomo.php'
 			), 'js/index.php', $code );
 		elseif ($settings->getGlobalOption ( 'track_mode' ) == 'proxy') {
 			$code = str_replace ( 'piwik.js', 'piwik.php', $code );
+			$code = str_replace ( 'matomo.js', 'matomo.php', $code );
 			$proxy = str_replace ( array (
 					'https://',
 					'http://'
 			), '//', plugins_url ( 'wp-piwik' ) . '/proxy' ) . '/';
 			$code = preg_replace ( '/var u="([^"]*)";/', 'var u="' . $proxy . '"', $code );
 			$code = preg_replace ( '/img src="([^"]*)piwik.php/', 'img src="' . $proxy . 'piwik.php', $code );
+			$code = preg_replace ( '/img src="([^"]*)matomo.php/', 'img src="' . $proxy . 'matomo.php', $code );
 		}
 		if ($settings->getGlobalOption ( 'track_cdnurl' ) || $settings->getGlobalOption ( 'track_cdnurlssl' ))
 			$code = str_replace ( array (
