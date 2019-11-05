@@ -1,9 +1,9 @@
-﻿=== WP-Matomo (WP-Piwik) ===
+=== WP-Matomo Integration (WP-Piwik) ===
 
 Contributors: Braekling
 Requires at least: 4.0
 Tested up to: 5.2.2
-Stable tag: 1.0.22
+Stable tag: 1.0.23
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
 Tags: matomo, tracking, statistics, stats, analytics
 
@@ -140,6 +140,10 @@ Add WP-Matomo to your /wp-content/plugins folder and enable it as [Network Plugi
 5. Matomo: Here you'll find your auth token.
 
 == Changelog ==
+
+= 1.0.23 =
+* Handle tracking codes containing matomo.js/.php instead of piwik.js/.php
+* Fixed target="_BLANK" property (thanks to tsteur)
 
 = 1.0.22 =
 * Bugfix: Innocraft cloud URL *.matomo.cloud will work
