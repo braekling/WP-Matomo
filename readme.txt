@@ -11,6 +11,8 @@ Adds Matomo (former Piwik) statistics to your WordPress dashboard and is also ab
 
 == Description ==
 
+If you are not yet using Matomo On-Premise or Matomo Cloud, please use the [Matomo for WordPress plugin](https://wordpress.org/plugins/matomo/). 
+
 This plugin uses the Matomo API to show your Matomo statistics in your WordPress dashboard. It's also able to add the Matomo tracking code to your blog and to do some modifications to the tracking code. Additionally, WP-Matomo supports WordPress networks and manages multiple sites and their tracking codes.
 
 To use this plugin the Matomo web analytics application is required. If you do not already have a Matomo setup (e.g., provided by your web hosting service), you have two simple options: use either a [self-hosted Matomo](http://matomo.org/) or a [cloud-hosted Matomo by InnoCraft](https://www.innocraft.cloud/?pk_campaign=WP-Piwik).
