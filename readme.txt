@@ -145,6 +145,7 @@ Add WP-Matomo to your /wp-content/plugins folder and enable it as [Network Plugi
 
 = 1.0.24 =
 * Hotfix to avoid deprecated jQuery.support.boxModel in jqPlot (https://github.com/jqPlot/jqPlot/issues/123)
+* Enabling metaboxes on particular Custom Post Types (thanks to goaround, https://github.com/braekling/WP-Matomo/pull/83)
 
 = 1.0.23 =
 * Handle tracking codes containing matomo.js/.php instead of piwik.js/.php
