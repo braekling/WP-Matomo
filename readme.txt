@@ -3,7 +3,7 @@
 Contributors: Braekling
 Requires at least: 5.0
 Tested up to: 5.5.1
-Stable tag: 1.0.23
+Stable tag: 1.0.24
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
 Tags: matomo, tracking, statistics, stats, analytics
 
@@ -50,7 +50,7 @@ is equal to *[wp-piwik module="overview" title="" period="day" date="yesterday"]
 
 * Graphs powered by [jqPlot](http://www.jqplot.com/) (GPL 2.0 and MIT) and and [jQuery Sparklines](http://omnipotent.net/jquery.sparkline/) (New BSD License).
 * All translators at Transifex and WordPress.
-* Donations: Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., Helmut O., Valerie S., Jochen D., Atlas R., Harald W., Jan M., Addy K., Hans-Georg E.-B., Yvonne K., Andrew D., Nicolas J., Andre M., Steve J., Jakub P., ditho.berlin, Robert R., Simon B., Grzegorz O., Bjarne O., the Matomo team itself, and all people flattering this.
+* Donations: Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., Helmut O., Valerie S., Jochen D., Atlas R., Harald W., Jan M., Addy K., Hans-Georg E.-B., Yvonne K., Andrew D., Nicolas J., Andre M., Steve J., Jakub P., ditho.berlin, Robert R., Simon B., Grzegorz O., Bjarne O., Georg H., Tino S., Carola H., Bo K. C., Timothy T., Heinz L., the Matomo team itself, and all people flattering this.
 * All users who send me mails containing criticism, commendation, feature requests and bug reports - you help me to make WP-Matomo much better!
 
 Thank you all!
@@ -142,6 +142,9 @@ Add WP-Matomo to your /wp-content/plugins folder and enable it as [Network Plugi
 5. Matomo: Here you'll find your auth token.
 
 == Changelog ==
+
+= 1.0.24 =
+* Hotfix to avoid deprecated jQuery.support.boxModel in jqPlot (https://github.com/jqPlot/jqPlot/issues/123)
 
 = 1.0.23 =
 * Handle tracking codes containing matomo.js/.php instead of piwik.js/.php
