@@ -1,8 +1,8 @@
 === WP-Matomo Integration (WP-Piwik) ===
 
 Contributors: Braekling
-Requires at least: 4.0
-Tested up to: 5.2.2
+Requires at least: 5.0
+Tested up to: 5.5.1
 Stable tag: 1.0.23
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
 Tags: matomo, tracking, statistics, stats, analytics
@@ -11,7 +11,7 @@ Adds Matomo (former Piwik) statistics to your WordPress dashboard and is also ab
 
 == Description ==
 
-If you are not yet using Matomo On-Premise or Matomo Cloud, please use the [Matomo for WordPress plugin](https://wordpress.org/plugins/matomo/). 
+If you are not yet using Matomo On-Premise, Matomo Cloud or hosting your own instance of Matomo, please use the [Matomo for WordPress plugin](https://wordpress.org/plugins/matomo/). 
 
 This plugin uses the Matomo API to show your Matomo statistics in your WordPress dashboard. It's also able to add the Matomo tracking code to your blog and to do some modifications to the tracking code. Additionally, WP-Matomo supports WordPress networks and manages multiple sites and their tracking codes.
 
