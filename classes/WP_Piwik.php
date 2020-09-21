@@ -1261,8 +1261,9 @@ class WP_Piwik {
 		global $post;
 		$postUrl = get_permalink ( $post->ID );
 		$this->log ( 'Load per post statistics: ' . $postUrl );
+		$locations = apply_filters( 'wp-piwik_meta_boxes_locations', array( 'post', 'page', 'custom_post_type' ) );
 		array (
-				new \WP_Piwik\Widget\Post ( $this, self::$settings, array('post', 'page', 'custom_post_type'), 'side', 'default', array (
+				new \WP_Piwik\Widget\Post ( $this, self::$settings, $locations, 'side', 'default', array (
 						'url' => $postUrl
 				) ),
 				'show'
