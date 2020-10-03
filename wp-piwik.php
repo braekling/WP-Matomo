@@ -57,7 +57,7 @@ function wp_piwik_autoloader($class) {
  */
 function wp_piwik_phperror() {
 	echo '<div class="error"><p>';
-	printf ( __ ( 'WP-Piwik requires at least PHP 5.3. You are using the deprecated version %s. Please update PHP to use WP-Piwik.', 'wp-piwik' ), PHP_VERSION );
+	printf ( __ ( 'WP-Matomo requires at least PHP 5.3. You are using the deprecated version %s. Please update PHP to use WP-Matomo.', 'wp-piwik' ), PHP_VERSION );
 	echo '</p></div>';
 }
 
