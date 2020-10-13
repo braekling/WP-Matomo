@@ -57,7 +57,7 @@ class Settings {
 					'administrator' => true
 			),
 			'perpost_stats' => false,
-			'plugin_display_name' => 'WP-Piwik',
+			'plugin_display_name' => 'WP-Matomo',
 			'piwik_shortcut' => false,
 			'shortcodes' => false,
 			// User settings: Tracking configuration

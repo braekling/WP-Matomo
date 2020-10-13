@@ -141,7 +141,7 @@ class WP_Piwik {
 						'addPiwikAnnotation'
 				), 10, 3 );
 		}
-		
+
 	}
 
 	/**
@@ -198,9 +198,9 @@ class WP_Piwik {
 	 * Install WP-Piwik for the first time
 	 */
 	private function installPlugin($isUpdate = false) {
-		self::$logger->log ( 'Running WP-Piwik installation' );
+		self::$logger->log ( 'Running WP-Matomo installation' );
 		if (! $isUpdate)
-			$this->addNotice ( 'install', sprintf ( __ ( '%s %s installed.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'plugin_display_name' ), self::$version ), __ ( 'Next you should connect to Piwik', 'wp-piwik' ) );
+			$this->addNotice ( 'install', sprintf ( __ ( '%s %s installed.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'plugin_display_name' ), self::$version ), __ ( 'Next you should connect to Matomo', 'wp-piwik' ) );
 		self::$settings->setGlobalOption ( 'revision', self::$revisionId );
 		self::$settings->setGlobalOption ( 'last_settings_update', time () );
 	}
@@ -209,7 +209,7 @@ class WP_Piwik {
 	 * Uninstall WP-Piwik
 	 */
 	public function uninstallPlugin() {
-		self::$logger->log ( 'Running WP-Piwik uninstallation' );
+		self::$logger->log ( 'Running WP-Matomo uninstallation' );
 		if (! defined ( 'WP_UNINSTALL_PLUGIN' ))
 			exit ();
 		self::deleteWordPressOption ( 'wp-piwik-notices' );
@@ -220,7 +220,7 @@ class WP_Piwik {
 	 * Update WP-Piwik
 	 */
 	private function updatePlugin() {
-		self::$logger->log ( 'Upgrade WP-Piwik to ' . self::$version );
+		self::$logger->log ( 'Upgrade WP-Matomo to ' . self::$version );
 		$patches = glob ( dirname ( __FILE__ ) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'update' . DIRECTORY_SEPARATOR . '*.php' );
 		$isPatched = false;
 		if (is_array ( $patches )) {
@@ -378,7 +378,7 @@ class WP_Piwik {
 				global $current_user;
 				$userRoles = $current_user->roles;
 				$allowed = self::$settings->getGlobalOption ( 'capability_read_stats' );
-				if (is_array($userRoles) && is_array($allowed)) 
+				if (is_array($userRoles) && is_array($allowed))
 					foreach ($userRoles as $userRole)
 						if (isset( $allowed[$userRole] ) && $allowed[$userRole]) {
 							$cap = 'read';
@@ -386,7 +386,7 @@ class WP_Piwik {
 						}
 			}
 			$statsPage = new WP_Piwik\Admin\Statistics ( $this, self::$settings );
-			$this->statsPageId = add_dashboard_page ( __ ( 'Piwik Statistics', 'wp-piwik' ), self::$settings->getGlobalOption ( 'plugin_display_name' ), $cap, 'wp-piwik_stats', array (
+			$this->statsPageId = add_dashboard_page ( __ ( 'Matomo Statistics', 'wp-piwik' ), self::$settings->getGlobalOption ( 'plugin_display_name' ), $cap, 'wp-piwik_stats', array (
 					$statsPage,
 					'show'
 			) );
@@ -405,10 +405,10 @@ class WP_Piwik {
 	/**
 	 * Register network admin menu components
 	 */
-	public function buildNetworkAdminMenu() {		
+	public function buildNetworkAdminMenu() {
 		if (self::isConfigured ()) {
 			$statsPage = new WP_Piwik\Admin\Network ( $this, self::$settings );
-			$this->statsPageId = add_dashboard_page ( __ ( 'Piwik Statistics', 'wp-piwik' ), self::$settings->getGlobalOption ( 'plugin_display_name' ), 'manage_sites', 'wp-piwik_stats', array (
+			$this->statsPageId = add_dashboard_page ( __ ( 'Matomo Statistics', 'wp-piwik' ), self::$settings->getGlobalOption ( 'plugin_display_name' ), 'manage_sites', 'wp-piwik_stats', array (
 					$statsPage,
 					'show'
 			) );
@@ -498,7 +498,7 @@ class WP_Piwik {
 			) );
 			$unique = $this->request ( $id );
 			$url = is_network_admin () ? $this->getSettingsURL () : false;
-			$content = is_network_admin () ? __('Configure WP-Piwik', 'wp-piwik') : '';
+			$content = is_network_admin () ? __('Configure WP-Matomo', 'wp-piwik') : '';
 			// Leave if result array does contain a message instead of valid data
 			if (isset($unique['result']))
 				$content .= '<!-- '.$unique['result'].': '.($unique['message']?$unique['message']:'...').' -->';
@@ -1091,7 +1091,7 @@ class WP_Piwik {
 				$result = $result [0] ['idsite'];
 			else $result = null;
 		} else $result = null;
-		self::$logger->log ( 'Get Piwik ID: WordPress site ' . ($isCurrent ? get_bloginfo ( 'url' ) : get_blog_details ( $blogId )->siteurl) . ' = Piwik ID ' . $result );
+		self::$logger->log ( 'Get Matomo ID: WordPress site ' . ($isCurrent ? get_bloginfo ( 'url' ) : get_blog_details ( $blogId )->siteurl) . ' = Matomo ID ' . $result );
 		if ($result !== null) {
 			self::$settings->setOption ( 'site_id', $result, $blogId );
 			if (self::$settings->getGlobalOption ( 'track_mode' ) != 'disabled' && self::$settings->getGlobalOption ( 'track_mode' ) != 'manually') {
@@ -1120,7 +1120,7 @@ class WP_Piwik {
 				'siteName' => urlencode( $isCurrent ? get_bloginfo ( 'name' ) : get_blog_details ( $blogId )->blogname )
 		) );
 		$result = (int) $this->request ( $id );
-		self::$logger->log ( 'Create Piwik ID: WordPress site ' . ($isCurrent ? get_bloginfo ( 'url' ) : get_blog_details ( $blogId )->siteurl) . ' = Piwik ID ' . $result );
+		self::$logger->log ( 'Create Matomo ID: WordPress site ' . ($isCurrent ? get_bloginfo ( 'url' ) : get_blog_details ( $blogId )->siteurl) . ' = Matomo ID ' . $result );
 		if (empty ( $result ))
 			return null;
 		else {
@@ -1145,7 +1145,7 @@ class WP_Piwik {
 				'siteName' => $isCurrent ? get_bloginfo ( 'name' ) : get_blog_details ( $blogId )->blogname
 		) );
 		$this->request ( $id );
-		self::$logger->log ( 'Update Piwik site: WordPress site ' . ($isCurrent ? get_bloginfo ( 'url' ) : get_blog_details ( $blogId )->siteurl) );
+		self::$logger->log ( 'Update Matomo site: WordPress site ' . ($isCurrent ? get_bloginfo ( 'url' ) : get_blog_details ( $blogId )->siteurl) );
 	}
 
 	/**
@@ -1319,7 +1319,7 @@ class WP_Piwik {
 
 	/**
 	 * Check if WP-Piwik options page
-	 * 
+	 *
 	 * @return boolean True if current page is WP-Piwik's option page
 	 */
 	public static function isValidOptionsPost() {
