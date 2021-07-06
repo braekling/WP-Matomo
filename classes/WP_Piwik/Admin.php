@@ -15,8 +15,6 @@
 		
 		abstract public function printAdminScripts();
 				
-		abstract public function extendAdminHeader();
-
 		public function printAdminStyles() {
 			wp_enqueue_style('wp-piwik', self::$wpPiwik->getPluginURL().'css/wp-piwik.css', array(), self::$wpPiwik->getPluginVersion());
 		}

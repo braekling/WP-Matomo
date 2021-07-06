@@ -2,6 +2,8 @@
 
 namespace WP_Piwik;
 
+use WP_Piwik;
+
 /**
  * Abstract widget class
  *
@@ -12,14 +14,15 @@ abstract class Widget {
 	
 	/**
 	 *
-	 * @var Environment variables
+	 * @var WP_Piwik
 	 */
-	protected static $wpPiwik, $settings;
-	
+	protected static $wpPiwik;
+
 	/**
-	 *
-	 * @var Configuration parameters
-	 */
+     * @var Settings
+     */
+	protected static $settings;
+	
 	protected $isShortcode = false, $method = '', $title = '', $context = 'side', $priority = 'core', $parameter = array (), $apiID = array (), $pageId = 'dashboard', $blogId = null, $name = 'Value', $limit = 10, $content = '', $output = '';
 	
 	/**
@@ -27,7 +30,7 @@ abstract class Widget {
 	 *
 	 * @param WP_Piwik $wpPiwik
 	 *        	current WP-Piwik object
-	 * @param WP_Piwik\Settings $settings
+	 * @param Settings $settings
 	 *        	current WP-Piwik settings
 	 * @param string $pageId
 	 *        	WordPress page ID (default: dashboard)
@@ -56,11 +59,11 @@ abstract class Widget {
 		$this->configure ( $prefix, $params );
 		if (is_array ( $this->method ))
 			foreach ( $this->method as $method ) {
-				$this->apiID [$method] = \WP_Piwik\Request::register ( $method, $this->parameter );
+				$this->apiID [$method] = Request::register ( $method, $this->parameter );
 				self::$wpPiwik->log ( "Register request: " . $this->apiID [$method] );
 			}
 		else {
-			$this->apiID [$this->method] = \WP_Piwik\Request::register ( $this->method, $this->parameter );
+			$this->apiID [$this->method] = Request::register ( $this->method, $this->parameter );
 			self::$wpPiwik->log ( "Register request: " . $this->apiID [$this->method] );
 		}
 		if ($this->isShortcode)
@@ -189,10 +192,10 @@ abstract class Widget {
 	 *        	array of rows, each row containing an array of cells
 	 * @param string $class
 	 *        	CSS class to apply
-	 * @param unknown $javaScript
+	 * @param array $javaScript
 	 *        	array of javascript code to apply (one item per row)
 	 */
-	private function tabBody($tbody, $class = false, $javaScript = array(), $classes = array()) {
+	private function tabBody($tbody, $class = "", $javaScript = array(), $classes = array()) {
 		$this->out( '<tbody' . ($class ? ' class="' . $class . '"' : '') . '>' );
 		foreach ( $tbody as $key => $trow )
 			$this->tabRow ( $trow, isset( $javaScript [$key] ) ?$javaScript [$key] : '', isset ( $classes [$key] ) ?$classes [$key] : '');

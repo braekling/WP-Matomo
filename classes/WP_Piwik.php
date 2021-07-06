@@ -8,10 +8,6 @@
  */
 class WP_Piwik {
 
-	/**
-	 *
-	 * @var Runtime environment variables
-	 */
 	private static $revisionId = 2019110501, $version = '1.0.23', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
 
 	/**
@@ -438,10 +434,6 @@ class WP_Piwik {
 		add_action ( 'admin_print_styles-' . $statsPageId, array (
 				$statsPage,
 				'printAdminStyles'
-		) );
-		add_action ( 'admin_head-' . $statsPageId, array (
-				$statsPage,
-				'extendAdminHeader'
 		) );
 		add_action ( 'load-' . $statsPageId, array (
 				$this,
@@ -1221,9 +1213,7 @@ class WP_Piwik {
 		wp_enqueue_script ( 'wp-lists' );
 		wp_enqueue_script ( 'postbox' );
 		wp_enqueue_script ( 'wp-piwik', $this->getPluginURL () . 'js/wp-piwik.js', array (), self::$version, true );
-		wp_enqueue_script ( 'wp-piwik-jqplot', $this->getPluginURL () . 'js/jqplot/wp-piwik.jqplot.js', array (
-				'jquery'
-		), self::$version );
+		wp_enqueue_script ( 'wp-piwik-chartjs', $this->getPluginURL () . 'js/chartjs/chart.min.js', "3.4.1" );
 		new \WP_Piwik\Widget\Chart ( $this, self::$settings, $this->statsPageId );
 		new \WP_Piwik\Widget\Visitors ( $this, self::$settings, $this->statsPageId );
 		new \WP_Piwik\Widget\Overview ( $this, self::$settings, $this->statsPageId );

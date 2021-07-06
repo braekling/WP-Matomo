@@ -19,16 +19,9 @@
 			$this->method = 'DevicesDetection.getModel';
 			$this->context = 'normal';
 			wp_enqueue_script('wp-piwik', self::$wpPiwik->getPluginURL().'js/wp-piwik.js', array(), self::$wpPiwik->getPluginVersion(), true);
-			wp_enqueue_script('wp-piwik-jqplot',self::$wpPiwik->getPluginURL().'js/jqplot/wp-piwik.jqplot.js',array('jquery'));
+			wp_enqueue_script ( 'wp-piwik-chartjs', self::$wpPiwik->getPluginURL () . 'js/chartjs/chart.min.js', "3.4.1" );
 			wp_enqueue_style('wp-piwik', self::$wpPiwik->getPluginURL().'css/wp-piwik.css',array(),self::$wpPiwik->getPluginVersion());
-			add_action('admin_head-index.php', array($this, 'addHeaderLines'));
-		}
-		
-		public function addHeaderLines() {
-			echo '<!--[if IE]><script language="javascript" type="text/javascript" src="'.self::$wpPiwik->getPluginURL().'js/jqplot/excanvas.min.js"></script><![endif]-->';
-			echo '<link rel="stylesheet" href="'.self::$wpPiwik->getPluginURL().'js/jqplot/jquery.jqplot.min.css" type="text/css"/>';
-			echo '<script type="text/javascript">var $j = jQuery.noConflict();</script>';			
-		}
+}
 		
 		public function show() {
 			$response = self::$wpPiwik->request($this->apiID[$this->method]);
@@ -48,7 +41,7 @@
                         $count++;
                         $sum += isset($row[$unique])?$row[$unique]:0;
                         if ($count < $this->limit)
-                            $tableBody[$row['label']] = array($row['label'], $row[$unique], 0);
+                            $tableBody[$row['label']] = array(htmlentities($row['label']), $row[$unique], 0);
                         elseif (!isset($tableBody['Others'])) {
                             $tableBody['Others'] = array($row['label'], $row[$unique], 0);
                             $class['Others'] = 'wp-piwik-hideDetails';
