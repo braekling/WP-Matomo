@@ -914,7 +914,7 @@ class WP_Piwik {
 	 * Get WP-Piwik's URL
 	 */
 	public function getPluginURL() {
-		return trailingslashit ( plugins_url () . '/wp-piwik/' );
+		return trailingslashit ( plugin_dir_url( dirname( __FILE__ ) ) );
 	}
 
 	/**
