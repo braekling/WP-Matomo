@@ -51,7 +51,7 @@ function getContents($useCurl, $url, $options = false)
 		return piwikFileGetContentsCurl($url, $options);
 	else return 'Neither url_fopen nor cURL is available. Please enable at least one of them.';
 }
-function piwikFileGetContentsCurl($url, $options) 
+function piwikFileGetContentsCurl($url, $options)
 {
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -104,7 +104,7 @@ foreach ($_GET as $key => $value) {
 sendHeader("Content-Type: image/gif");
 $stream_options = array('http' => array(
     'user_agent' => arrayValue($_SERVER, 'HTTP_USER_AGENT', ''),
-    'header'     => sprintf("Accept-Language: %s\r\n", str_replace(array("\n", "\t", "\r"), "", arrayValue($_SERVER, 'HTTP_ACCEPT_LANGUAGE', ''))),
+    'header'     => sprintf("Accept-Language: %s", str_replace(array("\n", "\t", "\r"), "", arrayValue($_SERVER, 'HTTP_ACCEPT_LANGUAGE', ''))),
     'timeout'    => $timeout
 ));
 if (version_compare(PHP_VERSION, '5.3.0', '<')) {
