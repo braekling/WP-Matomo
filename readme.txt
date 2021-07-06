@@ -143,6 +143,10 @@ Add WP-Matomo to your /wp-content/plugins folder and enable it as [Network Plugi
 
 == Changelog ==
 
+= 1.0.25 =
+* Fix/update proxy script (thanks to nicobilliotte and Rasp8e, https://github.com/braekling/WP-Matomo/pull/91)
+* Make plugin working if deployed in a custom folder (thanks to utolosa002, https://github.com/braekling/WP-Matomo/pull/88)
+
 = 1.0.24 =
 * Hotfix to avoid deprecated jQuery.support.boxModel in jqPlot (https://github.com/jqPlot/jqPlot/issues/123)
 * Enabling metaboxes on particular Custom Post Types (thanks to goaround, https://github.com/braekling/WP-Matomo/pull/83)
