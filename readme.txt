@@ -145,6 +145,8 @@ Add WP-Matomo to your /wp-content/plugins folder and enable it as [Network Plugi
 
 = 1.0.25 =
 * Replace jqplot and jquery.sparklines with [Chart.js](https://www.chartjs.org)
+* Allow to show overview stats for last 60 and 90 days
+* Allow to select the per post stats range from today to last 90 days
 * Fix/update proxy script (thanks to nicobilliotte and Rasp8e, https://github.com/braekling/WP-Matomo/pull/91)
 * Make plugin working if deployed in a custom folder (thanks to utolosa002, https://github.com/braekling/WP-Matomo/pull/88)
 

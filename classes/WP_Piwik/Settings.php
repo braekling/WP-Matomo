@@ -56,7 +56,7 @@ class Settings {
 			'capability_read_stats' => array (
 					'administrator' => true
 			),
-			'perpost_stats' => false,
+			'perpost_stats' => "disabled",
 			'plugin_display_name' => 'WP-Matomo',
 			'piwik_shortcut' => false,
 			'shortcodes' => false,
@@ -106,6 +106,7 @@ class Settings {
 			'track_cdnurl' => '',
 			'track_cdnurlssl' => '',
 			'force_protocol' => 'disabled',
+			'remove_type_attribute' => false,
 			'update_notice' => 'enabled'
 	), $settings = array (
 			'name' => '',
