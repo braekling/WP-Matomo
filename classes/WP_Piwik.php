@@ -1,5 +1,7 @@
 <?php
 
+use WP_Piwik\Widget\Post;
+
 /**
  * The main WP-Matomo class configures, registers and manages the plugin
  *
@@ -8,7 +10,7 @@
  */
 class WP_Piwik {
 
-	private static $revisionId = 2019110501, $version = '1.0.23', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
+	private static $revisionId = 2021070701, $version = '1.0.25', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
 
 	/**
 	 * Constructor class to configure and register all WP-Piwik components
@@ -356,7 +358,7 @@ class WP_Piwik {
 					'saveCustomVars'
 			), 10, 2 );
 		}
-		if (self::$settings->getGlobalOption ( 'perpost_stats' )) {
+		if (self::$settings->getGlobalOption ( 'perpost_stats' ) != "disabled") {
 			add_action ( 'add_meta_boxes', array (
 					$this,
 					'onloadPostPage'
@@ -495,7 +497,49 @@ class WP_Piwik {
 			if (isset($unique['result']))
 				$content .= '<!-- '.$unique['result'].': '.($unique['message']?$unique['message']:'...').' -->';
 			elseif (is_array ( $unique ) ) {
-				$content = "<script type='text/javascript'>var \$jSpark = jQuery.noConflict();\$jSpark(function() {var piwikSparkVals=[" . implode ( ',', $unique ) . "];\$jSpark('.wp-piwik_dynbar').sparkline(piwikSparkVals, {type: 'bar', barColor: '#ccc', barWidth:2});});</script><span class='wp-piwik_dynbar'>Loading...</span>";
+			    $labels = "";
+			    for ($i = 0; $i < count($unique); $i++) {
+                    $labels .= $i.",";
+                }
+                ob_start();
+                ?>
+                    <div style="width:100px; height:100%;">
+                        <canvas id="wpPiwikSparkline" style="max-width:100%; max-height:100%;padding-top:4px; padding-bottom:4px;"></canvas>
+                    </div>
+                    <script>
+                        function showWpPiwikSparkline() {
+                            new Chart(document.getElementById('wpPiwikSparkline').getContext('2d'), {
+                                type: 'bar',
+                                data: {
+                                    labels: [<?php echo $labels; ?>],
+                                    datasets: [
+                                        {
+                                            borderColor: "rgb(240, 240, 241)",
+                                            backgroundColor: "rgb(240, 240, 241)",
+                                            borderWidth:1,
+                                            radius:0,
+                                            data: [<?php echo implode(',', $unique); ?>]
+                                        }
+                                    ]
+                                },
+                                options: {
+                                    responsive: true,
+                                    plugins: {
+                                        legend: { display: false },
+                                        tooltip: { enabled: false }
+                                    },
+                                    scales: {
+                                        y: { display: false },
+                                        x: { display: false }
+                                    }
+                                }
+                            });
+                        }
+                        jQuery(showWpPiwikSparkline);
+                    </script>
+                <?php
+                $content .= ob_get_contents();
+                ob_end_clean();
 				$url = $this->getStatsURL ();
 			}
 			$toolbar->add_menu ( array (
@@ -528,10 +572,7 @@ class WP_Piwik {
 	 */
 	public function loadToolbarRequirements() {
 		if (is_admin_bar_showing ()) {
-			wp_enqueue_script ( 'wp-piwik-sparkline', $this->getPluginURL () . 'js/sparkline/jquery.sparkline.min.js', array (
-					'jquery'
-			), self::$version );
-			wp_enqueue_style ( 'wp-piwik', $this->getPluginURL () . 'css/wp-piwik-spark.css', array (), $this->getPluginVersion () );
+            wp_enqueue_script ( 'wp-piwik-chartjs', $this->getPluginURL () . 'js/chartjs/chart.min.js', "3.4.1" );
 		}
 	}
 
@@ -1253,7 +1294,8 @@ class WP_Piwik {
 		$this->log ( 'Load per post statistics: ' . $postUrl );
         $locations = apply_filters( 'wp-piwik_meta_boxes_locations', get_post_types( array( 'public' => true ), 'names' ) );
 		array (
-				new \WP_Piwik\Widget\Post ( $this, self::$settings, $locations, 'side', 'default', array (
+				new Post ( $this, self::$settings, $locations, 'side', 'default', array (
+				        'range' => self::$settings->getGlobalOption ( 'perpost_stats' ),
 						'url' => $postUrl
 				) ),
 				'show'

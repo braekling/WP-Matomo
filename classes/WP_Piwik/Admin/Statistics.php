@@ -32,7 +32,7 @@
 				echo '</div>';
 			}
 			echo '</div></form></div>';
-			echo '<script type="text/javascript">//<![CDATA['."\n";
+			echo '<script>//<![CDATA['."\n";
 			echo 'jQuery(document).ready(function($) {$(".if-js-closed").removeClass("if-js-closed").addClass("closed"); postboxes.add_postbox_toggles("'.self::$wpPiwik->statsPageId.'");});'."\n";
 			echo '//]]></script>'."\n";
 			if (self::$settings->checkNetworkActivation() && function_exists('is_super_admin') && is_super_admin()) {

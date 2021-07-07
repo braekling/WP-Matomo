@@ -42,53 +42,46 @@ class Chart extends Visitors
             $unique = substr($unique, 0, -1);
             $labels = substr($labels, 0, -1);
             $bounced = substr($bounced, 0, -1);
-
-            echo '<div>';
-            echo '<canvas id="wp-piwik_stats_vistors_graph" style="height:220px;"></canvas>';
-            echo '</div>';
-            echo '<script type="text/javascript">';
-            // echo '$j.jqplot("wp-piwik_stats_vistors_graph", [[' . $values . '],[' . $unique . '],[' . $bounced . ']],{axes:{yaxis:{min:0, tickOptions:{formatString:"%.0f"}},xaxis:{min:1,max:30,ticks:[' . $labels . ']}},seriesDefaults:{showMarker:false,lineWidth:1,fill:true,fillAndStroke:true,fillAlpha:0.9,trendline:{show:false,color:"#C00",lineWidth:1.5,type:"exp"}},series:[{color:"#90AAD9",fillColor:"#D4E2ED"},{color:"#A3BCEA",fillColor:"#E4F2FD",trendline:{show:true,label:"Unique visitor trend"}},{color:"#E9A0BA",fillColor:"#FDE4F2"}],});';
             ?>
-            console.log([<?php echo $labels ?>]);
-            const data = {
-                labels: [<?php echo $labels ?>],
-                datasets: [
+            <div>
+                <canvas id="wp-piwik_stats_vistors_graph" style="height:220px;"></canvas>
+            </div>
+            <script>
+                new Chart(
+                    document.getElementById('wp-piwik_stats_vistors_graph'),
                     {
-                        label: 'Visitors',
-                        backgroundColor: '#0277bd',
-                        borderColor: '#0277bd',
-                        data: [<?php echo $values; ?>],
-                        borderWidth: 1
-                    },
-                    {
-                        label: 'Unique',
-                        backgroundColor: '#ff8f00',
-                        borderColor: '#ff8f00',
-                        data: [<?php echo $unique; ?>],
-                        borderWidth: 1
-                    },
-                    {
-                        label: 'Bounced',
-                        backgroundColor: '#ad1457',
-                        borderColor: '#ad1457',
-                        data: [<?php echo $bounced; ?>],
-                        borderWidth: 1
-                    },
-                ]
-            };
-
-            const config = {
-                type: 'line',
-                data,
-                options: {}
-            };
-
-            new Chart(
-                document.getElementById('wp-piwik_stats_vistors_graph'),
-                config
-            );
+                        type: 'line',
+                        data: {
+                            labels: [<?php echo $labels ?>],
+                            datasets: [
+                                {
+                                    label: 'Visitors',
+                                    backgroundColor: '#0277bd',
+                                    borderColor: '#0277bd',
+                                    data: [<?php echo $values; ?>],
+                                    borderWidth: 1
+                                },
+                                {
+                                    label: 'Unique',
+                                    backgroundColor: '#ff8f00',
+                                    borderColor: '#ff8f00',
+                                    data: [<?php echo $unique; ?>],
+                                    borderWidth: 1
+                                },
+                                {
+                                    label: 'Bounced',
+                                    backgroundColor: '#ad1457',
+                                    borderColor: '#ad1457',
+                                    data: [<?php echo $bounced; ?>],
+                                    borderWidth: 1
+                                },
+                            ]
+                        },
+                        options: {}
+                    }
+                );
+            </script>
             <?php
-            echo '</script>';
         }
     }
 

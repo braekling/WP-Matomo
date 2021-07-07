@@ -170,7 +170,9 @@ class Settings extends \WP_Piwik\Admin {
 				'disabled' => __ ( 'Disabled', 'wp-piwik' ),
 				'yesterday' => __ ( 'Yesterday', 'wp-piwik' ),
 				'today' => __ ( 'Today', 'wp-piwik' ),
-				'last30' => __ ( 'Last 30 days', 'wp-piwik' )
+				'last30' => __ ( 'Last 30 days', 'wp-piwik' ),
+                'last60' => __ ( 'Last 60 days', 'wp-piwik' ),
+                'last90' => __ ( 'Last 90 days', 'wp-piwik' )
 		), __ ( 'Enable WP-Matomo dashboard widget &quot;Overview&quot;.', 'wp-piwik' ) );
 
 		$this->showCheckbox ( 'dashboard_chart', __ ( 'Dashboard graph', 'wp-piwik' ), __ ( 'Enable WP-Matomo dashboard widget &quot;Graph&quot;.', 'wp-piwik' ) );
@@ -190,9 +192,17 @@ class Settings extends \WP_Piwik\Admin {
 		}
 		echo '<span class="dashicons dashicons-editor-help" onclick="$j(\'#capability_read_stats-desc\').toggleClass(\'hidden\');"></span> <p class="description hidden" id="capability_read_stats-desc">' . __ ( 'Choose user roles allowed to see the statistics page.', 'wp-piwik' ) . '</p></td></tr>';
 
-		$this->showCheckbox ( 'perpost_stats', __ ( 'Show per post stats', 'wp-piwik' ), __ ( 'Show stats about single posts at the post edit admin page.', 'wp-piwik' ) );
+        $this->showSelect ( 'perpost_stats', __ ( 'Show per post stats', 'wp-piwik' ), array (
+            'disabled' => __ ( 'Disabled', 'wp-piwik' ),
+            'yesterday' => __ ( 'Yesterday', 'wp-piwik' ),
+            'today' => __ ( 'Today', 'wp-piwik' ),
+            'last30' => __ ( 'Last 30 days', 'wp-piwik' ),
+            'last60' => __ ( 'Last 60 days', 'wp-piwik' ),
+            'last90' => __ ( 'Last 90 days', 'wp-piwik' )
+        ), __ ( 'Show stats about single posts at the post edit admin page.', 'wp-piwik' ) );
 
-		$this->showCheckbox ( 'piwik_shortcut', __ ( 'Matomo shortcut', 'wp-piwik' ), __ ( 'Display a shortcut to Matomo itself.', 'wp-piwik' ) );
+
+            $this->showCheckbox ( 'piwik_shortcut', __ ( 'Matomo shortcut', 'wp-piwik' ), __ ( 'Display a shortcut to Matomo itself.', 'wp-piwik' ) );
 
 		$this->showInput ( 'plugin_display_name', __ ( 'WP-Matomo display name', 'wp-piwik' ), __ ( 'Plugin name shown in WordPress.', 'wp-piwik' ) );
 
@@ -554,7 +564,6 @@ class Settings extends \WP_Piwik\Admin {
 	 * @see \WP_Piwik\Admin::extendAdminHeader()
 	 */
 	public function extendAdminHeader() {
-		echo '<script type="text/javascript">var $j = jQuery.noConflict();</script>';
 	}
 
 	/**
@@ -563,7 +572,7 @@ class Settings extends \WP_Piwik\Admin {
 	public function showCredits() {
 		?>
 		<p><strong><?php _e('Thank you very much for your donation', 'wp-piwik'); ?>:</strong> Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., Helmut O., Valerie S., Jochen D., Atlas R., Harald W., Jan M., Addy K., Hans-Georg E.-B., Yvonne K., Andrew D., Nicolas, J., Andre M., Steve J., Jakub P., ditho.berlin, Robert R., Simon B., Grzegorz O.,  Bjarne O., Georg H., Tino S., Carola H., Bo K. C., Timothy T., Heinz L., <?php _e('the Matomo team itself','wp-piwik');?><?php _e(', and all people flattering this','wp-piwik'); ?>!</p>
-		<p><?php _e('Graphs powered by <a href="http://www.jqplot.com/" target="_BLANK">jqPlot</a> (License: GPL 2.0 and MIT) and <a href="http://omnipotent.net/jquery.sparkline/" target="_BLANK">jQuery Sparklines</a> (License: New BSD License).','wp-piwik'); ?></p>
+		<p><?php _e('Graphs powered by <a href="https://www.chartjs.org" target="_BLANK">Chart.js</a> (MIT License).','wp-piwik'); ?></p>
 		<p><?php _e('Thank you very much','wp-piwik'); ?>, <?php _e('Transifex and WordPress translation community for your translation work.','wp-piwik'); ?>!</p>
 		<p><?php _e('Thank you very much, all users who send me mails containing criticism, commendation, feature requests and bug reports! You help me to make WP-Matomo much better.','wp-piwik'); ?></p>
 		<p><?php _e('Thank <strong>you</strong> for using my plugin. It is the best commendation if my piece of code is really used!','wp-piwik'); ?></p>
