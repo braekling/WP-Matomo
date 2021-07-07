@@ -37,6 +37,13 @@ class TrackingCode {
         if (preg_match ( '/var u="([^"]*)";/', $code, $hits )) {
             $fetchedProxyUrl = $hits [1];
         } else $fetchedProxyUrl = '';
+        if ($settings->getGlobalOption ( 'remove_type_attribute')) {
+            $code = str_replace (
+                array( ' type="text/javascript"', " type='text/javascript'" ),
+                '',
+                $code
+            );
+        }
 		if ($settings->getGlobalOption ( 'track_mode' ) == 'js')
 			$code = str_replace ( array (
 					'piwik.js',

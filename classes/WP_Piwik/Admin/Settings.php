@@ -348,7 +348,9 @@ class Settings extends \WP_Piwik\Admin {
 				'https' => __ ( 'https (SSL)', 'wp-piwik' )
 		), __ ( 'Choose if you want to explicitly force Matomo to use HTTP or HTTPS. Does not work with a CDN URL.', 'wp-piwik' ) );
 
-		$this->showSelect ( 'update_notice', __ ( 'Update notice', 'wp-piwik' ), array (
+        $this->showCheckbox ( 'remove_type_attribute', __ ( 'Remove type attribute', 'wp-piwik' ), __ ( 'Removes the type attribute from Matomo\'s tracking code script tag.', 'wp-piwik') );
+
+        $this->showSelect ( 'update_notice', __ ( 'Update notice', 'wp-piwik' ), array (
 				'enabled' => __ ( 'Show always if WP-Matomo is updated', 'wp-piwik' ),
 				'script' => __ ( 'Show only if WP-Matomo is updated and settings were changed', 'wp-piwik' ),
 				'disabled' => __ ( 'Disabled', 'wp-piwik' )
@@ -571,7 +573,7 @@ class Settings extends \WP_Piwik\Admin {
 	 */
 	public function showCredits() {
 		?>
-		<p><strong><?php _e('Thank you very much for your donation', 'wp-piwik'); ?>:</strong> Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., Helmut O., Valerie S., Jochen D., Atlas R., Harald W., Jan M., Addy K., Hans-Georg E.-B., Yvonne K., Andrew D., Nicolas, J., Andre M., Steve J., Jakub P., ditho.berlin, Robert R., Simon B., Grzegorz O.,  Bjarne O., Georg H., Tino S., Carola H., Bo K. C., Timothy T., Heinz L., <?php _e('the Matomo team itself','wp-piwik');?><?php _e(', and all people flattering this','wp-piwik'); ?>!</p>
+        <p><strong><?php _e('Thank you very much, everyone who donates to the WP-Matomo project, including the Matomo team!', 'wp-piwik'); ?></strong></p>
 		<p><?php _e('Graphs powered by <a href="https://www.chartjs.org" target="_BLANK">Chart.js</a> (MIT License).','wp-piwik'); ?></p>
 		<p><?php _e('Thank you very much','wp-piwik'); ?>, <?php _e('Transifex and WordPress translation community for your translation work.','wp-piwik'); ?>!</p>
 		<p><?php _e('Thank you very much, all users who send me mails containing criticism, commendation, feature requests and bug reports! You help me to make WP-Matomo much better.','wp-piwik'); ?></p>

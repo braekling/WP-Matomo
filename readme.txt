@@ -3,7 +3,7 @@
 Contributors: Braekling
 Requires at least: 5.0
 Tested up to: 5.7.2
-Stable tag: 1.0.24
+Stable tag: 1.0.25
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
 Tags: matomo, tracking, statistics, stats, analytics
 
@@ -46,11 +46,11 @@ Shows the chosen keys value related to the current post. You can define a range 
     [wp-piwik]
 is equal to *[wp-piwik module="overview" title="" period="day" date="yesterday"]*.
 
-= Credits =
+= Credits and Acknowledgements =
 
 * Graphs powered by [Chart.js](https://www.chartjs.org) (MIT License).
 * All translators at Transifex and WordPress.
-* Donations: Marco L., Rolf W., Tobias U., Lars K., Donna F., Kevin D., Ramos S., Thomas M., John C., Andreas G., Ben M., Myra R. I., Carlos U. R.-S., Oleg I., M. N., Daniel K., James L., Jochen K., Cyril P., Thomas K., Patrik K., Zach, Sebastian W., Peakkom, Patrik K., Kati K., Helmut O., Valerie S., Jochen D., Atlas R., Harald W., Jan M., Addy K., Hans-Georg E.-B., Yvonne K., Andrew D., Nicolas J., Andre M., Steve J., Jakub P., ditho.berlin, Robert R., Simon B., Grzegorz O., Bjarne O., Georg H., Tino S., Carola H., Bo K. C., Timothy T., Heinz L., the Matomo team itself, and all people flattering this.
+* Anyone who donates to the WP-Matomo project, including the Matomo team!
 * All users who send me mails containing criticism, commendation, feature requests and bug reports - you help me to make WP-Matomo much better!
 
 Thank you all!
@@ -147,6 +147,7 @@ Add WP-Matomo to your /wp-content/plugins folder and enable it as [Network Plugi
 * Replace jqplot and jquery.sparklines with [Chart.js](https://www.chartjs.org)
 * Allow to show overview stats for last 60 and 90 days
 * Allow to select the per post stats range from today to last 90 days
+* Optionally remove Matomo's script tag's type attribute, see https://wordpress.org/support/topic/how-to-remove-unnecessary-type-attribute-for-javascript/.
 * Fix/update proxy script (thanks to nicobilliotte and Rasp8e, https://github.com/braekling/WP-Matomo/pull/91)
 * Make plugin working if deployed in a custom folder (thanks to utolosa002, https://github.com/braekling/WP-Matomo/pull/88)
 
