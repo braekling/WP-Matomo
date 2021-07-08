@@ -1295,7 +1295,8 @@ class WP_Piwik {
         $locations = apply_filters( 'wp-piwik_meta_boxes_locations', get_post_types( array( 'public' => true ), 'names' ) );
 		array (
 				new Post ( $this, self::$settings, $locations, 'side', 'default', array (
-				        'range' => self::$settings->getGlobalOption ( 'perpost_stats' ),
+				        'date' => self::$settings->getGlobalOption ( 'perpost_stats' ),
+						'period' => 'day',
 						'url' => $postUrl
 				) ),
 				'show'
