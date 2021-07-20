@@ -598,11 +598,11 @@ class WP_Piwik {
 			$posturl = get_permalink ( $post->ID );
 			$urlref = get_bloginfo ( 'rss2_url' );
 			if (self::$settings->getGlobalOption ( 'track_mode' ) == 'proxy')
-			    $url = plugins_url ( 'wp-piwik' ) . '/proxy/piwik.php';
+			    $url = plugins_url ( 'wp-piwik' ) . '/proxy/matomo.php';
             else {
                 $url = self::$settings->getGlobalOption ( 'piwik_url' );
                 if (substr($url, -10, 10) == '/index.php')
-                    $url = str_replace('/index.php', '/piwik.php', $url);
+                    $url = str_replace('/index.php', '/matomo.php', $url);
                 else
                     $url .= 'piwik.php';
             }
