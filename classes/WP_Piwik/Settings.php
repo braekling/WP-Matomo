@@ -228,12 +228,17 @@ class Settings {
 	 *        	blog ID (default: current blog)
 	 */
 	public function setOption($key, $value, $blogID = null) {
+		if (empty( $blogID )) {
+			$blogID = get_current_blog_id();
+		}
 		$this->settingsChanged = true;
 		self::$wpPiwik->log ( 'Changed option ' . $key . ': ' . $value );
-		if ($this->checkNetworkActivation () && ! empty ( $blogID )) {
+		if ($this->checkNetworkActivation ()) {
 			update_blog_option ( $blogID, 'wp-piwik-'.$key, $value );
 		}
-		$this->settings [$key] = $value;
+		if ($blogID == get_current_blog_id()) {
+			$this->settings [$key] = $value;
+		}
 	}
 
 	/**
