@@ -222,10 +222,10 @@ class Settings {
 	 *
 	 * @param string $key
 	 *        	option key
-	 * @param int $blogID
-	 *        	blog ID (default: current blog)
 	 * @param string $value
 	 *        	new option value
+	 * @param int $blogID
+	 *        	blog ID (default: current blog)
 	 */
 	public function setOption($key, $value, $blogID = null) {
 		$this->settingsChanged = true;
