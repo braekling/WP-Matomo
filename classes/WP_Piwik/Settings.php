@@ -231,9 +231,9 @@ class Settings {
 		$this->settingsChanged = true;
 		self::$wpPiwik->log ( 'Changed option ' . $key . ': ' . $value );
 		if ($this->checkNetworkActivation () && ! empty ( $blogID )) {
-			add_blog_option ( $blogID, 'wp-piwik-'.$key, $value );
-		} else
-			$this->settings [$key] = $value;
+			update_blog_option ( $blogID, 'wp-piwik-'.$key, $value );
+		}
+		$this->settings [$key] = $value;
 	}
 
 	/**
