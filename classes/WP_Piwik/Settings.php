@@ -369,7 +369,7 @@ class Settings {
 		if ($in ['track_mode'] == 'manually' || $in ['track_mode'] == 'disabled') {
 			$value = stripslashes ( $value );
 			if ($this->checkNetworkActivation ())
-				add_site_option ( 'wp-piwik-manually', $value );
+				update_site_option ( 'wp-piwik-manually', $value );
 			return $value;
 		}
 		/*$result = self::$wpPiwik->updateTrackingCode ();
