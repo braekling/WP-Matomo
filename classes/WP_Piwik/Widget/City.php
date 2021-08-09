@@ -15,7 +15,7 @@
 				'period' => $timeSettings['period'],
 				'date'  => $timeSettings['date']
 			);
-			$this->title = $prefix.__('Countries', 'wp-piwik').' ('.__($timeSettings['description'],'wp-piwik').')';
+			$this->title = $prefix.__('Cities', 'wp-piwik').' ('.__($timeSettings['description'],'wp-piwik').')';
 			$this->method = 'UserCountry.getCity';
 			$this->context = 'normal';
 			wp_enqueue_script('wp-piwik', self::$wpPiwik->getPluginURL().'js/wp-piwik.js', array(), self::$wpPiwik->getPluginVersion(), true);
