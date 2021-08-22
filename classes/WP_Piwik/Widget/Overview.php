@@ -58,7 +58,7 @@ class Overview extends \WP_Piwik\Widget
             );
             if (!in_array($this->parameter['date'], array('last30', 'last60', 'last90')))
                 array_push($tableBody, array(__('Time/visit', 'wp-piwik') . ':', $avgTime), array(__('Max. page views in one visit', 'wp-piwik') . ':', $this->value($response, 'max_actions')));
-            $tableFoot = (self::$settings->getGlobalOption('piwik_shortcut') ? array(__('Shortcut', 'wp-piwik') . ':', '<a href="' . self::$settings->getGlobalOption('piwik_url') . '">Piwik</a>' . (isset($aryConf['inline']) && $aryConf['inline'] ? ' - <a href="?page=wp-piwik_stats">WP-Piwik</a>' : '')) : null);
+            $tableFoot = (self::$settings->getGlobalOption('piwik_shortcut') ? array(__('Shortcut', 'wp-piwik') . ':', '<a href="' . self::$settings->getGlobalOption('piwik_url') . '" target="_BLANK">Matomo</a>' . (isset($aryConf['inline']) && $aryConf['inline'] ? ' - <a href="?page=wp-piwik_stats">WP-Piwik</a>' : '')) : null);
             $this->table($tableHead, $tableBody, $tableFoot);
         }
     }

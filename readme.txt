@@ -2,8 +2,8 @@
 
 Contributors: Braekling
 Requires at least: 5.0
-Tested up to: 5.7.2
-Stable tag: 1.0.25
+Tested up to: 5.8
+Stable tag: 1.0.26
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
 Tags: matomo, tracking, statistics, stats, analytics
 
@@ -17,13 +17,13 @@ This plugin uses the Matomo API to show your Matomo statistics in your WordPress
 
 To use this plugin the Matomo web analytics application is required. If you do not already have a Matomo setup (e.g., provided by your web hosting service), you have two simple options: use either a [self-hosted Matomo](http://matomo.org/) or a [cloud-hosted Matomo by InnoCraft](https://www.innocraft.cloud/?pk_campaign=WP-Piwik).
 
-**Requirements:** PHP 7.0 (or higher), WordPress 5.0 (or higher), Matomo 3.0 (or higher)
+**Requirements:** PHP 7.0 (or higher), WordPress 5.0 (or higher), Matomo 4.0 (or higher)
  
 **Languages:** English, Albanian, Chinese, Dutch, French, German, Greek, Hungarian, Italian, Polish, Portuguese (Brazil). Partially supported: Azerbaijani, Belarusian, Hindi, Lithuanian, Luxembourgish, Norwegian, Persian, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian
 
 = What is Matomo? =
 
-[youtube https://youtu.be/OslfF_EH81g]
+[youtube https://youtu.be/Qc2kooLNDiU]
 [Learn more.](https://matomo.org/what-is-matomo/)
 
 = First steps =
@@ -142,6 +142,15 @@ Add WP-Matomo to your /wp-content/plugins folder and enable it as [Network Plugi
 5. Matomo: Here you'll find your auth token.
 
 == Changelog ==
+
+= 1.0.26 =
+* Fix feed tracking via proxy script (thanks to nicobilliotte, [details](https://github.com/braekling/WP-Matomo/pull/92))
+* Add piwik.php proxy script wrapper to make sure proxy tracking codes continue working if piwik.php is used
+* Fix for stalled blog options on network activation (thanks to ulkoalex, [details](https://github.com/braekling/WP-Matomo/pull/94))
+* Fix wrong title on city statistics (thanks to ulkoalex, [details](https://github.com/braekling/WP-Matomo/pull/95))
+* [Fix "call to undefined method" error on network admin](https://wordpress.org/support/topic/fatal-error-call-to-undefined-method-wp_piwikadminnetworkgetpluginurl/)
+* Do not allow to set empty WP-Matomo display name
+* Rename Piwik link on dashboard widget to Matomo
 
 = 1.0.25 =
 * Replace jqplot and jquery.sparklines with [Chart.js](https://www.chartjs.org)

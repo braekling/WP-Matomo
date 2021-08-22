@@ -10,7 +10,7 @@ use WP_Piwik\Widget\Post;
  */
 class WP_Piwik {
 
-	private static $revisionId = 2021070701, $version = '1.0.25', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
+	private static $revisionId = 2021082201, $version = '1.0.26', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
 
 	/**
 	 * Constructor class to configure and register all WP-Piwik components
@@ -198,7 +198,7 @@ class WP_Piwik {
 	private function installPlugin($isUpdate = false) {
 		self::$logger->log ( 'Running WP-Matomo installation' );
 		if (! $isUpdate)
-			$this->addNotice ( 'install', sprintf ( __ ( '%s %s installed.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'plugin_display_name' ), self::$version ), __ ( 'Next you should connect to Matomo', 'wp-piwik' ) );
+			$this->addNotice ( 'install', sprintf ( __ ( '%s %s installed.', 'wp-piwik' ), self::$settings->getNotEmptyGlobalOption ( 'plugin_display_name' ), self::$version ), __ ( 'Next you should connect to Matomo', 'wp-piwik' ) );
 		self::$settings->setGlobalOption ( 'revision', self::$revisionId );
 		self::$settings->setGlobalOption ( 'last_settings_update', time () );
 	}
@@ -232,7 +232,7 @@ class WP_Piwik {
 			}
 		}
 		if ((self::$settings->getGlobalOption('update_notice') == 'enabled') || ((self::$settings->getGlobalOption('update_notice') == 'script') && $isPatched))
-			$this->addNotice ( 'update', sprintf ( __ ( '%s updated to %s.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'plugin_display_name' ), self::$version ), __ ( 'Please validate your configuration', 'wp-piwik' ) );
+			$this->addNotice ( 'update', sprintf ( __ ( '%s updated to %s.', 'wp-piwik' ), self::$settings->getNotEmptyGlobalOption ( 'plugin_display_name' ), self::$version ), __ ( 'Please validate your configuration', 'wp-piwik' ) );
 		$this->installPlugin ( true );
 	}
 
@@ -384,7 +384,7 @@ class WP_Piwik {
 						}
 			}
 			$statsPage = new WP_Piwik\Admin\Statistics ( $this, self::$settings );
-			$this->statsPageId = add_dashboard_page ( __ ( 'Matomo Statistics', 'wp-piwik' ), self::$settings->getGlobalOption ( 'plugin_display_name' ), $cap, 'wp-piwik_stats', array (
+			$this->statsPageId = add_dashboard_page ( __ ( 'Matomo Statistics', 'wp-piwik' ), self::$settings->getNotEmptyGlobalOption ( 'plugin_display_name' ), $cap, 'wp-piwik_stats', array (
 					$statsPage,
 					'show'
 			) );
@@ -392,7 +392,7 @@ class WP_Piwik {
 		}
 		if (! self::$settings->checkNetworkActivation ()) {
 			$optionsPage = new WP_Piwik\Admin\Settings ( $this, self::$settings );
-			self::$optionsPageId = add_options_page ( self::$settings->getGlobalOption ( 'plugin_display_name' ), self::$settings->getGlobalOption ( 'plugin_display_name' ), 'activate_plugins', __FILE__, array (
+			self::$optionsPageId = add_options_page ( self::$settings->getNotEmptyGlobalOption ( 'plugin_display_name' ), self::$settings->getNotEmptyGlobalOption ( 'plugin_display_name' ), 'activate_plugins', __FILE__, array (
 					$optionsPage,
 					'show'
 			) );
@@ -406,14 +406,14 @@ class WP_Piwik {
 	public function buildNetworkAdminMenu() {
 		if (self::isConfigured ()) {
 			$statsPage = new WP_Piwik\Admin\Network ( $this, self::$settings );
-			$this->statsPageId = add_dashboard_page ( __ ( 'Matomo Statistics', 'wp-piwik' ), self::$settings->getGlobalOption ( 'plugin_display_name' ), 'manage_sites', 'wp-piwik_stats', array (
+			$this->statsPageId = add_dashboard_page ( __ ( 'Matomo Statistics', 'wp-piwik' ), self::$settings->getNotEmptyGlobalOption ( 'plugin_display_name' ), 'manage_sites', 'wp-piwik_stats', array (
 					$statsPage,
 					'show'
 			) );
 			$this->loadAdminStatsHeader ( $this->statsPageId, $statsPage );
 		}
 		$optionsPage = new WP_Piwik\Admin\Settings ( $this, self::$settings );
-		self::$optionsPageId = add_submenu_page ( 'settings.php', self::$settings->getGlobalOption ( 'plugin_display_name' ), self::$settings->getGlobalOption ( 'plugin_display_name' ), 'manage_sites', __FILE__, array (
+		self::$optionsPageId = add_submenu_page ( 'settings.php', self::$settings->getNotEmptyGlobalOption ( 'plugin_display_name' ), self::$settings->getNotEmptyGlobalOption ( 'plugin_display_name' ), 'manage_sites', __FILE__, array (
 				$optionsPage,
 				'show'
 		) );

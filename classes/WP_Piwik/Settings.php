@@ -176,6 +176,17 @@ class Settings {
 		$this->settingsChanged = false;
 	}
 
+    /**
+     * Get a global option's value which should not be empty
+     *
+     * @param string $key
+     *        	option key
+     * @return string option value
+     */
+    public function getNotEmptyGlobalOption($key) {
+        return isset ( $this->globalSettings [$key] ) && !empty($this->globalSettings [$key]) ? $this->globalSettings [$key] : self::$defaultSettings ['globalSettings'] [$key];
+    }
+
 	/**
 	 * Get a global option's value
 	 *

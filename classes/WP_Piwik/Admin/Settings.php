@@ -511,7 +511,7 @@ class Settings extends \WP_Piwik\Admin {
 	 * @param string $addPluginName set to true to add the plugin name to the headline (default: false)
 	 */
 	private function getHeadline($order, $icon, $headline, $addPluginName = false) {
-		echo ($order > 0 ? "<h$order>" : '') . sprintf ( '<span class="dashicons dashicons-%s"></span> %s%s', $icon, ($addPluginName ? self::$settings->getGlobalOption ( 'plugin_display_name' ) . ' ' : ''), __ ( $headline, 'wp-piwik' ) ) . ($order > 0 ? "</h$order>" : '');
+		echo ($order > 0 ? "<h$order>" : '') . sprintf ( '<span class="dashicons dashicons-%s"></span> %s%s', $icon, ($addPluginName ? self::$settings->getNotEmptyGlobalOption ( 'plugin_display_name' ) . ' ' : ''), __ ( $headline, 'wp-piwik' ) ) . ($order > 0 ? "</h$order>" : '');
 	}
 
 	/**
