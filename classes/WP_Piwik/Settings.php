@@ -233,18 +233,23 @@ class Settings {
 	 *
 	 * @param string $key
 	 *        	option key
-	 * @param int $blogID
-	 *        	blog ID (default: current blog)
 	 * @param string $value
 	 *        	new option value
+	 * @param int $blogID
+	 *        	blog ID (default: current blog)
 	 */
 	public function setOption($key, $value, $blogID = null) {
+		if (empty( $blogID )) {
+			$blogID = get_current_blog_id();
+		}
 		$this->settingsChanged = true;
 		self::$wpPiwik->log ( 'Changed option ' . $key . ': ' . $value );
-		if ($this->checkNetworkActivation () && ! empty ( $blogID )) {
-			add_blog_option ( $blogID, 'wp-piwik-'.$key, $value );
-		} else
+		if ($this->checkNetworkActivation ()) {
+			update_blog_option ( $blogID, 'wp-piwik-'.$key, $value );
+		}
+		if ($blogID == get_current_blog_id()) {
 			$this->settings [$key] = $value;
+		}
 	}
 
 	/**
@@ -380,7 +385,7 @@ class Settings {
 		if ($in ['track_mode'] == 'manually' || $in ['track_mode'] == 'disabled') {
 			$value = stripslashes ( $value );
 			if ($this->checkNetworkActivation ())
-				add_site_option ( 'wp-piwik-manually', $value );
+				update_site_option ( 'wp-piwik-manually', $value );
 			return $value;
 		}
 		/*$result = self::$wpPiwik->updateTrackingCode ();
