@@ -1212,7 +1212,7 @@ class WP_Piwik {
 		if (isset ( $result ['script'] ) && ! empty ( $result ['script'] )) {
 			self::$settings->setOption ( 'tracking_code', $result ['script'], $blogId );
 			self::$settings->setOption ( 'noscript_code', $result ['noscript'], $blogId );
-			self::$settings->setGlobalOption ( 'proxy_url', $result ['proxy'], $blogId );
+			self::$settings->setGlobalOption ( 'proxy_url', $result ['proxy'] );
 		}
 		return $result;
 	}
