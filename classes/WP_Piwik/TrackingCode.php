@@ -54,6 +54,7 @@ class TrackingCode {
 		elseif ($settings->getGlobalOption ( 'track_mode' ) == 'proxy') {
 			$code = str_replace ( 'piwik.js', 'matomo.php', $code );
 			$code = str_replace ( 'matomo.js', 'matomo.php', $code );
+            $code = str_replace ( 'piwik.php', 'matomo.php', $code );
 			$proxy = str_replace ( array (
 					'https://',
 					'http://'
