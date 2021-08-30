@@ -1,18 +1,16 @@
 # 
 # Translators:
-# Andr&eacute; Br&auml;kling <webmaster@braekling.de>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "POT-Creation-Date: 2017-10-09 20:37+0200\n"
-"PO-Revision-Date: 2019-03-26 08:31+0000\n"
-"Last-Translator: André Bräkling\n"
-"Language-Team: Russian (Russia) (http://www.transifex.com/matomo/wp-piwik/language/ru_RU/)\n"
+"PO-Revision-Date: 2015-05-10 13:23+0000\n"
+"Language-Team: Welsh (http://www.transifex.com/matomo/wp-piwik/language/cy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru_RU\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Language: cy\n"
+"Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n==2) ? 1 : (n != 8 && n != 11) ? 2 : 3;\n"
 
 #: classes/WP_Piwik.php:203
 #, php-format
@@ -30,11 +28,11 @@ msgstr ""
 
 #: classes/WP_Piwik.php:237
 msgid "Please validate your configuration"
-msgstr "Пожалуйста, проверь свою конфигурацию."
+msgstr ""
 
 #: classes/WP_Piwik.php:269 classes/WP_Piwik.php:527
 msgid "Settings"
-msgstr "Настройки"
+msgstr ""
 
 #: classes/WP_Piwik.php:272
 msgid "Important"
@@ -50,7 +48,7 @@ msgstr ""
 
 #: classes/WP_Piwik.php:992
 msgid "An error occured"
-msgstr "Произошла ошибка"
+msgstr ""
 
 #: classes/WP_Piwik.php:992 classes/WP_Piwik/Admin/Settings.php:89
 msgid "Support"
@@ -128,7 +126,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:93
 msgid "Credits"
-msgstr "Благодарности"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:106
 msgid ""
@@ -236,7 +234,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:122
 msgid "Auth token"
-msgstr "Также токен"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:122
 msgid ""
@@ -306,7 +304,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:162
 msgid "Default date shown on statistics page."
-msgstr "Стандартная дата, которая отображается на странице статистики."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:164
 msgid "Show SEO data"
@@ -388,7 +386,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:189
 msgid "Choose user roles allowed to see the statistics page."
-msgstr "Выбери те пользовательские роли, которые могут просматривать статистики."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:191
 msgid "Show per post stats"
@@ -581,7 +579,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:238
 msgid "Track 404"
-msgstr "Отслеживание объектов 404"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:238
 msgid ""
@@ -652,11 +650,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:264
 msgid "Tracking filter"
-msgstr "Фильтр отслеживания"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:268
 msgid "Choose users by user role you do <strong>not</strong> want to track."
-msgstr "Выбери те пользовательские роли, которые ты <strong>не</strong> хочешь отслеживать."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:270
 msgid "Track subdomains in the same website"
@@ -981,7 +979,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:561
 msgid "Thank you very much for your donation"
-msgstr "Огромное спасибо за твой взнос!"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:561
 msgid "the Matomo team itself"
@@ -1001,11 +999,11 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:563
 msgid "Thank you very much"
-msgstr "Огромное спасибо"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:563
 msgid "for your translation work"
-msgstr "за вашу переводческую работу"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:564
 msgid ""
@@ -1018,7 +1016,7 @@ msgstr ""
 msgid ""
 "Thank <strong>you</strong> for using my plugin. It is the best commendation "
 "if my piece of code is really used!"
-msgstr "Огромное спасибо <strong>тебе</strong> за использование моего плагина. Если мой код действительно используется - это лучшая похвала!"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:574
 msgid "The best place to get help:"
@@ -1141,7 +1139,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Statistics.php:21
 msgid "Currently shown stats:"
-msgstr "DАктуальные показанные статистики:"
+msgstr ""
 
 #: classes/WP_Piwik/Request/Php.php:27
 msgid "Could not resolve"
@@ -1202,12 +1200,12 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Systems.php:35
 #: classes/WP_Piwik/Widget/Visitors.php:57
 msgid "Unique"
-msgstr "Уникально"
+msgstr ""
 
 #: classes/WP_Piwik/Widget.php:102 classes/WP_Piwik/Widget/Plugins.php:25
 #: classes/WP_Piwik/Widget/Visitors.php:57
 msgid "Visits"
-msgstr "Посещения"
+msgstr ""
 
 #: classes/WP_Piwik/Widget.php:104
 msgid "Hits"
@@ -1219,7 +1217,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget.php:162
 msgid "No data available."
-msgstr "Нет данных."
+msgstr ""
 
 #: classes/WP_Piwik/Widget.php:243
 msgid "today"
@@ -1264,7 +1262,7 @@ msgstr ""
 #: classes/WP_Piwik/Widget/BrowserDetails.php:39
 #: classes/WP_Piwik/Widget/Browsers.php:39
 msgid "Browser"
-msgstr "Browser"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:39
 #: classes/WP_Piwik/Widget/Browsers.php:39
@@ -1274,7 +1272,7 @@ msgstr "Browser"
 #: classes/WP_Piwik/Widget/SystemDetails.php:35
 #: classes/WP_Piwik/Widget/Systems.php:35
 msgid "Percent"
-msgstr "Процент"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/BrowserDetails.php:66
 #: classes/WP_Piwik/Widget/Browsers.php:66
@@ -1283,7 +1281,7 @@ msgstr "Процент"
 #: classes/WP_Piwik/Widget/SystemDetails.php:62
 #: classes/WP_Piwik/Widget/Systems.php:62
 msgid "Others"
-msgstr "Другие"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Browsers.php:18
 msgid "Browsers"
@@ -1293,7 +1291,7 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Overview.php:48 classes/WP_Piwik/Widget/Post.php:37
 #: classes/WP_Piwik/Widget/Visitors.php:17
 msgid "Visitors"
-msgstr "Посетитель"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Chart.php:71
 msgid ""
@@ -1368,7 +1366,7 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Ecommerce.php:40
 #: classes/WP_Piwik/Widget/Overview.php:58 classes/WP_Piwik/Widget/Post.php:46
 msgid "Shortcut"
-msgstr "Быстрая клавиша соединения"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Items.php:11
 msgid "E-Commerce Items"
@@ -1405,7 +1403,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget/Keywords.php:16
 msgid "Keywords"
-msgstr "Ключевые слова"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Noresult.php:16
 #: classes/WP_Piwik/Widget/Search.php:16
@@ -1415,7 +1413,7 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Noresult.php:25
 #: classes/WP_Piwik/Widget/Search.php:25
 msgid "Keyword"
-msgstr "Ключевое слово"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Noresult.php:25
 #: classes/WP_Piwik/Widget/Search.php:25
@@ -1426,11 +1424,11 @@ msgstr ""
 #: classes/WP_Piwik/Widget/Search.php:25
 #: classes/WP_Piwik/Widget/Visitors.php:57
 msgid "Bounced"
-msgstr "Сбросы"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:17 classes/WP_Piwik/Widget/Post.php:18
 msgid "Overview"
-msgstr "Обзор"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:17
 msgid "dashboard"
@@ -1438,31 +1436,31 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:50 classes/WP_Piwik/Widget/Post.php:38
 msgid "Unique visitors"
-msgstr "Уникальные посетители"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:52 classes/WP_Piwik/Widget/Post.php:39
 msgid "Page views"
-msgstr "Вид страниц"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:53 classes/WP_Piwik/Widget/Post.php:40
 msgid "Total time spent"
-msgstr "Проведенное время"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:54 classes/WP_Piwik/Widget/Post.php:42
 msgid "Bounce count"
-msgstr "Счетчик сбросов"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:57 classes/WP_Piwik/Widget/Post.php:41
 msgid "Time/visit"
-msgstr "Время/посещение"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Overview.php:57
 msgid "Max. page views in one visit"
-msgstr "Максимальное количество просмотров за посещениеj"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Pages.php:16
 msgid "Pages"
-msgstr "Страницы"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Pages.php:18
 msgid "Page"
@@ -1470,7 +1468,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget/Plugins.php:16
 msgid "Plugins"
-msgstr "Плагины"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Plugins.php:25
 msgid "Plugin"
@@ -1494,7 +1492,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget/Screens.php:37
 msgid "Resolution"
-msgstr "Развертка"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Seo.php:13
 msgid "SEO"
@@ -1515,7 +1513,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Widget/Visitors.php:57
 msgid "Date"
-msgstr "Дата"
+msgstr ""
 
 #: classes/WP_Piwik/Widget/Visitors.php:57
 msgid "Page Views"

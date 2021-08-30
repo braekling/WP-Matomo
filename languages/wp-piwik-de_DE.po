@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "POT-Creation-Date: 2017-10-09 20:37+0200\n"
-"PO-Revision-Date: 2017-10-09 20:51+0000\n"
+"PO-Revision-Date: 2019-03-26 08:31+0000\n"
 "Last-Translator: André Bräkling\n"
-"Language-Team: German (Germany) (http://www.transifex.com/piwik/wp-piwik/language/de_DE/)\n"
+"Language-Team: German (Germany) (http://www.transifex.com/matomo/wp-piwik/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,8 +21,8 @@ msgid "%s %s installed."
 msgstr "%s %s installiert."
 
 #: classes/WP_Piwik.php:203
-msgid "Next you should connect to Piwik"
-msgstr "Als n&auml;chstes solltest Du eine Verbindung zu Piwik herstellen"
+msgid "Next you should connect to Matomo"
+msgstr ""
 
 #: classes/WP_Piwik.php:237
 #, php-format
@@ -42,12 +42,12 @@ msgid "Important"
 msgstr "Wichtig"
 
 #: classes/WP_Piwik.php:387 classes/WP_Piwik.php:409
-msgid "Piwik Statistics"
-msgstr "Piwik Statistiken"
+msgid "Matomo Statistics"
+msgstr ""
 
 #: classes/WP_Piwik.php:499
-msgid "Configure WP-Piwik"
-msgstr "Konfiguriere WP-Piwik"
+msgid "Configure WP-Matomo"
+msgstr ""
 
 #: classes/WP_Piwik.php:992
 msgid "An error occured"
@@ -70,13 +70,13 @@ msgid "Changes saved."
 msgstr "&Auml;nderungen gespeichert"
 
 #: classes/WP_Piwik/Admin/Settings.php:55
-msgid "Thanks for using WP-Piwik!"
-msgstr "Vielen Dank f&uuml;r die Verwendung von WP-Piwik!"
+msgid "Thanks for using WP-Matomo!"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:58
 #, php-format
-msgid "WP-Piwik %s is successfully connected to Piwik %s."
-msgstr "WP-Piwik %s wurde erfolgreich mit Piwik %s verbunden."
+msgid "WP-Matomo %s is successfully connected to Matomo %s."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:58
 #, php-format
@@ -86,34 +86,34 @@ msgstr "Du verwendest WordPress %s."
 #: classes/WP_Piwik/Admin/Settings.php:58
 #, php-format
 msgid ""
-"You are running a WordPress %s blog network (WPMU). WP-Piwik will handle "
+"You are running a WordPress %s blog network (WPMU). WP-Matomo will handle "
 "your sites as different websites."
-msgstr "Du verwendest ein WordPress %s Blog Netzwerk (WPMU). WP-Piwik wird Deine Seiten als unterschiedliche Webseiten behandeln."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:62
 #, php-format
 msgid ""
-"WP-Piwik %s was not able to connect to Piwik using your configuration. Check"
-" the &raquo;Connect to Piwik&laquo; section below."
-msgstr "WP-Piwik %s konnte sich mit Deiner Konfiguration nicht mit Piwik verbinden. Bitte &uuml;berpr&uuml;fe die &raquo;Mit Piwik verbinden&laquo;-Sektion unten."
+"WP-Matomo %s was not able to connect to Matomo using your configuration. "
+"Check the &raquo;Connect to Matomo&laquo; section below."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:64
 #, php-format
 msgid ""
-"WP-Piwik %s was not able to connect to Piwik using your configuration. "
+"WP-Matomo %s was not able to connect to Matomo using your configuration. "
 "During connection the following error occured: <br /><code>%s</code>"
-msgstr "WP-Piwik %s konnte mit der vorliegenden Konfiguration keine Verbindung zu Piwik aufbauen. Beim Verbindungsaufbau ist folgender Fehler aufgetreten: <br /><code>%s</code>"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:67
 #, php-format
 msgid ""
-"WP-Piwik %s has to be connected to Piwik first. Check the &raquo;Connect to "
-"Piwik&laquo; section below."
-msgstr "WP-Piwik %s muss zun&auml;chst mit Piwik verbunden werden. Bitte &uuml;berpr&uuml;fe die &raquo;Mit Piwik verbinden&laquo;-Sektion unten."
+"WP-Matomo %s has to be connected to Matomo first. Check the &raquo;Connect "
+"to Matomo&laquo; section below."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:71
-msgid "Connect to Piwik"
-msgstr "Mit Piwik verbinden"
+msgid "Connect to Matomo"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:76
 msgid "Show Statistics"
@@ -133,29 +133,29 @@ msgstr "Danksagungen"
 
 #: classes/WP_Piwik/Admin/Settings.php:106
 msgid ""
-"WP-Piwik is a WordPress plugin to show a selection of Piwik stats in your "
-"WordPress admin dashboard and to add and configure your Piwik tracking code."
-" To use this you will need your own Piwik instance. If you do not already "
-"have a Piwik setup, you have two simple options: use either"
-msgstr "WP-Piwik ist ein WordPress Plugin, um eine Auswahl von Piwik-Statistiken in Deinem WordPress Admin-Dashboard anzuzeigen, und um Deinen Piwik-Tracking-Code hinzuzufügen und zu konfigurieren. Um es zu verwenden, musst Du zunächst eine Piwik-Installation haben. Es gibt zwei M&ouml;glichkeiten: Betreibe Piwik entweder "
+"WP-Matomo is a WordPress plugin to show a selection of Matomo stats in your "
+"WordPress admin dashboard and to add and configure your Matomo tracking "
+"code. To use this you will need your own Matomo instance. If you do not "
+"already have a Matomo setup, you have two simple options: use either"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:106
-msgid "a self-hosted Piwik"
-msgstr "ein selbst-gehostetes Piwik"
+msgid "a self-hosted Matomo"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:106
 msgid "or"
 msgstr "oder"
 
 #: classes/WP_Piwik/Admin/Settings.php:106
-msgid "a cloud-hosted Piwik by InnoCraft"
-msgstr "ein cloud-gehostetes Piwik von InnoCraft"
+msgid "a cloud-hosted Matomo by InnoCraft"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:109
 msgid ""
-"Neither cURL nor fopen are available. So WP-Piwik can not use the HTTP API "
+"Neither cURL nor fopen are available. So WP-Matomo can not use the HTTP API "
 "and not connect to InnoCraft Cloud."
-msgstr "Weder cURL noch dopen sind verfügbar. Daher kann WP-Piwik sich weder mit der HTTP noch mit der InnoCraft Cloud verbinden."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:109
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:30
@@ -173,9 +173,9 @@ msgstr "Selbst-gehostet (HTTP API, Standard)"
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid ""
-"This is the default option for a self-hosted Piwik and should work for most "
-"configurations. WP-Piwik will connect to Piwik using http(s)."
-msgstr "Dies ist die Standard-Einstellung für ein selbst-gehostetes Piwik und sollte in den meisten Konfigurationen funktionieren. WP-Piwik verbindet sich mit Piwik &uuml;ber http(s)."
+"This is the default option for a self-hosted Matomo and should work for most"
+" configurations. WP-Matomo will connect to Matomo using http(s)."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 #: classes/WP_Piwik/Admin/Settings.php:115
@@ -184,9 +184,9 @@ msgstr "Selbst-gehostet (PHP API)"
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid ""
-"Choose this, if your self-hosted Piwik and WordPress are running on the same"
-" machine and you know the full server path to your Piwik instance."
-msgstr "W&auml;hle diese Option, wenn Dein selbst-gehostetes Piwik und WordPress auf dem gleichen Server laufen und Du den vollen Serverpfad zu Deiner Piwik-Installation kennst."
+"Choose this, if your self-hosted Matomo and WordPress are running on the "
+"same machine and you know the full server path to your Matomo instance."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 #: classes/WP_Piwik/Admin/Settings.php:116
@@ -195,39 +195,39 @@ msgstr "Cloud-hosted (InnoCraft Cloud)"
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid ""
-"If you are using a cloud-hosted Piwik by InnoCraft, you can simply use this "
-"option."
-msgstr "Wenn Du ein cloud-hosted Piwik von InnoCraft verwendet, kannst Du einfach diese Option wählen."
+"If you are using a cloud-hosted Matomo by InnoCraft, you can simply use this"
+" option."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:112
-msgid "Piwik Mode"
-msgstr "Piwik-Modus"
+msgid "Matomo Mode"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:113
-msgid "Disabled (WP-Piwik will not connect to Piwik)"
-msgstr "Deaktiviert (WP-Piwik wird sich nicht mit Piwik verbinden)"
+msgid "Disabled (WP-Matomo will not connect to Matomo)"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:119
-msgid "Piwik URL"
-msgstr "Piwik URL"
+msgid "Matomo URL"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:119
 msgid ""
-"Enter your Piwik URL. This is the same URL you use to access your Piwik "
-"instance, e.g. http://www.example.com/piwik/."
-msgstr "Gebe Deine Piwik-URL ein. Es handelt sich um die gleiche URL, die Du auch verwendest, um Dein Piwik zu &ouml;ffnen, z.B. http://www.example.com/piwik/."
+"Enter your Matomo URL. This is the same URL you use to access your Matomo "
+"instance, e.g. http://www.example.com/matomo/."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:120
-msgid "Piwik path"
-msgstr "Piwik Pfad"
+msgid "Matomo path"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:120
-msgid "Enter the file path to your Piwik instance, e.g. /var/www/piwik/."
-msgstr "Gib den Dateipfad zu Deiner Piwik-Installation an, z.B. /var/www/piwik/."
+msgid "Enter the file path to your Matomo instance, e.g. /var/www/matomo/."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:121
-msgid "Piwik subdomain"
-msgstr "Piwik-Subdomain"
+msgid "Matomo subdomain"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:121
 msgid ""
@@ -241,14 +241,14 @@ msgstr "Auth Token"
 
 #: classes/WP_Piwik/Admin/Settings.php:122
 msgid ""
-"Enter your Piwik auth token here. It is an alphanumerical code like "
+"Enter your Matomo auth token here. It is an alphanumerical code like "
 "0a1b2c34d56e78901fa2bc3d45678efa."
-msgstr "Gib hier Dein Piwik Auth Token an. Es ist ein alphanumerische Code wie 0a1b2c34d56e78901fa2bc3d45678efa."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:122
 #, php-format
-msgid "See %sWP-Piwik FAQ%s."
-msgstr "Siehe %sdie WP-Piwik FAQ%s"
+msgid "See %sWP-Matomo FAQ%s."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:127
 msgid "Auto config"
@@ -256,16 +256,16 @@ msgstr "Auto-Konfiguration"
 
 #: classes/WP_Piwik/Admin/Settings.php:127
 msgid ""
-"Check this to automatically choose your blog from your Piwik sites by URL. "
-"If your blog is not added to Piwik yet, WP-Piwik will add a new site."
-msgstr "Aktiviere diesen Haken, um Dein Blog &uuml;ber seine URL automatisch aus Deinen Piwik-Seiten auszuw&auml;hlen. Wenn Dein Blog bisher nicht zu Piwik hinzugef&uuml;gt wurde, wird WP-Piwik eine neue Seite hinzuf&uuml;gen."
+"Check this to automatically choose your blog from your Matomo sites by URL. "
+"If your blog is not added to Matomo yet, WP-Matomo will add a new site."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:131
 #, php-format
 msgid ""
-"WP-Piwik %s was not able to get sites with at least view access: <br "
+"WP-Matomo %s was not able to get sites with at least view access: <br "
 "/><code>%s</code>"
-msgstr "WP-Piwik %s konnte keine Seiten finden, für die zumindest View-Zugriff eingerichtet ist: <br /><code>%s</code>"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:141
 msgid "Determined site"
@@ -276,8 +276,8 @@ msgid "Select site"
 msgstr "W&auml;hle die Seite"
 
 #: classes/WP_Piwik/Admin/Settings.php:155
-msgid "Piwik default date"
-msgstr "Piwik Standard-Datum"
+msgid "Matomo default date"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:156
 #: classes/WP_Piwik/Admin/Settings.php:170
@@ -348,32 +348,32 @@ msgid "Last 30 days"
 msgstr "Letzte 30 Tage"
 
 #: classes/WP_Piwik/Admin/Settings.php:172
-msgid "Enable WP-Piwik dashboard widget &quot;Overview&quot;."
-msgstr "Aktiviere das WP-Piwik Dashboard Widget &quot;Übersicht&quot;."
+msgid "Enable WP-Matomo dashboard widget &quot;Overview&quot;."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:174
 msgid "Dashboard graph"
 msgstr "Dashboard-Graph"
 
 #: classes/WP_Piwik/Admin/Settings.php:174
-msgid "Enable WP-Piwik dashboard widget &quot;Graph&quot;."
-msgstr "Aktiviere das WP-Piwik Dashboard Widget &quot;Graph&quot;."
+msgid "Enable WP-Matomo dashboard widget &quot;Graph&quot;."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:176
 msgid "Dashboard SEO"
 msgstr "Dashboard SEO"
 
 #: classes/WP_Piwik/Admin/Settings.php:176
-msgid "Enable WP-Piwik dashboard widget &quot;SEO&quot;."
-msgstr "Aktiviere das WP-Piwik Dashboard Widget &quot;SEO&quot;."
+msgid "Enable WP-Matomo dashboard widget &quot;SEO&quot;."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:178
 msgid "Dashboard e-commerce"
 msgstr "Dashboard E-Commerce"
 
 #: classes/WP_Piwik/Admin/Settings.php:178
-msgid "Enable WP-Piwik dashboard widget &quot;E-commerce&quot;."
-msgstr "Aktiviere das WP-Piwik Dashboard Widget &quot;E-Commerce&quot;."
+msgid "Enable WP-Matomo dashboard widget &quot;E-commerce&quot;."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:180
 msgid "Show graph on WordPress Toolbar"
@@ -400,16 +400,16 @@ msgid "Show stats about single posts at the post edit admin page."
 msgstr "Zeige Statistiken zu einzelnen Beitr&auml;gen auf der Bearbeiten-Seite."
 
 #: classes/WP_Piwik/Admin/Settings.php:193
-msgid "Piwik shortcut"
-msgstr "Piwik-Verlinkung"
+msgid "Matomo shortcut"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:193
-msgid "Display a shortcut to Piwik itself."
-msgstr "Zeigt einen Shortcut zu Piwik an."
+msgid "Display a shortcut to Matomo itself."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:195
-msgid "WP-Piwik display name"
-msgstr "Anzeigename f&uuml;r WP-Piwik"
+msgid "WP-Matomo display name"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:195
 msgid "Plugin name shown in WordPress."
@@ -429,10 +429,10 @@ msgstr "Du kannst zwischen vier Tracking-Code-Varianten wählen:"
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 msgid ""
-"WP-Piwik will not add the tracking code. Use this, if you want to add the "
+"WP-Matomo will not add the tracking code. Use this, if you want to add the "
 "tracking code to your template files or you use another plugin to add the "
 "tracking code."
-msgstr "WP-Piwik wird den Tracking-Code nicht hinzuf&uuml;gen. Benutze dies, wenn Du den Tracking-Code direkt in Deinem Template oder &uuml;ber ein anderes Plugin einfügen willst."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 #: classes/WP_Piwik/Admin/Settings.php:211
@@ -440,8 +440,8 @@ msgid "Default tracking"
 msgstr "Standard-Tracking"
 
 #: classes/WP_Piwik/Admin/Settings.php:208
-msgid "WP-Piwik will use Piwik's standard tracking code."
-msgstr "WP-Piwik verwendet den Standard Tracking-Code von Piwik."
+msgid "WP-Matomo will use Matomo's standard tracking code."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 #: classes/WP_Piwik/Admin/Settings.php:212
@@ -451,8 +451,8 @@ msgstr "Nutze js/index.php"
 #: classes/WP_Piwik/Admin/Settings.php:208
 msgid ""
 "You can choose this tracking code, to deliver a minified proxy code and to "
-"avoid using the files called piwik.js or piwik.php."
-msgstr "Du kannst diesen Tracking-Code w&auml;hlen, um einen minimierten Proxy-Code auszuliefern und dabei zu vermeiden, dass die Dateien mit dem Namen piwik.js oder piwik.php verwendet werden."
+"avoid using the files called matomo.js or matomo.php."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 #, php-format
@@ -465,15 +465,15 @@ msgid "Use proxy script"
 msgstr "Verwende Proxy-Skript"
 
 #: classes/WP_Piwik/Admin/Settings.php:208
-msgid "Use this tracking code to not reveal the Piwik server URL."
-msgstr "Verwende diesen Tracking-Code, um die URL zu Deinem Piwik-Sever nicht offenzulegen."
+msgid "Use this tracking code to not reveal the Matomo server URL."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 #: classes/WP_Piwik/Admin/Settings.php:228
 #: classes/WP_Piwik/Admin/Settings.php:238
 #, php-format
-msgid "See %sPiwik FAQ%s."
-msgstr "Siehe %sPiwik FAQ%s."
+msgid "See %sMatomo FAQ%s."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 #: classes/WP_Piwik/Admin/Settings.php:214
@@ -488,8 +488,8 @@ msgid ""
 msgstr "Gebe manuell Deinen eigenen Tracking-Code ein. Du kannst eine der vorhergehenden Optionen nutzen, Deinen Tracking-Code vorkonfigurieren und abschlie&szlig;end auf die manuelle Bearbeitung wechseln."
 
 #: classes/WP_Piwik/Admin/Settings.php:208
-msgid "Use the placeholder {ID} to add the Piwik site ID."
-msgstr "Verwende den Platzhalter {ID}, um Piwiks Site-ID einzuf&uuml;gen."
+msgid "Use the placeholder {ID} to add the Matomo site ID."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:209
 msgid "Add tracking code"
@@ -569,16 +569,16 @@ msgstr "Das Content-Tracking erlaubt es Dir, Interaktionen mit dem Inhalt einer 
 #: classes/WP_Piwik/Admin/Settings.php:278
 #: classes/WP_Piwik/Admin/Settings.php:343
 #, php-format
-msgid "See %sPiwik documentation%s."
-msgstr "Siehe %sPiwik-Dokumentation%s."
+msgid "See %sMatomo documentation%s."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:236
 msgid "Track search"
 msgstr "Tracke Suchanfragen"
 
 #: classes/WP_Piwik/Admin/Settings.php:236
-msgid "Use Piwik's advanced Site Search Analytics feature."
-msgstr "Nutze Piwiks Site Search Funktion, um interne Suchen zu tracken."
+msgid "Use Matomo's advanced Site Search Analytics feature."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:238
 msgid "Track 404"
@@ -586,8 +586,8 @@ msgstr "404-Tracking"
 
 #: classes/WP_Piwik/Admin/Settings.php:238
 msgid ""
-"WP-Piwik can automatically add a 404-category to track 404-page-visits."
-msgstr "WP-Piwik kann automatisch eine eigene Kategorie f&uuml;r 404-Seiten hinzuf&uuml;gen."
+"WP-Matomo can automatically add a 404-category to track 404-page-visits."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:241
 msgid "Add annotation on new post of type"
@@ -687,9 +687,9 @@ msgid ""
 "other domain by default. When this feature is enabled, it will append a URL "
 "parameter \"pk_vid\" that contains the visitor ID when a user clicks on a "
 "URL that belongs to one of your domains. For this feature to work, you also "
-"have to configure which domains should be treated as local in your Piwik "
-"website settings. This feature requires Piwik 3.0.2."
-msgstr "Wenn aktiviert, stellt die Funktion sicher, dass die gleiche Besucher-ID für den gleichen Besucher über mehrere Domains hinweg benutzt wird. Dies funktioniert nur, wenn die Funktion aktiviert ist, da die Besucher-ID in einem Cookie gespeichert wird und somit nicht auf einer anderen Domain gelesen werden kann. Über diese Funktion wird der URL der Parameter \"pk_vid\" hinzugefügt, der die Besucher-ID enthält, sobald ein Nutzer auf eine URL klickt, die zu Deinen Domains gehört. Damit es funktioniert, müssen die als lokal zu betrachtenden Domains auch in den Piwik Webseiten-Einstellungen konfiguriert sein. Die Funktion erfordert zumindest Piwik 3.0.2."
+"have to configure which domains should be treated as local in your Matomo "
+"website settings. This feature requires Matomo 3.0.2."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:276
 msgid "Track RSS feeds"
@@ -704,8 +704,8 @@ msgid "Track RSS feed links as campaign"
 msgstr "Links in RSS-Feeds als Kampagne tracken"
 
 #: classes/WP_Piwik/Admin/Settings.php:278
-msgid "This will add Piwik campaign parameters to the RSS feed links. "
-msgstr "Dies f&uuml;gt einen Piwik-Kampagnen-Parameter zu den RSS-Feed-Links hinzu."
+msgid "This will add Matomo campaign parameters to the RSS feed links. "
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:280
 msgid "RSS feed campaign"
@@ -723,10 +723,10 @@ msgstr "Aktiviere Heartbeat-Timer"
 msgid ""
 "Enable a heartbeat timer to get more accurate visit lengths by sending "
 "periodical HTTP ping requests as long as the site is opened. Enter the time "
-"between the pings in seconds (Piwik default: 15) to enable or 0 to disable "
+"between the pings in seconds (Matomo default: 15) to enable or 0 to disable "
 "this feature. <strong>Note:</strong> This will cause a lot of additional "
 "HTTP requests on your site."
-msgstr "Aktiviere den Heratbeat-Timer, um genauere Besuchszeiten zu erhalten, indem HTTP-Ping-Anfragen gesendet werden, solange die Seite geöffnet ist. Gib den Zeitabstand zwischen den Ping-Anfragen in Sekunden (Piwik-Default: 15) an oder trage 0 zum deaktivieren ein. <strong>Hinweis:</strong> Dadurch entsteht eine Vielzahl zusätzlicher HTTP-Anfragen an Deine Seite."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:284
 msgid "User ID Tracking"
@@ -785,9 +785,9 @@ msgstr "fopen"
 
 #: classes/WP_Piwik/Admin/Settings.php:303
 msgid ""
-"Choose whether WP-Piwik should use cURL or fopen to connect to Piwik in HTTP"
-" or Cloud mode."
-msgstr "Wähle, ob WP-Piwik cURL oder dopen verwenden soll, um im HTTP oder Cloud Modus mit Piwik zu verbinden."
+"Choose whether WP-Matomo should use cURL or fopen to connect to Matomo in "
+"HTTP or Cloud mode."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:305
 msgid "HTTP method"
@@ -804,8 +804,8 @@ msgid "GET"
 msgstr "GET"
 
 #: classes/WP_Piwik/Admin/Settings.php:308
-msgid "Choose whether WP-Piwik should use POST or GET in HTTP or Cloud mode."
-msgstr "Wähle, ob WP-Piwik POST oder GET im HTTP oder Cloud Modus verwenden soll."
+msgid "Choose whether WP-Matomo should use POST or GET in HTTP or Cloud mode."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:310
 msgid "Disable time limit"
@@ -858,8 +858,8 @@ msgstr "Aktiviere DNS-Prefetch"
 
 #: classes/WP_Piwik/Admin/Settings.php:323
 #, php-format
-msgid "See %sPiwik Blog%s."
-msgstr "Siehe %sPiwik Blog%s."
+msgid "See %sMatomo Blog%s."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:323
 msgid "Add a DNS prefetch tag. "
@@ -889,8 +889,8 @@ msgid "CDN URL (SSL)"
 msgstr "CDN URL (SSL)"
 
 #: classes/WP_Piwik/Admin/Settings.php:331
-msgid "Force Piwik to use a specific protocol"
-msgstr "Zwinge Piwik, ein bestimmtes Protokoll zu verwenden"
+msgid "Force Matomo to use a specific protocol"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:332
 msgid "Disabled (default)"
@@ -906,25 +906,25 @@ msgstr "https (SSL)"
 
 #: classes/WP_Piwik/Admin/Settings.php:335
 msgid ""
-"Choose if you want to explicitly force Piwik to use HTTP or HTTPS. Does not "
-"work with a CDN URL."
-msgstr "W&auml;hle aus, ob Du Piwik ausdr&uuml;cklich zwingen willst, HTTP oder HTTPS zu verwenden. Funktioniert nicht mit einer CDN URL."
+"Choose if you want to explicitly force Matomo to use HTTP or HTTPS. Does not"
+" work with a CDN URL."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:337
 msgid "Update notice"
 msgstr "Update-Hinweis"
 
 #: classes/WP_Piwik/Admin/Settings.php:338
-msgid "Show always if WP-Piwik is updated"
-msgstr "Immer anzeigen, wenn WP-Piwik aktualisiert wurde"
+msgid "Show always if WP-Matomo is updated"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:339
-msgid "Show only if WP-Piwik is updated and settings were changed"
-msgstr "Immer anzeigen, wenn WP-Piwik aktualisiert und dabei die Konfiguration ge&auml;ndert wurde"
+msgid "Show only if WP-Matomo is updated and settings were changed"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:341
-msgid "Choose if you want to get an update notice if WP-Piwik is updated."
-msgstr "W&auml;hole aus, ob Du einen Hinweis erhalten m&ouml;chtest, wenn WP-Piwik aktualisiert wurde."
+msgid "Choose if you want to get an update notice if WP-Matomo is updated."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:343
 msgid "Define all file types for download tracking"
@@ -932,9 +932,9 @@ msgstr "Lege alle Dateiendungen für das Download-Tracking fest"
 
 #: classes/WP_Piwik/Admin/Settings.php:343
 msgid ""
-"Replace Piwik's default file extensions for download tracking, divided by a "
-"vertical bar (&#124;). Leave blank to keep Piwik's default settings."
-msgstr "Ersetze Piwiks Standard-Dateiendungen für das Download-Tracking, getrennt durch einen senkrechten Strich (&#124;). Lasse dieses Feld frei, um die Standard-Einstellungen von Piwik zu erhalten."
+"Replace Matomo's default file extensions for download tracking, divided by a"
+" vertical bar (&#124;). Leave blank to keep Matomo's default settings."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:345
 msgid "Set classes to be treated as downloads"
@@ -942,16 +942,16 @@ msgstr "Lege die Klassen fest, die als Download behandelt werden sollen."
 
 #: classes/WP_Piwik/Admin/Settings.php:345
 msgid ""
-"Set classes to be treated as downloads (in addition to piwik_download), "
-"divided by a vertical bar (&#124;). Leave blank to keep Piwik's default "
+"Set classes to be treated as downloads (in addition to matomo_download), "
+"divided by a vertical bar (&#124;). Leave blank to keep Matomo's default "
 "settings."
-msgstr "Lege die Klassen fest, die (zusätzlich zu piwik_download) als Download behandelt werden sollen. Trenne mehrere Klassen durch einen senkrechten Strich (&#124;). Lasse dieses Feld frei, um die Standard-Einstellungen von Piwik zu erhalten."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:345
 #: classes/WP_Piwik/Admin/Settings.php:347
 #, php-format
-msgid "See %sPiwik JavaScript Tracking Client reference%s."
-msgstr "Siehe %sPiwik JavaScript Tracking Client Referenz%s."
+msgid "See %sMatomo JavaScript Tracking Client reference%s."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:347
 msgid "Set classes to be treated as outlinks"
@@ -959,17 +959,17 @@ msgstr "Lege die Klassen fest, die als ausgehender Link behandelt werden sollen"
 
 #: classes/WP_Piwik/Admin/Settings.php:347
 msgid ""
-"Set classes to be treated as outlinks (in addition to piwik_link), divided "
+"Set classes to be treated as outlinks (in addition to matomo_link), divided "
 "by a vertical bar (&#124;). Leave blank to keep Piwik's default settings."
-msgstr "Lege die Klassen fest, die (zusätzlich zu piwik_link) als ausgehender Link behandelt werden sollen. Trenne mehrere Klassen durch einen senkrechten Strich (&#124;). Lasse dieses Feld frei, um die Standard-Einstellungen von Piwik zu erhalten."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:508
 msgid "Donate"
 msgstr "Spenden"
 
 #: classes/WP_Piwik/Admin/Settings.php:511
-msgid "If you like WP-Piwik, you can support its development by a donation:"
-msgstr "Wenn Dir WP-Piwik gef&auml;llt, kannst Du die weitere Entwicklung mit einer Spende f&ouml;rdern:"
+msgid "If you like WP-Matomo, you can support its development by a donation:"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:530
 msgid "My Amazon.de wishlist"
@@ -985,8 +985,8 @@ msgid "Thank you very much for your donation"
 msgstr "Vielen Dank f&uuml;r eure Spenden"
 
 #: classes/WP_Piwik/Admin/Settings.php:561
-msgid "the Piwik team itself"
-msgstr "das Piwik-Team selbst"
+msgid "the Matomo team itself"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:561
 msgid ", and all people flattering this"
@@ -1011,9 +1011,9 @@ msgstr "f&uuml;r eure &Uuml;bersetzungsarbeit"
 #: classes/WP_Piwik/Admin/Settings.php:564
 msgid ""
 "Thank you very much, all users who send me mails containing criticism, "
-"commendation, feature requests and bug reports! You help me to make WP-Piwik"
-" much better."
-msgstr "Vielen Dank an alle Nutzer, die mir Mails mit Kritik, Lob, Featurew&uuml;nsche und Bugmeldungen senden. Ihr helft mir dabei, WP-Piwik viel besser zu machen."
+"commendation, feature requests and bug reports! You help me to make WP-"
+"Matomo much better."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:565
 msgid ""
@@ -1026,8 +1026,8 @@ msgid "The best place to get help:"
 msgstr "Der beste Platz, um Hilfe zu bekommen:"
 
 #: classes/WP_Piwik/Admin/Settings.php:574
-msgid "WP-Piwik support forum"
-msgstr "WP-Piwik Support-Forum"
+msgid "WP-Matomo support forum"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:577
 msgid "Debugging"
@@ -1065,8 +1065,8 @@ msgid "is used."
 msgstr "wird verwendet."
 
 #: classes/WP_Piwik/Admin/Settings.php:592
-msgid "Determined Piwik base URL is"
-msgstr "Die ermittelte Piwik-Basis-URL ist"
+msgid "Determined Matomo base URL is"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:596
 msgid "Tools"
@@ -1089,8 +1089,8 @@ msgid "Are you sure you want to clear all settings?"
 msgstr "Bist Du Dir sicher, dass Du alle Einstellungen l&ouml;schen willst?"
 
 #: classes/WP_Piwik/Admin/Settings.php:601
-msgid "Reset WP-Piwik"
-msgstr "WP-Piwik zur&uuml;cksetzen"
+msgid "Reset WP-Matomo"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:603
 msgid "Latest support threads on WordPress.org"
@@ -1129,8 +1129,8 @@ msgid "URL"
 msgstr "URL"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:37
-msgid "Site ID (Piwik)"
-msgstr "Seiten-ID (Piwik)"
+msgid "Site ID (Matomo)"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:84
 msgid "Site not created yet."
@@ -1153,16 +1153,16 @@ msgid "realpath() returns false"
 msgstr "realpath() gibt false zur&uuml;ck"
 
 #: classes/WP_Piwik/Request/Php.php:39
-msgid "Class Piwik\\FrontController does not exists."
-msgstr "Die Klasse Piwik\\FrontController existiert nicht."
+msgid "Class Matomo\\FrontController does not exists."
+msgstr ""
 
 #: classes/WP_Piwik/Request/Php.php:42
-msgid "Class Piwik\\API\\Request does not exists."
-msgstr "Die Klasse Piwik\\API\\Request existiert nicht."
+msgid "Class Matomo\\API\\Request does not exists."
+msgstr ""
 
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:10
-msgid "Piwik Custom Variables"
-msgstr "Piwik Custom Variables"
+msgid "Matomo Custom Variables"
+msgstr ""
 
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:21
 msgid "Name"
@@ -1191,8 +1191,8 @@ msgstr "Definiere custom variables f&uuml;r einen Seitenaufruf."
 #: classes/WP_Piwik/Widget/SystemDetails.php:33
 #: classes/WP_Piwik/Widget/Systems.php:33
 #: classes/WP_Piwik/Widget/Visitors.php:35
-msgid "Piwik error"
-msgstr "Piwik-Fehler"
+msgid "Matomo error"
+msgstr ""
 
 #: classes/WP_Piwik/Widget.php:100
 #: classes/WP_Piwik/Widget/BrowserDetails.php:39
@@ -1525,6 +1525,21 @@ msgstr "Seitenansichten"
 #: wp-piwik.php:60
 #, php-format
 msgid ""
-"WP-Piwik requires at least PHP 5.3. You are using the deprecated version %s."
-" Please update PHP to use WP-Piwik."
-msgstr "WP-Piwik ben&ouml;tigt zumindest PHP 5.3. Du verwendest die veraltete Version %s. Bitte aktualisiere PHP um WP-Piwik zu nutzen."
+"WP-Matomo requires at least PHP 5.3. You are using the deprecated version "
+"%s. Please update PHP to use WP-Matomo."
+msgstr ""
+
+msgid "City"
+msgstr ""
+
+msgid "Models"
+msgstr ""
+
+msgid "Model"
+msgstr ""
+
+msgid "Types"
+msgstr ""
+
+msgid "Type"
+msgstr ""
