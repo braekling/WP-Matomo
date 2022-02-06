@@ -224,7 +224,7 @@ class Settings extends \WP_Piwik\Admin {
 				'js' => __ ( 'Use js/index.php', 'wp-piwik' ),
 				'proxy' => __ ( 'Use proxy script', 'wp-piwik' ),
 				'manually' => __ ( 'Enter manually', 'wp-piwik' )
-		), $description, 'jQuery(\'tr.wp-piwik-track-option\').addClass(\'hidden\'); jQUery(\'tr.wp-piwik-track-option-\' + jQUery(\'#track_mode\').val()).removeClass(\'hidden\'); jQUery(\'#tracking_code, #noscript_code\').prop(\'readonly\', jQUery(\'#track_mode\').val() != \'manually\');' );
+		), $description, 'jQuery(\'tr.wp-piwik-track-option\').addClass(\'hidden\'); jQuery(\'tr.wp-piwik-track-option-\' + jQuery(\'#track_mode\').val()).removeClass(\'hidden\'); jQuery(\'#tracking_code, #noscript_code\').prop(\'readonly\', jQuery(\'#track_mode\').val() != \'manually\');' );
 
 		$this->showTextarea ( 'tracking_code', __ ( 'Tracking code', 'wp-piwik' ), 15, 'This is a preview of your current tracking code. If you choose to enter your tracking code manually, you can change it here.', $isNotTracking, 'wp-piwik-track-option wp-piwik-track-option-default wp-piwik-track-option-js wp-piwik-track-option-proxy wp-piwik-track-option-manually', true, '', (self::$settings->getGlobalOption ( 'track_mode' ) != 'manually'), false );
 
@@ -254,7 +254,7 @@ class Settings extends \WP_Piwik\Admin {
         $filter = self::$settings->getGlobalOption ( 'add_post_annotations' );
         foreach ( get_post_types(array(), 'objects') as $post_type )
             echo '<input type="checkbox" ' . (isset ( $filter [$post_type->name] ) && $filter [$post_type->name] ? 'checked="checked" ' : '') . 'value="1" name="wp-piwik[add_post_annotations][' . $post_type->name . ']" /> ' . $post_type->label . ' &nbsp; ';
-        echo '<span class="dashicons dashicons-editor-help" onclick="jQUery(\'#add_post_annotations-desc\').toggleClass(\'hidden\');"></span> <p class="description hidden" id="add_post_annotations-desc">' . sprintf ( __ ( 'See %sMatomo documentation%s.', 'wp-piwik' ), '<a href="http://piwik.org/docs/annotations/" target="_BLANK">', '</a>' ) . '</p></td></tr>';
+        echo '<span class="dashicons dashicons-editor-help" onclick="jQuery(\'#add_post_annotations-desc\').toggleClass(\'hidden\');"></span> <p class="description hidden" id="add_post_annotations-desc">' . sprintf ( __ ( 'See %sMatomo documentation%s.', 'wp-piwik' ), '<a href="http://piwik.org/docs/annotations/" target="_BLANK">', '</a>' ) . '</p></td></tr>';
 
 		$this->showCheckbox ( 'add_customvars_box', __ ( 'Show custom variables box', 'wp-piwik' ), __ ( ' Show a &quot;custom variables&quot; edit box on post edit page.', 'wp-piwik' ) . ' ' . sprintf ( __ ( 'See %sMatomo documentation%s.', 'wp-piwik' ), '<a href="http://piwik.org/docs/custom-variables/" target="_BLANK">', '</a>' ), $isNotGeneratedTracking, $fullGeneratedTrackingGroup . ' wp-piwik-track-option-manually' );
 
