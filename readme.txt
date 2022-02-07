@@ -3,7 +3,7 @@
 Contributors: Braekling
 Requires at least: 5.0
 Tested up to: 5.8
-Stable tag: 1.0.26
+Stable tag: 1.0.27
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
 Tags: matomo, tracking, statistics, stats, analytics
 
@@ -142,6 +142,14 @@ Add WP-Matomo to your /wp-content/plugins folder and enable it as [Network Plugi
 5. Matomo: Here you'll find your auth token.
 
 == Changelog ==
+
+= 1.0.27 =
+* Fix a CSRF vulnerability
+* Fix JavaScript typos on settings page which broke some interface functionality
+* Fix proxy path on multisite networks (thanks to caveman99, [details](https://github.com/braekling/WP-Matomo/pull/98))
+* Fix array key warnings (thanks to goaround, [details](https://github.com/braekling/WP-Matomo/pull/102))
+* Fixed a bug in proxy config.php to avoid adding the protocol twice to the Matomo URL 
+* Proxy script will run proxy/config.local.php before proxy/config.php to set an individual WordPress root directory via $wpRootDir
 
 = 1.0.26 =
 * Fix feed tracking via proxy script (thanks to nicobilliotte, [details](https://github.com/braekling/WP-Matomo/pull/92))

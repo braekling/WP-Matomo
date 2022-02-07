@@ -17,6 +17,10 @@ $DEBUG_PROXY = false;
 // set to true if the target matomo server has a ssl certificate that will fail verification, like when testing.
 $NO_VERIFY_SSL = false;
 
+if (file_exists(__DIR__ . '/config.local.php')) {
+    include __DIR__ . '/config.local.php';
+}
+
 if (file_exists(__DIR__ . '/config.php')) {
     include __DIR__ . '/config.php';
 }

@@ -18,7 +18,7 @@ class Settings extends \WP_Piwik\Admin {
 			new \WP_Piwik\Admin\Sitebrowser(self::$wpPiwik);
 			return;
 		}
-		if (isset($_GET['clear']) && $_GET['clear']) {
+		if (isset($_GET['clear']) && $_GET['clear'] && check_admin_referer()) {
 			$this->clear($_GET['clear'] == 2);
 			self::$wpPiwik->resetRequest();
 			echo '<form method="post" action="?page='.htmlentities($_GET['page']).'"><input type="submit" value="'.__('Reload', 'wp-piwik').'" /></form>';
@@ -612,8 +612,8 @@ class Settings extends \WP_Piwik\Admin {
 		<ol>
 			<li><a href="<?php echo admin_url( (self::$settings->checkNetworkActivation () ? 'network/settings' : 'options-general').'.php?page='.$_GET['page'].'&testscript=1' ); ?>"><?php _e('Run testscript', 'wp-piwik'); ?></a></li>
 			<li><a href="<?php echo admin_url( (self::$settings->checkNetworkActivation () ? 'network/settings' : 'options-general').'.php?page='.$_GET['page'].'&sitebrowser=1' ); ?>"><?php _e('Sitebrowser', 'wp-piwik'); ?></a></li>
-			<li><a href="<?php echo admin_url( (self::$settings->checkNetworkActivation () ? 'network/settings' : 'options-general').'.php?page='.$_GET['page'].'&clear=1' ); ?>"><?php _e('Clear cache', 'wp-piwik'); ?></a></li>
-			<li><a onclick="return confirm('<?php _e('Are you sure you want to clear all settings?', 'wp-piwik'); ?>')" href="<?php echo admin_url( (self::$settings->checkNetworkActivation () ? 'network/settings' : 'options-general').'.php?page='.$_GET['page'].'&clear=2' ); ?>"><?php _e('Reset WP-Matomo', 'wp-piwik'); ?></a></li>
+			<li><a href="<?php echo wp_nonce_url( admin_url( (self::$settings->checkNetworkActivation () ? 'network/settings' : 'options-general').'.php?page='.$_GET['page'].'&clear=1' ) ); ?>"><?php _e('Clear cache', 'wp-piwik'); ?></a></li>
+			<li><a onclick="return confirm('<?php _e('Are you sure you want to clear all settings?', 'wp-piwik'); ?>')" href="<?php echo wp_nonce_url( admin_url( (self::$settings->checkNetworkActivation () ? 'network/settings' : 'options-general').'.php?page='.$_GET['page'].'&clear=2' ) ); ?>"><?php _e('Reset WP-Matomo', 'wp-piwik'); ?></a></li>
 		</ol>
 		<h3><?php _e('Latest support threads on WordPress.org', 'wp-piwik'); ?></h3><?php
 		$supportThreads = $this->readRSSFeed('http://wordpress.org/support/rss/plugin/wp-piwik');

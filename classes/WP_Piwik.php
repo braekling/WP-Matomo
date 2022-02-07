@@ -10,7 +10,7 @@ use WP_Piwik\Widget\Post;
  */
 class WP_Piwik {
 
-	private static $revisionId = 2021082201, $version = '1.0.26', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
+	private static $revisionId = 2022020701, $version = '1.0.27', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
 
 	/**
 	 * Constructor class to configure and register all WP-Piwik components
