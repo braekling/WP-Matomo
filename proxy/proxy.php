@@ -17,9 +17,15 @@ $DEBUG_PROXY = false;
 // set to true if the target matomo server has a ssl certificate that will fail verification, like when testing.
 $NO_VERIFY_SSL = false;
 
+// config calls wp-load.php which on multisite networks redeclares and messes up $path
+$wp_matomo_proxy_path=$path;
+
 if (file_exists(__DIR__ . '/config.php')) {
     include __DIR__ . '/config.php';
 }
+
+// restore $path
+$path=$wp_matomo_proxy_path;
 
 // -----
 // Important: read the instructions in README.md or at:
