@@ -21,9 +21,15 @@ if (file_exists(__DIR__ . '/config.local.php')) {
     include __DIR__ . '/config.local.php';
 }
 
+// Config calls wp-load.php which on multisite networks redeclares and messes up $path
+$wp_matomo_proxy_path=$path;
+
 if (file_exists(__DIR__ . '/config.php')) {
     include __DIR__ . '/config.php';
 }
+
+// Restore $path
+$path=$wp_matomo_proxy_path;
 
 // -----
 // Important: read the instructions in README.md or at:
