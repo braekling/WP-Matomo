@@ -1152,7 +1152,12 @@ class WP_Piwik {
 				'urls' => $isCurrent ? get_bloginfo ( 'url' ) : get_blog_details ( $blogId )->siteurl,
 				'siteName' => urlencode( $isCurrent ? get_bloginfo ( 'name' ) : get_blog_details ( $blogId )->blogname )
 		) );
-		$result = (int) $this->request ( $id );
+		$result = $this->request ( $id );
+		if ( is_array( $result ) && isset( $result['value'] ) ) {
+			$result = (int) $result['value'];
+		} else {
+			$result = (int) $result;
+		}
 		self::$logger->log ( 'Create Matomo ID: WordPress site ' . ($isCurrent ? get_bloginfo ( 'url' ) : get_blog_details ( $blogId )->siteurl) . ' = Matomo ID ' . $result );
 		if (empty ( $result ))
 			return null;
