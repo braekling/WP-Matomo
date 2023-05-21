@@ -2,8 +2,8 @@
 
 Contributors: Braekling
 Requires at least: 5.0
-Tested up to: 5.8
-Stable tag: 1.0.27
+Tested up to: 6.2
+Stable tag: 1.0.28
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6046779
 Tags: matomo, tracking, statistics, stats, analytics
 
@@ -142,6 +142,14 @@ Add WP-Matomo to your /wp-content/plugins folder and enable it as [Network Plugi
 5. Matomo: Here you'll find your auth token.
 
 == Changelog ==
+
+= 1.0.28 =
+* Encode plugin display name
+* Option to set requireConsent or requireCookieConsent
+* Avoid notice on empty ecommerce data
+* Improve search tracking performance (thanks to theodejager, [details](https://github.com/braekling/WP-Matomo/pull/111))
+* Fix multisite sub-site tracking (thanks to ulkoalex, [details](https://github.com/braekling/WP-Matomo/issues/107))
+* Remove excess form closing tag (thanks to ulkoalex, [details](https://github.com/braekling/WP-Matomo/pull/113))
 
 = 1.0.27 =
 * Fix a CSRF vulnerability

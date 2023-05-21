@@ -75,6 +75,7 @@ class Settings {
 			'set_download_extensions' => '',
 			'set_link_classes' => '',
 			'set_download_classes' => '',
+            'require_consent' => 'disabled',
 			'disable_cookies' => false,
 			'limit_cookies' => false,
 			'limit_cookies_visitor' => 34186669, // Piwik default 13 months
@@ -148,6 +149,9 @@ class Settings {
 		}
 		self::$wpPiwik->log ( 'Save settings' );
 		foreach ( $this->globalSettings as $key => $value ) {
+            if ($key == "plugin_display_name") {
+                $value = htmlentities($value, ENT_QUOTES, 'utf-8');
+            }
 			if ( $this->checkNetworkActivation() )
 				update_site_option ( 'wp-piwik_global-' . $key, $value );
 			else
