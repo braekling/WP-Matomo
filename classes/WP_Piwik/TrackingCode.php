@@ -118,9 +118,9 @@ class TrackingCode {
 	}
 
 	private function applySearchChanges() {
+		global $wp_query;
 		self::$wpPiwik->log ( 'Apply search tracking changes. Blog ID: ' . get_current_blog_id () . ' Site ID: ' . self::$wpPiwik->getOption ( 'site_id' ) );
-		$objSearch = new \WP_Query ( "s=" . get_search_query () . '&showposts=-1' );
-		$intResultCount = $objSearch->post_count;
+		$intResultCount = $wp_query->found_posts;
 		$this->trackingCode = str_replace ( "_paq.push(['trackPageView']);", "_paq.push(['trackSiteSearch','" . get_search_query () . "', false, " . $intResultCount . "]);\n_paq.push(['trackPageView']);", $this->trackingCode );
 	}
 
