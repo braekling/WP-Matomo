@@ -3,7 +3,7 @@
 use WP_Piwik\Widget\Post;
 
 /**
- * The main WP-Matomo class configures, registers and manages the plugin
+ * The main Matomo Connector class configures, registers and manages the plugin
  *
  * @author Andr&eacute; Br&auml;kling <webmaster@braekling.de>
  * @package WP_Piwik
@@ -196,7 +196,7 @@ class WP_Piwik {
 	 * Install WP-Piwik for the first time
 	 */
 	private function installPlugin($isUpdate = false) {
-		self::$logger->log ( 'Running WP-Matomo installation' );
+		self::$logger->log ( 'Running Matomo Connector installation' );
 		if (! $isUpdate)
 			$this->addNotice ( 'install', sprintf ( __ ( '%s %s installed.', 'wp-piwik' ), self::$settings->getNotEmptyGlobalOption ( 'plugin_display_name' ), self::$version ), __ ( 'Next you should connect to Matomo', 'wp-piwik' ) );
 		self::$settings->setGlobalOption ( 'revision', self::$revisionId );
@@ -207,7 +207,7 @@ class WP_Piwik {
 	 * Uninstall WP-Piwik
 	 */
 	public function uninstallPlugin() {
-		self::$logger->log ( 'Running WP-Matomo uninstallation' );
+		self::$logger->log ( 'Running Matomo Connector uninstallation' );
 		if (! defined ( 'WP_UNINSTALL_PLUGIN' ))
 			exit ();
 		self::deleteWordPressOption ( 'wp-piwik-notices' );
@@ -218,7 +218,7 @@ class WP_Piwik {
 	 * Update WP-Piwik
 	 */
 	private function updatePlugin() {
-		self::$logger->log ( 'Upgrade WP-Matomo to ' . self::$version );
+		self::$logger->log ( 'Upgrade Matomo Connector to ' . self::$version );
 		$patches = glob ( dirname ( __FILE__ ) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'update' . DIRECTORY_SEPARATOR . '*.php' );
 		$isPatched = false;
 		if (is_array ( $patches )) {
@@ -492,7 +492,7 @@ class WP_Piwik {
 			) );
 			$unique = $this->request ( $id );
 			$url = is_network_admin () ? $this->getSettingsURL () : false;
-			$content = is_network_admin () ? __('Configure WP-Matomo', 'wp-piwik') : '';
+			$content = is_network_admin () ? __('Configure Matomo Connector', 'wp-piwik') : '';
 			// Leave if result array does contain a message instead of valid data
 			if (isset($unique['result']))
 				$content .= '<!-- '.$unique['result'].': '.($unique['message']?$unique['message']:'...').' -->';

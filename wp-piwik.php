@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: WP-Matomo Integration 
+Plugin Name: Matomo Connector
 
 Plugin URI: http://wordpress.org/extend/plugins/wp-piwik/
 
