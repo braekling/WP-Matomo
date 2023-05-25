@@ -57,7 +57,7 @@ class Settings {
 					'administrator' => true
 			),
 			'perpost_stats' => "disabled",
-			'plugin_display_name' => 'Matomo Connector',
+			'plugin_display_name' => 'Connect Matomo',
 			'piwik_shortcut' => false,
 			'shortcodes' => false,
 			// User settings: Tracking configuration

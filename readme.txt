@@ -1,4 +1,4 @@
-=== Matomo Connector (WP-Matomo, WP-Piwik) ===
+=== Connect Matomo (WP-Matomo, WP-Piwik) ===
 
 Contributors: Braekling
 Requires at least: 5.0
