@@ -38,7 +38,7 @@ msgstr ""
 
 #: classes/WP_Piwik.php:499
 msgid "Configure WP-Matomo"
-msgstr "Configure Connect Matomo"
+msgstr ""
 
 #: classes/WP_Piwik.php:992
 msgid "An error occured"
@@ -62,12 +62,12 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:55
 msgid "Thanks for using WP-Matomo!"
-msgstr "Thanks for using Connect Matomo!"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:58
 #, php-format
 msgid "WP-Matomo %s is successfully connected to Matomo %s."
-msgstr "Connect Matomo %s is successfully connected to Matomo %s."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:58
 #, php-format
@@ -212,7 +212,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:113
 msgid "Disabled (WP-Matomo will not connect to Matomo)"
-msgstr "Disabled (Connect Matomo will not connect to Matomo)"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:119
 msgid "Matomo URL"
@@ -255,7 +255,7 @@ msgstr ""
 #: classes/WP_Piwik/Admin/Settings.php:122
 #, php-format
 msgid "See %sWP-Matomo FAQ%s."
-msgstr "See %sConnect Matomo FAQ%s."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:127
 msgid "Auto config"
@@ -359,7 +359,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:172
 msgid "Enable WP-Matomo dashboard widget &quot;Overview&quot;."
-msgstr "Enable Connect Matomo dashboard widget &quot;Overview&quot;."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:174
 msgid "Dashboard graph"
@@ -367,7 +367,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:174
 msgid "Enable WP-Matomo dashboard widget &quot;Graph&quot;."
-msgstr "Enable Connect Matomo dashboard widget &quot;Graph&quot;."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:176
 msgid "Dashboard SEO"
@@ -375,7 +375,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:176
 msgid "Enable WP-Matomo dashboard widget &quot;SEO&quot;."
-msgstr "Enable Connect Matomo dashboard widget &quot;SEO&quot;."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:178
 msgid "Dashboard e-commerce"
@@ -383,7 +383,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:178
 msgid "Enable WP-Matomo dashboard widget &quot;E-commerce&quot;."
-msgstr "Enable Connect Matomo dashboard widget &quot;E-commerce&quot;."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:180
 msgid "Show graph on WordPress Toolbar"
@@ -454,7 +454,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 msgid "WP-Matomo will use Matomo's standard tracking code."
-msgstr "Connect Matomo will use Matomo's standard tracking code."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 #: classes/WP_Piwik/Admin/Settings.php:212
@@ -599,7 +599,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:238
 msgid "WP-Matomo can automatically add a 404-category to track 404-page-visits."
-msgstr "Connect Matomo can automatically add a 404-category to track 404-page-visits."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:241
 msgid "Add annotation on new post of type"
@@ -938,7 +938,7 @@ msgstr "Show only if Connect Matomo is updated and settings were changed"
 
 #: classes/WP_Piwik/Admin/Settings.php:341
 msgid "Choose if you want to get an update notice if WP-Matomo is updated."
-msgstr "Choose if you want to get an update notice if Connect Matomo is updated."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:343
 msgid "Define all file types for download tracking"
@@ -983,7 +983,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:511
 msgid "If you like WP-Matomo, you can support its development by a donation:"
-msgstr "If you like Connect Matomo, you can support its development by a donation:"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:530
 msgid "My Amazon.de wishlist"
@@ -1044,7 +1044,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:574
 msgid "WP-Matomo support forum"
-msgstr "Connect Matomo support forum"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:577
 msgid "Debugging"
@@ -1107,7 +1107,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:601
 msgid "Reset WP-Matomo"
-msgstr "Reset Connect Matomo"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:603
 msgid "Latest support threads on WordPress.org"
