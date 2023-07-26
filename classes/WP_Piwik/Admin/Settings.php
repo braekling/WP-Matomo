@@ -103,7 +103,7 @@ class Settings extends \WP_Piwik\Admin {
 		echo '</h2></td></tr></tbody></table><table id="connect" class="wp-piwik_menu-tab"><tbody>';
 
 		if (! self::$wpPiwik->isConfigured ())
-            $this->showBox ( 'updated', 'info',  __ ( 'Before you can complete the setup, make sure you have a Matomo instance running. If you don\'t have one, you can <a href="https://matomo.org/start-free-analytics-trial/" target="_blank">create a free account</a> or <a href="https://wordpress.org/plugins/matomo/" target="_blank">install the "Matomo for WordPress" plugin</a> instead.', 'wp-piwik' ) );
+            $this->showBox ( 'updated', 'info',  __ ( 'Before you can complete the setup, make sure you have a Matomo instance running. If you don\'t have one, you can', 'wp-piwik' ) .' <a href="https://matomo.org/start-free-analytics-trial/" target="_blank">' . __ ('create a free account', 'wp-piwik' ) .'</a> ' . __ ('or ', 'wp-piwik' ) .'<a href="https://wordpress.org/plugins/matomo/" target="_blank">' . __ ('install the "Matomo for WordPress" plugin', 'wp-piwik' ) .'</a> ' . __ ('instead.', 'wp-piwik' ) );
 
 		if (! function_exists ( 'curl_init' ) && ! ini_get ( 'allow_url_fopen' ))
 			$this->showBox ( 'error', 'no', __ ( 'Neither cURL nor fopen are available. So WP-Matomo can not use the HTTP API and not connect to InnoCraft Cloud.' ) . ' ' . sprintf ( '<a href="%s">%s.</a>', 'https://wordpress.org/plugins/wp-piwik/faq/', __ ( 'More information', 'wp-piwik' ) ) );
