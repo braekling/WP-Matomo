@@ -103,7 +103,7 @@ class Settings extends \WP_Piwik\Admin {
 		echo '</h2></td></tr></tbody></table><table id="connect" class="wp-piwik_menu-tab"><tbody>';
 
 		if (! self::$wpPiwik->isConfigured ())
-			$this->showBox ( 'updated', 'info', sprintf ( '%s <a href="%s">%s</a> %s <a href="%s">%s</a>.', __ ( 'WP-Matomo is a WordPress plugin to show a selection of Matomo stats in your WordPress admin dashboard and to add and configure your Matomo tracking code. To use this you will need your own Matomo instance. If you do not already have a Matomo setup, you have two simple options: use either', 'wp-piwik' ), 'http://piwik.org/', __ ( 'a self-hosted Matomo', 'wp-piwik' ), __ ( 'or', 'wp-piwik' ), 'https://www.innocraft.cloud/?pk_campaign=WP-Matomo', __ ( 'a cloud-hosted Matomo by InnoCraft', 'wp-piwik' ) ) );
+            $this->showBox ( 'updated', 'info',  __ ( 'Before you can complete the setup, make sure you have a Matomo instance running. If you don\'t have one, you can', 'wp-piwik' ) .' <a href="https://matomo.org/start-free-analytics-trial/" target="_blank">' . __ ('create a free account', 'wp-piwik' ) .'</a> ' . __ ('or ', 'wp-piwik' ) .'<a href="https://wordpress.org/plugins/matomo/" target="_blank">' . __ ('install the "Matomo for WordPress" plugin', 'wp-piwik' ) .'</a> ' . __ ('instead.', 'wp-piwik' ) );
 
 		if (! function_exists ( 'curl_init' ) && ! ini_get ( 'allow_url_fopen' ))
 			$this->showBox ( 'error', 'no', __ ( 'Neither cURL nor fopen are available. So WP-Matomo can not use the HTTP API and not connect to InnoCraft Cloud.' ) . ' ' . sprintf ( '<a href="%s">%s.</a>', 'https://wordpress.org/plugins/wp-piwik/faq/', __ ( 'More information', 'wp-piwik' ) ) );
@@ -394,18 +394,6 @@ class Settings extends \WP_Piwik\Admin {
 	}
 
 	/**
-	 * Show an option's description
-	 *
-	 * @param string $id option id
-	 * @param string $description option description
-	 * @param boolean $hideDescription set to false to show description initially (default: true)
-	 * @return string full description HTML
-	 */
-	private function getDescription($id, $description, $hideDescription = true) {
-		return sprintf ( '<span class="dashicons dashicons-editor-help" onclick="jQuery(\'#%s-desc\').toggleClass(\'hidden\');"></span> <p class="description' . ($hideDescription ? ' hidden' : '') . '" id="%1$s-desc">%s</p>', $id, $description );
-	}
-
-	/**
 	 * Show a checkbox option
 	 *
 	 * @param string $id option id
@@ -417,8 +405,44 @@ class Settings extends \WP_Piwik\Admin {
 	 * @param string $onChange javascript for onchange event (default: empty)
 	 */
 	private function showCheckbox($id, $name, $description, $isHidden = false, $groupName = '', $hideDescription = true, $onChange = '') {
-		printf ( '<tr class="' . $groupName . ($isHidden ? ' hidden' : '') . '"><th scope="row"><label for="%2$s">%s</label>:</th><td><input type="checkbox" value="1"' . (self::$settings->getGlobalOption ( $id ) ? ' checked="checked"' : '') . ' onchange="jQuery(\'#%s\').val(this.checked?1:0);%s" /><input id="%2$s" type="hidden" name="wp-piwik[%2$s]" value="' . ( int ) self::$settings->getGlobalOption ( $id ) . '" /> %s</td></tr>', $name, $id, $onChange, $this->getDescription ( $id, $description, $hideDescription ) );
-	}
+        $this->showInputWrapper($id, $name, $description, $isHidden, $groupName, $hideDescription, function() use ($id, $onChange) {
+            ?>
+            <input type="checkbox" value="1" <?=(self::$settings->getGlobalOption ( $id ) ? ' checked="checked"' : '')?> onchange="jQuery('<?=$onChange?>').val(this.checked?1:0);" />
+            <input id="<?=$id?>" type="hidden" name="wp-piwik[<?=$id?>]" value="<?=( int ) self::$settings->getGlobalOption ( $id )?>" />
+            <?php
+        });
+    }
+
+    /**
+     * Display the input with the extra elements around it
+     *
+     * @param string $id option id
+     * @param string $name descriptive option name
+     * @param string $description option description
+     * @param boolean $isHidden set to true to initially hide the option (default: false)
+     * @param string $groupName define a class name to access a group of option rows by javascript (default: empty)
+     * @param boolean $hideDescription $hideDescription set to false to show description initially (default: true)
+     * @param callable $input function to inject the input into the wrapper
+     * @param string $rowName define a class name to access the specific option row by javascript (default: empty)
+     *
+     * @return void
+     */
+    private function showInputWrapper($id, $name, $description, $isHidden, $groupName, $hideDescription, $input, $rowName = false) {
+        ?>
+        <tr class="<?=$groupName?> <?=$rowName?> <?=$isHidden ? 'hidden': ''?>">
+            <td colspan="2" class="wp-piwik-input-row">
+                <label for="<?=$id?>"><?= __( $name, 'wp-piwik' ) ?>:</label>
+                <?php $input()?>
+                <?php if (!empty($description)) : ?>
+                    <span class="dashicons dashicons-editor-help" onclick="jQuery('#<?=$id?>-desc').toggleClass('hidden');"></span>
+                    <p class="description <?=$hideDescription ? 'hidden' : '' ?>" id="<?=$id?>-desc">
+                        <?= __( $description, 'wp-piwik' ) ?>
+                    </p>
+                <?php endif; ?>
+            </td>
+        </tr>
+        <?php
+    }
 
 	/**
 	 * Show a textarea option
@@ -435,8 +459,13 @@ class Settings extends \WP_Piwik\Admin {
 	 * @param boolean $global set to false if the textarea shows a site-specific option (default: true)
 	 */
 	private function showTextarea($id, $name, $rows, $description, $isHidden, $groupName, $hideDescription = true, $onChange = '', $isReadonly = false, $global = true) {
-		printf (
-			'<tr class="' . $groupName . ($isHidden ? ' hidden' : '') . '"><th scope="row"><label for="%2$s">%s</label>:</th><td><textarea cols="80" rows="' . $rows . '" id="%s" name="wp-piwik[%2$s]" onchange="%s"' . ($isReadonly ? ' readonly="readonly"' : '') . '>%s</textarea> %s</td></tr>', $name, $id, $onChange, ($global ? self::$settings->getGlobalOption ( $id ) : self::$settings->getOption ( $id )), $this->getDescription ( $id, $description, $hideDescription ) );
+        $this->showInputWrapper($id, $name, $description, $isHidden, $groupName, $hideDescription, function() use ($id, $onChange, $rows, $isReadonly, $global) {
+            ?>
+                <textarea cols="80" rows="<?=$rows?>" id="<?=$id?>" name="wp-piwik[<?=$id?>]" onchange="<?=$onChange?>" <?=($isReadonly ? ' readonly="readonly"' : '')?>>
+                    <?=($global ? self::$settings->getGlobalOption ( $id ) : self::$settings->getOption ( $id ))?>
+                </textarea>
+            <?php
+        });
 	}
 
 	/**
@@ -461,7 +490,11 @@ class Settings extends \WP_Piwik\Admin {
 	 * @param boolean $wide Create a wide box (default: false)
 	 */
 	private function showInput($id, $name, $description, $isHidden = false, $groupName = '', $rowName = false, $hideDescription = true, $wide = false) {
-		printf ( '<tr class="%s%s"%s><th scope="row"><label for="%5$s">%s:</label></th><td><input '.($wide?'class="wp-piwik-wide" ':'').'name="wp-piwik[%s]" id="%5$s" value="%s" /> %s</td></tr>', $isHidden ? 'hidden ' : '', $groupName ? $groupName : '', $rowName ? ' id="' . $groupName . '-' . $rowName . '"' : '', $name, $id, htmlentities(self::$settings->getGlobalOption( $id ), ENT_QUOTES, 'UTF-8', false), !empty($description) ? $this->getDescription ( $id, $description, $hideDescription ) : '' );
+        $this->showInputWrapper($id, $name, $description, $isHidden, $groupName, $hideDescription, function() use ($id) {
+            ?>
+            <input name="wp-piwik[<?=$id?>]" id="<?=$id?>" value="<?=htmlentities(self::$settings->getGlobalOption( $id ), ENT_QUOTES, 'UTF-8', false)?>" >
+            <?php
+        }, $rowName);
 	}
 
 	/**
@@ -478,12 +511,17 @@ class Settings extends \WP_Piwik\Admin {
 	 * @param boolean $global set to false if the textarea shows a site-specific option (default: true)
 	 */
 	private function showSelect($id, $name, $options = array(), $description = '', $onChange = '', $isHidden = false, $groupName = '', $hideDescription = true, $global = true) {
-		$optionList = '';
 		$default = $global ? self::$settings->getGlobalOption ( $id ) : self::$settings->getOption ( $id );
-		if (is_array ( $options ))
-			foreach ( $options as $key => $value )
-				$optionList .= sprintf ( '<option value="%s"' . ($key == $default ? ' selected="selected"' : '') . '>%s</option>', $key, $value );
-		printf ( '<tr class="' . $groupName . ($isHidden ? ' hidden' : '') . '"><th scope="row"><label for="%2$s">%s:</label></th><td><select name="wp-piwik[%s]" id="%2$s" onchange="%s">%s</select> %s</td></tr>', $name, $id, $onChange, $optionList, $this->getDescription ( $id, $description, $hideDescription ) );
+
+        $this->showInputWrapper($id, $name, $description, $isHidden, $groupName, $hideDescription, function() use ($id, $onChange, $options, $default) {
+            ?>
+            <select name="wp-piwik[<?=$id?>]" id="<?=$id?>" onchange="<?=$onChange?>">
+                <?php foreach ($options as $key => $value) : ?>
+                    <option value="<?=$key?>" <?=($key == $default ? ' selected="selected"' : '')?> ><?=$value?></option>
+                <?php endforeach; ?>
+            </select>
+            <?php
+        });
 	}
 
 	/**
@@ -585,8 +623,38 @@ class Settings extends \WP_Piwik\Admin {
 	 * Show support information
 	 */
 	public function showSupport() {
-		?><ul>
-			<li><?php _e('The best place to get help:', 'wp-piwik'); ?> <a href="https://wordpress.org/support/plugin/wp-piwik" target="_BLANK"><?php _e('WP-Matomo support forum','wp-piwik'); ?></a></li>
+		?>
+        <h2><?php _e('How can we help?', 'wp-piwik'); ?></h2>
+
+        <form method="get" action="https://matomo.org" target="_blank" rel="noreferrer noopener">
+            <input type="text" name="s" style="width:300px;"><input type="submit" class="button-secondary" value="<?php _e('Search on', 'wp-piwik'); ?> matomo.org">
+        </form>
+        <ul class="wp-piwik-help-list">
+            <li><a target="_blank" rel="noreferrer noopener"
+                   href="https://matomo.org/docs/"><?php _e('User guides', 'wp-piwik'); ?></a>
+                - <?php _e('Learn how to configure Matomo and how to effectively analyse your data', 'wp-piwik'); ?></li>
+            <li><a target="_blank" rel="noreferrer noopener"
+                   href="https://matomo.org/faq/wordpress/"><?php _e('Matomo for WordPress FAQs', 'wp-piwik'); ?></a>
+                - <?php _e('Get answers to frequently asked questions', 'wp-piwik'); ?></li>
+            <li><a target="_blank" rel="noreferrer noopener"
+                   href="https://matomo.org/faq/"><?php _e('General FAQs', 'wp-piwik'); ?></a>
+                - <?php _e('Get answers to frequently asked questions', 'wp-piwik'); ?></li>
+            <li><a target="_blank" rel="noreferrer noopener"
+                   href="https://forum.matomo.org/"><?php _e('Forums', 'wp-piwik'); ?></a>
+                - <?php _e('Get help directly from the community of Matomo users', 'wp-piwik'); ?></li>
+            <li><a target="_blank" rel="noreferrer noopener"
+                   href="https://glossary.matomo.org"><?php _e('Glossary', 'wp-piwik'); ?></a>
+                - <?php _e('Learn about commonly used terms to make the most of Matomo Analytics', 'wp-piwik'); ?></li>
+            <li><a target="_blank" rel="noreferrer noopener"
+                   href="https://matomo.org/support-plans/"><?php _e('Support Plans', 'wp-piwik'); ?></a>
+                - <?php _e('Let our experienced team assist you online on how to best utilise Matomo', 'wp-piwik'); ?></li>
+            <li><a href="https://local.wordpressplugin.matomo.org/wp-admin/admin.php?page=matomo-systemreport&#038;tab=troubleshooting"><?php _e('Troubleshooting', 'wp-piwik'); ?></a>
+                - <?php _e('Click here if you are having Trouble with Matomo', 'wp-piwik'); ?></li>
+        </ul>
+
+        <ul>
+            <li><?php _e('Contact Matomo support here:', 'wp-piwik'); ?> <a href="https://matomo.org/contact/" target="_BLANK"><?php _e('https://matomo.org/contact/','wp-piwik'); ?></a></li>
+            <li><?php _e('Find support for this plugin here:', 'wp-piwik'); ?> <a href="https://wordpress.org/support/plugin/wp-piwik" target="_BLANK"><?php _e('WP-Matomo support forum','wp-piwik'); ?></a></li>
 			<li><?php _e('Please don\'t forget to vote the compatibility at the','wp-piwik'); ?> <a href="http://wordpress.org/extend/plugins/wp-piwik/" target="_BLANK">WordPress.org Plugin Directory</a>.</li>
 		</ul>
 		<h3><?php _e('Debugging', 'wp-piwik'); ?></h3>
