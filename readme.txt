@@ -143,6 +143,10 @@ Add WP-Matomo to your /wp-content/plugins folder and enable it as [Network Plugi
 
 == Changelog ==
 
+= 1.0.29 =
+* Rename plugin to "Connect Matomo"
+* Fix a XSS vulnerability
+
 = 1.0.28 =
 * Encode plugin display name
 * Option to set requireConsent or requireCookieConsent
