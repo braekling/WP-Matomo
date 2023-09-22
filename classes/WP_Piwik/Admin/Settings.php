@@ -126,7 +126,15 @@ class Settings extends \WP_Piwik\Admin {
 		// Site configuration
 		$piwikSiteId = self::$wpPiwik->isConfigured () ? self::$wpPiwik->getPiwikSiteId () : false;
 		if (! self::$wpPiwik->isNetworkMode() ) {
-			$this->showCheckbox ( 'auto_site_config', __ ( 'Auto config', 'wp-piwik' ), __ ( 'Check this to automatically choose your blog from your Matomo sites by URL. If your blog is not added to Matomo yet, WP-Matomo will add a new site.', 'wp-piwik' ), false, 'jQuery(\'tr.wp-piwik-auto-option\').toggle(\'hidden\');' . ($piwikSiteId ? 'jQuery(\'#site_id\').val(' . $piwikSiteId . ');' : '') );
+			$this->showCheckbox (
+                    'auto_site_config',
+                    __ ( 'Auto config', 'wp-piwik' ),
+                    __ ( 'Check this to automatically choose your blog from your Matomo sites by URL. If your blog is not added to Matomo yet, WP-Matomo will add a new site.', 'wp-piwik' ),
+                    false,
+                    '',
+                    '',
+                    'jQuery(\'tr.wp-piwik-auto-option\').toggle(\'hidden\');' . ($piwikSiteId ? 'jQuery(\'#site_id\').val(' . $piwikSiteId . ');' : '')
+            );
 			if (self::$wpPiwik->isConfigured ()) {
 				$piwikSiteList = self::$wpPiwik->getPiwikSiteDetails ();
 				if (isset($piwikSiteList['result']) && $piwikSiteList['result'] == 'error') {
@@ -407,7 +415,7 @@ class Settings extends \WP_Piwik\Admin {
 	private function showCheckbox($id, $name, $description, $isHidden = false, $groupName = '', $hideDescription = true, $onChange = '') {
         $this->showInputWrapper($id, $name, $description, $isHidden, $groupName, $hideDescription, function() use ($id, $onChange) {
             ?>
-            <input type="checkbox" value="1" <?=(self::$settings->getGlobalOption ( $id ) ? ' checked="checked"' : '')?> onchange="jQuery('<?=$onChange?>').val(this.checked?1:0);" />
+            <input type="checkbox" value="1" <?=(self::$settings->getGlobalOption ( $id ) ? ' checked="checked"' : '')?> onchange="jQuery('#<?=$id ?>').val(this.checked?1:0); <?=$onChange ?>" />
             <input id="<?=$id?>" type="hidden" name="wp-piwik[<?=$id?>]" value="<?=( int ) self::$settings->getGlobalOption ( $id )?>" />
             <?php
         });
