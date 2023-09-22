@@ -148,7 +148,7 @@ Add WP-Matomo to your /wp-content/plugins folder and enable it as [Network Plugi
 = 1.0.30 =
 * Fix settings behavior
 * Fix auto configuration in PHP API mode
-* Fix Opt-Out shortcode language
+* Fix Opt-Out shortcode language attribute
 * Remove deprecated dynamic property (PHP 8.2)
 
 = 1.0.29 =
