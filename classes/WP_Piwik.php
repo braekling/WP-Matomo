@@ -10,9 +10,10 @@ use WP_Piwik\Widget\Post;
  */
 class WP_Piwik {
 
-	private static $revisionId = 2023091601, $version = '1.0.29', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
+	private static $revisionId = 2023092201, $version = '1.0.30', $blog_id, $pluginBasename = NULL, $logger, $settings, $request, $optionsPageId;
+    private $statsPageId;
 
-	/**
+    /**
 	 * Constructor class to configure and register all WP-Piwik components
 	 */
 	public function __construct() {
