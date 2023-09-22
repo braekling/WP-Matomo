@@ -26,7 +26,16 @@ class Settings extends \WP_Piwik\Admin {
 		} elseif (self::$wpPiwik->isConfigSubmitted()) {
 			$this->showBox ( 'updated', 'yes', __ ( 'Changes saved.' ) );
 			self::$wpPiwik->resetRequest();
-			self::$wpPiwik->updateTrackingCode();
+            if (self::$settings->getGlobalOption('piwik_mode') == 'php') {
+                self::$wpPiwik->definePiwikConstants();
+            }
+            if (self::$settings->getGlobalOption ( 'auto_site_config' ) && self::$wpPiwik->isConfigured ()) {
+                $siteId = self::$wpPiwik->getPiwikSiteId (null, true);
+                self::$wpPiwik->updateTrackingCode ( $siteId );
+                self::$settings->setOption ( 'site_id', $siteId );
+            } else {
+                self::$wpPiwik->updateTrackingCode();
+            }
 		}
 		global $wp_roles;
 		?>

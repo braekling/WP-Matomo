@@ -657,13 +657,6 @@ class WP_Piwik {
 	 */
 	private function applySettings() {
 		self::$settings->applyChanges ( $_POST ['wp-piwik'] );
-		if (self::$settings->getGlobalOption ( 'auto_site_config' ) && self::isConfigured ()) {
-			if ($this->isPHPMode () && ! defined ( 'PIWIK_INCLUDE_PATH' ))
-				self::definePiwikConstants ();
-			$siteId = $this->getPiwikSiteId ();
-			$trackingCode = $this->updateTrackingCode ( $siteId );
-			self::$settings->setOption ( 'site_id', $siteId );
-		}
 		self::$settings->setGlobalOption ( 'revision', self::$revisionId );
 		self::$settings->setGlobalOption ( 'last_settings_update', time () );
 		return true;
@@ -1084,12 +1077,12 @@ class WP_Piwik {
 	 *        	which blog's Piwik site ID to get, default is the current blog
 	 * @return mixed Piwik site ID or n/a
 	 */
-	public function getPiwikSiteId($blogId = null) {
+	public function getPiwikSiteId($blogId = null, $forceFetch = false) {
 		if (! $blogId && $this->isNetworkMode ())
 			$blogId = get_current_blog_id ();
-		$result = self::$settings->getOption ( 'site_id', $blogId );
+		$result = self::$settings->getOption ( 'site_id' );
         self::$logger->log ( 'Database result: ' . $result );
-        return (! empty ( $result ) ? $result : $this->requestPiwikSiteId ( $blogId ));
+        return (! empty ( $result ) && ! $forceFetch ? $result : $this->requestPiwikSiteId ( $blogId ));
 	}
 
 	/**
