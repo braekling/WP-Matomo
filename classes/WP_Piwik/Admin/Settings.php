@@ -124,7 +124,7 @@ class Settings extends \WP_Piwik\Admin {
 				'php' => __ ( 'Self-hosted (PHP API)', 'wp-piwik' ),
                 'cloud-matomo' => __('Cloud-hosted (Innocraft Cloud, *.matomo.cloud)', 'wp-piwik'),
 				'cloud' => __ ( 'Cloud-hosted (InnoCraft Cloud, *.innocraft.cloud)', 'wp-piwik' )
-		), $description, 'jQuery(\'tr.wp-piwik-mode-option\').addClass(\'hidden\'); jQuery(\'#wp-piwik-mode-option-\' + jQuery(\'#piwik_mode\').val()).removeClass(\'hidden\');', false, '', self::$wpPiwik->isConfigured () );
+		), $description, 'jQuery(\'tr.wp-piwik-mode-option\').addClass(\'hidden\'); jQuery(\'.wp-piwik-mode-option-\' + jQuery(\'#piwik_mode\').val()).removeClass(\'hidden\');', false, '', self::$wpPiwik->isConfigured () );
 
 		$this->showInput ( 'piwik_url', __ ( 'Matomo URL', 'wp-piwik' ), __( 'Enter your Matomo URL. This is the same URL you use to access your Matomo instance, e.g. http://www.example.com/matomo/.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'http', 'wp-piwik-mode-option', 'http', self::$wpPiwik->isConfigured (), true );
 		$this->showInput ( 'piwik_path', __ ( 'Matomo path', 'wp-piwik' ), __( 'Enter the file path to your Matomo instance, e.g. /var/www/matomo/.', 'wp-piwik' ), self::$settings->getGlobalOption ( 'piwik_mode' ) != 'php', 'wp-piwik-mode-option', 'php', self::$wpPiwik->isConfigured (), true );
@@ -446,7 +446,7 @@ class Settings extends \WP_Piwik\Admin {
      */
     private function showInputWrapper($id, $name, $description, $isHidden, $groupName, $hideDescription, $input, $rowName = false) {
         ?>
-        <tr class="<?=$groupName?> <?=$rowName?> <?=$isHidden ? 'hidden': ''?>">
+        <tr class="<?=$groupName?> <?=$groupName?>-<?=$rowName?> <?=$isHidden ? 'hidden': ''?>">
             <td colspan="2" class="wp-piwik-input-row">
                 <label for="<?=$id?>"><?= __( $name, 'wp-piwik' ) ?>:</label>
                 <?php $input()?>
