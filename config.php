@@ -1,9 +1,10 @@
 <?php
 
-/******************************************************
- * Configure WP-Piwik Logger
- * 0: Logger disabled
- * 1: Log to screen
- * 2: Log to file (logs/YYYYMMDD_wp-piwik.log)
- ******************************************************/
-define ( 'WP_PIWIK_ACTIVATE_LOGGER', 0 );
+const CONNECT_MATOMO_VERSION = '1.0.30';
+const CONNECT_MATOMO_REVISION = 2023092201;
+
+if (!defined('NAMESPACE_SEPARATOR')) {
+    define("NAMESPACE_SEPARATOR", '\\');
+}
+
+const CONNECT_MATOMO_PATH = dirname(__FILE__) . DIRECTORY_SEPARATOR;
