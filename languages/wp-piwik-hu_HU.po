@@ -1,14 +1,14 @@
 # 
 # Translators:
 # Márk Kökény <oregapamgroup@gmail.com>, 2015-2016
-# Márk Kökény <oregapamgroup@gmail.com>, 2016
+# Márk Kökény <oregapamgroup@gmail.com>, 2016-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Piwik\n"
 "POT-Creation-Date: 2017-10-09 20:37+0200\n"
-"PO-Revision-Date: 2017-10-09 20:41+0000\n"
+"PO-Revision-Date: 2019-03-26 08:31+0000\n"
 "Last-Translator: André Bräkling\n"
-"Language-Team: Hungarian (Hungary) (http://www.transifex.com/piwik/wp-piwik/language/hu_HU/)\n"
+"Language-Team: Hungarian (Hungary) (http://www.transifex.com/matomo/wp-piwik/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,8 +21,8 @@ msgid "%s %s installed."
 msgstr "%s %s telepítve."
 
 #: classes/WP_Piwik.php:203
-msgid "Next you should connect to Piwik"
-msgstr "Most kapcsolódnod kell a Piwik-hez"
+msgid "Next you should connect to Matomo"
+msgstr ""
 
 #: classes/WP_Piwik.php:237
 #, php-format
@@ -42,12 +42,12 @@ msgid "Important"
 msgstr "Fontos"
 
 #: classes/WP_Piwik.php:387 classes/WP_Piwik.php:409
-msgid "Piwik Statistics"
-msgstr "Piwik statisztikák"
+msgid "Matomo Statistics"
+msgstr ""
 
 #: classes/WP_Piwik.php:499
-msgid "Configure WP-Piwik"
-msgstr "WP-Piwik beállításai"
+msgid "Configure WP-Matomo"
+msgstr ""
 
 #: classes/WP_Piwik.php:992
 msgid "An error occured"
@@ -70,13 +70,13 @@ msgid "Changes saved."
 msgstr "Módosítások elmentve."
 
 #: classes/WP_Piwik/Admin/Settings.php:55
-msgid "Thanks for using WP-Piwik!"
-msgstr "Köszönjük, hogy a WP-Piwik-et használod!"
+msgid "Thanks for using WP-Matomo!"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:58
 #, php-format
-msgid "WP-Piwik %s is successfully connected to Piwik %s."
-msgstr "WP-Piwik %s sikeresen kapcsolódott a Piwik %s-hez."
+msgid "WP-Matomo %s is successfully connected to Matomo %s."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:58
 #, php-format
@@ -86,34 +86,34 @@ msgstr "WordPress %s verzióját használod."
 #: classes/WP_Piwik/Admin/Settings.php:58
 #, php-format
 msgid ""
-"You are running a WordPress %s blog network (WPMU). WP-Piwik will handle "
+"You are running a WordPress %s blog network (WPMU). WP-Matomo will handle "
 "your sites as different websites."
-msgstr "WordPress %s bloghálózatot (WPMU) használsz. WP-Piwik külön oldalként kezeli minden oldalad."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:62
 #, php-format
 msgid ""
-"WP-Piwik %s was not able to connect to Piwik using your configuration. Check"
-" the &raquo;Connect to Piwik&laquo; section below."
-msgstr "WP-Piwik %s nem tud kapcsolatot létesíteni a Piwik-el a megadott kapcsolati adatok alapján. Ellenőrizd a &raquo;Kapcsolódás Piwikhez&laquo; szekciót lentebb."
+"WP-Matomo %s was not able to connect to Matomo using your configuration. "
+"Check the &raquo;Connect to Matomo&laquo; section below."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:64
 #, php-format
 msgid ""
-"WP-Piwik %s was not able to connect to Piwik using your configuration. "
+"WP-Matomo %s was not able to connect to Matomo using your configuration. "
 "During connection the following error occured: <br /><code>%s</code>"
-msgstr "WP-Piwik %s nem tud kapcsolatot létesíteni a Piwik-el a megadott kapcsolati adatok alapján. Kapcsolódás közben az alábbi hiba lépett fel: <br /><code>%s</code>"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:67
 #, php-format
 msgid ""
-"WP-Piwik %s has to be connected to Piwik first. Check the &raquo;Connect to "
-"Piwik&laquo; section below."
-msgstr "WP-Piwik-nek mindenekelőtt kapcsolatban kell lennie a Piwik-el. Ellenőrizd a &raquo;Kapcsolódás Piwikhez&laquo; szekciót lentebb."
+"WP-Matomo %s has to be connected to Matomo first. Check the &raquo;Connect "
+"to Matomo&laquo; section below."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:71
-msgid "Connect to Piwik"
-msgstr "Kapcsolódás Piwik-hez"
+msgid "Connect to Matomo"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:76
 msgid "Show Statistics"
@@ -133,14 +133,14 @@ msgstr "Stáblista"
 
 #: classes/WP_Piwik/Admin/Settings.php:106
 msgid ""
-"WP-Piwik is a WordPress plugin to show a selection of Piwik stats in your "
-"WordPress admin dashboard and to add and configure your Piwik tracking code."
-" To use this you will need your own Piwik instance. If you do not already "
-"have a Piwik setup, you have two simple options: use either"
-msgstr "A WP-Piwik egy WordPress kiegészítő, amely a Piwik statisztikáit megjeleníti a te WordPress admin vezérlőpultodon, illetve Piwik követőkódot helyezhetsz el vele a blogodon. Használatához szükséged lesz egy saját működőképes Piwik rendszerre. Amennyiben nincs Piwik-ed, két egyszerű lehetőség közül választhatsz: választhatod bármelyiket"
+"WP-Matomo is a WordPress plugin to show a selection of Matomo stats in your "
+"WordPress admin dashboard and to add and configure your Matomo tracking "
+"code. To use this you will need your own Matomo instance. If you do not "
+"already have a Matomo setup, you have two simple options: use either"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:106
-msgid "a self-hosted Piwik"
+msgid "a self-hosted Matomo"
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:106
@@ -148,12 +148,12 @@ msgid "or"
 msgstr "vagy"
 
 #: classes/WP_Piwik/Admin/Settings.php:106
-msgid "a cloud-hosted Piwik by InnoCraft"
+msgid "a cloud-hosted Matomo by InnoCraft"
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:109
 msgid ""
-"Neither cURL nor fopen are available. So WP-Piwik can not use the HTTP API "
+"Neither cURL nor fopen are available. So WP-Matomo can not use the HTTP API "
 "and not connect to InnoCraft Cloud."
 msgstr ""
 
@@ -173,9 +173,9 @@ msgstr "Általad-üzemeltetettt (HTTP API, alapértelmezett)"
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid ""
-"This is the default option for a self-hosted Piwik and should work for most "
-"configurations. WP-Piwik will connect to Piwik using http(s)."
-msgstr "Ez az alapértelmezett beállítás az általad-üzemeltetett Piwik-hez, ennek a legtöbb esetben működnie kell. WP-Piwik http(s)-en keresztül fog csatlakozni Piwik-edhez."
+"This is the default option for a self-hosted Matomo and should work for most"
+" configurations. WP-Matomo will connect to Matomo using http(s)."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 #: classes/WP_Piwik/Admin/Settings.php:115
@@ -184,9 +184,9 @@ msgstr "Általad-üzemeltetett (PHP API)"
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid ""
-"Choose this, if your self-hosted Piwik and WordPress are running on the same"
-" machine and you know the full server path to your Piwik instance."
-msgstr "Válaszd ezt, ha az általad-üzemeltetett Piwik és a WordPress ugyanazon a szervergépen fut és tudod a teljes elérési útvonalat Piwik rendszeredhez."
+"Choose this, if your self-hosted Matomo and WordPress are running on the "
+"same machine and you know the full server path to your Matomo instance."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 #: classes/WP_Piwik/Admin/Settings.php:116
@@ -195,38 +195,38 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:111
 msgid ""
-"If you are using a cloud-hosted Piwik by InnoCraft, you can simply use this "
-"option."
+"If you are using a cloud-hosted Matomo by InnoCraft, you can simply use this"
+" option."
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:112
-msgid "Piwik Mode"
-msgstr "Piwik üzemmód"
+msgid "Matomo Mode"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:113
-msgid "Disabled (WP-Piwik will not connect to Piwik)"
-msgstr "Letiltva (WP-Piwik nem csatlakozik a Piwikhez)"
+msgid "Disabled (WP-Matomo will not connect to Matomo)"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:119
-msgid "Piwik URL"
-msgstr "Piwik URL"
+msgid "Matomo URL"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:119
 msgid ""
-"Enter your Piwik URL. This is the same URL you use to access your Piwik "
-"instance, e.g. http://www.example.com/piwik/."
-msgstr "Add meg Piwik-ed URL címét. Ugyan az a cím, amelyen te is eléred Piwik-ed webböngészőn keresztül. Pl.: http://www.example.com/piwik/."
+"Enter your Matomo URL. This is the same URL you use to access your Matomo "
+"instance, e.g. http://www.example.com/matomo/."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:120
-msgid "Piwik path"
-msgstr "Piwik útvonal"
+msgid "Matomo path"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:120
-msgid "Enter the file path to your Piwik instance, e.g. /var/www/piwik/."
-msgstr "Add meg az elérési útvonalat a Piwik telepítésedhez, pl.: /var/www/piwik/."
+msgid "Enter the file path to your Matomo instance, e.g. /var/www/matomo/."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:121
-msgid "Piwik subdomain"
+msgid "Matomo subdomain"
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:121
@@ -241,14 +241,14 @@ msgstr "Authorizációs token"
 
 #: classes/WP_Piwik/Admin/Settings.php:122
 msgid ""
-"Enter your Piwik auth token here. It is an alphanumerical code like "
+"Enter your Matomo auth token here. It is an alphanumerical code like "
 "0a1b2c34d56e78901fa2bc3d45678efa."
-msgstr "Írd be Piwik authorizációs tokened ide. Ez egy alfanumerikus karaktersor, pl.: 0a1b2c34d56e78901fa2bc3d45678efa."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:122
 #, php-format
-msgid "See %sWP-Piwik FAQ%s."
-msgstr "Bővebb infó %sWP-Piwik GYIK%s"
+msgid "See %sWP-Matomo FAQ%s."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:127
 msgid "Auto config"
@@ -256,14 +256,14 @@ msgstr "Automata konfiguráció"
 
 #: classes/WP_Piwik/Admin/Settings.php:127
 msgid ""
-"Check this to automatically choose your blog from your Piwik sites by URL. "
-"If your blog is not added to Piwik yet, WP-Piwik will add a new site."
-msgstr "Pipáld be ezt, hogy automatikusan kiválasszam a blogod a Piwik oldalaid közül URL alapján. Amennyiben még nem adtad hozzá az oldalad Piwik-hez, a WP-Piwik megteszi ezt helyetted."
+"Check this to automatically choose your blog from your Matomo sites by URL. "
+"If your blog is not added to Matomo yet, WP-Matomo will add a new site."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:131
 #, php-format
 msgid ""
-"WP-Piwik %s was not able to get sites with at least view access: <br "
+"WP-Matomo %s was not able to get sites with at least view access: <br "
 "/><code>%s</code>"
 msgstr ""
 
@@ -276,8 +276,8 @@ msgid "Select site"
 msgstr "Válassz oldalt"
 
 #: classes/WP_Piwik/Admin/Settings.php:155
-msgid "Piwik default date"
-msgstr "Piwik alapértelmezett dátum"
+msgid "Matomo default date"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:156
 #: classes/WP_Piwik/Admin/Settings.php:170
@@ -348,31 +348,31 @@ msgid "Last 30 days"
 msgstr "Utolsó 30 nap"
 
 #: classes/WP_Piwik/Admin/Settings.php:172
-msgid "Enable WP-Piwik dashboard widget &quot;Overview&quot;."
-msgstr "WP-Piwik vezérlőpulti widget &quot;Összegzés&quot; engedélyezése."
+msgid "Enable WP-Matomo dashboard widget &quot;Overview&quot;."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:174
 msgid "Dashboard graph"
 msgstr "Vezélőpult grafikon"
 
 #: classes/WP_Piwik/Admin/Settings.php:174
-msgid "Enable WP-Piwik dashboard widget &quot;Graph&quot;."
-msgstr "WP-Piwik vezérlőpulti widget &quot;Grafikon&quot; engedélyezése."
+msgid "Enable WP-Matomo dashboard widget &quot;Graph&quot;."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:176
 msgid "Dashboard SEO"
 msgstr "Vezélőpult grafikon"
 
 #: classes/WP_Piwik/Admin/Settings.php:176
-msgid "Enable WP-Piwik dashboard widget &quot;SEO&quot;."
-msgstr "WP-Piwik vezérlőpulti widget &quot;SEO&quot; engedélyezése."
+msgid "Enable WP-Matomo dashboard widget &quot;SEO&quot;."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:178
 msgid "Dashboard e-commerce"
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:178
-msgid "Enable WP-Piwik dashboard widget &quot;E-commerce&quot;."
+msgid "Enable WP-Matomo dashboard widget &quot;E-commerce&quot;."
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:180
@@ -400,16 +400,16 @@ msgid "Show stats about single posts at the post edit admin page."
 msgstr "Az egyszeri bejegyzések statisztikáit jeleníti meg az admin oldalon."
 
 #: classes/WP_Piwik/Admin/Settings.php:193
-msgid "Piwik shortcut"
-msgstr "Piwik parancsikon"
+msgid "Matomo shortcut"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:193
-msgid "Display a shortcut to Piwik itself."
-msgstr "Piwik prancsikon megejlenítése."
+msgid "Display a shortcut to Matomo itself."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:195
-msgid "WP-Piwik display name"
-msgstr "WP-Piwik megjelenítendő neve"
+msgid "WP-Matomo display name"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:195
 msgid "Plugin name shown in WordPress."
@@ -429,10 +429,10 @@ msgstr "Négy követési módszer közül választhatsz:"
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 msgid ""
-"WP-Piwik will not add the tracking code. Use this, if you want to add the "
+"WP-Matomo will not add the tracking code. Use this, if you want to add the "
 "tracking code to your template files or you use another plugin to add the "
 "tracking code."
-msgstr "WP-Piwik nem állít be követőkódot. Használd ezt, ha manuálisan akarod beágyazni a követőkódod a sablonfájlokba, vagy másik kiegészítőt használsz erre a célra."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 #: classes/WP_Piwik/Admin/Settings.php:211
@@ -440,8 +440,8 @@ msgid "Default tracking"
 msgstr "Alapértelmezett követés"
 
 #: classes/WP_Piwik/Admin/Settings.php:208
-msgid "WP-Piwik will use Piwik's standard tracking code."
-msgstr "WP-Piwik a Piwik sztenderd követőkódját alkalmazza."
+msgid "WP-Matomo will use Matomo's standard tracking code."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 #: classes/WP_Piwik/Admin/Settings.php:212
@@ -451,8 +451,8 @@ msgstr "Használja a js/index.php-t"
 #: classes/WP_Piwik/Admin/Settings.php:208
 msgid ""
 "You can choose this tracking code, to deliver a minified proxy code and to "
-"avoid using the files called piwik.js or piwik.php."
-msgstr "Választhatod ezt a követőkódot, amely kicsinyített proxy kódot tartalmaz, ezzel elkerülve a piwik.js illetve piwik.php fájlok használatát."
+"avoid using the files called matomo.js or matomo.php."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 #, php-format
@@ -465,15 +465,15 @@ msgid "Use proxy script"
 msgstr "Használjon proxy szkriptet"
 
 #: classes/WP_Piwik/Admin/Settings.php:208
-msgid "Use this tracking code to not reveal the Piwik server URL."
-msgstr "Használd ezt a követőkódot, és nem feded fel a Piwik szerver URL címét."
+msgid "Use this tracking code to not reveal the Matomo server URL."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 #: classes/WP_Piwik/Admin/Settings.php:228
 #: classes/WP_Piwik/Admin/Settings.php:238
 #, php-format
-msgid "See %sPiwik FAQ%s."
-msgstr "Bővebb infó %sWP-Piwik GYIK%s"
+msgid "See %sMatomo FAQ%s."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:208
 #: classes/WP_Piwik/Admin/Settings.php:214
@@ -488,8 +488,8 @@ msgid ""
 msgstr "Írd be saját követőkódod manuálisan. Választhatsz egyet az előbbi opciók közül, elő-konfigurálod a követőkódot, majd a végén váltasz manuális szerkesztésre."
 
 #: classes/WP_Piwik/Admin/Settings.php:208
-msgid "Use the placeholder {ID} to add the Piwik site ID."
-msgstr "Használj placeholder-t {ID} hogy hozzáadd a Piwik oldal ID-t."
+msgid "Use the placeholder {ID} to add the Matomo site ID."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:209
 msgid "Add tracking code"
@@ -569,16 +569,16 @@ msgstr "A tartalom követés engedélyezi számodra, hogy interakciókat kövess
 #: classes/WP_Piwik/Admin/Settings.php:278
 #: classes/WP_Piwik/Admin/Settings.php:343
 #, php-format
-msgid "See %sPiwik documentation%s."
-msgstr "Bővebb infó a %sPiwik dokumentációban%s."
+msgid "See %sMatomo documentation%s."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:236
 msgid "Track search"
 msgstr "Keresés követése"
 
 #: classes/WP_Piwik/Admin/Settings.php:236
-msgid "Use Piwik's advanced Site Search Analytics feature."
-msgstr "Piwik haladó oldal keresési analitika funkció használata."
+msgid "Use Matomo's advanced Site Search Analytics feature."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:238
 msgid "Track 404"
@@ -586,8 +586,8 @@ msgstr "404 követése"
 
 #: classes/WP_Piwik/Admin/Settings.php:238
 msgid ""
-"WP-Piwik can automatically add a 404-category to track 404-page-visits."
-msgstr "WP-Piwik képes automatikusan 404-kategóriát létrehozni, hogy nyomonkövesse a 404-oldal-látogatásokat."
+"WP-Matomo can automatically add a 404-category to track 404-page-visits."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:241
 msgid "Add annotation on new post of type"
@@ -687,8 +687,8 @@ msgid ""
 "other domain by default. When this feature is enabled, it will append a URL "
 "parameter \"pk_vid\" that contains the visitor ID when a user clicks on a "
 "URL that belongs to one of your domains. For this feature to work, you also "
-"have to configure which domains should be treated as local in your Piwik "
-"website settings. This feature requires Piwik 3.0.2."
+"have to configure which domains should be treated as local in your Matomo "
+"website settings. This feature requires Matomo 3.0.2."
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:276
@@ -704,7 +704,7 @@ msgid "Track RSS feed links as campaign"
 msgstr "RSS csatorna linkek kampánykénti követése"
 
 #: classes/WP_Piwik/Admin/Settings.php:278
-msgid "This will add Piwik campaign parameters to the RSS feed links. "
+msgid "This will add Matomo campaign parameters to the RSS feed links. "
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:280
@@ -723,10 +723,10 @@ msgstr "Heartbeat időzítő engedélyezése"
 msgid ""
 "Enable a heartbeat timer to get more accurate visit lengths by sending "
 "periodical HTTP ping requests as long as the site is opened. Enter the time "
-"between the pings in seconds (Piwik default: 15) to enable or 0 to disable "
+"between the pings in seconds (Matomo default: 15) to enable or 0 to disable "
 "this feature. <strong>Note:</strong> This will cause a lot of additional "
 "HTTP requests on your site."
-msgstr "A heartbeat időzítő engedélyezésével pontosabb látogatási hosszakat kaphatsz, periodikusan kiküldött HTTP ping kérések kiküldésének segítségével, rögtön miután az oldalt megnyitották. Add meg az időt a pingek között másodpercben(Piwik alapértelmezett: 15), hogy engedélyezd, vagy 0-t hogy letiltsd ezt a funkciót. <strong>Megjegyzés:</strong> Ez a funkció sok HTTP kérést okozhat az oldaladon."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:284
 msgid "User ID Tracking"
@@ -785,8 +785,8 @@ msgstr "fopen"
 
 #: classes/WP_Piwik/Admin/Settings.php:303
 msgid ""
-"Choose whether WP-Piwik should use cURL or fopen to connect to Piwik in HTTP"
-" or Cloud mode."
+"Choose whether WP-Matomo should use cURL or fopen to connect to Matomo in "
+"HTTP or Cloud mode."
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:305
@@ -804,7 +804,7 @@ msgid "GET"
 msgstr "GET"
 
 #: classes/WP_Piwik/Admin/Settings.php:308
-msgid "Choose whether WP-Piwik should use POST or GET in HTTP or Cloud mode."
+msgid "Choose whether WP-Matomo should use POST or GET in HTTP or Cloud mode."
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:310
@@ -858,7 +858,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:323
 #, php-format
-msgid "See %sPiwik Blog%s."
+msgid "See %sMatomo Blog%s."
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:323
@@ -889,8 +889,8 @@ msgid "CDN URL (SSL)"
 msgstr "CDN URL (SSL)"
 
 #: classes/WP_Piwik/Admin/Settings.php:331
-msgid "Force Piwik to use a specific protocol"
-msgstr "Erőltesse a Piwik-et, hogy használja a specifikus protokollt"
+msgid "Force Matomo to use a specific protocol"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:332
 msgid "Disabled (default)"
@@ -906,25 +906,25 @@ msgstr "https (SSL)"
 
 #: classes/WP_Piwik/Admin/Settings.php:335
 msgid ""
-"Choose if you want to explicitly force Piwik to use HTTP or HTTPS. Does not "
-"work with a CDN URL."
-msgstr "Válaszd ezt, ha explicit módon akarod rábírni a Piwik-et, hogy használjon HTTP-t vagy HTTPS-t. Nem fog működni CDN URL-el."
+"Choose if you want to explicitly force Matomo to use HTTP or HTTPS. Does not"
+" work with a CDN URL."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:337
 msgid "Update notice"
 msgstr "Frissítési értesítés"
 
 #: classes/WP_Piwik/Admin/Settings.php:338
-msgid "Show always if WP-Piwik is updated"
-msgstr "Mutassa mindíg, ha a WP-Piwik frissítve van"
+msgid "Show always if WP-Matomo is updated"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:339
-msgid "Show only if WP-Piwik is updated and settings were changed"
-msgstr "Mutassa csak akkor, ha a WP-Piwik frissítésre került és beállításai módosultak"
+msgid "Show only if WP-Matomo is updated and settings were changed"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:341
-msgid "Choose if you want to get an update notice if WP-Piwik is updated."
-msgstr "Válaszd ezt, ha értesítést kívánsz kapni a WP-Piwik frissítéséről."
+msgid "Choose if you want to get an update notice if WP-Matomo is updated."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:343
 msgid "Define all file types for download tracking"
@@ -932,9 +932,9 @@ msgstr "Add meg a követni kívánt fájltípusokat"
 
 #: classes/WP_Piwik/Admin/Settings.php:343
 msgid ""
-"Replace Piwik's default file extensions for download tracking, divided by a "
-"vertical bar (&#124;). Leave blank to keep Piwik's default settings."
-msgstr "Piwik alapértelmezett fájlkiterjesztések lecserélése letöltés követéskor, függőleges vonallal elválasztva (&#124;). Hagyd üresen, hogy megtartsd a Piwik alapértelmezett beállításait."
+"Replace Matomo's default file extensions for download tracking, divided by a"
+" vertical bar (&#124;). Leave blank to keep Matomo's default settings."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:345
 msgid "Set classes to be treated as downloads"
@@ -942,15 +942,15 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:345
 msgid ""
-"Set classes to be treated as downloads (in addition to piwik_download), "
-"divided by a vertical bar (&#124;). Leave blank to keep Piwik's default "
+"Set classes to be treated as downloads (in addition to matomo_download), "
+"divided by a vertical bar (&#124;). Leave blank to keep Matomo's default "
 "settings."
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:345
 #: classes/WP_Piwik/Admin/Settings.php:347
 #, php-format
-msgid "See %sPiwik JavaScript Tracking Client reference%s."
+msgid "See %sMatomo JavaScript Tracking Client reference%s."
 msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:347
@@ -959,7 +959,7 @@ msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:347
 msgid ""
-"Set classes to be treated as outlinks (in addition to piwik_link), divided "
+"Set classes to be treated as outlinks (in addition to matomo_link), divided "
 "by a vertical bar (&#124;). Leave blank to keep Piwik's default settings."
 msgstr ""
 
@@ -968,8 +968,8 @@ msgid "Donate"
 msgstr "Támogatás"
 
 #: classes/WP_Piwik/Admin/Settings.php:511
-msgid "If you like WP-Piwik, you can support its development by a donation:"
-msgstr "Ha tetszik a WP-Piwik, támogasd fejlesztésünket egy kis adománnyal:"
+msgid "If you like WP-Matomo, you can support its development by a donation:"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:530
 msgid "My Amazon.de wishlist"
@@ -985,8 +985,8 @@ msgid "Thank you very much for your donation"
 msgstr "Köszönjük, hogy támogattad munkánkat"
 
 #: classes/WP_Piwik/Admin/Settings.php:561
-msgid "the Piwik team itself"
-msgstr "a Piwik csapat maga"
+msgid "the Matomo team itself"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:561
 msgid ", and all people flattering this"
@@ -1011,9 +1011,9 @@ msgstr "a fordítási munkádért"
 #: classes/WP_Piwik/Admin/Settings.php:564
 msgid ""
 "Thank you very much, all users who send me mails containing criticism, "
-"commendation, feature requests and bug reports! You help me to make WP-Piwik"
-" much better."
-msgstr "Köszönettel tartozunk minden felhasználónak, aki kritikájával, dícséretével, új funkciók ajánlásával és hibabejelentésekkel segítette munkánkat! Általatok lesz a WP-Piwik kiegészítő jobb és jobb."
+"commendation, feature requests and bug reports! You help me to make WP-"
+"Matomo much better."
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:565
 msgid ""
@@ -1026,8 +1026,8 @@ msgid "The best place to get help:"
 msgstr "Legjobb hely, ahol segítséget kaphatsz:"
 
 #: classes/WP_Piwik/Admin/Settings.php:574
-msgid "WP-Piwik support forum"
-msgstr "WP-Piwik támogatási fórum"
+msgid "WP-Matomo support forum"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:577
 msgid "Debugging"
@@ -1065,8 +1065,8 @@ msgid "is used."
 msgstr "használatban."
 
 #: classes/WP_Piwik/Admin/Settings.php:592
-msgid "Determined Piwik base URL is"
-msgstr "A meghatározott Piwik gyökér URL:"
+msgid "Determined Matomo base URL is"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:596
 msgid "Tools"
@@ -1089,8 +1089,8 @@ msgid "Are you sure you want to clear all settings?"
 msgstr "Biztos, hogy törölnél minden beállítást?"
 
 #: classes/WP_Piwik/Admin/Settings.php:601
-msgid "Reset WP-Piwik"
-msgstr "WP-Piwik visszaállítása"
+msgid "Reset WP-Matomo"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Settings.php:603
 msgid "Latest support threads on WordPress.org"
@@ -1129,8 +1129,8 @@ msgid "URL"
 msgstr "URL"
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:37
-msgid "Site ID (Piwik)"
-msgstr "Oldal ID (Piwik)"
+msgid "Site ID (Matomo)"
+msgstr ""
 
 #: classes/WP_Piwik/Admin/Sitebrowser.php:84
 msgid "Site not created yet."
@@ -1153,16 +1153,16 @@ msgid "realpath() returns false"
 msgstr "realpath() false értékkel tér vissza"
 
 #: classes/WP_Piwik/Request/Php.php:39
-msgid "Class Piwik\\FrontController does not exists."
-msgstr "Piwik\\FrontController osztály nem létezik."
+msgid "Class Matomo\\FrontController does not exists."
+msgstr ""
 
 #: classes/WP_Piwik/Request/Php.php:42
-msgid "Class Piwik\\API\\Request does not exists."
-msgstr "Piwik\\API\\Request osztály nem létezk."
+msgid "Class Matomo\\API\\Request does not exists."
+msgstr ""
 
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:10
-msgid "Piwik Custom Variables"
-msgstr "Piwik egyedi változók"
+msgid "Matomo Custom Variables"
+msgstr ""
 
 #: classes/WP_Piwik/Template/MetaBoxCustomVars.php:21
 msgid "Name"
@@ -1191,8 +1191,8 @@ msgstr "Egyedi változók beállítása az oldalnézethez"
 #: classes/WP_Piwik/Widget/SystemDetails.php:33
 #: classes/WP_Piwik/Widget/Systems.php:33
 #: classes/WP_Piwik/Widget/Visitors.php:35
-msgid "Piwik error"
-msgstr "Piwik hiba"
+msgid "Matomo error"
+msgstr ""
 
 #: classes/WP_Piwik/Widget.php:100
 #: classes/WP_Piwik/Widget/BrowserDetails.php:39
@@ -1525,6 +1525,21 @@ msgstr "Oldal megtekintések"
 #: wp-piwik.php:60
 #, php-format
 msgid ""
-"WP-Piwik requires at least PHP 5.3. You are using the deprecated version %s."
-" Please update PHP to use WP-Piwik."
-msgstr "A WP-Piwik megkívánja legalább a PHP 5.3-at. Te egy korábbi %s verziót használsz. Kérlek frissítsd a PHP-t, hogy használni tudd a WP-Piwik-et."
+"WP-Matomo requires at least PHP 5.3. You are using the deprecated version "
+"%s. Please update PHP to use WP-Matomo."
+msgstr ""
+
+msgid "City"
+msgstr ""
+
+msgid "Models"
+msgstr ""
+
+msgid "Model"
+msgstr ""
+
+msgid "Types"
+msgstr ""
+
+msgid "Type"
+msgstr ""
