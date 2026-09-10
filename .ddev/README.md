@@ -91,8 +91,8 @@ web_environment:
 ```
 
 A publicly resolvable Matomo needs nothing else. A Matomo running in *another DDEV project* is not
-in DNS, so `.ddev/docker-compose.matomo-host.yaml` maps its hostname onto the Docker host, where
-ddev-router listens. Add an entry there for any additional project you want to reach:
+in DNS, so add a `.ddev/docker-compose.matomo-host.yaml` that maps its hostname onto the Docker host,
+where ddev-router listens. Add an entry there for any additional project you want to reach, for example:
 
 ```yaml
 services:
